@@ -2,6 +2,7 @@
 
 - replace "br0" by your network hardware name. 
 
+```sh
         #!/bin/bash
          
         #本脚本是获取计算机当前的网络配置信息
@@ -34,7 +35,8 @@
         echo "获取当前适配器的MAC地址:"
          
         ifconfig |grep "^br0" |awk '{print $5}'
----
+```
+        ---
 
 ### this is a title
 
