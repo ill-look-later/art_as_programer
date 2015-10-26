@@ -37,6 +37,5 @@
         ifconfig |grep "^br0" |awk '{print $5}'
 ```
 
-### this is a title
 
 ---
