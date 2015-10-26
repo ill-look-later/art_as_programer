@@ -1,5 +1,7 @@
 # Get Ip/gateway/dns throgh sh script On Platform Linux(Unix)
 
+- replace "br0" by your network hardware name. 
+
         #!/bin/bash
          
         #本脚本是获取计算机当前的网络配置信息
