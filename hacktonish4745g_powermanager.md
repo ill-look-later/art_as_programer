@@ -3,27 +3,26 @@ http://bbs.pcbeta.com/viewthread-1473630-1-1.html
 
 本帖最后由 s1025xfei 于 2014-2-4 21:15 编辑
 
+---
 
 在前人的帖子里面通过加载AppleLPC.kext来使用MAC原生的CPU电源管理 提到修改与苹果LPC设备匹配的ID来达到可以使用原生电源管理
 
 所以呢，以后本论坛里面很多关于DSDT修改帖子里面都千篇一律的
 如下写到
 
-
-查找：0x001F0000 或 Device (PX40)
+  查找：0x001F0000 或 Device (PX40)
 
 加入（3A18）
 xxxxxx
 或加入（2815）
 xxxxx
 
-然后又不全面的提供完整的苹果LPC设备匹配的ID，导致太多人加入了（3A18）或者（2815）虽然可以加载AppleLPC.kext了。但是仍然无法使用原生电源管理，可能要用到破解的电源管理驱动AppleIntelCPUPowerManagement以加载来使用上原生电源管理，然后可以完美睡眠什么的。其实呢，修改DSDT之前每个人应该使用IORegistryExplorer搜索一下自己电脑的LPC的ID
+- 然后又不全面的提供完整的苹果LPC设备匹配的ID，导致太多人加入了（3A18）或者（2815）虽然可以加载AppleLPC.kext了。但是仍然无法使用原生电源管理，可能要用到破解的电源管理驱动AppleIntelCPUPowerManagement以加载来使用上原生电源管理，然后可以完美睡眠什么的。其实呢，修改DSDT之前每个人应该使用IORegistryExplorer搜索一下自己电脑的LPC的ID
 
- 屏幕快照 2014-01-30 下午7.07.42.png
 
-比如我的就是pci8086,1c49，如果按照那些的修改DSDT帖子改成什么（3A18）或者（2815）就可能出现无法使用原生电源管理的情况。对此，我针对自己的情况修改成了
+- 比如我的就是pci8086,1c49，如果按照那些的修改DSDT帖子改成什么（3A18）或者（2815）就可能出现无法使用原生电源管理的情况。对此，我针对自己的情况修改成了
+- 
 ```
-
 Method (_DSM, 4, NotSerialized)
                 {
                     Store (Package (0x02)
