@@ -64,12 +64,34 @@ VmallocChunk:     487284 kB
 ```shell
 #
 #mkdir /tmp/nfs202
-#mkdir /tmp/nfs206
-#mount -o nolock 192.168.18.206:/nfs /tmp/nfs206
 #mount -o nolock 192.168.18.202:/nfs /tmp/nfs202
-#export SSL_CERT_DIR=/tmp/nfs206/certs
 #export http_proxy=192.168.18.205:808
 #export https_proxy=192.168.18.205:808
-
-# cd /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/
 ```
+- 切换到sdk目录， 配置好$LD_LIBRARY_PATH $SRAF_CONFIG_DIR 和证书的路径配置
+
+```shell
+# cd /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/
+# ls
+bin       certs     config    include   lib       plugin    resource
+#
+# echo $LD_LIBRARY_PATH   *"THIS IS THE ORIGIN LD_LIBRARY_PATH"*
+/vendor/lib:/vendor/lib/dtcp:/vendor/lib/ipc_svc:/vendor/lib/qtwebkit:/vendor/lib/directfb-1.4-0:/vendor/lib/utopia:/vendor/lib/directfb-1.4-0/systems:/vendor/lib/directfb-1.4-0/wm:/vendor/lib/directfb-1.4-0/inputdrivers:/vendor/lib/directfb-1.4-0/gfxdrivers:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBFont:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBImageProvider:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBVideoProvider:/vendor/lib/qt/plugins/gfxdrivers/:/vendor/lib/gstreamer-0.10/:/vendor/lib/boost/:/vendor/lib/Widevinel2/:/vendor/lib/ipc_mm:/application/mstar_wireless_tools
+/vendor/lib:/vendor/lib/dtcp:/vendor/lib/ipc_svc:/vendor/lib/qtwebkit:/vendor/lib/directfb-1.4-0:/vendor/lib/utopia:/vendor/lib/directfb-1.4-0/systems:/vendor/lib/directfb-1.4-0/wm:/vendor/lib/directfb-1.4-0/inputdrivers:/vendor/lib/directfb-1.4-0/gfxdrivers:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBFont:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBImageProvider:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBVideoProvider:/vendor/lib/qt/plugins/gfxdrivers/:/vendor/lib/gstreamer-0.10/:/vendor/lib/boost/:/vendor/lib/Widevinel2/:/vendor/lib/ipc_mm:/application/mstar_wireless_tools
+
+# export LD_LIBRARY_PATH=/tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/lib:$LD_LIBRARY_PATH
+# echo $LD_LIBRARY_PATH         "after setting library path
+/tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/lib:/vendor/lib:/vendor/lib/dtcp:/vendor/lib/ipc_svc:/vendor/lib/qtwebkit:/vendor/lib/directfb-1.4-0:/vendor/lib/utopia:/vendor/lib/directfb-1.4-0/systems:/vendor/lib/directfb-1.4-0/wm:/vendor/lib/directfb-1.4-0/inputdrivers:/vendor/lib/directfb-1.4-0/gfxdrivers:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBFont:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBImageProvider:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBVideoProvider:/vendor/lib/qt/plugins/gfxdrivers/:/vendor/lib/gstreamer-0.10/:/vendor/lib/boost/:/vendor/lib/Widevinel2/:/vendor/lib/ipc_mm:/application/mstar_wireless_tools
+
+export SRAF_CONFIG_DIR=/tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/config
+
+# mkdir /application/sraf
+# ln -s /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/certs /application/sr
+af/certs
+
+# date -s "2015-11-18 11:30"
+Wed Nov 18 11:30:00 UTC 2015
+
+
+```
+
