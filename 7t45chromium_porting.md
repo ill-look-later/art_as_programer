@@ -90,6 +90,7 @@ bin       certs     config    include   lib       plugin    resource
 # mkdir /application/sraf
 # ln -s /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/certs /application/sr
 af/certs
+
 # "UPDATE 日期和事件，确保不会出现证书的问题和x509的错误
 # date -s "2015-11-18 11:30"
 Wed Nov 18 11:30:00 UTC 2015
