@@ -97,4 +97,28 @@ Wed Nov 18 11:30:00 UTC 2015
 ```
 ---
 ## 3. boot up sraf_browser
-- 因为在板子启动后，video 等硬件配置并没有初始化，所以在run browser之前需要一个客户程序【这里我们使用的是skyworth提供的demo程序，将系统和硬件准备好， 这个demo程序是我在skywoth提供的demo代码中去掉大部分code 仅保留核心初始化代码的一个程序 dfb_input_event.bin】
+- 因为在板子启动后，video 等硬件配置并没有初始化，所以在run browser之前需要一个客户程序dfb_input_event.bin【这里我们使用的是skyworth提供的demo程序，将系统和硬件准备好，这个demo程序是我在skywoth提供的demo代码中去掉大部分code 仅保留核心初始化代码的一个程序 】其核心代码如下
+
+```c++
+    sk_status_code_t sk_status;
+    sk_hdi_kbd_open_para_t test_open_params = {0};
+    int err = -1;
+    disply_init();
+    static IDirectFBEventBuffer * eventsbuf = NULL;
+    DFBCHECK(DirectFBInit(0, NULL));
+    DFBCHECK(DirectFBCreate(&dfb));
+    dfb->CreateInputEventBuffer(dfb, DICAPS_ALL, DFB_TRUE, &eventsbuf);
+    sk_status = sk_hdi_kbd_open (&test_kbd_handle1, &test_open_params);
+    sk_status = sk_hdi_kbd_register_callback (test_kbd_handle1, NULL);
+    if (SK_SUCCESS != sk_status) {
+        printf("Unable to Open sk_hdi_open");
+    }
+
+    while(1) {
+    DFBEvent evt;
+    eventsbuf->WaitForEvent(eventsbuf);
+
+
+  
+```
+
