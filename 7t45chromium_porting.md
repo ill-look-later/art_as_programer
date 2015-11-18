@@ -138,7 +138,7 @@ core                sraf_browser_bin
     dlopen /config/libdfbinfo.so fail !!!
     dlerror() : /config/libdfbinfo.so: cannot open shared object file: No such file or directory
     DFBCreate: DirectFBDoDFBInfo_SetKEYPADCfg fail!
-    ==========================================
+    '==========================================
     DFB library build @ 2015-05-25 07:50===========================================
     commandline read: sraf_browser_bin
     commandline read: http://www.wiki.org
@@ -205,21 +205,20 @@ core                sraf_browser_bin
     dlopen /config/libdfbinfo.so fail !!!
     dlerror() : /config/libdfbinfo.so: cannot open shared object file: No such file or directory
     DFBCreate: DirectFBDoDFBInfo_SetKEYPADCfg fail!
-    ==========================================
+    '==========================================
     DFB library build @ 2015-05-25 07:50===========================================
     [1006:1136:1118/113203:1895478000:WARNING:proxy_service.cc(909)] PAC support disabled because there is no system implementation
-    
     Sraf Browser v3.5 build(Nov  5 2015)
     [1204:1204:1118/113207:1899544951:ERROR:renderer_main.cc(207)] Running without renderer sandbox
-    ###Sraf### sraf_mediaplayer_initialize() ++++++++++++++++++++++++++++++++++++++++++++++++++
-    ###Sraf### sraf_mediaplayer_initialize process id(1204) thread id(0x772AD000)
-    ###Sraf### initialize_graphic_panel_resolution() width(1280) height(720)
-    ###Sraf### initialize_video_panel_resolution() width(1920) height(1080)
+    '###Sraf### sraf_mediaplayer_initialize() ++++++++++++++++++++++++++++++++++++++++++++++++++
+    '###Sraf### sraf_mediaplayer_initialize process id(1204) thread id(0x772AD000)
+    '###Sraf### initialize_graphic_panel_resolution() width(1280) height(720)
+    '###Sraf### initialize_video_panel_resolution() width(1920) height(1080)
     
     (<unknown>:1204): GStreamer-WARNING **: Failed to load plugin '/vendor/lib/gstreamer-0.10/libgstmad.so': libmad.so.0: cannot open shared object file: No such file or directory
-    ###Sraf### command thread start...
-    ###Sraf### command thread process id(1204) thread id(0x6EDD8490)
-    ###Sraf### update_current_playtime_internal() 0.000000/0.000000
+    '###Sraf### command thread start...
+    '###Sraf### command thread process id(1204) thread id(0x6EDD8490)
+    '###Sraf### update_current_playtime_internal() 0.000000/0.000000
     
     Sraf Browser v3.5 build(Nov  5 2015)
      ../../content/common/plugin_list_posix.cc 280 ReadWebPluginInfo !!! load plugin lib FAILED Error libhbbtv_avc_adaptor.so: cannot open shared object file: No such file or directory
