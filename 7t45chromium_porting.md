@@ -115,8 +115,12 @@ Wed Nov 18 11:30:00 UTC 2015
     }
 
     while(1) {
-    DFBEvent evt;
-    eventsbuf->WaitForEvent(eventsbuf);
+        DFBEvent evt;
+        eventsbuf->WaitForEvent(eventsbuf);
+        ...
+        ...
+        ...
+    }
 
 
   
