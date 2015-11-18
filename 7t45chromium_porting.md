@@ -86,6 +86,7 @@ bin       certs     config    include   lib       plugin    resource
 # "config the SRAF_CONFIG_DIR 
 #export SRAF_CONFIG_DIR=/tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/config
 
+# "导入证书路径
 # mkdir /application/sraf
 # ln -s /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/certs /application/sr
 af/certs
