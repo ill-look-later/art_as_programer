@@ -1,6 +1,6 @@
 # 7t45_chromium_porting
 
-##1 搭建硬件平台 升级rootfs && kernel
+## 1.搭建硬件平台 升级rootfs && kernel
 - cp 升级包到u盘根目录
 - 进入uboot
 
@@ -62,3 +62,11 @@ VmallocChunk:     487284 kB
 - mount nfs
 
 ```shell
+mkdir /tmp/nfs202
+mkdir /tmp/nfs206
+mount -o nolock 192.168.18.206:/nfs /tmp/nfs206
+mount -o nolock 192.168.18.202:/nfs /tmp/nfs202
+export SSL_CERT_DIR=/tmp/nfs206/certs
+export http_proxy=192.168.18.205:808
+export https_proxy=192.168.18.205:808
+```
