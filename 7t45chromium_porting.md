@@ -59,14 +59,17 @@ VmallocChunk:     487284 kB
 ```
 ---
 ## 2 .configure sraf browser runtime environment 
-- mount nfs
+- mount nfs [ps: ensure the network work well and replace the ip address according your network state]
 
 ```shell
-mkdir /tmp/nfs202
-mkdir /tmp/nfs206
-mount -o nolock 192.168.18.206:/nfs /tmp/nfs206
-mount -o nolock 192.168.18.202:/nfs /tmp/nfs202
-export SSL_CERT_DIR=/tmp/nfs206/certs
-export http_proxy=192.168.18.205:808
-export https_proxy=192.168.18.205:808
+#
+#mkdir /tmp/nfs202
+#mkdir /tmp/nfs206
+#mount -o nolock 192.168.18.206:/nfs /tmp/nfs206
+#mount -o nolock 192.168.18.202:/nfs /tmp/nfs202
+#export SSL_CERT_DIR=/tmp/nfs206/certs
+#export http_proxy=192.168.18.205:808
+#export https_proxy=192.168.18.205:808
+
+# cd /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/
 ```
