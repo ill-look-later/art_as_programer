@@ -121,8 +121,13 @@ Wed Nov 18 11:30:00 UTC 2015
         ...
         ...
     }
-
-
-  
 ```
 
+```shell
+#../../dfb_input_event.bin &
+#cd /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/bin
+# ls
+content_shell.log   sraf.pak            sraf_dfb_input_bin
+core                sraf_browser_bin
+
+```
