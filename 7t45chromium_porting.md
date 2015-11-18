@@ -83,7 +83,8 @@ bin       certs     config    include   lib       plugin    resource
 # echo $LD_LIBRARY_PATH         "after setting library path
 /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/lib:/vendor/lib:/vendor/lib/dtcp:/vendor/lib/ipc_svc:/vendor/lib/qtwebkit:/vendor/lib/directfb-1.4-0:/vendor/lib/utopia:/vendor/lib/directfb-1.4-0/systems:/vendor/lib/directfb-1.4-0/wm:/vendor/lib/directfb-1.4-0/inputdrivers:/vendor/lib/directfb-1.4-0/gfxdrivers:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBFont:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBImageProvider:/vendor/lib/directfb-1.4-0/interfaces/IDirectFBVideoProvider:/vendor/lib/qt/plugins/gfxdrivers/:/vendor/lib/gstreamer-0.10/:/vendor/lib/boost/:/vendor/lib/Widevinel2/:/vendor/lib/ipc_mm:/application/mstar_wireless_tools
 
-export SRAF_CONFIG_DIR=/tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/config
+# "config the SRAF_CONFIG_DIR 
+#export SRAF_CONFIG_DIR=/tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/config
 
 # mkdir /application/sraf
 # ln -s /tmp/nfs202/gongh/v39/out/Release/Sraf_Browser_SDK/certs /application/sr
