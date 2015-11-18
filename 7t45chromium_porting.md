@@ -94,7 +94,7 @@ af/certs
 # "UPDATE 日期和事件，确保不会出现证书的问题和x509的错误
 # date -s "2015-11-18 11:30"
 Wed Nov 18 11:30:00 UTC 2015
-
-
 ```
+
+## 3. boot up sraf_browser
 
