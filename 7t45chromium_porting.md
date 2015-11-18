@@ -131,6 +131,100 @@ content_shell.log   sraf.pak            sraf_dfb_input_bin
 core                sraf_browser_bin
 # ./sraf_browser_bin
 ```
+- 完成上述步骤， 在我这个开发平台就能正常的run起来；sraf_browser_bin run之后的log如下
+```shell
+    # ./sraf_browser_bin http://www.wiki.org
+    Sraf Browser v3.5 build(Nov  5 2015)
+    dlopen /config/libdfbinfo.so fail !!!
+    dlerror() : /config/libdfbinfo.so: cannot open shared object file: No such file or directory
+    DFBCreate: DirectFBDoDFBInfo_SetKEYPADCfg fail!
+    ==========================================
+    DFB library build @ 2015-05-25 07:50===========================================
+    commandline read: sraf_browser_bin
+    commandline read: http://www.wiki.org
+    dlopen /config/libdfbinfo.so fail !!!
+    DFBCreate: DirectFBDoDFBInfo_SetDFBRcCfg fail!
+    dfb_system_lookup:327, module name = devmem
+    
+     DFB USE THE GFX : MSTAR  WARNING PLEASE REMOVE libdirectfb_mstar.so in mslibdirectfb-1.4-0gfxdrivers
+    [MPOOL USER ERR][000435]     ~!~!~MsOS_Mapping_SharedMem: pid = 1006
+    [MSOS_PRINT][003312]     ~!~mappd sharemem  @
+    [MSOS_PRINT][000663]     pthread_mutex_init
+    [MSOS_PRINT][000665]     CHIP_InitISR
+    [utopia info] utopia init
+    [utopia info] register module: MODULE_UTOPIA
+    [utopia info] register module: MODULE_BDMA
+    [utopia info] register module: MODULE_GOP
+    [utopia info] register module: MODULE_GFX
+    [utopia info] register module: MODULE_TVENCODER
+    [utopia info] register module: MODULE_XC
+    [utopia info] register module: MODULE_MBX
+    [utopia info] register module: MODULE_DIP
+    [utopia info] register module: MODULE_PNL
+    [utopia info] register module: MODULE_SAR
+    Function = SARRegisterToUtopia, Line = 1999, SAR Register finished
+    [utopia info] register module: MODULE_MIU
+    [utopia info] register module: MODULE_SEM
+    [utopia info] register module: MODULE_SYS
+    [utopia info] register module: MODULE_VDEC_EX
+    [utopia info] register module: MODULE_MVOP
+    [utopia info] register module: MODULE_UART
+    [utopia info] register module: MODULE_GPD
+    [utopia info] register module: MODULE_CPU
+    [utopia info] register module: MODULE_JPEG_EX
+    MDrv_PNL_Init u32PnlRiuBaseAddr = 6dd94000
+    MDrv_PNL_Init u32PMRiuBaseAddr = 6df94000
+    [MDrv_XC_SetIOMapBase,  590]No instance existed, please get an instance by calling MApi_XC_Init() first
+    
+    [GOP INFO] gop open
+    [MSOS_PRINT][000544]     [MsOS_Init] already inited!
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [MPOOL USER WARN][000255]    MsOS_MPool_Init is initiated more than once
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [MPOOL USER WARN][000255]    MsOS_MPool_Init is initiated more than once
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [MPOOL USER WARN][000255]    MsOS_MPool_Init is initiated more than once
+    Set to Mixer
+    [_GOP_Get_XCSemaphore,  580]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [_GOP_Release_XCSemaphore,  606]No instance existed, please get an instance by calling MApi_XC_Init() first
+    [1006:1006:1118/113202:1894779247:ERROR:browser_main_loop.cc(163)] Running without the SUID sandbox! See https://code.google.com/p/chromium/wiki/LinuxSUIDSandboxDevelopment for more information on developing with the sandbox on.
+    [1006:1127:1118/113202:1894793889:ERROR:file_path_watcher_linux.cc(259)] inotify_init() failed: Function not implemented
+    dlopen /config/libdfbinfo.so fail !!!
+    dlerror() : /config/libdfbinfo.so: cannot open shared object file: No such file or directory
+    DFBCreate: DirectFBDoDFBInfo_SetKEYPADCfg fail!
+    ==========================================
+    DFB library build @ 2015-05-25 07:50===========================================
+    [1006:1136:1118/113203:1895478000:WARNING:proxy_service.cc(909)] PAC support disabled because there is no system implementation
+    
+    Sraf Browser v3.5 build(Nov  5 2015)
+    [1204:1204:1118/113207:1899544951:ERROR:renderer_main.cc(207)] Running without renderer sandbox
+    ###Sraf### sraf_mediaplayer_initialize() ++++++++++++++++++++++++++++++++++++++++++++++++++
+    ###Sraf### sraf_mediaplayer_initialize process id(1204) thread id(0x772AD000)
+    ###Sraf### initialize_graphic_panel_resolution() width(1280) height(720)
+    ###Sraf### initialize_video_panel_resolution() width(1920) height(1080)
+    
+    (<unknown>:1204): GStreamer-WARNING **: Failed to load plugin '/vendor/lib/gstreamer-0.10/libgstmad.so': libmad.so.0: cannot open shared object file: No such file or directory
+    ###Sraf### command thread start...
+    ###Sraf### command thread process id(1204) thread id(0x6EDD8490)
+    ###Sraf### update_current_playtime_internal() 0.000000/0.000000
+    
+    Sraf Browser v3.5 build(Nov  5 2015)
+     ../../content/common/plugin_list_posix.cc 280 ReadWebPluginInfo !!! load plugin lib FAILED Error libhbbtv_avc_adaptor.so: cannot open shared object file: No such file or directory
+ 
+```
 
 
 
