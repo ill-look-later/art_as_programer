@@ -135,14 +135,16 @@ RenderWidgetHostViewAura ： RenderWidgetHostViewBase
 
 ##event [事件传递与分发]： 
 sraf_porting/content/browser/renderer_host/render_widget_host_view_aura.cc
-	RenderWidgetHostViewAura::OnMouseEvent
+```
+RenderWidgetHostViewAura::OnMouseEvent
 		blink::WebMouseEvent mouse_event = MakeWebMouseEvent(event);
 		host_->ForwardMouseEvent(mouse_event);
-
+```
 content/browser/renderer_host/render_widget_host_impl.cc
-	RenderWidgetHostImpl::ForwardMouseEvent(const WebMouseEvent& mouse_event)
+```
+RenderWidgetHostImpl::ForwardMouseEvent(const WebMouseEvent& mouse_event)
 		RenderWidgetHostImpl::ForwardMouseEventWithLatencyInfo
-	
+```	
 	
 			
 		
