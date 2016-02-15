@@ -86,30 +86,38 @@ third_party/WebKit/Source/core/html/HTMLSelectElement.cpp
 HTMLSelectElement::menuListDefaultEventHandler(Event* event)
 		f: hidePopup();
 			m_popup->hide();  // m_popup PopupMenu对象
-	
+```	
 third_party/WebKit/Source/web/PopupMenuImpl.cpp
-	PopupMenuImpl::hide()
+```
+PopupMenuImpl::hide()
 		m_chromeClient->closePagePopup(m_popup);
+```
 
 third_party/WebKit/Source/web/ChromeClientImpl.cpp
-	void ChromeClientImpl::closePagePopup(PagePopup* popup)
+```
+void ChromeClientImpl::closePagePopup(PagePopup* popup)
 		m_webView->closePagePopup(popup);
-
+```
 third_party/WebKit/Source/web/WebViewImpl.cpp
-	WebViewImpl::closePagePopup(PagePopup* popup)
+```
+WebViewImpl::closePagePopup(PagePopup* popup)
 		m_pagePopup->closePopup();
-
+```
 third_party/WebKit/Source/web/WebPagePopupImpl.cpp
-	WebPagePopupImpl::closePopup()
+```
+WebPagePopupImpl::closePopup()
 		m_widgetClient->closeWidgetSoon();   //m_widgetClient ---> webwidgetclient ----> RenderWidget
-
+```
 sraf_porting/content/renderer/render_widget.cc
-	RenderWidget::closeWidgetSoon() 
+```
+RenderWidget::closeWidgetSoon() 
 		base::MessageLoop::current()->PostNonNestableTask(FROM_HERE, base::Bind(&RenderWidget::DoDeferredClose, this));
 	DoDeferredClose
 		Send(new ViewHostMsg_Close(routing_id_));
+```
 ./sraf_porting/content/browser/renderer_host/render_widget_host_impl.cc
-	IPC_MESSAGE_HANDLER(ViewHostMsg_Close, OnClose)
+```
+IPC_MESSAGE_HANDLER(ViewHostMsg_Close, OnClose)
 	RenderWidgetHostImpl::OnClose()
 		Shutdown();
 	RenderWidgetHostImpl::Shutdown()
@@ -117,13 +125,13 @@ sraf_porting/content/renderer/render_widget.cc
 	RenderWidgetHostImpl::Destroy()
 		view_->Destroy();    // RenderWidgetHostViewBase view_;  public RenderWidgetHostView,
 		delete this;
-
+```
 content/browser/renderer_host/render_widget_host_view_aura.h	
-	RenderWidgetHostViewAura ： RenderWidgetHostViewBase
+```
+RenderWidgetHostViewAura ： RenderWidgetHostViewBase
 	RenderWidgetHostViewAura::Destroy()
 		delete window_;
 ```
-
 
 event： 
 sraf_porting/content/browser/renderer_host/render_widget_host_view_aura.cc
