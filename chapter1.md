@@ -82,7 +82,7 @@ web_content_impl
 	m: created_widgets_
 ```
 
-destroy：
+##destroy [关闭过程]：
 third_party/WebKit/Source/core/html/HTMLSelectElement.cpp
 	HTMLSelectElement::menuListDefaultEventHandler(Event* event)
 		f: hidePopup();
