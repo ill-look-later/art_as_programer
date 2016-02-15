@@ -1,9 +1,8 @@
-blink::WebWidgetClient   blink::webpagePopup : public WebWidget
-RenderWidget: 内部提供了静态函数 Create，根据 blink::WebPopupType 创建不同的renderwidget
-renderviewImpl 内部创建的
-
 ---
 ##摘要：
+    blink::WebWidgetClient   blink::webpagePopup : public WebWidget
+    RenderWidget: 内部提供了静态函数 Create，根据 blink::WebPopupType 创建不同的renderwidget，renderviewImpl 内部创建的 
+
     WebViewClient : virtual public WebWidgetClient
     WebWidgetClient <-----> RenderViewImpl ：public blink::WebViewClient ，
                                          RenderView,
