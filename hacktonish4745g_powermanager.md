@@ -106,3 +106,5 @@ Method (_DSM, 4, NotSerialized)
     当然，如果用接近的无效，最后的方法，还是把自己电脑的id加到AppleLPC的info.plist里。另，祝新年快乐。
 
 > reference: http://bbs.pcbeta.com/viewthread-1473630-1-1.html
+
+//**File End**
