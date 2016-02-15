@@ -1,5 +1,5 @@
 # HackTonish_4745G_PowerManager
-http://bbs.pcbeta.com/viewthread-1473630-1-1.html
+
 
 本帖最后由 s1025xfei 于 2014-2-4 21:15 编辑
 
@@ -104,3 +104,5 @@ Method (_DSM, 4, NotSerialized)
  - LPC的id也可以在Windows的设备管理器里的LPC Controller里查看哦。另外，如果自己的id不在支持列表里，不建议把自己的id加进info.plist里，以加载AppleLPC，因为这样虽然能够加载AppleLPC，但这应该是空加载，实际这样并不会调用AppleLPC的二进制程序，而只是加载了AppleLPC的空壳。
     个人觉得，如果自己的id不在支持列表里，就选择支持列表里与自己的最接近的加入DSDT，比如，先看看有没有id的前三位都一样的，没有的话选前两位一样的。这样，加载AppleLPC应该就能调用实际的程序了。
     当然，如果用接近的无效，最后的方法，还是把自己电脑的id加到AppleLPC的info.plist里。另，祝新年快乐。
+
+> reference: http://bbs.pcbeta.com/viewthread-1473630-1-1.html
