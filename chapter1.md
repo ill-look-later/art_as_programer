@@ -4,38 +4,51 @@ RenderWidget: 内部提供了静态函数 Create，根据 blink::WebPopupType �
 renderviewImpl 内部创建的
 
 
-WebViewClient : virtual public WebWidgetClient    -----    RenderViewImpl ： blink::WebViewClient ， RenderView, RenderWidget,
-								   						   RenderWidget ： blink::WebWidgetClient 
+WebViewClient : virtual public WebWidgetClient
+WebWidgetClient <-----> RenderViewImpl ：public blink::WebViewClient ，
+                                         RenderView,
+                                         RenderWidget,
+                                         RenderWidget,
+                                         blink::WebWidgetClient 
 
 
 
-domtree 中有各种obj pop类的就有 windowpagepopup， DateTimeChooserImpl.h， PopupMenuImpl.h	
-create：
+> domtree 中有各种obj pop类的就有 windowpagepopup， DateTimeChooserImpl.h， PopupMenuImpl.h	
+
+##create [创建过程]：
 
 Source/core/html/HTMLSelectElement.cpp
+```
 blink::HTMLSelectElement::defaultEventHandler
 	blink::HTMLSelectElement::menuListDefaultEventHandler
 		blink::RenderMenuList::showPopup
+```
 Source/core/rendering/RenderMenuList.cpp
+```
 	blink::RenderMenuList::showPopup
 		m_popup->show(quad, size, select->optionToListIndex(select->selectedIndex()));
+```
 Source/web/PopupMenuChromium.cpp
-	 PopupMenuChromium::show(const FloatQuad& controlPosition, const IntSize& controlSize, int index)
+```
+PopupMenuChromium::show(const FloatQuad& controlPosition, const IntSize& controlSize, int index)
 		m_popup->showInRect(controlPosition, controlSize, m_frameView.get(), index);
+```
 Source/web/PopupContainer.cpp:419
-	PopupContainer::showInRect(const FloatQuad& controlPosition, const IntSize& controlSize, FrameView* v, int index)
+```
+PopupContainer::showInRect(const FloatQuad& controlPosition, const IntSize& controlSize, FrameView* v, int index)
 		showPopup(v);
-	PopupContainer::showPopup(FrameView* view)
+PopupContainer::showPopup(FrameView* view)
 		popupOpened(layoutAndCalculateWidgetRect(m_controlSize.height(), transformOffset, roundedIntPoint(m_controlPosition.p4())));
-	PopupContainer::popupOpened(const IntRect& bounds)
+PopupContainer::popupOpened(const IntRect& bounds)
 		WebWidget* webwidget = webView->client()->createPopupMenu(WebPopupTypeSelect);
 		toWebPopupMenuImpl(webwidget)->initialize(this, bounds);
-/**
+```
 Source/web/WebViewImpl.cpp
-	WebViewImpl::openPagePopup(PagePopupClient* client)
+```
+WebViewImpl::openPagePopup(PagePopupClient* client)
 		WebWidget* popupWidget = m_client->createPopupMenu(WebPopupTypePage);   ps：wekit中WebViewClient.h ----> content中 RenderViewImpl
 		m_pagePopup->initialize(this, client)
-**/
+```
 Source/web/WebPagePopupImpl.cpp ： public PagePopup
 	void WebPopupMenuImpl::initialize(PopupContainer* widget, const WebRect& bounds)
 		m_client->setWindowRect(bounds);
