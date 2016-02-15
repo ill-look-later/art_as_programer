@@ -133,7 +133,7 @@ RenderWidgetHostViewAura ： RenderWidgetHostViewBase
 		delete window_;
 ```
 
-event： 
+##event [事件传递与分发]： 
 sraf_porting/content/browser/renderer_host/render_widget_host_view_aura.cc
 	RenderWidgetHostViewAura::OnMouseEvent
 		blink::WebMouseEvent mouse_event = MakeWebMouseEvent(event);
