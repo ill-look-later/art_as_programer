@@ -82,7 +82,8 @@ web_content_impl
 
 ##destroy [关闭过程]：
 third_party/WebKit/Source/core/html/HTMLSelectElement.cpp
-	HTMLSelectElement::menuListDefaultEventHandler(Event* event)
+```
+HTMLSelectElement::menuListDefaultEventHandler(Event* event)
 		f: hidePopup();
 			m_popup->hide();  // m_popup PopupMenu对象
 	
@@ -121,7 +122,7 @@ content/browser/renderer_host/render_widget_host_view_aura.h
 	RenderWidgetHostViewAura ： RenderWidgetHostViewBase
 	RenderWidgetHostViewAura::Destroy()
 		delete window_;
-
+```
 
 
 event： 
