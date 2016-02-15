@@ -3,9 +3,8 @@ blink::WebWidgetClient   blink::webpagePopup : public WebWidget
 RenderWidget: 内部提供了静态函数 Create，根据 blink::WebPopupType 创建不同的renderwidget
 renderviewImpl 内部创建的
 
-
+---
 ##摘要：
-
     WebViewClient : virtual public WebWidgetClient
     WebWidgetClient <-----> RenderViewImpl ：public blink::WebViewClient ，
                                          RenderView,
@@ -13,9 +12,9 @@ renderviewImpl 内部创建的
                                          RenderWidget,
                                          blink::WebWidgetClient 
 
+---
 
-
-> domtree 中有各种obj pop类的就有 windowpagepopup， DateTimeChooserImpl.h， PopupMenuImpl.h	
+    domtree 中有各种obj pop类的就有 windowpagepopup， DateTimeChooserImpl.h， PopupMenuImpl.h	
 
 ##create [创建过程]：
 
@@ -57,12 +56,13 @@ Source/web/WebPagePopupImpl.cpp ： public PagePopup
 		m_client->show(WebNavigationPolicy()); //invoke it   --------------- RenderWidget
   
 ./sraf_porting/content/renderer/render_widget.cc
+```
 RenderWidget::show(WebNavigationPolicy)   ps：RenderWidget :public blink::WebWidgetClient
-	f： Send(new ViewHostMsg_ShowWidget(opener_id_, routing_id_, initial_pos_));		
-		
+	f： Send(new ViewHostMsg_ShowWidget(opener_id_, routing_id_, initial_pos_))
+```
 sraf_porting/content/browser/renderer_host/render_view_host_impl.cc
+```
 IPC_MESSAGE_HANDLER(ViewHostMsg_ShowWidget, OnShowWidget)
-
 OnShowWidget(int route_id, gfx::rect inital_pos)
 	f:  delegate_->ShowCreatedWidget(route_id, initial_pos);
 
@@ -80,7 +80,7 @@ web_content_impl
 	f：WebContentsImpl::CreateNewWidget
 	m: pending_widget_views_
 	m: created_widgets_
-
+```
 
 destroy：
 third_party/WebKit/Source/core/html/HTMLSelectElement.cpp
