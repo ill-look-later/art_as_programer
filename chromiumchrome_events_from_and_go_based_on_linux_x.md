@@ -1,2 +1,129 @@
-# chromium(chrome) event's "from and go" based on linux X11 system
+# chromium(chrome) event's "from and go" based on linux X11 system 
+> chrome 在linux X11上事件的生和死
+
+
+events/platform/x11/x11_event_source_glib.cc
+```
+GSourceFuncs XSourceFuncs = {
+  XSourcePrepare,
+  XSourceCheck,
+  XSourceDispatch,
+  NULL
+};
+```
+通过这样的一个结构体， 并在InitXSource函数中将函数注册给x11系统，将display和事件进行atach的操作；也就是说之后发生在这个display的事件会和这些callback相互联系起来； ~~`在操作系统事件产生的时候调用XSourceDispatch函数`~~
+```
+gboolean XSourceDispatch(GSource* source,
+                         GSourceFunc unused_func,
+                         gpointer data) {
+  X11EventSource* x11_source = static_cast<X11EventSource*>(data);
+  x11_source->DispatchXEvents();
+  return TRUE;
+}
+
+void X11EventSourceGlib::InitXSource(int fd) {
+  DCHECK(!x_source_);
+  DCHECK(event_source_.display()) << "Unable to get connection to X server";
+
+  x_poll_.reset(new GPollFD());
+  x_poll_->fd = fd;
+  x_poll_->events = G_IO_IN;
+  x_poll_->revents = 0;
+
+  GLibX11Source* glib_x_source = static_cast<GLibX11Source*>(
+      g_source_new(&XSourceFuncs, sizeof(GLibX11Source)));
+  glib_x_source->display = event_source_.display();
+  glib_x_source->poll_fd = x_poll_.get();
+
+  x_source_ = glib_x_source;
+  g_source_add_poll(x_source_, x_poll_.get());
+  g_source_set_can_recurse(x_source_, TRUE);
+  g_source_set_callback(x_source_, NULL, &event_source_, NULL);
+  g_source_attach(x_source_, g_main_context_default());
+}
+```
+InitXSource函数属于X11方面的编程， 没有仔细深究， XSourceDispatch函数中的X11EventSource类的主要功能就像其类申明前面说道的一样
+    
+    Receives X11 events and sends them to X11EventSourceDelegate. Handles
+    receiving, pre-process and post-processing XEvents.
+主要就是用来接收X11系统产生的事件，以及做一些相关的预处理以及扫尾工作。其主要几个函数
+ - DispatchXEvents()； 
+ - ExtractCookieDataDispatchEvent(XEvent* xevent)
+ - 维护着一个和事件对应的XDispplay *
+ - 还有一个X11EventSourceDelegate* delegate_;对象
+
+```
+void X11EventSource::DispatchXEvents() {
+  DCHECK(display_);
+  // Handle all pending events.
+  // It may be useful to eventually align this event dispatch with vsync, but
+  // not yet.
+  continue_stream_ = true;
+  while (XPending(display_) && continue_stream_) {
+    XEvent xevent;
+    XNextEvent(display_, &xevent);
+    ExtractCookieDataDispatchEvent(&xevent);
+  }
+}
+```
+这个函数里面即是整个事件循环，函数XNetEvent()等待发生的display 上的相关系统事件；其函数说明：ref：http://www.x.org/archive/X11R7.5/doc/man/man3/XNextEvent.3.html
+
+    The XNextEvent function copies the first event from the event queue into the specified XEvent structure and then removes it from the queue. If the event queue is empty, XNextEvent flushes the output buffer and blocks until an event is received.
+当事件发生的时候就填充 xevent变量， 通过函数ExtractCookieDataDispatchEvent将xevent通过X11EventSourceDelegate对象 delegate的ProcessXEvent函数进行传递；
+```
+void X11EventSource::ExtractCookieDataDispatchEvent(XEvent* xevent) {
+  bool have_cookie = false;
+  if (xevent->type == GenericEvent &&
+      XGetEventData(xevent->xgeneric.display, &xevent->xcookie)) {
+    have_cookie = true;
+  }
+  delegate_->ProcessXEvent(xevent);
+  PostDispatchEvent(xevent);
+  if (have_cookie)
+    XFreeEventData(xevent->xgeneric.display, &xevent->xcookie);
+}
+```
+这里的X11EventSourceDelegate中的函数ProcessXEvent被类X11EventSourceGlib继承并显示，通过，在它的实现中仅仅是调用了其自身的函数DispatchEvent(xevent);来继续分发这个事件；通过查看X11EventSourceGlib类的申明， 瞬间激动了一把， 他不仅继承了X11EventSourceDelegate 还继承了 类PlatformEventSource， 是不是有点感觉了，终于看到了PlatformEventSource，不再是停留在x11 xxx里面了，而是到了我们的google大法里面的platxxx了， 激动！！！
+再仔细一看DispatchEvent(xevent)就是~~`重载`~~覆盖（override）的PlatformEventSource的函数；
+
+**好了！ 重点来了~_~; 是不是很激动...不说了，上代码** 
+```
+uint32_t PlatformEventSource::DispatchEvent(PlatformEvent platform_event) {
+  uint32_t action = POST_DISPATCH_PERFORM_DEFAULT;
+
+  FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
+                    WillProcessEvent(platform_event));
+  // Give the overridden dispatcher a chance to dispatch the event first.
+  if (overridden_dispatcher_)
+    action = overridden_dispatcher_->DispatchEvent(platform_event);
+
+  if ((action & POST_DISPATCH_PERFORM_DEFAULT) &&
+      dispatchers_.might_have_observers()) {
+    base::ObserverList<PlatformEventDispatcher>::Iterator iter(&dispatchers_);
+    while (PlatformEventDispatcher* dispatcher = iter.GetNext()) {
+      if (dispatcher->CanDispatchEvent(platform_event))
+        action = dispatcher->DispatchEvent(platform_event);
+      if (action & POST_DISPATCH_STOP_PROPAGATION)
+        break;
+    }
+  }
+  FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
+                    DidProcessEvent(platform_event));
+
+  // If an overridden dispatcher has been destroyed, then the platform
+  // event-source should halt dispatching the current stream of events, and wait
+  // until the next message-loop iteration for dispatching events. This lets any
+  // nested message-loop to unwind correctly and any new dispatchers to receive
+  // the correct sequence of events.
+  if (overridden_dispatcher_restored_)
+    StopCurrentEventStream();
+
+  overridden_dispatcher_restored_ = false;
+
+  return action;
+}
+```
+完了， 半夜了睡觉！
+@你特么是逗我么，这么激动的时刻，裤子都脱了，你就给我看这个？？？
+
 
