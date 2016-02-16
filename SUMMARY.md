@@ -6,6 +6,6 @@
    * [Get Ip/gateway/dns throgh sh script On Platform Linux(Unix)](get_ipgatewaydns_throgh_sh_script_on_platform_linuxunix.md)
    * [HackTonish_4745G_PowerManager](hacktonish4745g_powermanager.md)
    * [7t45_chromium_porting](7t45chromium_porting.md)
-   * [popup元素的创建和销毁](chromium中popup元素的创建和销毁.md)
+   * [popup元素的创建和销毁](chromiumzhong_popup_yuan_su_de_chuang_jian_he_xiao.md)
    * [chromium(chrome) event's "from and go" based on linux X11 system](chromiumchrome_events_from_and_go_based_on_linux_x.md)
 
