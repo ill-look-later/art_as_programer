@@ -1,7 +1,7 @@
 ####FAQ: What's the difference between RenderWidget and RenderView?
 ---
 
-    RenderWidget maps to one WebCore::Widget object by implementing the abstract
+      RenderWidget maps to one WebCore::Widget object by implementing the abstract
     interface in the glue layer called WebWidgetDelegate.. 
     This is basically a Window on the screen that receives input events and that we paint into.
     A RenderView inherits from RenderWidget and is the contents of a tab or popup Window.
