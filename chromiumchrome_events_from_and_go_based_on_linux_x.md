@@ -1,4 +1,4 @@
-# chromium(chrome) event's "from and go" based on linux X11 system 
+# chromium event's "from and go" based on linux X11 system 
 > chrome 在linux X11上事件的生和死
 
 
