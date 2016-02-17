@@ -129,4 +129,8 @@ uint32_t PlatformEventSource::DispatchEvent(PlatformEvent platform_event) {
 
 ---
 
+看上面code中的这一句
+
+    if (overridden_dispatcher_)
+      action = overridden_dispatcher_->DispatchEvent(platform_event);
 
