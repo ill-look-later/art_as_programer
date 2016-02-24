@@ -158,7 +158,7 @@ FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
 从上面overridden_dispatcher_->DispatchEvent(platform_event);之后代码中我们可以看到， 后面还有如果事件还有其他的oberserver的话， 还会遍历这些PlatformEventObserver 和 其他的PlatformEventDispatcher， 而这些都是通过调用函数 
 
     PlatformEventSource::AddPlatformEventDispatcher()
-来添加额外的平台事件分发者， 除此之外还有通过添加平台事件的观察者oberser来获取事件
+来添加额外的平台事件分发者，除此之外还有通过添加平台事件的观察者oberser来获取事件
 ```
 .cc
 void PlatformEventSource::AddPlatformEventObserver(
