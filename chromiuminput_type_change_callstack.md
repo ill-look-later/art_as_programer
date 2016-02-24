@@ -5,7 +5,7 @@
 - mouse select event for editor
 ---
 
-
+### Mouse selection Event
 ```
 void EditorClientImpl::respondToChangedSelection(LocalFrame* frame, SelectionType selectionType)
 {
