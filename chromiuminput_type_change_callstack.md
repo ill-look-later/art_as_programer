@@ -22,7 +22,7 @@ virtual void didChangeSelection(bool isSelectionEmpty) { }
 
 
 void Element::focus(const FocusParams& params)
-    document().page()->chromeClient().showImeIfNeeded();
+    call: document().page()->chromeClient().showImeIfNeeded();
 
 void ChromeClientImpl::showImeIfNeeded()
     call: if (m_webView->client())
