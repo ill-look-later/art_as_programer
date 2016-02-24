@@ -25,8 +25,8 @@ void Element::focus(const FocusParams& params)
     document().page()->chromeClient().showImeIfNeeded();
 
 void ChromeClientImpl::showImeIfNeeded()
-    if (m_webView->client())
-        m_webView->client()->showImeIfNeeded();
+    call: if (m_webView->client())
+            m_webView->client()->showImeIfNeeded();
         
 
 void RenderWidget::showImeIfNeeded():
