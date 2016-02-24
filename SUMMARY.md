@@ -10,4 +10,5 @@
    * [chromium(chrome) event's "from and go" based on linux X11 system](chromiumchrome_events_from_and_go_based_on_linux_x.md)
    * [Google Protocol Buffer 的使用和原理](google_protocol_buffer.md)
    * [nvm 在fish shell中的两种使用方式](nvm_work_on_fish_shell_on_osx.md)
+   * Chromium_input_type_change_call_stack
 
