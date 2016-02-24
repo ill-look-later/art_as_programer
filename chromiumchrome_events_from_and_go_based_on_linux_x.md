@@ -171,5 +171,4 @@ void PlatformEventSource::AddPlatformEventObserver(
 base::ObserverList<PlatformEventObserver> observers_ 
 
 ```
-
 来给平台事件的侦听者发送这些事件消息..
