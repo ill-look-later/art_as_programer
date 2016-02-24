@@ -31,5 +31,4 @@ void RenderWidget::OnShowImeIfNeeded()
 void RenderWidget::UpdateTextInputState(ShowIme show_ime,
                         ChangeSource change_source)
     text_input_type_ = new_type;
-
 ```
