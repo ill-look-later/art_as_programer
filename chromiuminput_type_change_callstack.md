@@ -16,11 +16,11 @@ void EditorClientImpl::respondToChangedSelection(LocalFrame* frame, SelectionTyp
 
 virtual void didChangeSelection(bool isSelectionEmpty) { }
 //override by render_frame
-
+```
 
 
 ## Focus
-
+```
 void Element::focus(const FocusParams& params)
     call: document().page()->chromeClient().showImeIfNeeded();
 
