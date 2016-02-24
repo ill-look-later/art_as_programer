@@ -133,5 +133,5 @@ uint32_t PlatformEventSource::DispatchEvent(PlatformEvent platform_event) {
 
     if (overridden_dispatcher_)
       action = overridden_dispatcher_->DispatchEvent(platform_event);
-定睛一看， 这不是
+定睛一看overridden_dispatcher_成员变量的类型PlatformEventDispatcher* overridden_dispatcher_， 这不是
 
