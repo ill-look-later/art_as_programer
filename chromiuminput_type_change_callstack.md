@@ -19,7 +19,7 @@ virtual void didChangeSelection(bool isSelectionEmpty) { }
 ```
 
 
-## Focus
+## Html element Focus
 ```
 void Element::focus(const FocusParams& params)
     call: document().page()->chromeClient().showImeIfNeeded();
