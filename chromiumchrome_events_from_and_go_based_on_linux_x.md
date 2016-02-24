@@ -130,21 +130,22 @@ uint32_t PlatformEventSource::DispatchEvent(PlatformEvent platform_event) {
 ---
 
 看上面code中的这一句
-
-    if (overridden_dispatcher_)
-      action = overridden_dispatcher_->DispatchEvent(platform_event);
+```
+if (overridden_dispatcher_)
+  action = overridden_dispatcher_->DispatchEvent(platform_event);
     
-    if ((action & POST_DISPATCH_PERFORM_DEFAULT) &&
-      dispatchers_.might_have_observers()) {
+if ((action & POST_DISPATCH_PERFORM_DEFAULT) &&
+  dispatchers_.might_have_observers()) {
     base::ObserverList<PlatformEventDispatcher>::Iterator iter(&dispatchers_);
     while (PlatformEventDispatcher* dispatcher = iter.GetNext()) {
-      if (dispatcher->CanDispatchEvent(platform_event))
+    if (dispatcher->CanDispatchEvent(platform_event))
         action = dispatcher->DispatchEvent(platform_event);
-      if (action & POST_DISPATCH_STOP_PROPAGATION)
+    if (action & POST_DISPATCH_STOP_PROPAGATION)
         break;
     }
-  }
-  FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
-                    DidProcessEvent(platform_event));
+}
+FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
+                  DidProcessEvent(platform_event));
+```    
 定睛一看overridden_dispatcher_成员变量的类型PlatformEventDispatcher* overridden_dispatcher_， PlatformEventDispatcher看上去就是chromium中平台相关的接口，既然到这里，肯定是有某个chromium中的一个类来集成和实现这部分的对接。我检索一下code。
 
