@@ -148,4 +148,14 @@ FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
                   DidProcessEvent(platform_event));
 ```    
 定睛一看overridden_dispatcher_成员变量的类型PlatformEventDispatcher* overridden_dispatcher_， PlatformEventDispatcher看上去就是chromium中平台相关的接口，既然到这里，肯定是有某个chromium中的一个类来集成和实现这部分的对接。我检索一下code。
+发现继承它的是：
+    
+    class AURA_EXPORT WindowTreeHostX11 : public WindowTreeHost,
+                                          public ui::PlatformEventDispatcher
+还有类NativeViewGLSurfaceEGLX11， X11Window， DesktopWindowTreeHostX11，
+当然这部分索引出来的都是linux上x11上的一些code， 其实假设我们最后是把他porting到嵌入式平台不带x11的， 可能系统native 窗口是dfbwindow 或者其他的；或者android平台上的Glsurface. 总之我们可以很容一看出来，是chromium的windowtreehost 或要实现类似功能的模块；也就是说：调用overridden_dispatcher_->DispatchEvent(platform_event);是将事件分发给chromium内部的窗口树的host节点上。
 
+从上面overridden_dispatcher_->DispatchEvent(platform_event);之后代码中我们可以看到， 后面还有如果事件还有其他的oberserver的话， 还会遍历这些PlatformEventObserver 和 其他的PlatformEventDispatcher， 而这些都是通过调用函数 **PlatformEventSource::AddPlatformEventDispatcher** 来添加额外的平台事件分发者， 还有通过
+
+    base::ObserverList<PlatformEventObserver> observers_ 
+来给平台事件的侦听者发送这些事件消息..
