@@ -170,4 +170,4 @@ void PlatformEventSource::AddPlatformEventObserver(
 .h
 base::ObserverList<PlatformEventObserver> observers_ 
 ```
-来给平台事件的侦听者发送这些事件消息.. 至此， chromium平台事件到此结束。而后面的事件处理就是chromium本身给自己的UI系统也就是基于全新的Aura的子系统分发这些事件， 当让在这个之前，得将这些事件从从PlatEvent 转化成uiEvent， 具体请参见各个继承者对DispatchEvent的具体实现。
+来给平台事件的侦听者发送这些事件消息.. 至此， chromium平台事件到此结束。而后面的事件处理就是chromium本身给自己的UI系统也就是基于全新的Aura的子系统分发这些事件， 当让在这个之前，得将这些事件从从PlatEvent 转化成uiEvent， 具体请参见各个继承者对DispatchEvent的具体实现。不同平台拿上来的平台事件也不同有Xevent， 也有windows的 Msg事件 嵌入式平台上也有DFBEvent
