@@ -1,4 +1,10 @@
 # Chromium_input_type_change_call_stack
+###主要三种情况
+- html element focus
+- pepper plugin set focus
+- mouse select event for editor
+---
+
 
 ```
 void EditorClientImpl::respondToChangedSelection(LocalFrame* frame, SelectionType selectionType)
