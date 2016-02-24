@@ -30,7 +30,8 @@ void ChromeClientImpl::showImeIfNeeded()
         
 void RenderWidget::showImeIfNeeded():
 // override src/third_party/WebKit/public/web/WebWidgetClient.h	
-    OnShowImeIfNeeded();
+    call: OnShowImeIfNeeded();
+
 void RenderWidget::OnShowImeIfNeeded()
     Call: UpdateTextInputState
     
