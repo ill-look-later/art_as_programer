@@ -11,4 +11,5 @@
    * [Google Protocol Buffer 的使用和原理](google_protocol_buffer.md)
    * [nvm 在fish shell中的两种使用方式](nvm_work_on_fish_shell_on_osx.md)
    * [Chromium_input_type_change_call_stack](chromiuminput_type_change_callstack.md)
+   * chromium_webElement_Paint_and_update
 
