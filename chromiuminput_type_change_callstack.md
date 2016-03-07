@@ -4,9 +4,7 @@
 - pepper plugin set focus
 - mouse select event for editor
 ---
-<ol>
-google.com
-</ol>
+
 ### Mouse selection Event
 ```
 void EditorClientImpl::respondToChangedSelection(LocalFrame* frame, SelectionType selectionType)
