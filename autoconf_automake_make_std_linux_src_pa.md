@@ -122,18 +122,19 @@ AC_HEADER_STDC
 dnl 输出文件，一般来说顶级目录和各子目录都应有Makefile输出
 AC_OUTPUT(Makefile src/Makefile)
 ```
-
-　　./configure的自定义参数有两种，一种是开关式(--enable-XXX或--disable-XXX)，另一种是开放式，即后面要填入一串字符(--with-XXX=yyyy)参数。
+./configure的自定义参数有两种，一种是开关式(--enable-XXX或--disable-XXX)，另一种是开放式，即后面要填入一串字符(--with-XXX=yyyy)参数。
 　　上述代码中用的是开关式，第一个参数是参数名，第二个是说明(执行"./configure --help"后所显示出来的内容)，最后一个参数是默认值。一般来说默认值和用户提示应该是互斥的，即默认值是no的话，应提示用户用enable进行修改，反之亦然。
 　　从上面的代码中可以看到，如果$enable_popo为yes的话，就用AC_DEFINE来定义POPO这个宏(Macro)，否则就不定义，我们在这里所使用到的宏，一定要在acconfig.h中声明。
-第二步　运行aclocal　在tt目录下运行aclocal，将会生成aclocal.m4。
-第三步　编写acconfig.h
+  
+- 第二步　运行aclocal　在tt目录下运行aclocal，将会生成aclocal.m4。
+- 第三步　编写acconfig.h
 　　在configure.in中使用到的宏(Macro)，都应该在这个文件声明，一般用#undef来声明。
 acconfig.h
+```
 #undef POPO
+```
 
-
-第四步　运行autoheader
+###第四步　运行autoheader
 　　运行autoheader后会根据configure.in、acconfig.h和系统预设的acconfig.h来生成config.h.in。
 第五步　编写Makefile.am
 　　一般来说，在顶级目录和各子目录都应有一个Makefile.am。
