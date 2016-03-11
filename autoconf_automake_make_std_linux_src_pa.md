@@ -162,7 +162,7 @@ tt_SOURCES = tt.c qq.c qq.h
 第七步　运行autoconf
 　　最后，可以执行autoconf了，完成后将会生成最终的configure！
 
-四、编译&测试
+###四、编译&测试
 　　用默认值编译：
 ```
 [root@chiosoft tt]# ./configure
