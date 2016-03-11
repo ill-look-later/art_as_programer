@@ -207,6 +207,12 @@ QQ: Hey PoPo, long time no see.
 此外，我们也可以用make install来安装，预设是安装至/usr/local/bin下，当然，这些都是可以修改的。
 
 ###五、生成发布包tarball
+
 　　好了，至今为止，我们的小软件已经测试完毕，可以发布了，在tt下有很多文件，有的是我们自己写的，也有些是编译时生成的临时档案，到底哪些需 要打包到发行包中呢？当然你可以自己一个一个文件挑选，但用automake生成的Makefile提供了几个极方便的功能给我们。
-　　我们可以用make dist或make distcheck来生成相应的tarball，其中后者还会帮我们测试发布包能否正常工作，所以个人推荐使用make distcheck。
-　　看到了吧？发布包tt-0.1.0.tar.gz已经放到tt下了，有没有留意，这里用的软件名及版本号正是 configure.in中AM_INIT_AUTOMAKE所带的两个参数！现在你可以试试把它解压安装了。
+　　
+
+我们可以用make dist或make distcheck来生成相应的tarball，其中后者还会帮我们测试发布包能否正常工作，所以个人推荐使用make distcheck。
+
+
+看到了吧？发布包tt-0.1.0.tar.gz已经放到tt下了，有没有留意，这里用的软件名及版本号正是 configure.in中AM_INIT_AUTOMAKE所带的两个参数！现在你可以试试把它解压安装了。
+
