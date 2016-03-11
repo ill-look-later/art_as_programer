@@ -143,8 +143,8 @@ Makefile
 AUTOMAKE_OPTIONS = foreign
 SUBDIRS = src
 ```
-　　第一行是告诉automake不要检测目录中是否存在AUTHORS、README等文件。
-　　第二行是告诉automake处理src这个子目录。
+  * 第一行是告诉automake不要检测目录中是否存在AUTHORS、README等文件。
+  * 第二行是告诉automake处理src这个子目录。
 
 src/Makefile
 AUTOMAKE_OPTIONS = foreign
