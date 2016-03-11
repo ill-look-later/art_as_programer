@@ -29,7 +29,7 @@ refs:http://blog.chinaunix.net/uid-24704319-id-2594460.html
 
 ※源代码内容：
 tt.c
-
+```
 #include <stdio.h>
 #include <qq.h>
 
@@ -51,10 +51,10 @@ int main(void)
 
    return 0;
 }
-
+```
 qq.c
 
-
+```
 #include <stdio.h>
 #include <qq.h>
 
@@ -70,15 +70,16 @@ void qq(void)
    printf("QQ: Hey PoPo, long time no see.\n");
    #endif
 }
+```
 qq.h 
-
+```
 #ifndef __QQ__
 #define __QQ__
 
 void qq(void);
 
 #endif
-
+```
 
 
 ※运行流程：
