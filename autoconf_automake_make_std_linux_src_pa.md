@@ -181,8 +181,10 @@ Checking for ......
 Hello, I am teacher(23), pls tell me your names!
 My name is QQ
 ```
-　　默认状态下，我们没有定义宏POPO，所以./configure时输出"PoPo isn't here!"，运行时也只有QQ来报到。
-　　再看看这个： 
+默认状态下，我们没有定义宏POPO，所以./configure时输出"PoPo isn't here!"，运行时也只有QQ来报到。
+
+> 再看看这个： 
+
 ```
 [root@chiosoft tt]# ./configure --help
 ......
