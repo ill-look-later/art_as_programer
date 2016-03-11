@@ -145,15 +145,16 @@ SUBDIRS = src
 ```
   * 第一行是告诉automake不要检测目录中是否存在AUTHORS、README等文件。
   * 第二行是告诉automake处理src这个子目录。
-
+```
 src/Makefile
 AUTOMAKE_OPTIONS = foreign
 bin_PROGRAMS = tt
 tt_SOURCES = tt.c qq.c qq.h
+```
+　* 第一行作用同前。
+　* 第二行是目标执行档的名称。
+　* 第三行是生成tt这个执行档所需的所有源程序和头文件名称。
 
-　　第一行作用同前。
-　　第二行是目标执行档的名称。
-　　第三行是生成tt这个执行档所需的所有源程序和头文件名称。
 - 第六步　运行automake
 　　接著可以执行automake了，在命令行下输入
 　　　　automake -a　和
