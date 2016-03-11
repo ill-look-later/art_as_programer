@@ -93,11 +93,11 @@ void qq(void);
 请按照以下的执行顺序一步一步做：
 
 - 第一步　编写configure.in
-　　
-  生成configure.in的方法有两个，一个是自己从零开始写，另一个方法是用autoscan，执行autoscan后会生成configure.scan，其中包含了一些模板内容，使用时只要把名字改成.in就可以。
-　　configure.in中使用的命令有两种，一种是以AC开头，表示是由autoconf提供，另一种是以AM开头，代表由automake提供。
-　　在configure.in我们可以完成很多检测动作，比如检查编译所需的程式、头文件、库等等，总之功能是十分强大，不过我们这里只检测了编译器和头文件，详细用法请看 GNU Manuals Online
-　　以"dnl"为首的行为注释行(代码中绿色部份)。
+
+  * 生成configure.in的方法有两个，一个是自己从零开始写，另一个方法是用autoscan，执行autoscan后会生成configure.scan，其中包含了一些模板内容，使用时只要把名字改成.in就可以。
+  * configure.in中使用的命令有两种，一种是以AC开头，表示是由autoconf提供，另一种是以AM开头，代表由automake提供。
+  * 在configure.in我们可以完成很多检测动作，比如检查编译所需的程式、头文件、库等等，总之功能是十分强大，不过我们这里只检测了编译器和头文件，详细用法请看 GNU Manuals Online
+  * 以"dnl"为首的行为注释行(代码中绿色部份)。
 
 configure.in
 ```
