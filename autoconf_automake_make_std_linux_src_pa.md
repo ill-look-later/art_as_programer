@@ -203,8 +203,7 @@ My name is QQ
 QQ: Hey PoPo, long time no see.
 ```
 
-可以看到./configure时输出"PoPo is here!"，执行结果也完全不一样！
-此外，我们也可以用make install来安装，预设是安装至/usr/local/bin下，当然，这些都是可以修改的。
+可以看到./configure时输出"PoPo is here!"，执行结果也完全不一样！此外，我们也可以用make install来安装，预设是安装至/usr/local/bin下，当然，这些都是可以修改的。
 
 ###五、生成发布包tarball
 
