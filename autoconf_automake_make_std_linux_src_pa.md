@@ -4,11 +4,11 @@ refs:http://blog.chinaunix.net/uid-24704319-id-2594460.html
 
 本文教你如何使用autoconf、automake等来制作一个以源代码形式(.tar.gz)发布的软件、并可在执行configure时使用自定义参数。
 
-一、概述和基础知识
+###一、概述和基础知识
 　　在Linux下得到一个以源代码形式发布的包(一般为.tar.gz或.tar.bz2格式)，我们可以用 ./confiugure、make、make install来编译安装，其中在运行./configure的时候还可以根据自己的需要加入不同的参数(可用./configure --help来查看参数表)。
 　　先说说执行./configure后会生成什么东西？运行后系统会根据用户的实际情况生成config.h和多个Makefile。其中 Makefile是运行make时所用的模板；而config.h则会以宏(Marco)的形式记录用户的自定义参数，编译器可以根据config.h来 对源代码进行预编译(pre-compile)，从而生成个性化的执行档。
 
-二、我们的“软件”
+###二、我们的“软件”
 　　现在我们可以动手设计一个自己的“软件”了，为了更切合实际，将使用多个源程序，首先建立一个目录tt，用来放我们的东西，然后在tt下建立一个src目录，一般来说源代码都放在src中(好像已经成为一个不成文的规矩了:P)。整体架构如下：
 ```
 　　<tt>
