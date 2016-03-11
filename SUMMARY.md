@@ -13,5 +13,5 @@
    * [Chromium_input_type_change_call_stack](chromiuminput_type_change_callstack.md)
    * [chromium_webElement_Paint_and_update](chromiumwebelement_paint_and_update.md)
    * [用Nodejs搭建weixin公众平台入门例子](use_nodejs_setup_weixin_PublicAPI_platform_example.md)
-   * HowTo_using_autoconf_automake_Make_std_linux_src_package
+   * [HowTo_using_autoconf_automake_Make_std_linux_src_package](autoconf_automake_make_std_linux_src_pa.md)
 
