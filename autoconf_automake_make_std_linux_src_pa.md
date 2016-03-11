@@ -1,5 +1,5 @@
 ## HowTo_using_autoconf_automake_Make_std_linux_src_package
-
+---
 refs:http://blog.chinaunix.net/uid-24704319-id-2594460.html
 
 本文教你如何使用autoconf、automake等来制作一个以源代码形式(.tar.gz)发布的软件、并可在执行configure时使用自定义参数。
