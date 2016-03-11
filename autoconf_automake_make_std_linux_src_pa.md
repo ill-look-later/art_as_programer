@@ -128,7 +128,7 @@ AC_OUTPUT(Makefile src/Makefile)
 - 第三步　编写acconfig.h
 - 在configure.in中使用到的宏(Macro)，都应该在这个文件声明，一般用#undef来声明。
 
-> acconfig.h
+acconfig.h
 ```
 #undef POPO
 ```
