@@ -89,7 +89,7 @@ void qq(void);
 　　显然易见，PoPo是否出席，完全取决于POPO这个宏(Macro)有否被定义，我们只要在编译前决定要不要定义它，就能实现不同的效果。
 　　如果config.h存在的话，编译时Makefile会把宏HAVE_CONFIG_H传给编译器，所以如果没有定义HAVE_CONFIG_H 的话，我们的程序不应该把config.h include进去。
 
-三、制作流程
+###三、制作流程
 请按照以下的执行顺序一步一步做：
 第一步　编写configure.in
 　　生成configure.in的方法有两个，一个是自己从零开始写，另一个方法是用autoscan，执行autoscan后会生成configure.scan，其中包含了一些模板内容，使用时只要把名字改成.in就可以。
@@ -98,6 +98,7 @@ void qq(void);
 　　以"dnl"为首的行为注释行(代码中绿色部份)。
 
 configure.in
+```
 dnl 初始化autoconf，参数为入口函数所在的文件
 AC_INIT(src/tt.c)
 dnl 初始化automake，参数为软件名称及版本号
@@ -118,7 +119,7 @@ dnl 检测Standard C的头文件
 AC_HEADER_STDC
 dnl 输出文件，一般来说顶级目录和各子目录都应有Makefile输出
 AC_OUTPUT(Makefile src/Makefile)
-
+```
 
 　　./configure的自定义参数有两种，一种是开关式(--enable-XXX或--disable-XXX)，另一种是开放式，即后面要填入一串字符(--with-XXX=yyyy)参数。
 　　上述代码中用的是开关式，第一个参数是参数名，第二个是说明(执行"./configure --help"后所显示出来的内容)，最后一个参数是默认值。一般来说默认值和用户提示应该是互斥的，即默认值是no的话，应提示用户用enable进行修改，反之亦然。
