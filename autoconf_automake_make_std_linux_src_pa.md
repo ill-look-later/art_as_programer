@@ -136,7 +136,7 @@ acconfig.h
 - 第四步　运行autoheader
   - 运行autoheader后会根据configure.in、acconfig.h和系统预设的acconfig.h来生成config.h.in。
 - 第五步　编写Makefile.am
-　- 一般来说，在顶级目录和各子目录都应有一个Makefile.am。
+  - 一般来说，在顶级目录和各子目录都应有一个Makefile.am。
 ```
 Makefile
 AUTOMAKE_OPTIONS = foreign
