@@ -10,6 +10,7 @@ refs:http://blog.chinaunix.net/uid-24704319-id-2594460.html
 
 二、我们的“软件”
 　　现在我们可以动手设计一个自己的“软件”了，为了更切合实际，将使用多个源程序，首先建立一个目录tt，用来放我们的东西，然后在tt下建立一个src目录，一般来说源代码都放在src中(好像已经成为一个不成文的规矩了:P)。整体架构如下：
+```
 　　<tt>
 　　　|-configure.in
 　　　|-Makefile.am
@@ -19,6 +20,7 @@ refs:http://blog.chinaunix.net/uid-24704319-id-2594460.html
 　　　　　|-qq.c
 　　　　　|-qq.h
 　　　　　|-Makefile.am
+```
 ※说明:
 1. configure.in　这是最重要的文档，整个安装过程都靠它来主导。
 2. Makefile.am　automake会根据它来生成Makefile.in，再由./configure 把Makefile.in变成最终的Makefile，一般来说在顶级目录和各个子目录都应该有一个Makefile.am
