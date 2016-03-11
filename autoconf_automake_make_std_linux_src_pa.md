@@ -202,8 +202,9 @@ My name is PoPo!
 My name is QQ
 QQ: Hey PoPo, long time no see.
 ```
-　　可以看到./configure时输出"PoPo is here!"，执行结果也完全不一样！
-　　此外，我们也可以用make install来安装，预设是安装至/usr/local/bin下，当然，这些都是可以修改的。
+
+可以看到./configure时输出"PoPo is here!"，执行结果也完全不一样！
+此外，我们也可以用make install来安装，预设是安装至/usr/local/bin下，当然，这些都是可以修改的。
 
 ###五、生成发布包tarball
 　　好了，至今为止，我们的小软件已经测试完毕，可以发布了，在tt下有很多文件，有的是我们自己写的，也有些是编译时生成的临时档案，到底哪些需 要打包到发行包中呢？当然你可以自己一个一个文件挑选，但用automake生成的Makefile提供了几个极方便的功能给我们。
