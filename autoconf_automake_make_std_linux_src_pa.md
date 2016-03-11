@@ -134,15 +134,15 @@ acconfig.h
 #undef POPO
 ```
 
-###第四步　运行autoheader
+- 第四步　运行autoheader
 　　运行autoheader后会根据configure.in、acconfig.h和系统预设的acconfig.h来生成config.h.in。
-第五步　编写Makefile.am
+- 第五步　编写Makefile.am
 　　一般来说，在顶级目录和各子目录都应有一个Makefile.am。
-
+```
 Makefile
 AUTOMAKE_OPTIONS = foreign
 SUBDIRS = src
-
+```
 　　第一行是告诉automake不要检测目录中是否存在AUTHORS、README等文件。
 　　第二行是告诉automake处理src这个子目录。
 
@@ -154,13 +154,13 @@ tt_SOURCES = tt.c qq.c qq.h
 　　第一行作用同前。
 　　第二行是目标执行档的名称。
 　　第三行是生成tt这个执行档所需的所有源程序和头文件名称。
-第六步　运行automake
+- 第六步　运行automake
 　　接著可以执行automake了，在命令行下输入
 　　　　automake -a　和
 　　　　automake -a src/Makefile
 　　使用"automake -a"或"automake --add-missing"，会自动将install.sh、mkinstalldirs等文件补齐，否则会出错，切记!
-第七步　运行autoconf
-　　最后，可以执行autoconf了，完成后将会生成最终的configure！
+- 第七步　运行autoconf
+- 最后，可以执行autoconf了，完成后将会生成最终的configure！
 
 ###四、编译&测试
 　　用默认值编译：
