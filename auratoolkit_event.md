@@ -1,4 +1,7 @@
 # Aura_Toolkit_Event
+ui/views/widget/desktop_aura/desktop_native_widget_aura.cc
+  void DesktopNativeWidgetAura::RepostNativeEvent(gfx::NativeEvent native_event)
+
 ui/events/event_handler.cc
   void EventHandler::OnEvent(Event* event)
 
