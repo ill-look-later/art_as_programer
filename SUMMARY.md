@@ -15,4 +15,5 @@
    * [用Nodejs搭建weixin公众平台入门例子](use_nodejs_setup_weixin_PublicAPI_platform_example.md)
    * [HowTo_using_autoconf_automake_Make_std_linux_src_package](autoconf_automake_make_std_linux_src_pa.md)
    * [Aura_Toolkit_Event](auratoolkit_event.md)
+   * The Relationship Between View && aura::window
 
