@@ -1,4 +1,9 @@
 # Aura_Toolkit_Event
+
+
+0x0000000004de5c25 in ui::(anonymous namespace)::XSourceDispatch (source=0x16b02cd9f860, unused_func=0x0, data=0x16b02ce37a40)
+    at ../../ui/events/platform/x11/x11_event_source_glib.cc:39
+
 ui/views/widget/desktop_aura/desktop_native_widget_aura.cc
   void DesktopNativeWidgetAura::RepostNativeEvent(gfx::NativeEvent native_event)
 ```
