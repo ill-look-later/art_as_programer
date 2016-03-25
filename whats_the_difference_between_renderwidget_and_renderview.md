@@ -1,5 +1,5 @@
 ####FAQ: What's the difference between RenderWidget and RenderView?
----
+
 
       RenderWidget maps to one WebCore::Widget object by implementing the abstract
     interface in the glue layer called WebWidgetDelegate.. 
