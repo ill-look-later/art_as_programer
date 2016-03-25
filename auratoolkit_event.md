@@ -2,6 +2,70 @@
 
 
 0x0000000004de5c25 in ui::(anonymous namespace)::XSourceDispatch (source=0x16b02cd9f860, unused_func=0x0, data=0x16b02ce37a40) at ../../ui/events/platform/x11/x11_event_source_glib.cc:39
+ 0x0000000004de534b in ui::X11EventSource::DispatchXEvents (this=0x16b02ce37a40) at ../../ui/events/platform/x11/x11_event_source.cc:118
+ 
+ 0x0000000004de543f in ui::X11EventSource::DispatchEvent (this=0x16b02ce37a40, xevent=0x7fffffffc7b8)
+    at ../../ui/events/platform/x11/x11_event_source.cc:142
+    
+0x0000000004dde023 in ui::PlatformEventSource::DispatchEvent (this=0x16b02ce37a40, platform_event=0x7fffffffc7b8)
+    at ../../ui/events/platform/platform_event_source.cc:79
+    
+0x0000000004a6bfdf in non-virtual thunk to views::DesktopWindowTreeHostX11::DispatchEvent(_XEvent* const&) ()
+    at ../../ui/views/widget/desktop_aura/desktop_window_tree_host_x11.cc:1916
+
+views::DesktopWindowTreeHostX11::DispatchEvent
+
+ui::EventSource::SendEventToProcessor
+
+ui::EventSource::DeliverEventToProcessor
+
+ui::EventProcessor::OnEventFromSource
+
+ui::EventDispatcherDelegate::DispatchEvent
+
+ui::EventDispatcherDelegate::DispatchEventToTarget
+
+ui::EventDispatcher::ProcessEvent
+
+ui::EventDispatcher::DispatchEventToEventHandlers
+
+ui::EventDispatcher::DispatchEvent
+
+ui::EventHandler::OnEvent
+
+wm::CompoundEventFilter::OnKeyEvent
+
+wm::CompoundEventFilter::FilterKeyEvent
+
+wm::InputMethodEventFilter::OnKeyEvent
+
+ui::InputMethodAuraLinux::DispatchKeyEvent
+
+ui::InputMethodBase::DispatchKeyEventPostIME
+
+wm::InputMethodEventFilter::DispatchKeyEventPostIME
+
+wm::InputMethodEventFilter::DispatchKeyEventPostIME
+
+ui::EventProcessor::OnEventFromSource
+
+ui::EventDispatcherDelegate::DispatchEvent
+
+ui::EventDispatcherDelegate::DispatchEventToTarget
+
+ui::EventDispatcher::ProcessEvent
+
+ui::EventDispatcher::DispatchEvent
+
+ui::EventTarget::OnEvent
+
+ui::EventHandler::OnEvent
+
+views::DesktopNativeWidgetAura::OnKeyEvent(ui::KeyEvent*)
+
+views::DesktopNativeWidgetAura::OnKeyEvent
+
+ views::Widget::OnKeyEvent
 
 ui/views/widget/desktop_aura/desktop_native_widget_aura.cc
   void DesktopNativeWidgetAura::RepostNativeEvent(gfx::NativeEvent native_event)
