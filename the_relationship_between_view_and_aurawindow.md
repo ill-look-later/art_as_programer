@@ -8,5 +8,4 @@ webcontent 维护着一个webcontentview的对象，下面是webcontentview的�
     // The WebContentsView is an interface that is implemented by the platform-
     // dependent web contents views. The WebContents uses this interface to talk to
     // them.
-webcontentview 里面维护着nativewindow(aura平台的aura::window)
-nativeview ———aura::window
+webcontentview 里面维护着nativewindow(aura平台的aura::window)nativeview ———aura::window
