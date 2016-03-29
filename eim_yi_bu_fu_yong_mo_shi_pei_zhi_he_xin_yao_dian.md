@@ -9,12 +9,12 @@ freescale预留的接口可以满足绝大部分的需求， 但是在官方的�
 
 ####下面基本上是当是的一个笔记
 我们可用的信号/引脚：
-Addr ： A24-A16 DA15-DA0
-Data ： DA15 - DA0
+    Addr ： A24-A16 DA15-DA0
+    Data ： DA15 - DA0
 所以：
-mum = 0；
-Dsz  = 001；
+    mum = 0；
+    Dsz  = 001；
 And：如果在mum=1时，及复用时想使用异步读/异步写的模式的话
 SRD = 0；
 SWR = 0；
-![](file:///Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-0@2x.png)
+![](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-0@2x.png)
