@@ -1,4 +1,3 @@
-
 # Web IDL on chromium
 
 
@@ -6,4 +5,4 @@
 - [web-idl-interfaces](https://www.chromium.org/developers/web-idl-interfaces)
 - [webidl](https://www.chromium.org/blink/webidl)
 
-### 在idl中描述的属性和方法一定要按照规则编写，不然的话很容易出错
+** 在idl中描述的属性和方法一定要按照规则编写，不然的话很容易出错**
