@@ -59,10 +59,11 @@ Caution should be exercised for using OEA/WEA & ADH bit fields. They should be c
 ####核心寄存器代码配置16bin非复用
 
 - 读写寄存器配置：
-![]()
+![](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-3@2x.png)
 
 
-
+数据读写部分，这里的作用仅仅当把EIM作为字符设备打开操作的时候使用，其他时候推荐利用内存映射map函数进行读写。更安全和高效；
+![](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-4@2x.png)
 
 
 
