@@ -13,3 +13,12 @@ LocalFram
 通过client()可以访问FrameClient
 FrameClient()里通过page()拿到chromeClient
   page()->chromeClient()
+  
+  
+      WebLocalFrameImpl* webframe = WebLocalFrameImpl::fromFrame(frame);
+    if (webframe->client()) {
+        if (WebUserGestureIndicator::isProcessingUserGesture())
+            WebUserGestureIndicator::currentUserGestureToken().setJavascriptPrompt();
+        webframe->client()->runModalAlertDialog(message);
+        return true;
+    }
