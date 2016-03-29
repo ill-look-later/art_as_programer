@@ -56,4 +56,4 @@ Caution should be exercised for using OEA/WEA & ADH bit fields. They should be c
 ![读写时序](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-2@2x.png)
 
 
-####核心寄存器代码配置
+####核心寄存器代码配置16bin非复用
