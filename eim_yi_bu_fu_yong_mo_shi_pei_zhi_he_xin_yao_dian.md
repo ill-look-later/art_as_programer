@@ -17,6 +17,6 @@ freescale预留的接口可以满足绝大部分的需求， 但是在官方的�
     mum = 0；
     Dsz  = 001；
 And：如果在mum=1时，及复用时想使用异步读/异步写的模式的话
-SRD = 0；
-SWR = 0；
+    SRD = 0；
+    SWR = 0；
 ![](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-0@2x.png)
