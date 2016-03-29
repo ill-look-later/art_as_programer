@@ -33,6 +33,7 @@ The EIM has a data multiplexer which takes the four bytes of the AXI data bus an
 ![Image table 22-6](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-1@2x.png)
 
 ####22.5.6 Multiplexed Address/Data Mode Support
+
 - The control bit MUM allows support memory with multiplexed address/data bus both in asynchronous and in synchronous modes.
 Caution should be exercised for using OEA/WEA & ADH bit fields. They should be configured according to the external device requirements, as it determines the time point of end of address phase and start of data phase.
 
@@ -46,6 +47,8 @@ Caution should be exercised for using OEA/WEA & ADH bit fields. They should be c
 > ADH bit determine the address hold time after ADV negation in muxed mode
 
 ####22.5.9 WAIT_B Signal, RWSC and WWSC bit fields Usage
+
+
 - Most of the external devices supporting burst mode for write or read accesses provide a signal which indicates data is valid on the memory bus (a.k.a. handshake mode). For this mode, RFL and WFL bits should be cleared and RWSC/ WWSC bit fields indicate when the controller should start sampling this signal from the external device or, in other words, how many BCLK cycles should be masked.
 - For devices which do not use this signal or have a fixed latency ability, the RFL and WFL bits may be set for internal calculation regarding BCLK cycles penalty until data is valid (memory initial access time). For this mode, RWSC/ WWSC indicates when the data is ready for sampling by the controller (read access) or the external device (write access). There is separation between read and write accesses wait-state control. For read access, RWSC bit field is valid and WWSC bit field is ignored; for write access, WWSC is valid and RWSC is ignored.
 
