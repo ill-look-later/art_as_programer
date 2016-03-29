@@ -53,4 +53,7 @@ Caution should be exercised for using OEA/WEA & ADH bit fields. They should be c
 
 ####22.8.3 Asynchronous Read/Write Memory Accesses Timing Diagram
 
+![读写时序](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-2@2x.png)
 
+
+####核心寄存器代码配置
