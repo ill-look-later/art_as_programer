@@ -59,3 +59,13 @@ Caution should be exercised for using OEA/WEA & ADH bit fields. They should be c
 ####核心寄存器代码配置16bin非复用
 
 - 读写寄存器配置：
+
+
+
+
+
+
+
+
+
+
