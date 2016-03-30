@@ -26,8 +26,12 @@ open msg err
     
     - 不知你们那边对migaole 输入法engine是否有过成功调试的测试例子。如果有，是否可以提供参考，以便我们尽快推进集成到browsesr当中。
 
-@郭工， 你好， 除了提供的 “输入法SERVICE介绍.xls" 中调用流程和cmd的介绍之外， 是否还有更详细的说明；
-    -example： IPC_SERVICE_ANS_KEYBOARD_INFO 这个ipc返回的数据
+@郭工，
+  
+你好， 除了提供的 “输入法SERVICE介绍.xls" 中调用流程和cmd的介绍之外， 是否还有更详细的说明；
+
+- example：文档中说到了如下的调用返回 
+IPC_SERVICE_ANS_KEYBOARD_INFO 这个ipc返回的数据
 SERVICE键盘布局
 data0:非0 失败（失败就不要继续解析） 0 成功
 data1:总共多少按键		
