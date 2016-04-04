@@ -157,3 +157,4 @@ Loader { //the main content for display
   
 ---
 - 图二
+![添加新的rss Feed](QQ20160404-1.png)
