@@ -16,7 +16,7 @@
 　　借助于QML这种描述性脚本语言的特性。写这样的UI实在是太简单了。简单地都超出了我对桌面应用开发的理解。没写几行代码，事情基本上就搞定了。背后的动画原理基本上都不用脑子去考虑，对于我这种习惯了用C思维来思考的人，简直是中精神上的藐视...
 
 【图一】中所看到的这种见面，其实代码写了不到500行，而有意义的代码估计能有100行就不错了。下面是几点QML的知识。
-- splitview
-- webengineView Qt在5.4之后就引入了chromium项目作为web engine了，对于应用层面变化不大，暂时webengine的接口变化的比较快，改动也不较多，相信会慢慢地稳定下来。
-- StackView {ps： 就是C中得一个栈，不过你push进去的时一个个页面而已}
-- QML中得MVC————View - model - delegate
+- **splitview** 
+- **webengineView** Qt在5.4之后就引入了chromium项目作为web engine了，对于应用层面变化不大，暂时webengine的接口变化的比较快，改动也不较多，相信会慢慢地稳定下来。
+- **StackView** {ps： 就是C中得一个栈，不过你push进去的时一个个页面而已}
+- **QML中得MVC**————View - model - delegate
