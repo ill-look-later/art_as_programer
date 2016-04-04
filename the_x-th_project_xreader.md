@@ -158,3 +158,6 @@ Loader { //the main content for display
 ---
 - 图二
 ![添加新的rss Feed](QQ20160404-1.png)
+
+
+这个对话框是不是特别有feel。一开始我尝试了平台原生的对话框。但是在mac上那个对话框弹出来之后立马给我吓坏了。所以最后把他做成这样了。
