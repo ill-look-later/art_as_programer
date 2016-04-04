@@ -145,4 +145,11 @@ ApplicationWindow {
 
 }
 ```
-　　上面的main.qml基本上能看出个大概接口，就是左边一个Feed管理的StackView。右边一个contentView用来展示内容，不过这里做了一点点内存和扩展上得优化，使用了一个Loader。这个Loader就好比一个占位置的指针。最后它展示什么取决于我们通过Loader导入了什么。
+　　上面的main.qml基本上能看出个大概接口，就是左边一个Feed管理的StackView。右边一个contentView用来展示内容，不过这里做了一点点内存和扩展上得优化，使用了一个Loader。这个Loader就好比一个占位置的指针。最后它展示什么取决于我们通过Loader导入了什么。所以这里当我们不需要显示或者想显示别的东西的时候都可以很灵活地处理。比如将Loader的Source属性设置成空（“”）这样就会在析构掉当前loader的界面。真的是内存管理的利器呀...
+```
+            Loader { //the main content for display
+                id: content_loader
+                anchors.fill: parent
+                source: "qrc:/src/ContentWebView.qml"
+            }
+```
