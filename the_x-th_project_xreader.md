@@ -17,6 +17,6 @@
 
 【图一】中所看到的这种见面，其实代码写了不到500行，而有意义的代码估计能有100行就不错了。下面是几点QML的知识。
 - splitview
-- webengineView
+- webengineView Qt在5.4之后就引入了chromium项目作为web engine了，对于应用层面变化不大，暂时webengine的接口变化的比较快，改动也不较多，相信会慢慢地稳定下来。
 - StackView {ps： 就是C中得一个栈，不过你push进去的时一个个页面而已}
 - QML中得MVC————View - model - delegate
