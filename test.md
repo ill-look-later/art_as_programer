@@ -27,7 +27,7 @@ totalrow 4,rownumber=0
 
 
 
-> case 2集成到我们的代码中后的log： 可以看到从rownumber=243之后数据就不正确了， UTF8 和 UTF16编码结果都是这样的
+> case 2集成到我们的代码中后的log： 可以看到从rownumber=243之后数据就不正确了， UTF8 和 UTF16编码结果都是这样的；
 
 ```
 keyboard total num =30
@@ -47,3 +47,5 @@ totalrow 4,rownumber=243
 
 The keyboard keychar is:[]
 ```
+
+还请@何工， @郭工 帮忙分析这个问题；
