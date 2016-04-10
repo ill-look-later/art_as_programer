@@ -161,7 +161,7 @@ Loader { //the main content for display
 这两个view就是你在main.qml文件中看到的那个stackview对应的两个view；只要我们依次把它们通过下面这个接口
     
     stack_view.push({item:article_list_view, destroyOnPop:true})
-接口push到stackview当中即可，stackview还有一个属性 **initialItem**可以用来设置stackview的默认的第一个view，相当于在Component.onCompleted时将这个默认的view push进去而已
+接口push到stackview当中即可，其中push可以接收参数用来控制view的生命周期和一些属性的值，具体参考文档中得说明即可；stackview还有一个属性 **initialItem**可以用来设置stackview的默认的第一个view，相当于在Component.onCompleted时将这个默认的view push进去而已
 
 
 
