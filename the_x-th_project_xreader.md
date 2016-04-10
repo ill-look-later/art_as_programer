@@ -208,7 +208,8 @@ Loader { //the main content for display
 - 第二种方式就更容易管理了，你需要释放资源时，只要简单地通过Loader元素的**source 或者 sourceComponent**属性赋值为undefined或者”“即可；
 
 - 图片二
-![FeedManagerView](ddd.png)  ![ArticleListView](QQ20160410-0@2x.png)
+![FeedManagerView](ddd.png)  
+![ArticleListView](QQ20160410-0@2x.png)
 
 ##### 添加新feed的dialog
 - 图三
