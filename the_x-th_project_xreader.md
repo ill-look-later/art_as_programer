@@ -210,7 +210,7 @@ Loader { //the main content for display
 ![FeedManagerView](ddd.png)  ![ArticleListView](QQ20160410-0@2x.png)
 
 ##### 添加新feed的dialog
-- 图二
+- 图三
 ![添加新的rss Feed](QQ20160404-1.png)
 
 
