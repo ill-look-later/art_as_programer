@@ -157,6 +157,15 @@ Loader { //the main content for display
 　　其实这段代码也让我之后做的一些小折腾变得可能。直接load一个另外一个功能模块就可以轻松地扩展这个应用。借助于qt的特性。这个source还可以是网络上的qml文件。所以真TMD方便。关键就这么几句话呀。用我这中习惯C家族的死脑筋真的是看的目瞪口呆呀...{^&^}（ps: 其实早就习惯了qml得这个特性...）main.qml 中那些**FeedManagerView** **ArticleListView**这些只不过是一些视图模块而已。就是这么简单；代码中绝大一部分都是定位和布局的代码，可以说几乎无关紧要！
   
 ---
+##### FeedmannagerView 和 ArticleListView
+这两个view就是你在main.qml文件中看到的那个stackview对应的两个view；只要我们依次把它们通过
+    
+    stack_view.push({item:article_list_view, destroyOnPop:true})
+接口push到stackview当中即可，stackview还有一个属性 **initialItem**可以用来设置stackview的默认的第一个view，相当于在Component.onCompleted时将这个默认的view push进去而已
+
+
+
+
 ##### 添加新feed的dialog
 - 图二
 ![添加新的rss Feed](QQ20160404-1.png)
