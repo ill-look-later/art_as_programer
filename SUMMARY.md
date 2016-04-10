@@ -22,4 +22,5 @@
 * [Personal Project](personal_project.md)
    * [The X-th Project XReader](the_x-th_project_xreader.md)
 * [Mac everthing](mac_everthing.md)
+   * mac mini 外接显示器字体发虚
 
