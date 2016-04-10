@@ -199,8 +199,8 @@ Loader { //the main content for display
             }
 ```
 代码中*onSigShowAddFeedView* 函数是响应用户点选择了某个feed之后的操作，为了节省内存{C程序员的天生特质！抓狂}这里是动态的创建的组件；QML中有两种常用的方式来动态创建or load一个组件;
--  Qt.createComponent + component.createObject
--  通过Loader元素； 相当于一个占位符；
+1. Qt.createComponent + component.createObject
+2. 通过Loader元素； 相当于一个占位符；
 
 通过第一种
 
