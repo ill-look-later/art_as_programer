@@ -202,7 +202,7 @@ Loader { //the main content for display
 1. Qt.createComponent + component.createObject
 2. 通过Loader元素； 相当于一个占位符；
 
-通过第一种
+通过第一种创建的可以在组件需要销毁的地方调用destroy方法来销魂
 
 
 
