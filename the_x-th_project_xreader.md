@@ -198,7 +198,7 @@ Loader { //the main content for display
                 }
             }
 ```
-代码中*onSigShowAddFeedView* 函数是响应用户点选择了某个feed之后的操作，为了节省内存{C程序员的天生特质！抓狂}
+代码中*onSigShowAddFeedView* 函数是响应用户点选择了某个feed之后的操作，为了节省内存{C程序员的天生特质！抓狂}这里是动态的创建的组件
 
 
 
