@@ -1,4 +1,4 @@
-# The # The soX- th Project XReader
+#The soX- th Project XReader
 
 
 ####X 啥意思？ＸReader又是什么？
