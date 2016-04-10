@@ -202,6 +202,8 @@ Loader { //the main content for display
 - 1. Qt.createComponent + component.createObject
 - 2. 通过Loader元素； 相当于一个占位符；
 
+通过第一种
+
 
 
 ##### 添加新feed的dialog
