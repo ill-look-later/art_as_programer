@@ -207,7 +207,6 @@ Loader { //the main content for display
 - 第二种方式就更容易管理了，你需要释放资源时，只要简单地通过Loader元素的**source 或者 sourceComponent**属性赋值为undefined或者”“即可；
 
 
-
 ##### 添加新feed的dialog
 - 图二
 ![添加新的rss Feed](QQ20160404-1.png)
