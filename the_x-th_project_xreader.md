@@ -159,6 +159,12 @@ Loader { //the main content for display
 ---
 
 ##### FeedmannagerView 和 ArticleListView
+
+- 图片二
+
+![FeedManagerView](ddd.png)  
+![ArticleListView](QQ20160410-0@2x.png)
+
 这两个view就是你在main.qml文件中看到的那个stackview对应的两个view；只要我们依次把它们通过下面这个接口
     
     stack_view.push({item:article_list_view, destroyOnPop:true})
@@ -207,10 +213,7 @@ Loader { //the main content for display
 - 通过第一种创建的可以在组件需要销毁的地方调用destroy方法来销魂；这里qt文档中仅仅是说“放心。哪怕你是emit一个信号出去，你掉了destroy后我们忍让可以让你的信号被正确的处理，包括对资源变量的访问！” 所以放心用吧；
 - 第二种方式就更容易管理了，你需要释放资源时，只要简单地通过Loader元素的**source 或者 sourceComponent**属性赋值为undefined或者”“即可；
 
-- 图片二
 
-![FeedManagerView](ddd.png)  
-![ArticleListView](QQ20160410-0@2x.png)
 
 ##### 添加新feed的dialog
 - 图三
