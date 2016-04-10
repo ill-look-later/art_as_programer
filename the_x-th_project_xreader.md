@@ -162,6 +162,42 @@ Loader { //the main content for display
     
     stack_view.push({item:article_list_view, destroyOnPop:true})
 接口push到stackview当中即可，其中push可以接收参数用来控制view的生命周期和一些属性的值，具体参考文档中得说明即可；不得不说一句Qt的文档还是做得相当好的。stackview还有一个属性 **initialItem**可以用来设置stackview的默认的第一个view，相当于在Component.onCompleted时将这个默认的view push进去而已；
+```javascript
+            StackView {
+                id: stack_view
+                anchors.fill: parent
+
+                initialItem: FeedManagerView{
+                    id: chanel_page
+                    onSigChanelSelected: {
+                        //article_list_view.model =  model_instance.feed
+                        var article_list_view = article_list_component.createObject(stack_view);
+                        article_list_view.setFeed(model_instance.feed)
+                        article_list_view.articleClicked.connect(XReader.loadSelectedArticle);
+                        article_list_view.backToMainPage.connect(XReader.backToFeedManagerView);
+                        stack_view.push({item:article_list_view, destroyOnPop:true})
+                    }
+
+                    onSigShowAddFeedView: {
+                        var component = Qt.createComponent("qrc:/src/AddNewFeedView.qml");
+                        if (component.status === Component.Ready) {
+                            var dlg = component.createObject(main_window, {});
+                            dlg.sigOkPressed.connect(chanel_page.onAddNewFeed);
+                        } else {
+                            console.log("conmentnet not ready"+ component.errorString())
+                        }
+                    }
+                }
+
+                Component {
+                    id: article_list_component
+                    ArticleListView{
+                        id: article_list_view
+                        anchors.fill: parent
+                    }
+                }
+            }
+```
 
 
 
