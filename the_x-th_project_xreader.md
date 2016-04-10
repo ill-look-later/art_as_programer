@@ -202,7 +202,7 @@ Loader { //the main content for display
 1. Qt.createComponent + component.createObject
 2. 通过Loader元素； 相当于一个占位符；
 
-通过第一种创建的可以在组件需要销毁的地方调用destroy方法来销魂
+通过第一种创建的可以在组件需要销毁的地方调用destroy方法来销魂；这里qt文档中仅仅是说“放心。哪怕你是emit一个信号出去，你掉了destroy后我们忍让可以让你的信号被正确的处理，包括对资源变量的访问！” 所以放心用吧
 
 
 
