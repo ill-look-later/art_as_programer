@@ -73,3 +73,16 @@
  //alert(myObject.prototype.constructor); //console.log返回myObject(msg)，此时alert()更清楚，相当于myObject
  //console.log(myObject.prototype.constructor.name); //china, 相当于myObject.name;
 ```
+
+
+
+参考：
+http://www.cnblogs.com/mrsunny/archive/2011/05/09/2041185.html
+http://www.cnblogs.com/RicCC/archive/2008/02/15/JavaScript-Object-Model-Execution-Model.html
+ 
+
+近年来发现有人对上图做了解释，分享：
+
+http://www.cnblogs.com/daishuguang/p/3978409.html
+http://www.cnblogs.com/wangfupeng1988/p/3979985.html
+http://anykoro.sinaapp.com/2012/01/31/javascript%E4%B8%ADfunctionobjectprototypes__proto__%E7%AD%89%E6%A6%82%E5%BF%B5%E8%AF%A6%E8%A7%A3/
