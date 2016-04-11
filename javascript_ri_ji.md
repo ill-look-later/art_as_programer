@@ -39,7 +39,7 @@
  myObject.prototype.sayHello = function(){
      alert('hello everyone!');
  }
- //静态属性
+ //静态属性 ==== C++类中得static 变量
  //适用于对象的特殊实例，就是作为Function对象实例的构造函数本身
  myObject.name = 'china';
  //静态方法
