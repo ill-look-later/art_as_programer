@@ -59,7 +59,7 @@
  
  //---- 测试方法 ----//
  //myObject.alertname(); //china,直接调用函数的类方法
- //m1.alertname(); //FF: m1.alertname is not a function, alertname 是myObject类的方法，和实例对象没有直接关系
+ //m1.alertname(); //FF: m1.alertname is not a function, alertname 是myObject类的方法，和实例对象没有直接关系， 这和C++中得不一样额
  //m1.constructor.alertname(); //china, 调用该对象构造函数（类函数）的方法（函数）
  //m1.sayHello(); //hello everyone, myObject类的prototype原型下的方法将会被实例继承
  //myObject.sayHello(); //myObject.sayHello is not a function，sayHello是原型方法，不是类的方法
