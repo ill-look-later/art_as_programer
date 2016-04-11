@@ -49,6 +49,7 @@
  
  //实例化
  var m1 = new myObject('111');
+ 
  //---- 测试属性 ----//
  //console.log(myObject.name); //china
  //console.log(m1.name); //undefined, 静态属性不适用于一般实例
