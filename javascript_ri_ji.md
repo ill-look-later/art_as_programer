@@ -55,7 +55,7 @@
  //console.log(myObject.name); //china
  //console.log(m1.name); //undefined, 静态属性不适用于一般实例
  //console.log(m1.constructor.name); //china, 想访问类的静态属性，先访问该实例的构造函数，然后在访问该类静态属性
- //console.log(myObject.address); //undefined, **myObject中的this指的不是函数本身，**而是调用address的对象，而且只能是对象
+ //console.log(myObject.address); //undefined, **myObject中的this指的不是函数本身**，而是调用address的对象，而且只能是对象
  //console.log(m1.address); //上海 此时this指的是实例化后的m1
  
  //---- 测试方法 ----//
