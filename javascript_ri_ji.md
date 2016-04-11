@@ -81,7 +81,7 @@ http://www.cnblogs.com/mrsunny/archive/2011/05/09/2041185.html
 http://www.cnblogs.com/RicCC/archive/2008/02/15/JavaScript-Object-Model-Execution-Model.html
  
 
-近年来发现有人对上图做了解释，分享：
+#####近年来发现有人对上图做了解释，分享：
 
 http://www.cnblogs.com/daishuguang/p/3978409.html
 http://www.cnblogs.com/wangfupeng1988/p/3979985.html
