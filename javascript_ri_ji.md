@@ -15,7 +15,7 @@
      this.myMsg = msg; //只在被实例化后的实例中可调用
      this.address = '上海';
      
-     //私有属性 =====> C++类中得private属性， 只能构造函数（类）中使用
+     //私有属性 =====> C++类中得private属性， 只能构造函数（类）中使用；
      var name = '豪情';
      var age = 29;
      var that = this;
