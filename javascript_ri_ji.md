@@ -49,14 +49,14 @@
  
  //实例化
  var m1 = new myObject('111');
- // m1.xxx 这样的方式能访问的只能是公开属性和函数，不能调用到m1.
+ // m1.xxx 这样的方式能访问的只能是公开属性和函数，不能调用到m1.sayName是不能被访问的
  
  //---- 测试属性 ----//
  //console.log(myObject.name); //china
  //console.log(m1.name); //undefined, 静态属性不适用于一般实例
  //console.log(m1.constructor.name); //china, 想访问类的静态属性，先访问该实例的构造函数，然后在访问该类静态属性
  //console.log(myObject.address); //undefined, myObject中的this指的不是函数本身，而是调用address的对象，而且只能是对象
- //console.log(m1.address); //上海 此时this指的是实例化后的m1.sayName是不能被访问的
+ //console.log(m1.address); //上海 此时this指的是实例化后的m1
  
  //---- 测试方法 ----//
  //myObject.alertname(); //china,直接调用函数的类方法
