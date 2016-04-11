@@ -50,7 +50,7 @@
  }
  
  //实例化
- var m1 = new myObject('111');
+ var m1 = new MyObject('111');
  // m1.xxx 这样的方式能访问的只能是公开属性和函数，不能调用到m1.sayName是不能被访问的；而原型（基类）中添加的sayHello方法在对象实例化后能访问的m.sayhello();是ok的；
  
  //---- 测试属性 ----//
