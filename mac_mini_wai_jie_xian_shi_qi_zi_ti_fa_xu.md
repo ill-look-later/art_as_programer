@@ -8,7 +8,7 @@
 终端下执行:
 
     defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
-打开字体平滑, 最后一个数字可以尝试 1,2,3， 如果没有效果关闭字体平滑
+打开字体平滑, 最后一个数字可以尝试 1,2,3， 如果没有效果通过以下命令关闭字体平滑
 
     defaults -currentHost delete -globalDomain AppleFontSmoothing
     
