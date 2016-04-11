@@ -1,2 +1,3 @@
 # Node.js
 
+node 碎碎念...
