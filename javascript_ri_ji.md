@@ -74,7 +74,7 @@
  //console.log(myObject.prototype.constructor.name); //china, 相当于myObject.name;
 ```
 ![图一](221538237.jpg)
-![图二](221538237.jpg)
+![图二](221538238.png)
 
 #####参考：
 http://www.cnblogs.com/mrsunny/archive/2011/05/09/2041185.html
