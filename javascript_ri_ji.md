@@ -36,6 +36,7 @@
      //因而实例越多占用的内存越多, 通过公有方法，也就是把方法放到prototype中去
  }
  //公有方法 适用于通过new关键字实例化的该对象的每个实例
+ 
  //向prototype中添加成员将会把新方法添加到构造函数的底层中去
  myObject.prototype.sayHello = function(){
      alert('hello everyone!');
