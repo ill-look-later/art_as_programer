@@ -20,7 +20,7 @@
      var age = 29;
      var that = this;
      
-     //私有方法
+     //私有方法 ====> private函数， 只能内部访问？
      function sayName(){
          alert(that.name);
      }
