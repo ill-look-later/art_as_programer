@@ -12,7 +12,7 @@
 
  //使自己的对象多次复制，同时实例根据设置的访问等级可以访问其内部的属性和方法
  //当对象被实例化后，构造函数会立即执行它所包含的任何代码
- function myObject(msg){
+ function MyObject(msg){
      //特权属性(公有属性) ====> C++类中得public 属性
      this.myMsg = msg; //只在被实例化后的实例中可调用
      this.address = '上海';
