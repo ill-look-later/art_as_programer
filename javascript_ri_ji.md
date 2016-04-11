@@ -46,6 +46,7 @@
  myObject.alertname = function(){
      alert(this.name);
  }
+ 
  //实例化
  var m1 = new myObject('111');
  //---- 测试属性 ----//
