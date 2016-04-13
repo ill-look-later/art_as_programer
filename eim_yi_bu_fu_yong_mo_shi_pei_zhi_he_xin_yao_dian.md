@@ -20,7 +20,7 @@ And：如果在mum=1时，及复用时想使用异步读/异步写的模式的�
     
     SRD = 0；
     SWR = 0；
-![](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-0@2x.png)
+![](QQ20160329-0@2x.png)
 具体请参照datasheet 说明，重点在22章中：
 
 ####22.5.1 Bus Sizing Configuration
@@ -53,17 +53,17 @@ Caution should be exercised for using OEA/WEA & ADH bit fields. They should be c
 
 ####22.8.3 Asynchronous Read/Write Memory Accesses Timing Diagram
 
-![读写时序](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-2@2x.png)
+![](QQ20160329-2@2x.png)
 
 
 ####核心寄存器代码配置16bin非复用
 
 - 读写寄存器配置：
-![](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-3@2x.png)
+![](QQ20160329-3@2x.png)
 
 
 数据读写部分，这里的作用仅仅当把EIM作为字符设备打开操作的时候使用，其他时候推荐利用内存映射map函数进行读写。更安全和高效；
-![](/Users/gh/Pictures/FN2V63AD2J.com.tencent.ScreenCapture2/QQ20160329-4@2x.png)
+![](QQ20160329-4@2x.png)
 
 
 
