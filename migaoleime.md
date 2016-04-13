@@ -21,7 +21,7 @@ srafwebchannel.onUpdateInputedData(str);
 /*这个函数在用户点击一个功能键"shift"后触发，参数是键盘每个按钮上的字母列表，通常长度是和先前获取到键盘layout的按键数是一样的。
   arg in： arraylist；
   栗子： EN输入法下， 按了功能键'shift'后触发；这个函数会返回给你['Q' 'W',"E".....],
-  例子： onUpdateKeyboardLayout("nihao");
+  例子： onUpdateKeyboardLayout(["Q","W","E","R","T"]);
   */
 srafwebchannel.onUpdateKeyBtCharacterValue(arraylist);
 
