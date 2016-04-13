@@ -34,7 +34,8 @@ srafwebchannel.onUpdateTargetData(str)
 
 /*这个函数在有智能联想提示的语言中比如说中文【英语状态下这种没有候选词，测试看来这个函数从不触发】，参数是一个候选词的列表， 这个列表最长50个；
   arg in： candidateList；
-  栗子： 中文输入法下， 连续点击完'nihao' 但没有选择候选词的时候 按下回车【enter】后触发，这个函数会返回给你'nihao'，候选词这时候应该放弃掉
+  栗子： 中文输入法下， 连续点击完'nh'， 这个函数会返回给你
+  ["你好","你会","弄花","女孩","您好","你还","男孩","内核"......]，
   例子： onUpdateKeyboardLayout(["Q","W","E","R","T".....]);
   */
 srafwebchannel.onUpdateCandidateList(candidateList);
