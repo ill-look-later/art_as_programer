@@ -13,7 +13,7 @@ srafwebchannel.onUpdateKeyboardLayout(arraylist);
 /*这个函数在用户点击一个“字符按键”发送到ime时触发，参数是你现有输入的内容，
   arg in： str是一个字符串；
   栗子： 中文输入法下， 连续点击完'nihao' 但没有选择候选词的时候，这个函数会返回给你'nihao'
-  例子： onUpdateKeyboardLayout(["q","w","\r","x"]);
+  例子： onUpdateKeyboardLayout("nihao");
   */
 srafwebchannel.onUpdateInputedData(str);
 
