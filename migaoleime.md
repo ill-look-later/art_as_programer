@@ -25,7 +25,12 @@ srafwebchannel.onUpdateInputedData(str);
   */
 srafwebchannel.onUpdateKeyBtCharacterValue(arraylist);
 
-
+/*这个函数在用户点击一个功能键"enter"后触发，参数提交到输入框的内容
+  arg in： arraylist；
+  栗子： 中文输入法下， 连续点击完'nihao' 但没有选择候选词的时候 按下回车【enter】后触发，这个函数会返回给你'nihao'
+  例子： onUpdateKeyboardLayout(["Q","W","E","R","T".....]);
+  */
+srafwebchannel.onUpdateTargetData(str)
 ```
 
 
