@@ -1,7 +1,7 @@
 # migaole_ime
 
 js端需要实现的接口：
-```js
+```javascript
 /*这个函数在初始化完ime时会被调用， 请在函数内根据layout信息
   完成键盘ui的布局
   arg in： arraylist是一个数组；
