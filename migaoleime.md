@@ -40,8 +40,7 @@ srafwebchannel.onUpdateTargetData(str)
   */
 srafwebchannel.onUpdateCandidateList(candidateList);
 
-/* 
-  但与ime交互的过程中发生严重错误的时候触发， 参数是错误信息，str
+/*  但与ime交互的过程中发生严重错误的时候触发， 参数是错误信息，str
 */
 srafwebchannel.ImeCriticalError(string)
 ```
