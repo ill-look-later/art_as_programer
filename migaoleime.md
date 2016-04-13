@@ -25,5 +25,6 @@ srafwebchannel.onUpdateInputedData(str);
   */
 srafwebchannel.onUpdateKeyBtCharacterValue(arraylist);
 
+
 ```
 
