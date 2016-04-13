@@ -19,7 +19,7 @@ srafwebchannel.onUpdateInputedData(str);
 
 
 /*这个函数在用户点击一个功能键"shift"后触发，参数是键盘每个按钮上的字母列表，通常长度是和先前获取到键盘layout的按键数是一样的。
-  arg in： str是一个字符串；
+  arg in： arraylist；
   栗子： 中文输入法下， 连续点击完'nihao' 但没有选择候选词的时候，这个函数会返回给你'nihao',如过继续输入'm', 函数参数会变成'nihaom';
   例子： onUpdateKeyboardLayout("nihao");
   */
