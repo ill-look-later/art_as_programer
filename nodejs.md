@@ -17,5 +17,6 @@ node 碎碎念...
 发送用户的按键给ime
 - void sendCodeToIme(int id);
 
-请求ime设置新的语言
+请求ime设置新的语言 暂时这部分语言，无论你传什么字符串都是设置成英语，Migaole那边设置语言之后有问题，暂时无法调用
 - void setImeLanguage(Domstring language)
+
