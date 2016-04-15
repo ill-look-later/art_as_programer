@@ -13,3 +13,9 @@ node 碎碎念...
 
 请求ime将输入的部分数据清空；
 - void clearImeCache();
+
+发送用户的按键给ime
+- void sendCodeToIme(int id);
+
+请求ime设置新的语言
+- void setImeLanguage(Domstring language)
