@@ -31,8 +31,9 @@ All of those just for note some information i recv
   sraf_clients/lib_browser_client.cc
     sraf_browser_client_set_focus();
    sraf_mas/mas_client.cc 
-    sraf_mas_client_create();
+    sraf_mas_client_set_focus();
       call: sraf_mas_client_set_focus()
+    
   ----- ipc to Browser
   sraf_mas/mas.cc
     IpcServerCallback()
