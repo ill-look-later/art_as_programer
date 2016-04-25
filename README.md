@@ -7,8 +7,8 @@ All of those just for note some information i recv
 
 ## client <<==>> SrafBrowser
 
-####cmd list
-- createw
+##cmd list
+#### createw
 ```c
   sraf_clients/lib_browser_client.cc
     sraf_browser_client_create();
@@ -26,7 +26,7 @@ All of those just for note some information i recv
      .....
 ```
 
-- setfocus
+####- setfocus
 ```c
   sraf_clients/lib_browser_client.cc
     sraf_browser_client_create();
