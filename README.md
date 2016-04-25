@@ -29,10 +29,10 @@ All of those just for note some information i recv
 #### setfocus
 ```c
   sraf_clients/lib_browser_client.cc
-    sraf_browser_client_create();
+    sraf_browser_client_set_focus();
    sraf_mas/mas_client.cc 
     sraf_mas_client_create();
-      call: send_mas_command_sync
+      call: sraf_mas_client_set_focus
   ----- ipc to Browser
   sraf_mas/mas.cc
     IpcServerCallback()
