@@ -26,7 +26,7 @@ All of those just for note some information i recv
      .....
 ```
 
-####- setfocus
+#### setfocus
 ```c
   sraf_clients/lib_browser_client.cc
     sraf_browser_client_create();
