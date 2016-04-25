@@ -27,6 +27,7 @@ client端的“控制”相关的接口基本调用顺序为： lib_browser_clie
  sraf_mtm/mtm_impl.cc
    CreateTab();
      .....
+  通常后续都是在MTM中通过访问shell， web_content等对象来操作页面
 ```
 
 #### setfocus
