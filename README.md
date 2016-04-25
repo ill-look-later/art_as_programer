@@ -69,5 +69,6 @@ SetBounds() file: sraf_porting/ui/aura/window_tree_host_sraf.cc
   call: platform_window_->SetBounds(bounds);
 Setbounds(); file: sraf_porting/ui/platform_window/sraf_window.cc
   call : delegate_->OnBoundsChanged(); && sraf_graphics_window_set_bounds()
-sraf_graphics_window_set_bounds(...); file: sraf_graphics/directfb/sraf_graphics_adaptor_dfb.c 
+sraf_graphics_window_set_bounds(...); file: sraf_graphics/directfb/sraf_graphics_adaptor_dfb.c
+
 ```
