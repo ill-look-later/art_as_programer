@@ -43,3 +43,18 @@ client端的“控制”相关的接口基本调用顺序为： lib_browser_clie
       active_status ? mtm_instance->ActiveTab(id) : mtm_instance->DeactiveTab(id);
      .....
 ```
+
+#### setrect
+```
+sraf_browser_client_set_rect() file:sraf_clients/lib_browser_client.cc
+sraf_mas_client_set_rect file: sraf_mas/mas_client.cc
+send_mas_command() // 发送 Ipc 消息
+----Browser 端ipc消息处理
+IpcServerCallback file: sraf_mas/mas.cc
+OnSetBrowserRect  file: sraf_mas/mas.cc
+SetBrowserDisplayRect file: sraf_mtm/mtm_impl.cc
+UpdateShellDispalyRect file: sraf_porting/content/shell/browser/shell_sraf.cc
+call： platform_->host()->SetBounds(new_rect)
+SetBounds() file: sraf_porting/ui/aura/window_tree_host_sraf.cc
+  call: platform_window_->SetBounds(bounds);
+```
