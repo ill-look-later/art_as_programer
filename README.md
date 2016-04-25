@@ -38,7 +38,7 @@ All of those just for note some information i recv
     IpcServerCallback()
       call: OnChangeTabActiveStatus();
     OnChangeTabActiveStatus();
-      mtm_instance->CreateTab();
+      active_status ? mtm_instance->ActiveTab(id) : mtm_instance->DeactiveTab(id);
  sraf_mtm/mtm_impl.cc
    CreateTab();
      .....
