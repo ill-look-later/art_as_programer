@@ -37,7 +37,7 @@ All of those just for note some information i recv
   sraf_mas/mas.cc
     IpcServerCallback()
       call: OnChangeTabActiveStatus();
-    OnCreateNewTab();
+    OnChangeTabActiveStatus();
       mtm_instance->CreateTab();
  sraf_mtm/mtm_impl.cc
    CreateTab();
