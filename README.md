@@ -50,7 +50,7 @@ client端的“控制”相关的接口基本调用顺序为： lib_browser_clie
 - src/content/shell/browser/shell.cc
 - src/content/browser/web_contents/web_contents_impl.cc
 - src/content/browser/renderer_host/render_XXX.cc
-
+同完成相应的功能
 
 
 #### setrect、resolution、opacity 等命令的大致调用流程；
