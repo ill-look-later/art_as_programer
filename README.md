@@ -44,7 +44,8 @@ client端的“控制”相关的接口基本调用顺序为： lib_browser_clie
      .....
 ```
 
-#### setrect
+#### setrect、resolution、opacity 等命令的大致调用流程；
+以setrect && none toolkitiew 为例
 ```
 sraf_browser_client_set_rect() file:sraf_clients/lib_browser_client.cc
 sraf_mas_client_set_rect file: sraf_mas/mas_client.cc
