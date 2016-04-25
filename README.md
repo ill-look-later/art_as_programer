@@ -19,6 +19,7 @@ All of those just for note some information i recv
   sraf_mas/mas.cc
     IpcServerCallback()
       call: OnCreateNewTab();
-    mtm_instance->CreateTab();
+    OnCreateNewTab();
+      mtm_instance->CreateTab();
     
 ```
