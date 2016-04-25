@@ -27,7 +27,6 @@ client端的“控制”相关的接口基本调用顺序为： lib_browser_clie
  sraf_mtm/mtm_impl.cc
    CreateTab();
      .....
-  通常后续都是在MTM中通过访问shell， web_content等对象来操作页面
 ```
 
 #### setfocus
@@ -45,6 +44,14 @@ client端的“控制”相关的接口基本调用顺序为： lib_browser_clie
       active_status ? mtm_instance->ActiveTab(id) : mtm_instance->DeactiveTab(id);
      .....
 ```
+
+  通常后续都是在MTM中通过访问shell， web_content等对象来操作页面， 对应的几个文件：
+- sraf_porting/content/shell/browser/shell_sraf.cc
+- src/content/shell/browser/shell.cc
+- src/content/browser/web_contents/web_contents_impl.cc
+- src/content/browser/renderer_host/render_XXX.cc
+- 
+
 
 #### setrect、resolution、opacity 等命令的大致调用流程；
 以setrect && none toolkitiew 为例
