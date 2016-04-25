@@ -9,11 +9,11 @@ All of those just for note some information i recv
 
 ####cmd list
 - createw
-```shell
+```c
   sraf_clients/lib_browser_client.cc
-    sraf_browser_client_create
+    sraf_browser_client_create();
    sraf_mas/mas_client.cc 
-    sraf_mas_client_create()
+    sraf_mas_client_create();
       call: send_mas_command_sync
   -----
 ```
