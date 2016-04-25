@@ -8,7 +8,8 @@ All of those just for note some information i recv
 ## client <<==>> SrafBrowser
 
 ##cmd list
-client端的“控制”相关的接口基本调用顺序为： lib_browser_client.cc  ====》 mas_client.cc <====发送ipc==ipc server端转发到mas.cc===> mas.cc中解析相应的cmd命令 ========> 通过sraf_mtm/mtm_impl.cc ===> 从mtm中访问各种浏览器内部的功能； 
+client端的“控制”相关的接口基本调用顺序为： lib_browser_client.cc  ====》 mas_client.cc <====发送ipc==ipc server端转发到mas.cc===> mas.cc中解析相应的cmd命令 ========> 通过sraf_mtm/mtm_impl.cc ===> 从mtm中访问各种浏览器内部的功能；
+
 #### createw
 ```c
   sraf_clients/lib_browser_client.cc
