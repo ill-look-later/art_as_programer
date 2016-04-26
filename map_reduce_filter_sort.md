@@ -8,5 +8,5 @@ var arr = [0,1,2,3,4,5,6,7];
 function add(x,y) {
   return x+y;
 }
-arr.map(add);
+arr.map(add); // === 0+1+2+3+4+5+6+7
 ```
