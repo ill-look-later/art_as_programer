@@ -1,7 +1,5 @@
 # ES6 New Feature Overview
 
-# ECMAScript 6 <sup>[git.io/es6features](http://git.io/es6features)</sup>
-
 <li> 这是引用来自http://git.io/es6features的总结， Thank for his good Job</li>
 
 ## Introduction
