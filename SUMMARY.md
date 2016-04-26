@@ -26,4 +26,5 @@
 * [Node And js](nodejs.md)
    * [javascript 日记](javascript_ri_ji.md)
    * [ES6 New Keyword class](es6_new_keyword_class.md)
+   * map_reduce_filter_sort
 
