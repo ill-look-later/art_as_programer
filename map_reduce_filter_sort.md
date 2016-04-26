@@ -1,3 +1,5 @@
 # map_reduce_filter_sort
 
+###map
 map 就是将可映射的每个对象进行同一个函数的操作
+
