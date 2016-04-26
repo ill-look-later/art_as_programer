@@ -35,7 +35,7 @@ xiaoming.hello();
 ###class继承
 
 用class定义对象的另一个巨大的好处是继承更方便了。想一想我们从Student派生一个PrimaryStudent需要编写的代码量。现在，原型继承的中间对象，原型对象的构造函数等等都不需要考虑了，直接通过extends来实现：
-
+```
 class PrimaryStudent extends Student {
     constructor(name, grade) {
         super(name); // 记得用super调用父类的构造方法!
@@ -46,6 +46,7 @@ class PrimaryStudent extends Student {
         alert('I am at grade ' + this.grade);
     }
 }
+```
 注意PrimaryStudent的定义也是class关键字实现的，而extends则表示原型链对象来自Student。子类的构造函数可能会与父类不太相同，例如，PrimaryStudent需要name和grade两个参数，并且需要通过super(name)来调用父类的构造函数，否则父类的name属性无法正常初始化。
 
 PrimaryStudent已经自动获得了父类Student的hello方法，我们又在子类中定义了新的myGrade方法。
