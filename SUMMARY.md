@@ -29,4 +29,5 @@
    * [map_reduce_filter_sort](map_reduce_filter_sort.md)
    * [ES6 New Feature Overview](es6_new_feature_overview.md)
 * [捷径](jie_jing.md)
+   * Get_the_wifi_password
 
