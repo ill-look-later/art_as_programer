@@ -118,6 +118,7 @@ SRAF_LOCAL_FUNC_ENTER();
   return SRAF_OK;
 }
 ```
+#####设置透明度, 设置window的大小，移动窗口，release surface，release window等操作都是直接桥接到dfb相应的api上，没有做任何处理
 
 ```cpp
 /* Copyright (c), 2013, SERAPHIC Information Technology (Shanghai) Co., Ltd.
