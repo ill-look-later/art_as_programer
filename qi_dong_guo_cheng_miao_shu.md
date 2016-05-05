@@ -9,4 +9,8 @@ xcode 开发ios程序帮我们隐藏了太多的东西， 包括系统的初始�
 - applicationWillEnterForeground
 - applicationDidBecomeActive
 - applicationWillTerminate
-- ..... 等等这一系列的消息
+- ..... 等等这一系列的消息 我们只要在相应地消息到来的时候做我们想做的事情就好了
+
+而在viewcontroller中， 我们得到的都是界面相关的消息回调。从名字就可以很容易的看出这些函数的意义
+- viewDidLoad
+- didReceiveMemoryWarning
