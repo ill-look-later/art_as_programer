@@ -93,9 +93,7 @@ SRAF_LOCAL_FUNC_ENTER();
   desc.posx = pos_x;
   desc.posy = pos_y;
 
-  SRAF_MUTEX_LOCK();
   display_handle->CreateWindow(display_handle, &desc, (IDirectFBWindow **)window);
-  SRAF_MUTEX_UNLOCK();
 
   IDirectFBWindow *dfb_window = (IDirectFBWindow*)(*window);
   if (dfb_window == NULL) {
@@ -107,7 +105,7 @@ SRAF_LOCAL_FUNC_ENTER();
   dfb_window->SetStackingClass(dfb_window, DWSC_UPPER);
   dfb_window->RaiseToTop(dfb_window);
   dfb_window->SetOpacity(dfb_window, 0xDD);
-
+//jiuzhou 的平台默认创建出来的window surface不干净，所以我们为jiuzhou单独的清空window的suface
 #if defined(SRAF_CHIP_NAME_BCM7362)
   IDirectFBSurface *window_surface = NULL;
   dfb_window->GetSurface(dfb_window, &window_surface);
