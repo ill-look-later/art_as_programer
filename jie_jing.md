@@ -84,14 +84,8 @@ SRAF_LOCAL_FUNC_ENTER();
   }
 
   DFBWindowDescription desc;
-#if defined(SRAF_CHIP_NAME_NT72562)
-  desc.flags = (DFBWindowDescriptionFlags)(DWDESC_WIDTH | DWDESC_HEIGHT |
-                                           DWDESC_POSX | DWDESC_POSY | DWDESC_STACKING);
-  desc.stacking = DWSC_LOWER;
-#else
   desc.flags = (DFBWindowDescriptionFlags)(DWDESC_WIDTH | DWDESC_HEIGHT |
                                            DWDESC_POSX | DWDESC_POSY | DWDESC_CAPS);
-#endif
   //desc.surface_caps = DSCAPS_VIDEOONLY/* | DSCAPS_DOUBLE*/;
   desc.caps   = DWCAPS_ALPHACHANNEL | DWCAPS_NODECORATION/* | DWCAPS_DOUBLEBUFFER*/;
   desc.width = width;
