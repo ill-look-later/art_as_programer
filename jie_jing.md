@@ -57,3 +57,9 @@ tmp_window->SetOpacity(tmp_window, opacity);
 -作为对比测试，在mstar的其他几个平台上，整个测试是没有问题的，unittest程序在进行surface测试部分的时候也没有出现crash的情况，
 
 ### 对比测试二
+- **在不按照jiuzhou提供的示例修改code的情况下**
+  - 1： 在我们现有的其他几个平台上测试ok，
+  - 2： 在jiuzhou stb平台上测试：
+    > 画面更新“重影”
+    > 透明度设置不符合预期，有时候会出现几种不同的现象【设置无效， 重影】
+    > dfb API LowerToBottom 会将dfbwindow置于video层之下，但通过API RaiseToTop 提到最上层时整个屏幕黑掉，而且无论怎么更新画面都不会再显示东西
