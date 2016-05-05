@@ -14,3 +14,12 @@ xcode 开发ios程序帮我们隐藏了太多的东西， 包括系统的初始�
 而在viewcontroller中， 我们得到的都是界面相关的消息回调。从名字就可以很容易的看出这些函数的意义
 - viewDidLoad
 - didReceiveMemoryWarning
+
+ios程序在开始启动时， 内部会帮我们去读取info.plist文件， 里面描述了一些设置，包括安全， 初始化ui的设置，程序名字等等一系列的配置。
+
+#####修改我们程序第一个界面
+1. 我们新建一个storyboard文件
+2. 拖入我们想要的界面viewcontroller
+3. 在viewcontroller的属性设置栏中，勾选‘is initial view controller’
+4. 在info.plist 中选项'Main storyboard file base name' 中填写上正确地文件名字，不需要后缀名
+
