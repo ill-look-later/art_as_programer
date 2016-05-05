@@ -25,7 +25,7 @@ tmp_window->SetOpacity(tmp_window, opacity);
   > example： 按下按键“down” log中显示已经更新了dfb window surface的部分画面，但是过了好几秒甚至十几秒后， 画面才会有更新，并且更新出来有重影的现象；
 
 ###jiuzhou提供的示例程序的dfbwindow核心初始化部分code
-```C
+```c++
      /* Fill the window description. */
      desc.flags  = DWDESC_POSX | DWDESC_POSY |
                    DWDESC_WIDTH | DWDESC_HEIGHT | DWDESC_CAPS;
