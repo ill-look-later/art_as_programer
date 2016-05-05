@@ -23,3 +23,37 @@ tmp_window->SetOpacity(tmp_window, opacity);
 
 - 另外在浏览器测试过程中， dfb window的surface 在进行小部分的blit 和 flip的操作会有“重影”而且显示好像和函数调用不是同步的。
   > example： 按下按键“down” log中显示已经更新了dfb window surface的部分画面，但是过了好几秒甚至十几秒后， 画面才会有更新，并且更新出来有重影的现象；
+
+###jiuzhou 提供的示例程序的dfbwindow核心初始化部分code
+```C
+     /* Fill the window description. */
+     desc.flags  = DWDESC_POSX | DWDESC_POSY |
+                   DWDESC_WIDTH | DWDESC_HEIGHT | DWDESC_CAPS;
+     desc.posx   = 0;
+     desc.posy   = 0;
+     desc.width  = 1280;
+     desc.height = 720;
+     desc.caps   = DWCAPS_ALPHACHANNEL | DWCAPS_NODECORATION;
+     layer->CreateWindow( layer, &desc, &window );
+
+
+     /* Get the window's surface. */
+      window->GetSurface( window, &primary );
+
+     /* Add ghost option (behave like an overlay). */
+     window->SetOptions( window, DWOP_ALPHACHANNEL | DWOP_GHOST );
+
+     /* Move window to upper stacking class. */
+     window->SetStackingClass( window, DWSC_UPPER );
+
+     /* Make it the top most window. */
+     window->RaiseToTop( window );
+     window->SetOpacity( window, 0x80 );
+
+```
+
+对比测试：
+### 对比测试一
+-作为对比测试，在mstar的其他几个平台上，整个测试是没有问题的，unittest程序在进行surface测试部分的时候也没有出现crash的情况，
+
+### 对比测试二
