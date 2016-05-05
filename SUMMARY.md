@@ -37,5 +37,5 @@
 * [MAC_And_IOS](macand_ios.md)
    * [swift](swift.md)
    * [IOS app](ios_app.md)
-       * 启动过程描述
+       * [启动过程描述](qi_dong_guo_cheng_miao_shu.md)
 
