@@ -24,7 +24,7 @@ tmp_window->SetOpacity(tmp_window, opacity);
 - 另外在浏览器测试过程中， dfb window的surface 在进行小部分的blit 和 flip的操作会有“重影”而且显示好像和函数调用不是同步的。
   > example： 按下按键“down” log中显示已经更新了dfb window surface的部分画面，但是过了好几秒甚至十几秒后， 画面才会有更新，并且更新出来有重影的现象；
 
-###jiuzhou 提供的示例程序的dfbwindow核心初始化部分code
+###jiuzhou提供的示例程序的dfbwindow核心初始化部分code
 ```C
      /* Fill the window description. */
      desc.flags  = DWDESC_POSX | DWDESC_POSY |
