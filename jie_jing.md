@@ -63,3 +63,345 @@ tmp_window->SetOpacity(tmp_window, opacity);
     > 画面更新“重影”
     > 透明度设置不符合预期，有时候会出现几种不同的现象【设置无效， 重影】
     > dfb API LowerToBottom 会将dfbwindow置于video层之下，但通过API RaiseToTop 提到最上层时整个屏幕黑掉，而且无论怎么更新画面都不会再显示东西
+
+
+我们unittest的代码
+```cpp
+/* Copyright (c), 2013, SERAPHIC Information Technology (Shanghai) Co., Ltd.
+ * All Right Reserved.
+ */
+
+//#define LOG_TAG "DfbTest"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+
+#include "sraf_graphics_adaptor.h"
+#include "sraf_common.h"
+
+#define SRAF_SHOW_TIMEOUT  (5) //seconds
+
+#define SRAF_LOGE(value) printf("\n%s\n", value)
+
+void Test_FullRect_blit_and_flip(SrafGraphicsWindowHandle, SrafGraphicsSurfaceHandle);
+void Test_PartRect_blit_and_flip(SrafGraphicsWindowHandle, SrafGraphicsSurfaceHandle);
+void Test_DfbWindow_opacity(SrafGraphicsWindowHandle, SrafGraphicsSurfaceHandle);
+void Test_DfbWindow_z_order(SrafGraphicsWindowHandle, SrafGraphicsSurfaceHandle);
+
+int main (int argc, char** argv)
+{
+
+  SrafGraphicsSurfaceHandle primary_surface = NULL;
+  SrafGraphicsSurfaceHandle sub_surface = NULL;
+
+  SrafGraphicsWindowHandle window = NULL;
+  SrafGraphicsSurfaceHandle window_surface = NULL;
+
+  if (SRAF_OK != sraf_graphics_initialize()) {
+    SRAF_LOGE("SRAF ERR::::::sraf_graphics_initialize failed");
+    return -1;
+  }
+
+  SRAF_LOGE("<<===============Start Graphic Window Test=================>>");
+  SRAF_LOGE("=============================================================");
+
+  SRAF_LOGE("=======create a 640x800 dfbwindow @ position 0,0==========");
+  sraf_graphics_create_window(&window, 640, 480, 0, 0, false);
+  sraf_graphics_window_set_opacity(window, 0xff);
+  if (NULL == window)  {
+    SRAF_LOGE("SRAF ERR::::::sraf_graphics_create_window failed");
+    sraf_graphics_finalize();
+    return -1;
+  }
+
+  window_surface = sraf_graphics_window_get_surface(window);
+  if (NULL == window_surface) {
+    SRAF_LOGE("SRAF ERR::::::sraf_graphics_window_get_surface failed");
+    sraf_graphics_destroy_window(window);
+    window = NULL;
+    sraf_graphics_finalize();
+    return -1;
+  }
+
+  SRAF_LOGE("=======clear window surface to color red      ==========");
+  sraf_graphics_clear_surface(window_surface, 0, 255, 0, 0xff);
+  sraf_graphics_flip(window_surface, NULL);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=======move dfb windowt to postion 200,200    ==========");
+  sraf_graphics_window_move_to(window, 200, 200);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=======change dfbwindow size to 1280x720      ==========");
+  sraf_graphics_set_window_size(window, 1280, 720);
+  sraf_graphics_clear_surface(window_surface, 0, 255, 0, 0xff);
+  sraf_graphics_flip(window_surface, NULL); //if not flip after change window size, it will be black window
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=======move dfb windowt to postion 0,0        ==========");
+  sraf_graphics_window_move_to(window, 0, 0);
+  sraf_graphics_clear_surface(window_surface, 0, 255, 0, 0xff);
+  sraf_graphics_flip(window_surface, NULL); //if not flip after change window size, it will be black window
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=======clear window_surface to color 255,255,0==========");
+  sraf_graphics_clear_surface(window_surface, 255, 255, 0, 0xff);
+  sraf_graphics_flip(window_surface, NULL);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=======full rect blit and flip test          ==========");
+  Test_FullRect_blit_and_flip(window, window_surface);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("====== graphiics window opacity test ==========");
+  Test_DfbWindow_opacity(window, window_surface);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=======partly rect blit and partly flip test ==========");
+  Test_PartRect_blit_and_flip(window, window_surface);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("========= z order test test ==========================");
+  Test_DfbWindow_z_order(window, window_surface);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  sraf_graphics_destroy_surface(window_surface);
+  sraf_graphics_destroy_window(window);
+  window = NULL;
+
+  sraf_graphics_release_layer();
+
+  SRAF_LOGE("\n\x1b[31m <<====Start Graphic Surface Test=====>> \x1b[0m \n");
+  SRAF_LOGE("=============================================================");
+  sleep(2);
+
+  SrafRect rect_primary = {0, 0, 0, 0};
+  if (SRAF_OK != sraf_graphics_create_surface(&rect_primary, 1, 0xFFFF0000, &primary_surface)) {
+    SRAF_LOGE("sraf_graphics_create_surface() error!\n");
+    sraf_graphics_finalize();
+    return -1;
+  }
+
+  SrafRect rect_sub = {0, 0, 60, 60};
+  if (SRAF_OK != sraf_graphics_create_surface(&rect_sub, false, 0xFF0000FF, &sub_surface)) {
+    sraf_graphics_destroy_surface(primary_surface);
+    primary_surface = NULL;
+    sraf_graphics_finalize();
+    SRAF_LOGE("sraf_graphics_create_surface() error!\n");
+    return -1;
+  }
+
+  if (SRAF_OK != sraf_graphics_bitblt(sub_surface, &rect_sub, primary_surface, 0, 0, 1)) {
+    sraf_graphics_destroy_surface(primary_surface);
+    primary_surface = NULL;
+
+    sraf_graphics_destroy_surface(sub_surface);
+    sub_surface = NULL;
+    sraf_graphics_finalize();
+    SRAF_LOGE("sraf_graphics_bitblt() error!\n");
+    return -1;
+  }
+
+  if (SRAF_OK != sraf_graphics_flip(primary_surface,NULL)) {
+    sraf_graphics_destroy_surface(primary_surface);
+    primary_surface = NULL;
+
+    sraf_graphics_destroy_surface(sub_surface);
+    sub_surface = NULL;
+    sraf_graphics_finalize();
+    SRAF_LOGE("sraf_graphics_flip) error!\n");
+    return -1;
+  }
+
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  sraf_graphics_destroy_surface(sub_surface);
+  sub_surface = NULL;
+
+  SrafRect imageRect = {0, 0, 120, 160};
+  unsigned char *pImage = (unsigned char *)malloc (imageRect.w*imageRect.h*4);
+  memset(pImage, 0xF0, (imageRect.w*imageRect.h*4));
+
+  if (SRAF_OK != sraf_graphics_attach_bitmap_to_surface(pImage, &imageRect, &sub_surface)) {
+    sraf_graphics_destroy_surface(primary_surface);
+    primary_surface = NULL;
+
+    sraf_graphics_finalize();
+    SRAF_LOGE("sraf_graphics_bitblt() error!\n");
+    return -1;
+  }
+
+  if (SRAF_OK != sraf_graphics_bitblt(sub_surface, &imageRect, primary_surface, 0, 0, 1)) {
+    sraf_graphics_destroy_surface(primary_surface);
+    primary_surface = NULL;
+
+    sraf_graphics_destroy_surface(sub_surface);
+    sub_surface = NULL;
+    sraf_graphics_finalize();
+    SRAF_LOGE("sraf_graphics_bitblt() error!\n");
+    return -1;
+  }
+
+  if (SRAF_OK != sraf_graphics_flip(primary_surface,NULL)) {
+    sraf_graphics_destroy_surface(primary_surface);
+    primary_surface = NULL;
+
+    sraf_graphics_destroy_surface(sub_surface);
+    sub_surface = NULL;
+    sraf_graphics_finalize();
+    SRAF_LOGE("sraf_graphics_flip) error!\n");
+    return -1;
+  }
+
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  if (pImage) {
+    free (pImage);
+    pImage = NULL;
+  }
+
+  sraf_graphics_destroy_surface(primary_surface);
+  primary_surface = NULL;
+
+  sraf_graphics_destroy_surface(sub_surface);
+  sub_surface = NULL;
+
+  sraf_graphics_finalize();
+
+  return 0;
+}
+
+
+void Test_FullRect_blit_and_flip(SrafGraphicsWindowHandle window,
+                                 SrafGraphicsSurfaceHandle surface) {
+  SrafGraphicsSurfaceHandle sub_surface = NULL;
+  SrafRect rect = {0, 0, 1280, 720};
+
+  SRAF_LOGE("=========== show a colored 'red' full rect===============");
+  sraf_graphics_create_surface(&rect, false, 0xFFFF0000, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, NULL, surface, 0, 0, 0xff);
+  sraf_graphics_flip(surface, NULL);
+  sraf_graphics_destroy_surface(sub_surface);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=========== show a colored 'green' full rect===============");
+  sraf_graphics_create_surface(&rect, false, 0xFF00FF00, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, NULL, surface, 0, 0, 0xff);
+  sraf_graphics_destroy_surface(sub_surface);
+  sraf_graphics_flip(surface, NULL);
+
+  SRAF_LOGE("=========== show a colored 'FF00FF' full recti with alpha 0xDD=");
+  sraf_graphics_create_surface(&rect, false, 0xDDFF00FF, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, NULL, surface, 0, 0, 0xff);
+  sraf_graphics_destroy_surface(sub_surface);
+  sraf_graphics_flip(surface, NULL);
+}
+
+void Test_PartRect_blit_and_flip(SrafGraphicsWindowHandle window,
+                                 SrafGraphicsSurfaceHandle surface) {
+  SrafGraphicsSurfaceHandle sub_surface = NULL;
+  SrafRect rect = {0, 0, 320, 240};
+
+  SRAF_LOGE("=========== show a  120x120 'red' rect at 0,0 =========");
+  sraf_graphics_create_surface(&rect, false, 0xFFFF0000, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, &rect, surface, 0, 0, 0xff);
+  sraf_graphics_destroy_surface(sub_surface);
+  sraf_graphics_flip(surface, NULL);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=========== show a 120x120 'green' rect at 200, 200 with alpha 0xEE====");
+  sraf_graphics_create_surface(&rect, false, 0xEE00FF00, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, &rect, surface, 200, 200, 0xff);
+  sraf_graphics_destroy_surface(sub_surface);
+  sraf_graphics_flip(surface, NULL);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=========== show a 120x120 'green' rect at 120, 0  with alpha 0xDD ====");
+  sraf_graphics_create_surface(&rect, false, 0xDD0000FF, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, &rect, surface, 420, 0, 0xff);
+  sraf_graphics_destroy_surface(sub_surface);
+  sraf_graphics_flip(surface, NULL);
+  sleep(SRAF_SHOW_TIMEOUT);
+
+  SRAF_LOGE("=========== show a 120x120 'green' rect at 380,330  with alpha 0xCC====");
+  sraf_graphics_create_surface(&rect, false, 0xCC00EEFF, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, &rect, surface, 380, 330, 0xff);
+  sraf_graphics_destroy_surface(sub_surface);
+  sraf_graphics_flip(surface, NULL);
+  sleep(SRAF_SHOW_TIMEOUT);
+}
+
+void Test_DfbWindow_opacity(SrafGraphicsWindowHandle window, SrafGraphicsSurfaceHandle surface) {
+  SrafGraphicsSurfaceHandle sub_surface = NULL;
+  SrafRect rect = {0, 0, 1280, 720};
+  sraf_graphics_create_surface(&rect, false, 0xFF00FF00, &sub_surface);
+  if (sub_surface == NULL) {
+    SRAF_LOGE("=========== create dfb surface failed ===============");
+  }
+  sraf_graphics_bitblt(sub_surface, NULL, surface, 0, 0, 0xff);
+  sraf_graphics_destroy_surface(sub_surface);
+  sraf_graphics_flip(surface, NULL);
+
+  SRAF_LOGE("=========== start opacity test ===============");
+  int opacity = 0x00;
+  printf("\nOpacity: [0xff]");
+  while(opacity < 256) {
+    printf("->[%d]", opacity);
+    sraf_graphics_window_set_opacity(window, opacity);
+    opacity += 0x0f;
+    sleep(1);
+  }
+
+  opacity = 256;
+  while(opacity > 0) {
+    printf("->[%d]", opacity);
+    sraf_graphics_window_set_opacity(window, opacity);
+    opacity -= 0x0f;
+    sleep(1);
+  }
+
+  SRAF_LOGE("=========== start opacity Test End=============");
+  sraf_graphics_window_set_opacity(window, 0xff);
+}
+
+void Test_DfbWindow_z_order(SrafGraphicsWindowHandle window, SrafGraphicsSurfaceHandle surface) {
+  SRAF_LOGE("=========== start window Z order test ===============");
+  int times = 0;
+  while (times++ < 3) {
+    SRAF_LOGE("=========== raise to top ===============");
+    sraf_graphics_window_raise_to_top(window);
+    sleep(SRAF_SHOW_TIMEOUT);
+
+    SRAF_LOGE("===========lower to bottom =============");
+    sraf_graphics_window_lower_to_bottom(window);
+    sleep(SRAF_SHOW_TIMEOUT);
+  }
+
+  SRAF_LOGE("===========z order test END =============");
+  sraf_graphics_window_raise_to_top(window);
+}
+
+```
