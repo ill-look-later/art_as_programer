@@ -17,7 +17,7 @@ xcode 开发ios程序帮我们隐藏了太多的东西， 包括系统的初始�
 
 ios程序在开始启动时， 内部会帮我们去读取info.plist文件， 里面描述了一些设置，包括安全， 初始化ui的设置，程序名字等等一系列的配置。
 
-#####修改我们程序第一个界面
+#####修改我们程序第的入口界面
 1. 我们新建一个storyboard文件
 2. 拖入我们想要的界面viewcontroller
 3. 在viewcontroller的属性设置栏中，勾选‘is initial view controller’
