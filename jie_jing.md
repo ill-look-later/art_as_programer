@@ -65,7 +65,69 @@ tmp_window->SetOpacity(tmp_window, opacity);
     > dfb API LowerToBottom 会将dfbwindow置于video层之下，但通过API RaiseToTop 提到最上层时整个屏幕黑掉，而且无论怎么更新画面都不会再显示东西
 
 
-我们unittest的代码
+我们unittest的代码:
+其中我们graphics_adaptor的代码只是对dfb的api做了一个桥接和参数的检测而已没有任何其他的code；所以我们只提供核心参考的几个函数
+#####创建dfb window的函数
+```cpp
+
+SRAF_ERR sraf_graphics_create_window(SrafGraphicsWindowHandle *window,int width, int height, int pos_x, int pos_y, bool is_cursor_window) {
+SRAF_LOCAL_FUNC_ENTER();
+
+  if ( width* height == 0) {
+    SRAF_LOCAL_TRACE();
+    return SRAF_ERR_INVALID_PARAM;
+  }
+
+  IDirectFBDisplayLayer *display_handle = get_display_layer();
+  if (NULL == display_handle) {
+    SRAF_LOCAL_TRACE_S("SRAF_DFB_INFO:: Get Display Layer Failed, CreateWindow Failed");
+    return SRAF_ERR_GENERIC;
+  }
+
+  DFBWindowDescription desc;
+#if defined(SRAF_CHIP_NAME_NT72562)
+  desc.flags = (DFBWindowDescriptionFlags)(DWDESC_WIDTH | DWDESC_HEIGHT |
+                                           DWDESC_POSX | DWDESC_POSY | DWDESC_STACKING);
+  desc.stacking = DWSC_LOWER;
+#else
+  desc.flags = (DFBWindowDescriptionFlags)(DWDESC_WIDTH | DWDESC_HEIGHT |
+                                           DWDESC_POSX | DWDESC_POSY | DWDESC_CAPS);
+#endif
+  //desc.surface_caps = DSCAPS_VIDEOONLY/* | DSCAPS_DOUBLE*/;
+  desc.caps   = DWCAPS_ALPHACHANNEL | DWCAPS_NODECORATION/* | DWCAPS_DOUBLEBUFFER*/;
+  desc.width = width;
+  desc.height = height;
+  desc.posx = pos_x;
+  desc.posy = pos_y;
+
+  SRAF_MUTEX_LOCK();
+  display_handle->CreateWindow(display_handle, &desc, (IDirectFBWindow **)window);
+  SRAF_MUTEX_UNLOCK();
+
+  IDirectFBWindow *dfb_window = (IDirectFBWindow*)(*window);
+  if (dfb_window == NULL) {
+    SRAF_LOCAL_TRACE_S("creat dfb window failed");
+    return SRAF_ERR_GENERIC;
+  }
+
+  dfb_window->SetOptions(dfb_window, DWOP_ALPHACHANNEL | DWOP_GHOST );
+  dfb_window->SetStackingClass(dfb_window, DWSC_UPPER);
+  dfb_window->RaiseToTop(dfb_window);
+  dfb_window->SetOpacity(dfb_window, 0xDD);
+
+#if defined(SRAF_CHIP_NAME_BCM7362)
+  IDirectFBSurface *window_surface = NULL;
+  dfb_window->GetSurface(dfb_window, &window_surface);
+  clear_surface((void*)window_surface, 0, 0, 0, 0xff);
+  window_surface->Flip(window_surface,NULL,(DFBSurfaceFlipFlags)0);
+  window_surface->Release(window_surface);
+#endif
+
+  SRAF_LOCAL_FUNC_LEAVE();
+  return SRAF_OK;
+}
+```
+
 ```cpp
 /* Copyright (c), 2013, SERAPHIC Information Technology (Shanghai) Co., Ltd.
  * All Right Reserved.
