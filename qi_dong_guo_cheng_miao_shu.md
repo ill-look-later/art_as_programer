@@ -23,3 +23,4 @@ ios程序在开始启动时， 内部会帮我们去读取info.plist文件， �
 3. 在viewcontroller的属性设置栏中，勾选‘is initial view controller’
 4. 在info.plist 中选项'Main storyboard file base name' 中填写上正确地文件名字，不需要后缀名
 
+这样你就能修改启动的第一个看到的界面文件了
