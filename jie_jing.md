@@ -69,7 +69,6 @@ tmp_window->SetOpacity(tmp_window, opacity);
 其中我们graphics_adaptor的代码只是对dfb的api做了一个桥接和参数的检测而已没有任何其他的code；所以我们只提供核心参考的几个函数
 #####创建dfb window的函数
 ```cpp
-
 SRAF_ERR sraf_graphics_create_window(SrafGraphicsWindowHandle *window,int width, int height, int pos_x, int pos_y, bool is_cursor_window) {
 SRAF_LOCAL_FUNC_ENTER();
 
