@@ -8,4 +8,5 @@
 
 - step 2:
   -  右击UI控件在Send envent选项中将相应地event事件拖拽到对应的ViewController上， 在弹出的函数选择框上选择需要绑定的函数； 
-  - 另外一个办法就是在相应的viewcontroller上右侧工具栏中选择connections inspects
+  - 另外一个办法就是在相应的viewcontroller上右侧工具栏中选择connections inspects， 按住响应函数拖到UI控件上，之后在弹出来的事件选择框中，选择事件
+  ![](xxxxxxx.png)
