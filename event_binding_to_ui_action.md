@@ -23,3 +23,4 @@
   2. 在项目中新建一个cocoatouch 类，基类为新的ui控件的基类， 上图中我们选择的时uiviewcontroller 所以我们在新建swift类的时候选择基类为UIViewController；
 
   3. 运行， 点击第一页面的按钮， 就会跳转到我们新建的uiviewcontroller中
+    ![](current_status.gif)
