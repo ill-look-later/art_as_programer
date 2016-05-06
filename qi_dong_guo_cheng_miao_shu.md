@@ -25,4 +25,4 @@ ios程序在开始启动时， 内部会帮我们去读取info.plist文件， �
 
 这样你就能修改启动的第一个看到的界面文件了;
 ####修改启动界面
-1. 同样在info.plist中我们可以修改‘LaunchScreen storyboard file base name’ 来指定启动界面
+1. 同样在info.plist中我们可以修改‘LaunchScreen storyboard file base name’ 来指定启动界面，例如我们可以在启动过程中，展示一个动画或者一个图片， 来保证用户不是干巴巴的等着我们的程序完全启动！
