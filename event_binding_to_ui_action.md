@@ -19,3 +19,5 @@
   
   1. 在storyboard中拖入新的uiviewcontroller， 拖动并设置为相应的present 方式；
   ![](QQ20160507-1.png)
+  
+  2. 在项目中新建一个cocoatouch 类，基类为新的ui控件的基类， 上图中我们选择的时uiviewcontroller 所以我们在新建swift类的时候选择基类为UIViewController；
