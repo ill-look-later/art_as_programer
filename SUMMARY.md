@@ -39,4 +39,5 @@
    * [IOS app](ios_app.md)
        * [启动过程描述](qi_dong_guo_cheng_miao_shu.md)
        * [UI与代码binding 的两种方法](uiyu_dai_ma_binding_de_liang_zhong_fang_fa.md)
+       * swift Class Binding to Storyboard
 
