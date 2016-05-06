@@ -15,6 +15,13 @@
   
   
   
+  
+  
+  
+  
+  
+  
   # 将新的viewcontroller 绑定到swift 类
   
   1. 在storyboard中拖入新的uiviewcontroller， 拖动并设置为相应的present 方式；
+  ![](QQ20160507-1.png)
