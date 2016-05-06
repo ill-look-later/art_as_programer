@@ -50,6 +50,6 @@
 
 ![](QQ20160507-3.png)
 
-如上图所示， 我们的控件就被添加并显示在了我们新加的uiviewcontroller中
+如上图所示， 我们的控件就被添加并显示在了我们新加的uiviewcontroller中；
 
 
