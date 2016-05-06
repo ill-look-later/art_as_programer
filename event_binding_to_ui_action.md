@@ -39,8 +39,6 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         let label = UILabel(frame: CGRect(x: 200, y: 100, width: 200, height: 90))
         label.text = "Name: HuanGong"
         view.addSubview(label)
