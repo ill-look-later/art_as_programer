@@ -17,10 +17,12 @@ xcode 开发ios程序帮我们隐藏了太多的东西， 包括系统的初始�
 
 ios程序在开始启动时， 内部会帮我们去读取info.plist文件， 里面描述了一些设置，包括安全， 初始化ui的设置，程序名字等等一系列的配置。
 
-#####修改我们程序第的入口界面
+#####修改我们程序第的主界面
 1. 我们新建一个storyboard文件
 2. 拖入我们想要的界面viewcontroller
 3. 在viewcontroller的属性设置栏中，勾选‘is initial view controller’
 4. 在info.plist 中选项'Main storyboard file base name' 中填写上正确地文件名字，不需要后缀名
 
-这样你就能修改启动的第一个看到的界面文件了
+这样你就能修改启动的第一个看到的界面文件了;
+####修改启动界面
+1. 同样在info.plist中我们可以修改‘LaunchScreen storyboard file base name’ 来指定启动界面
