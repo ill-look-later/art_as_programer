@@ -8,3 +8,7 @@
 
 - method 2：
 > 在document outline中选中需要UI对应的scene， 在右侧选择connections inspects，在右侧的Outlets变量中选取想binding的变量， 按住ctrl 键 拖到到相应地ui控件上
+![](ED15E046-218D-4947-B4ED-FEE3F124B8B3.png)
+
+####assistants editor
+ 在storyboard界面打开ui类对应的assistants editor；
