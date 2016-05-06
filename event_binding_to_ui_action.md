@@ -34,4 +34,19 @@
     
 # 通过代码， 在代码中手动的添加ui控件
 
+同样，我们也可以在代码中通过代码将ui控件添加到我们的整个view中，
+```swift
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+        let label = UILabel(frame: CGRect(x: 200, y: 100, width: 200, height: 90))
+        label.text = "Name: HuanGong"
+        view.addSubview(label)
+        
+        // Do any additional setup after loading the view.
+    }
+```
+
 
