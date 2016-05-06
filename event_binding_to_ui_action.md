@@ -10,3 +10,11 @@
   -  右击UI控件在Send envent选项中将相应地event事件拖拽到对应的ViewController上， 在弹出的函数选择框上选择需要绑定的函数； 
   - 另外一个办法就是在相应的viewcontroller上右侧工具栏中选择connections inspects， 按住响应函数拖到UI控件上，之后在弹出来的事件选择框中，选择事件
   ![](xxxxxxx.png)
+  
+  
+  
+  
+  
+  # 将新的viewcontroller 绑定到swift 类
+  
+  1. 在storyboard中拖入新的uiviewcontroller， 拖动并设置为相应的present 方式
