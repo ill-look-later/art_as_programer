@@ -46,6 +46,6 @@
         // Do any additional setup after loading the view.
     }
 ```
-通过上面的代码，我们就可以在我们的ui中添加一个新的label控件，
+通过上面的代码，我们就可以在我们的ui中添加一个新的label控件；
 
 
