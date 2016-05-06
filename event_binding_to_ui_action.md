@@ -11,13 +11,7 @@
   - 另外一个办法就是在相应的viewcontroller上右侧工具栏中选择connections inspects， 按住响应函数拖到UI控件上，之后在弹出来的事件选择框中，选择事件
   ![](xxxxxxx.png)
   
-  
-  
-  
-  
-  
-  
-  
+  ---
   
   
   
