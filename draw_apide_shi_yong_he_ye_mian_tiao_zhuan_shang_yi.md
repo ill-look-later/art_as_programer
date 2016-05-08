@@ -14,7 +14,7 @@
 | -- | -- | -- |
 
 
-- ###很容易看明白吧， 就是在页面跳转的时候，通过函数将tableview中得数据传递到下一个要显示的page上。看代码：
+- ###很容易看明白吧， 就是在页面跳转的时候，通过函数将tableview中得数据传递到下一个要显示的page上。看代码：不得不赞一个apple公司在这函数和api的说明上写的非常cool
 
 ```swift
       // In a storyboard-based application, you will often want to do a little preparation before navigation
