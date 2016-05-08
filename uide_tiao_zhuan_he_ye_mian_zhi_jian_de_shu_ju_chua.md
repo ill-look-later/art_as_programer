@@ -5,7 +5,7 @@
 页面跳转其实就两种方式啦， 新的和旧的，当然了， 原理都是一样一样的嘛
 先来看看效果：
 
-  <div align = "middle">XXXXX</div>
+  <div align = "center">XXXXX</div>
   
 ![](页面跳转和数据传递.gif)
 
