@@ -82,8 +82,11 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
  ```
 
 
-
-
+ > 返回， 返回是和storyboard中得动作一样的， 通过button或者其他的方式binding一个函数，在函数中调用下面这个函数即可
+     
+    self.dismissViewControllerAnimated(false) { 
+            print("sencond page dismissed completed")
+     }
 
 
 
