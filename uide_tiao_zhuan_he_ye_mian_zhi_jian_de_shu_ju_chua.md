@@ -66,3 +66,15 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
   > 进入
    - 新建一个基于UIviewcontroller的子类thirdViewcontroller，并勾选上create xib file 选项
    - 打开xib完成xib中得界面设计， 图中我加入了一个返回按钮和一个呈现数据的label
+
+
+
+
+
+
+
+
+
+
+
+
