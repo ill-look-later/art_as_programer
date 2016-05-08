@@ -29,8 +29,6 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
     // The completion handler, if provided, will be invoked after the dismissed controller's viewDidDisappear: callback is invoked.
     @available(iOS 5.0, *)
     public func dismissViewControllerAnimated(flag: Bool, completion: (() -> Void)?)
-    
-
 ```
 ##主要的步骤：
 
