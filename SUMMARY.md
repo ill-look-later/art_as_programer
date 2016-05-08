@@ -44,5 +44,5 @@
        * [UI的跳转和页面之间的数据传递](uide_tiao_zhuan_he_ye_mian_zhi_jian_de_shu_ju_chua.md)
        * [Draw API的使用和页面跳转上一点点的优化](draw_apide_shi_yong_he_ye_mian_tiao_zhuan_shang_yi.md)
 * [小技巧，大作用](xiao_ji_qiao_ff0c_da_zuo_yong.md)
-   * gitbook markdown居中显示图片
+   * [gitbook markdown居中显示图片](gitbook_markdownju_zhong_xian_shi_tu_pian.md)
 
