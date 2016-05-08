@@ -35,4 +35,7 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
 ### 在storyboard中设置跳转的方法一：
 1. 新建singleview 工程
 2. 在mainstoryboard中默认额view中拖入一个button
-3. 再拖入一个新的uiviewcontroller， 并在一个新的ui界面放入一个label来表示这是第二个页面
+3. 再拖入一个新的uiviewcontroller， 并在一个新的ui界面放入一个label来表示这是第二个页面， 同时放入一个返回button
+4. 按住ctrl在第一个segue的button上拖到第二个viewcontroller页面
+
+运行点击按钮就能跳转到下一个页面
