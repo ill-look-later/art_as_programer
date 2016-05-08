@@ -17,7 +17,7 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
 
 
 这里我们主要说得是设计方式上，一个是老的xib，一个是新的storyboard 其实都是一模一样的啦；
-先看两个代码一些代码的说明
+先看两个函数的说明
 ```swift
 /*
       The next two methods are replacements for presentModalViewController:animated and
