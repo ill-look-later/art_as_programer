@@ -43,5 +43,5 @@
        * [Event Binding to UI action](event_binding_to_ui_action.md)
        * [UI的跳转和页面之间的数据传递](uide_tiao_zhuan_he_ye_mian_zhi_jian_de_shu_ju_chua.md)
        * [Draw API的使用和页面跳转上一点点的优化](draw_apide_shi_yong_he_ye_mian_tiao_zhuan_shang_yi.md)
-* 小技巧，大作用
+* [小技巧，大作用](xiao_ji_qiao_ff0c_da_zuo_yong.md)
 
