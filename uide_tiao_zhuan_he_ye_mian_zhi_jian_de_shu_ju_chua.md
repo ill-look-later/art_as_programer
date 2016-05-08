@@ -45,5 +45,10 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
   - 通过代码编辑助手完成返回按钮和@IBACTION的绑定
   - 在IBAction代码中加入下列code，函数看上面的说明
   ```swift
-  
+      @IBAction func go_back_page() {
+        print("back")
+        self.dismissViewControllerAnimated(false) { 
+            print("sencond page dismissed completed")
+        }
+    }
   ```
