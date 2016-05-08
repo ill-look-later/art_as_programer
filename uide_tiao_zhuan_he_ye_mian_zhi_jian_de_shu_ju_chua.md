@@ -70,7 +70,7 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
    - 同样通过@IBACTION 完成页面上得按钮和代码的binding，加入下面代码
  
  ```swift
-       @IBAction func JumpToNextPage(sender: AnyObject) {
+    @IBAction func JumpToNextPage(sender: AnyObject) {
         print("go to next page")
         let xibViewController = ThirdUIViewController(nibName: "ThirdUIViewController", bundle: nil)
         xibViewController.textContentData = inputdata_field.text
