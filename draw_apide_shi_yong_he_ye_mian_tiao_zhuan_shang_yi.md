@@ -38,5 +38,4 @@
             //(segue.destinationViewController as JieDetailViewController).detailItem = object
         }
     }
-
 ```
