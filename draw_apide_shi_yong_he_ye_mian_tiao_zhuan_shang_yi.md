@@ -41,7 +41,7 @@
 ```
 
 
-#### 在接收的那边， 收到类型之后根据不同的type绘制不同的形状就ok了,新建一个类binding到第二个页面中得view上；
+#### 在接收的那边， 收到类型之后根据不同的type绘制不同的形状就ok了,新建一个类binding到第二个页面中得view上；在drawapi来绘制不同的形状
 ```swift
 import UIKit
 
