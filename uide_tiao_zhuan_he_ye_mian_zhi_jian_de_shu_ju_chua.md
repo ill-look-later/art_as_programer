@@ -66,7 +66,19 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
   > 进入
    - 新建一个基于UIviewcontroller的子类thirdViewcontroller，并勾选上create xib file 选项
    - 打开xib完成xib中得界面设计， 图中我加入了一个返回按钮和一个呈现数据的label
-
+   - 在第一个主页面的viewcontroller.swift中添加一个新的button用于跳转到xib的这个页面， 
+   - 同样通过@IBACTION 完成页面上得按钮和代码的binding，加入下面代码
+ ```swift
+       @IBAction func JumpToNextPage(sender: AnyObject) {
+        print("go to next page")
+        let xibViewController = ThirdUIViewController(nibName: "ThirdUIViewController", bundle: nil)
+        xibViewController.textContentData = inputdata_field.text
+        
+        presentViewController(xibViewController, animated: false) {
+            print("present view controller finished")
+        }
+    }
+ ```
 
 
 
