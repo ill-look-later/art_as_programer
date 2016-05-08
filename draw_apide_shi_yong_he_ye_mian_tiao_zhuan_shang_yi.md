@@ -43,4 +43,29 @@
 
 #### 在接收的那边， 收到类型之后根据不同的type绘制不同的形状就ok了
 ```swift
+import UIKit
+
+class CanvasView: UIView {
+
+    var drawtype:DrawType? = nil
+    // *
+    // Only override drawRect: if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func drawRect(rect: CGRect) {
+        print("I will Draw a \(drawtype!) here in size:width:\(rect.width),height:\(rect.height)")
+        // Drawing code
+    }
+    //*/
+
+    func drawLines() {
+        print("i will draw lines here, but i gona sleep now")
+    }
+    func drawRectangle() {
+        print("i will draw Rectangle here, but i gona sleep now")
+    }
+    func drawCircle() {
+        print("i will draw Circle here, but i gona sleep now")
+    }
+    
+}
 ```
