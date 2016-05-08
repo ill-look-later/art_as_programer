@@ -73,7 +73,7 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
     @IBAction func JumpToNextPage(sender: AnyObject) {
         print("go to next page")
         let xibViewController = ThirdUIViewController(nibName: "ThirdUIViewController", bundle: nil)
-        xibViewController.textContentData = inputdata_field.text
+        xibViewController.textContentData = inputdata_field.text //数据传递
         
         presentViewController(xibViewController, animated: false) {
             print("present view controller finished")
