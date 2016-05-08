@@ -43,7 +43,7 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
 
 运行点击按钮就能跳转到下一个页面
 > 返回
-  - 通过代码编辑助手完成返回按钮和@IBACTION的绑定
+  - 在类secondUiviewcontroller中通过代码编辑助手完成返回按钮和@IBACTION的绑定
   - 在IBAction代码中加入下列code，函数看上面的说明
   ```swift
       @IBAction func go_back_page() {
