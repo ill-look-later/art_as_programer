@@ -32,7 +32,7 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
 ```
 ##主要的步骤：
 
-###页面跳转的方法一：
+### 在storyboard中设置跳转的方法一：
 1. 新建singleview 工程
 2. 在mainstoryboard中默认额view中拖入一个button
 3. 再拖入一个新的uiviewcontroller， 并在一个新的ui界面放入一个
