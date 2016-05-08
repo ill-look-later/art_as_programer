@@ -86,7 +86,7 @@ ios中得页面衔接有好几种， 之前我们用过通过push的方法，将
      
     self.dismissViewControllerAnimated(false) { 
             print("sencond page dismissed completed")
-     }
+    }
 
 
 
