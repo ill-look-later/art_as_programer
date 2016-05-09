@@ -76,8 +76,17 @@ class CanvasView: UIView {
 ### 再来看绘图 在ios中叫 core graphics
 
 
-有时间先看看这篇文章：http://www.cocoachina.com/industry/20140115/7703.html
+有时间先看看这篇文章：http://www.cocoachina.com/industry/20140115/7703.html，  看完之后应该不用说不会写代码了吧..(*^__^*) 嘻嘻……，
 
+
+
+
+
+
+---
+>>我就是code小兵，code小兵就是我 
+
+---
 
 
 
