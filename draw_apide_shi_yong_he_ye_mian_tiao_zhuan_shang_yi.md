@@ -81,13 +81,10 @@ class CanvasView: UIView {
 
 
 
-
+---
 
 | **我就是code小兵，code小兵就是我**  |
 | -- |
-
----
->>
 
 ---
 
