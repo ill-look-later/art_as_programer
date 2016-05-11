@@ -96,7 +96,7 @@ class CanvasView: UIView {
 - CGContextSetLineWidth //设置线宽
 - CGContextFillPath //填充路径, 要保证路径是closed 哦, 不然你看不到效果的
 - CGContextAddEllipseInRect //添加一个椭圆,都说明了在矩形中啦, 请补习高中数学
-- CGContextDrawImage //
+- CGContextDrawImage // 绘制图像, 默认是颠倒的, 正过来的法方网上找
 - CGContextAddEllipseInRect
 - CGContextSetRGBFillColor
 - CGContextSaveGState
