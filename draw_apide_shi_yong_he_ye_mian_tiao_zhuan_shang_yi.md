@@ -78,7 +78,8 @@ class CanvasView: UIView {
 
 有时间先看看这篇文章：http://www.cocoachina.com/industry/20140115/7703.html，  看完之后应该不用说不会写代码了吧..(*^__^*) 嘻嘻……，
 
-下面是其核心代码部分, 其中drawtype是通过prepareForSegue 函数传递过来的.
+下面是其核心代码部分, 其中drawtype是通过prepareForSegue 函数传递过来的. 其中绘图的上下文通过
+*"UIGraphicsGetCurrentContext"*
 
 ```swift
     override func drawRect(rect: CGRect) {
