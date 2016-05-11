@@ -89,10 +89,10 @@ class CanvasView: UIView {
 - CGContextAddPath // 为上下文(我更愿意称为canvas) 添加一个CGPath来记录绘制的路径
 - CGContextClosePath // 如果当前的路径不是一个闭合路径, 则添加直线将区域连成闭合区域 {3 -> B }
 - CGContextMoveToPoint //将绘制的路径开始点移动到一个指定点
-- CGPathAddLineToPoint
-- CGContextStrokePath
-- CGContextSetRGBStrokeColor
-- CGContextAddArc
+- CGPathAddLineToPoint //在path路径中从当前位置开始链接一条线到指定点
+- CGContextStrokePath // 按照path路径, 在canvas上画出这条线
+- CGContextSetRGBStrokeColor // 设置画笔的颜色
+- CGContextAddArc // 添加一个弧度角, 2*pi当然就是一个圆啦
 - CGContextSetLineWidth
 - CGContextFillPath
 - CGContextAddEllipseInRect
