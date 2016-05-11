@@ -88,7 +88,7 @@ class CanvasView: UIView {
 - CGPathMoveToPoint //将路径移动到一个点
 - CGContextAddPath // 为上下文(我更愿意称为canvas) 添加一个CGPath来记录绘制的路径
 - CGContextClosePath // 如果当前的路径不是一个闭合路径, 则添加直线将区域连成闭合区域 {3 -> B }
-- CGContextMoveToPoint //将绘制的路径开始点移动到
+- CGContextMoveToPoint //将绘制的路径开始点移动到一个指定点
 - CGPathAddLineToPoint
 - CGContextStrokePath
 - CGContextSetRGBStrokeColor
