@@ -81,6 +81,20 @@ class CanvasView: UIView {
 下面是其核心代码部分, 其中drawtype是通过prepareForSegue 函数传递过来的. 其中绘图的上下文通过
 *"UIGraphicsGetCurrentContext"* 拿到, 这个上下文类似于javascript在浏览器中拿到的canvas.
 
+其中core graphics 提供了一系列的函数来在特定的函数来完成基本的绘制
+- CGPathMoveToPoint
+- CGContextAddPath
+- CGContextClosePath
+- CGPathMoveToPoint
+- CGContextMoveToPoint
+- CGPathAddLineToPoint
+- CGContextStrokePath
+- CGContextSetRGBStrokeColor
+- CGContextAddArc
+- CGContextSetLineWidth
+- CGContextFillPath
+- CGContextAddEllipseInRect
+
 ```swift
     override func drawRect(rect: CGRect) {
         print("I will Draw a \(drawtype!) here in size:width:\(rect.width),height:\(rect.height)")
