@@ -94,8 +94,8 @@ class CanvasView: UIView {
 - CGContextSetRGBStrokeColor // 设置画笔的颜色
 - CGContextAddArc // 添加一个弧度角, 2\*pi当然就是一个圆啦
 - CGContextSetLineWidth //设置线宽
-- CGContextFillPath
-- CGContextAddEllipseInRect
+- CGContextFillPath //填充路径, 要保证路径是closed 哦, 不然你看不到效果的
+- CGContextAddEllipseInRect //添加一个椭圆
 - CGContextDrawImage
 - CGContextAddEllipseInRect
 - CGContextSetRGBFillColor
