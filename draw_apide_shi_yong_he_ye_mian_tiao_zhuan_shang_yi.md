@@ -82,7 +82,7 @@ class CanvasView: UIView {
 *"UIGraphicsGetCurrentContext"* 拿到, 这个上下文类似于javascript在浏览器中拿到的canvas.
 
 其中core graphics 提供了一系列的函数来在特定的函数来完成基本的绘制
-- CGPathMoveToPoint
+- CGPathMoveToPoint //将路径移动到一个点
 - CGContextAddPath
 - CGContextClosePath
 - CGPathMoveToPoint
