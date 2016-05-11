@@ -94,6 +94,14 @@ class CanvasView: UIView {
 - CGContextSetLineWidth
 - CGContextFillPath
 - CGContextAddEllipseInRect
+- CGContextDrawImage
+- CGContextAddEllipseInRect
+- CGContextSetRGBFillColor
+- CGContextSaveGState
+- CGContextRestoreGState
+- ....
+
+这一系列的基本函数来帮助我们完成图形的绘制,
 
 ```swift
     override func drawRect(rect: CGRect) {
