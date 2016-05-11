@@ -1,4 +1,4 @@
-# Draw API的使用和页面跳转上一点点的优化
+# Draw API的使用和页面跳转上一点点的优# Draw API的使用和页面跳转上一点点的优na化
 
 
 　　参看别人的做的， 但是那个博客中是通过静态cell，和viewcontroller进行连接的， 也就是一个cell 会connect 到一个storyboard中拖入的viewcontroller， 对于我这种内存恐惧症还是有蛮大的伤害的， 所以我自己改了改，新手、勿喷！
@@ -79,7 +79,7 @@ class CanvasView: UIView {
 有时间先看看这篇文章：http://www.cocoachina.com/industry/20140115/7703.html，  看完之后应该不用说不会写代码了吧..(*^__^*) 嘻嘻……，
 
 下面是其核心代码部分, 其中drawtype是通过prepareForSegue 函数传递过来的. 其中绘图的上下文通过
-*"UIGraphicsGetCurrentContext"*
+*"UIGraphicsGetCurrentContext"* 拿到, 这个上下文类似于javascript在浏览器中拿到的canvas
 
 ```swift
     override func drawRect(rect: CGRect) {
