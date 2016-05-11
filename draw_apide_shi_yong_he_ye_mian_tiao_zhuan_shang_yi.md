@@ -211,6 +211,9 @@ class CanvasView: UIView {
 最后看一下storyboard中得样子, 还有一个最后完成的样子:
 
 
+|   |
+| :--: |
+
 ---
 
 | ——**我就是code小兵，code小兵就是我**  |
