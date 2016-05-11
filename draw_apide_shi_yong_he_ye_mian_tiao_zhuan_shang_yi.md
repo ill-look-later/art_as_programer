@@ -1,4 +1,4 @@
-# Draw API的使用和页面跳转上一点点的优# Draw API的使用和页面跳转上一点点的优na化
+# Draw API的使用和页面跳转上一点点的优# Draw API的使用和页面跳转# Draw API的使用和页面跳转上一点点的优# Draw API的使用和页面跳转xi'x上(*^__^*) 嘻嘻……优na化
 
 
 　　参看别人的做的， 但是那个博客中是通过静态cell，和viewcontroller进行连接的， 也就是一个cell 会connect 到一个storyboard中拖入的viewcontroller， 对于我这种内存恐惧症还是有蛮大的伤害的， 所以我自己改了改，新手、勿喷！
