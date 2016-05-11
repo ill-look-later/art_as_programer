@@ -80,7 +80,6 @@ class CanvasView: UIView {
 
 下面是其核心代码部分:
 
-
 ```swift
     override func drawRect(rect: CGRect) {
         print("I will Draw a \(drawtype!) here in size:width:\(rect.width),height:\(rect.height)")
