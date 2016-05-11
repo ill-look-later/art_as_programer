@@ -99,7 +99,7 @@ class CanvasView: UIView {
 - CGContextDrawImage // 绘制图像, 默认是颠倒的, 正过来的法方网上找
 - CGContextSetRGBFillColor //设置田中的颜色
 - CGContextSaveGState // 保存当前上下文状态, 因为有可能我们会拿这个canvas做变换,到时候我们绘制完我们的东西得还原回来, 不然, 呵呵, 你所有的绘制都不会是你想要的样子
-- CGContextRestoreGState
+- CGContextRestoreGState //不用说了吧, 看上一条
 - ....
 
 这一系列的基本函数来帮助我们完成图形的绘制,
