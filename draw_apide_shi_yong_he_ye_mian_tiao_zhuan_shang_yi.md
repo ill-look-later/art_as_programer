@@ -92,7 +92,7 @@ class CanvasView: UIView {
 - CGPathAddLineToPoint //在path路径中从当前位置开始链接一条线到指定点
 - CGContextStrokePath // 按照path路径, 在canvas上画出这条线
 - CGContextSetRGBStrokeColor // 设置画笔的颜色
-- CGContextAddArc // 添加一个弧度角, 2*pi当然就是一个圆啦
+- CGContextAddArc // 添加一个弧度角, 2\*pi当然就是一个圆啦
 - CGContextSetLineWidth
 - CGContextFillPath
 - CGContextAddEllipseInRect
