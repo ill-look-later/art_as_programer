@@ -83,7 +83,7 @@ class CanvasView: UIView {
 
 其中core graphics 提供了一系列的函数来在特定的函数来完成基本的绘制
 - CGPathMoveToPoint //将路径移动到一个点
-- CGContextAddPath // 为上下文(我更愿意称为canvas
+- CGContextAddPath // 为上下文(我更愿意称为canvas) 添加一个CGPath来记录绘制的路径
 - CGContextClosePath
 - CGPathMoveToPoint
 - CGContextMoveToPoint
