@@ -21,5 +21,5 @@
 
 查看apple官方的文档发现.原来的pin不是去掉了, 而是由editor菜单调整到了storyboard的视图上面;在storyboard中添加了新的功能选项来调整layout相关的功能;
 
-|  |
+| ![](QQ20160515-0.png) |
 |:--:|
