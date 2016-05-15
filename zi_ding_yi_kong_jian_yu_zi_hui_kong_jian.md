@@ -10,3 +10,5 @@
 - @IBInspectable 关键字将类其中的属性导出到storyboard中, 使得可以更方便的调整属性值,并预览效果
 - 通过override drawRect方法 绘制自定义的组件
 
+||
+|:--:|
