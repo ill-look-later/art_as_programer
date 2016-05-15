@@ -8,3 +8,4 @@
 - 通过view.addSubview(subview)接口从代码中添加子view
 - 通过@IBDesignable 关键字导出class 到storyboard,从而使类中的修改实时的可以在storyboard中看到效果
 - @IBInspectable 关键字将类其中的属性导出到storyboard中, 使得可以更方便的调整属性值,并预览效果
+- 通过override drawRect方法
