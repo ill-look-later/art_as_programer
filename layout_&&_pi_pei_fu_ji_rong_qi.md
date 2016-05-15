@@ -20,3 +20,4 @@
 
 
 查看apple官方的文档发现.
+在storyboard中添加了新的功能选项来调整layout相关的功能;
