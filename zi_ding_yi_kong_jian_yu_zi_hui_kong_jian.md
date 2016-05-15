@@ -11,4 +11,4 @@
 - 通过override drawRect方法 绘制自定义的组件
 
 | ![](customizeControl.gif) |
-|::|
+|:--:|
