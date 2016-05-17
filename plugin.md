@@ -9,5 +9,6 @@ RenderFrameImpl::CreatePlugin(RenderFrameImpl::CreatePlugin(),
                                const WebPluginInfo& info,
                                const blink::WebPluginParams& params)
   new WebPluginImpl(frame, params, info.path, render_view_, this);
+ 
 ```
-
+content/renderer/npapi/webplugin_impl.cc
