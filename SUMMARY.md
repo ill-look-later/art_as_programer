@@ -17,6 +17,7 @@
    * [Aura_Toolkit_Event](auratoolkit_event.md)
    * [The Relationship Between View && aura::window](the_relationship_between_view_and_aurawindow.md)
    * [Web IDL on chromium](web_idl_on_chromium.md)
+   * Plugin
 * [短暂的嵌入式生涯](duan_zan_de_qian_ru_shi_sheng_ya.md)
    * [EIM 异步复用模式配置核心要点](eim_yi_bu_fu_yong_mo_shi_pei_zhi_he_xin_yao_dian.md)
 * [Personal Project](personal_project.md)
