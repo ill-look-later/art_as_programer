@@ -6,7 +6,8 @@
 ###plugin 的创建
 
 - step ：
-  ./core/html/HTMLPlugInElement.cpp:599:        widget = frame->loader().client()->createPlugin(this, url, paramNames, paramValues, mimeType, loadManually, policy);
+  ./core/html/HTMLPlugInElement.cpp:599: 
+  widget = frame->loader().client()->createPlugin(this, url, paramNames, paramValues, mimeType, loadManually, policy);
 - step ：
   
 ```cpp
