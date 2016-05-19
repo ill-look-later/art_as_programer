@@ -19,7 +19,7 @@ third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
   call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
   call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
-content/renderer/render_frame_impl.cc ： 继承blink里面的FrameClient.h
+content/renderer/render_frame_impl.cc ： 继承blink里面的WebFrameClient.h
 blink::WebPlugin* RenderFrameImpl::createPlugin
   call: CreatePlugin(frame, info, params_to_use);
   
