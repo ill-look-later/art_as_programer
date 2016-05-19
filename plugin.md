@@ -122,6 +122,3 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
 可以看到在webpluginimpl中创建并管理了一个WebPluginDelegateProxy\* plugin_delegate 对象, 并调用了它的Initialize函数，来初始化WebPluginDelegateProxy，
 
 
-
-
-content/renderer/npapi/webplugin_impl.cc
