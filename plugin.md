@@ -6,10 +6,11 @@
 ###plugin 的创建
 
 core/html/HTMLPlugInElement.cpp:599: 
-    widget = frame->loader().client()->createPlugin(this, url, paramNames, paramValues, mimeType, loadManually, policy);
+    call: widget = frame->loader().client()->createPlugin(this, url, paramNames, paramValues, mimeType, loadManually, policy);
 
 //content/renderer/render_frame_impl.cc
 blink::WebPlugin* RenderFrameImpl::createPlugin
+  call: 
 
   
 ```cpp
