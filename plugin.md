@@ -10,7 +10,7 @@ core/html/HTMLPlugInElement.cpp:599:
 
 third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
   call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
-  call: **if (!webPlugin->initialize(container.get()))**
+  call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
 content/renderer/render_frame_impl.cc
 blink::WebPlugin* RenderFrameImpl::createPlugin
