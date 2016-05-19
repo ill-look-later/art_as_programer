@@ -73,6 +73,7 @@ third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
   call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
   call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
+webplugin_impl.cc
 bool WebPluginImpl::initialize(WebPluginContainer* container)
 ```cpp
 //content/renderer/render_frame_impl.cc
