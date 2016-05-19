@@ -29,8 +29,6 @@ blink::WebPlugin* RenderFrameImpl::CreatePlugin
 
 在创建NPAPI的这个webpluginImpl类的构造函数中， 仅仅是将params存起来而已，真的是啥都没干，不行你看
 ```cpp
-
-content/renderer/npapi/webplugin_impl.cc
 WebPluginImpl::WebPluginImpl(
     WebFrame* webframe,
     const WebPluginParams& params,
