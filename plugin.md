@@ -27,6 +27,12 @@ blink::WebPlugin* RenderFrameImpl::CreatePlugin
     call: return new WebPluginImpl(frame, params, info.path, render_view_, this);
 
 
+
+
+
+第二个过程： 创建plugin整个类的关系链
+---
+
 ```cpp
 //content/renderer/render_frame_impl.cc
 RenderFrameImpl::CreatePlugin(RenderFrameImpl::CreatePlugin(),
