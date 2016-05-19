@@ -13,7 +13,7 @@ blink::WebPlugin* RenderFrameImpl::createPlugin
   call: CreatePlugin(frame, info, params_to_use);
   
 blink::WebPlugin* RenderFrameImpl::CreatePlugin
-  
+    call: return new WebPluginImpl(frame, params, info.path, render_view_, this);
 ```cpp
 //content/renderer/render_frame_impl.cc
 RenderFrameImpl::CreatePlugin(RenderFrameImpl::CreatePlugin(),
