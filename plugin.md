@@ -11,7 +11,6 @@
 
 第一个过程： 创建plugin整个类的关系链
 ---
-content/renderer/npapi/webplugin_impl.cc
 core/html/HTMLPlugInElement.cpp:599: 
     call: widget = frame->loader().client()->createPlugin(this, url, paramNames, paramValues, mimeType, loadManually, policy);
 
@@ -73,7 +72,7 @@ third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
   call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
   call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
-webplugin_impl.cc
+content/renderer/npapi/webplugin_impl.cc
 bool WebPluginImpl::initialize(WebPluginContainer* container)
 ```cpp
 //content/renderer/render_frame_impl.cc
