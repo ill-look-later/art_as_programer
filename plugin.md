@@ -73,7 +73,55 @@ third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
   call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
 content/renderer/npapi/webplugin_impl.cc
+```
 bool WebPluginImpl::initialize(WebPluginContainer* container)
+bool WebPluginImpl::initialize(WebPluginContainer* container) {
+  if (!render_view_.get()) {
+    LOG(ERROR) << "No RenderView";
+    return false;
+  }
+
+  WebPluginDelegateProxy* plugin_delegate = new WebPluginDelegateProxy(
+      this, mime_type_, render_view_, render_frame_);
+
+  // Store the plugin's unique identifier, used by the container to track its
+  // script objects.
+  npp_ = plugin_delegate->GetPluginNPP();
+
+  // Set the container before Initialize because the plugin may
+  // synchronously call NPN_GetValue to get its container, or make calls
+  // passing script objects that need to be tracked, during initialization.
+  SetContainer(container);
+
+  bool ok = plugin_delegate->Initialize(
+      plugin_url_, arg_names_, arg_values_, load_manually_);
+  if (!ok) {
+    plugin_delegate->PluginDestroyed();
+
+    blink::WebPlugin* replacement_plugin =
+        GetContentClient()->renderer()->CreatePluginReplacement(
+            render_frame_, file_path_);
+    if (!replacement_plugin)
+      return false;
+
+    // Disable scripting by this plugin before replacing it with the new
+    // one. This plugin also needs destroying, so use destroy(), which will
+    // implicitly disable scripting while un-setting the container.
+    destroy();
+
+    // Inform the container of the replacement plugin, then initialize it.
+    container->setPlugin(replacement_plugin);
+    return replacement_plugin->initialize(container);
+  }
+
+  delegate_ = plugin_delegate;
+
+  return true;
+}
+```
+
+
+
 ```cpp
 //content/renderer/render_frame_impl.cc
 RenderFrameImpl::CreatePlugin(RenderFrameImpl::CreatePlugin(),
