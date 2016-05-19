@@ -74,7 +74,6 @@ third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
 
 content/renderer/npapi/webplugin_impl.cc
 ```
-bool WebPluginImpl::initialize(WebPluginContainer* container)
 bool WebPluginImpl::initialize(WebPluginContainer* container) {
   if (!render_view_.get()) {
     LOG(ERROR) << "No RenderView";
