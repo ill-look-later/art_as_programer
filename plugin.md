@@ -120,6 +120,7 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
 ```
 
 可以看到在webpluginimpl中创建并管理了一个WebPluginDelegateProxy\* plugin_delegate 对象, 并调用了它的Initialize函数，来初始化
+
     WebPluginDelegateProxy* plugin_delegate = new WebPluginDelegateProxy(this, mime_type_, render_view_, render_frame_);
     plugin_delegate->Initialize(
       plugin_url_, arg_names_, arg_values_, load_manually_);
