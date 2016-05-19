@@ -8,6 +8,9 @@
 
 ###plugin 的创建
 
+第一个过程： 创建plugin整个类的关系链
+---
+
 core/html/HTMLPlugInElement.cpp:599: 
     call: widget = frame->loader().client()->createPlugin(this, url, paramNames, paramValues, mimeType, loadManually, policy);
 
