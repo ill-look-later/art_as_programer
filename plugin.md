@@ -11,7 +11,7 @@
 
 第一个过程： 创建plugin整个类的关系链
 ---
-> 线面是一个大字的callstack， 在大概40版本开始， NPAPI就渐渐的被移除了，到现在version 51， 最新的code里面基本上已经看不到NPAPI的痕迹了， 就连blink面也都完全被移除干净了...
+> 线面是一个大字的callstack， 在大概40版本开始， NPAPI就渐渐的被移除了，到现在version 51， 最新的code里面基本上已经看不到NPAPI的痕迹了， 就连blink面也都完全被移除干净了...所以，接下来chromium已经完全是PPAPI的天下了
 
 ```cpp  
 core/html/HTMLPlugInElement.cpp:599: 
