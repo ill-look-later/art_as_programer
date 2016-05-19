@@ -119,14 +119,12 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
 }
 ```
 
+可以看到在webpluginimpl中创建并管理了一个WebPluginDelegateProxy\* plugin_delegate 对象
+    WebPluginDelegateProxy* plugin_delegate = new WebPluginDelegateProxy(this, mime_type_, render_view_, render_frame_);
+    plugin_delegate->Initialize(
+      plugin_url_, arg_names_, arg_values_, load_manually_);
 
 
-```cpp
-//content/renderer/render_frame_impl.cc
-RenderFrameImpl::CreatePlugin(RenderFrameImpl::CreatePlugin(),
-                               const WebPluginInfo& info,
-                               const blink::WebPluginParams& params)
-  new WebPluginImpl(frame, params, info.path, render_view_, this);
- 
-```
+
+
 content/renderer/npapi/webplugin_impl.cc
