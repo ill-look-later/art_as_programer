@@ -10,7 +10,7 @@ core/html/HTMLPlugInElement.cpp:599:
 
 //content/renderer/render_frame_impl.cc
 blink::WebPlugin* RenderFrameImpl::createPlugin
-  call: 
+  call: CreatePlugin(frame, info, params_to_use);
 
   
 ```cpp
