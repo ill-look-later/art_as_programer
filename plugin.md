@@ -22,7 +22,8 @@ third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
 content/renderer/render_frame_impl.cc ： 继承blink里面的WebFrameClient.h
 blink::WebPlugin* RenderFrameImpl::createPlugin
   call: CreatePlugin(frame, info, params_to_use);
-  
+
+content/renderer/npapi/webplugin_impl.cc.txt
 blink::WebPlugin* RenderFrameImpl::CreatePlugin
     call: return new WebPluginImpl(frame, params, info.path, render_view_, this);
 
