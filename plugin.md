@@ -28,6 +28,41 @@ blink::WebPlugin* RenderFrameImpl::CreatePlugin
 
 在创建NPAPI的这个webpluginImpl类的构造函数中， 仅仅是将params存起来而已，真的是啥都没干，不行你看
 ```cpp
+
+WebPluginImpl::WebPluginImpl(
+    WebFrame* webframe,
+    const WebPluginParams& params,
+    const base::FilePath& file_path,
+    const base::WeakPtr<RenderViewImpl>& render_view,
+    RenderFrameImpl* render_frame)
+    : windowless_(false),
+      window_(gfx::kNullPluginWindow),
+      accepts_input_events_(false),
+      render_frame_(render_frame),
+      render_view_(render_view),
+      webframe_(webframe),
+      delegate_(NULL),
+      container_(NULL),
+      npp_(NULL),
+      plugin_url_(params.url),
+      load_manually_(params.loadManually),
+      first_geometry_update_(true),
+      ignore_response_error_(false),
+      file_path_(file_path),
+      mime_type_(base::UTF16ToASCII(params.mimeType)),
+      loader_client_(this),
+      weak_factory_(this) {
+  DCHECK_EQ(params.attributeNames.size(), params.attributeValues.size());
+  base::StringToLowerASCII(&mime_type_);
+
+  for (size_t i = 0; i < params.attributeNames.size(); ++i) {
+    arg_names_.push_back(params.attributeNames[i].utf8());
+    arg_values_.push_back(params.attributeValues[i].utf8());
+  }
+
+  // Set subresource URL for crash reporting.
+  base::debug::SetCrashKeyValue("subresource_url", plugin_url_.spec());
+}
 ```
 
 
