@@ -65,11 +65,9 @@ WebPluginImpl::WebPluginImpl(
 }
 ```
 
-
-
 第二个过程： 创建plugin整个类的关系链
 ---
-
+至此， 我们整个render进程中， plugin 从一个html的element一步步的创建出一系列相关类的对象， 因为创建可能失败， 所以我们需要确保创建成功， 一旦创建成功， 我们就可以开始初始化我们真正的plugininstance， 在这个第二过程中， 会完成plugin进程中相应的object的创建；
 ```cpp
 //content/renderer/render_frame_impl.cc
 RenderFrameImpl::CreatePlugin(RenderFrameImpl::CreatePlugin(),
