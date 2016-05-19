@@ -8,11 +8,11 @@
 core/html/HTMLPlugInElement.cpp:599: 
     call: widget = frame->loader().client()->createPlugin(this, url, paramNames, paramValues, mimeType, loadManually, policy);
 
-//content/renderer/render_frame_impl.cc
+content/renderer/render_frame_impl.cc
 blink::WebPlugin* RenderFrameImpl::createPlugin
   call: CreatePlugin(frame, info, params_to_use);
   
-   FUN: blink::WebPlugin* RenderFrameImpl::CreatePlugin
+blink::WebPlugin* RenderFrameImpl::CreatePlugin
   
 ```cpp
 //content/renderer/render_frame_impl.cc
