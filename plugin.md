@@ -78,6 +78,7 @@ WebPluginImpl::WebPluginImpl(
       call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
       call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
+下面就是webplugin的初始化过程， 里面首先做了个判断， 确保这个plugin的render_view\_ 是存在的，
 content/renderer/npapi/webplugin_impl.cc
 ```CPP
 bool WebPluginImpl::initialize(WebPluginContainer* container) {
