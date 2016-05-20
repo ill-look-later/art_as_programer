@@ -98,6 +98,7 @@ void PluginChannel::OnCreateInstance(const std::string& mime_type,
   plugin_stubs_.push_back(stub);
 }
 ```
+#### focus 3： 
 
 
 content/renderer/npapi/webplugin_impl.cc
