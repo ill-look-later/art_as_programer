@@ -128,7 +128,8 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
 可以看到在webpluginimpl中创建并管理了一个WebPluginDelegateProxy\* plugin_delegate 对象, 并调用了它的Initialize函数，来初始化WebPluginDelegateProxy，
 
 
-//析构， destroy plugin instance
+析构， destroy plugin instance
+---
 
 在third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp 创建的webplugin会被
 third_party/WebKit/Source/web/WebPluginContainerImpl.cpp 中的webpluginContainer管理和维护着， 并在它的析构函数中，调用m_webPlugin->destroy(); 来析构
