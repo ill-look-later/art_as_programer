@@ -132,4 +132,4 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
 ---
 
 在third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp 创建的webplugin会被
-third_party/WebKit/Source/web/WebPluginContainerImpl.cpp 中的webpluginContainer管理和维护着， 并在它的析构函数中，调用m_webPlugin->destroy(); 来析构
+third_party/WebKit/Source/web/WebPluginContainerImpl.cpp 中的webpluginContainer管理和维护着， 并在它的析构函数中，调用m_webPlugin->destroy(); 来析构整个plugin 一些列的过程
