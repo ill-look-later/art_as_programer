@@ -92,7 +92,7 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
     的构造函数中通过 **render_view_->RegisterPluginDelegate(this);**向
     render_view_中传注册了这个delegate， 而这个delegate负责处理 PluginHostMsg**
     一些列来自于pluginhost的消息，delegate中一方面可以访问webpluginimpl去访问
-    Plugin，一方面可以和render_view_, render_frame_进行交互
+    Plugin，一方面可以和render_view_, render_frame_进行交互；
   */
   WebPluginDelegateProxy* plugin_delegate = new WebPluginDelegateProxy(
       this, mime_type_, render_view_, render_frame_);
