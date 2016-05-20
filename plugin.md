@@ -82,7 +82,9 @@ WebPluginImpl::WebPluginImpl(
 - 1. 发送一个FrameHostMsg_OpenChannelToPlugin IPC来初始化Plugin的IPCchannel， 
 - 2. 发送一个PluginMsg_CreateInstance IPC给Plugin进程创建PluginInstance
 - 3. 确定2完成后， 发送一个PluginMsg_Init IPC消息给Plugin初始化这个PluginInstance；
-- 4. 通过render_view\_->RegisterPluginDelegate(this); 将自己注册给RenderViewImpl 
+- 4. 通过render_view\_->RegisterPluginDelegate(this); 将自己注册给RenderViewImpl
+
+到这个函数完成， 整个plugin Instance 就完整的起来了。这里发送的IPC 全部是同步的IPC消息
 
 
 content/renderer/npapi/webplugin_impl.cc
