@@ -68,6 +68,7 @@ WebPluginImpl::WebPluginImpl(
 }
 ```
 
+
 第二个过程： 创建plugin整个类的关系链
 ---
 至此， 我们整个render进程中， plugin 从一个html的element一步步的创建出一系列相关类的对象， 因为创建可能失败， 所以我们需要确保创建成功， 一旦创建成功， 我们就可以开始初始化我们真正的plugininstance， 在这个第二过程中， 会完成plugin进程中相应的object的创建；
@@ -127,3 +128,7 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
 可以看到在webpluginimpl中创建并管理了一个WebPluginDelegateProxy\* plugin_delegate 对象, 并调用了它的Initialize函数，来初始化WebPluginDelegateProxy，
 
 
+//析构， destroy plugin instance
+
+在third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp 创建的webplugin会被
+third_party/WebKit/Source/web/WebPluginContainerImpl.cpp 中的webpluginContainer管理和维护着， 并在它的析构函数中，调用m_webPlugin->destroy(); 来析构
