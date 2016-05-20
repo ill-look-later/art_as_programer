@@ -90,7 +90,8 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
     这里很重要，在init的过程中， 构造了一个WebPluginDelegateProxy， 并将
     render_view_ 传递给了WebPluginDelegateProxy，而在webplugindelegateproxy
     的构造函数中通过 **render_view_->RegisterPluginDelegate(this);**向
-    render_view
+    render_view_中传注册了这个delegate， 而这个delegate负责处理 PluginHostMsg**
+    一些列来自于pluginhost的消息，
   */
   WebPluginDelegateProxy* plugin_delegate = new WebPluginDelegateProxy(
       this, mime_type_, render_view_, render_frame_);
