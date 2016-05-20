@@ -72,9 +72,10 @@ WebPluginImpl::WebPluginImpl(
 ---
 至此， 我们整个render进程中， plugin 从一个html的element一步步的创建出一系列相关类的对象， 因为创建可能失败， 所以我们需要确保创建成功， 一旦创建成功， 我们就可以开始初始化我们真正的plugininstance， 在这个第二过程中， 会完成plugin进程中相应的object的创建；
 从我们上面的分析中
-third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
-  call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
-  call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
+
+    third_party/WebKit/Source/web/FrameLoaderClientImpl.cpp
+      call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
+      call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
 content/renderer/npapi/webplugin_impl.cc
 ```
