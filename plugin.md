@@ -78,7 +78,9 @@ WebPluginImpl::WebPluginImpl(
       call: WebPlugin* webPlugin = m_webFrame->client()->createPlugin(m_webFrame, params);
       call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
-下面的内容就是webplugin的初始化过程， 里面首先做了个判断， 确保这个plugin的render_view\_ 是存在的，之后这里构造了一个WebPluginDelegateProxy对象并通过Initialize函数初始化；
+下面的内容就是webplugin的初始化过程， 里面首先做了个判断， 确保这个plugin的render_view\_ 是存在的，之后这里构造了一个WebPluginDelegateProxy对象并通过Initialize函数初始化；初始化中完成了下面几件事情
+- 发送一个FrameHostMsg_OpenChannelToPlugin IPC来初始化Plugin的IPCchannel， 
+- 发送一个PluginMsg_CreateInstance IPC给Plugin进程创建PluginInstance
 
 
 content/renderer/npapi/webplugin_impl.cc
