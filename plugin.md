@@ -96,7 +96,6 @@ void PluginChannel::OnCreateInstance(const std::string& mime_type,
   AddRoute(*instance_id, stub.get(), NULL);
   plugin_stubs_.push_back(stub);
 }
-
 ```
 
 
