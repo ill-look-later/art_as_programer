@@ -2,7 +2,7 @@
 
 
 
-![](fresscale memory.JPG)
+
 
 
 
