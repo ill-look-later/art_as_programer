@@ -148,9 +148,6 @@ PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
 
 ```
 
-
-
-
 content/renderer/npapi/webplugin_impl.cc
 ```CPP
 bool WebPluginImpl::initialize(WebPluginContainer* container) {
