@@ -132,6 +132,16 @@ webplugin_ = new WebPluginProxy(channel_.get(),
 - scoped_refptr<PluginInstance> instance(plugin_lib->CreateInstance(mime_type));
 - return new WebPluginDelegateImpl(plugin, instance.get());
 
+```CPP
+PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
+...
+  WebPluginInfo info;
+  if (!PluginList::Singleton()->ReadPluginInfo(filename, &info))
+    return NULL;
+
+  return new PluginLib(info);
+}
+```
 
 
 
