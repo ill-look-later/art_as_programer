@@ -101,7 +101,9 @@ void PluginChannel::OnCreateInstance(const std::string& mime_type,
 ```
 #### focus 3： 
 在第二点中创建好WebPluginDelegateStub之后， 发送一个Init的消息给到pluginDelegateStub，响应函数如下：这里我删除了大部分无关的代码， 只保留了主要流程的内容：大致完成了如下部分的工作
-
+- 创建一个webplugindelegate对象，//
+- 设置delegate关系和注册NPObject的owner
+- 初始化webplugindelegate对象；//
 ```CPP
 void WebPluginDelegateStub::OnInit(const PluginMsg_Init_Params& params,
                                    bool* transparent,
