@@ -126,7 +126,13 @@ webplugin_ = new WebPluginProxy(channel_.get(),
 }
 ```
 
-在静态方法WebPluginDelegateImpl::Create(webplugin_, path, mime_type_);的调用中
+在静态方法WebPluginDelegateImpl::Create(webplugin_, path, mime_type_);的调用中调用如下方法
+- scoped_refptr<PluginLib> plugin_lib(PluginLib::CreatePluginLib(filename));
+- NPError err = plugin_lib->NP_Initialize();
+- scoped_refptr<PluginInstance> instance(plugin_lib->CreateInstance(mime_type));
+- return new WebPluginDelegateImpl(plugin, instance.get());
+
+
 
 
 content/renderer/npapi/webplugin_impl.cc
