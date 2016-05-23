@@ -101,7 +101,6 @@ void PluginChannel::OnCreateInstance(const std::string& mime_type,
 ```
 #### focus 3： 
 
-
 content/renderer/npapi/webplugin_impl.cc
 ```CPP
 bool WebPluginImpl::initialize(WebPluginContainer* container) {
