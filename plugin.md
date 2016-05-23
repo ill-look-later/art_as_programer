@@ -87,7 +87,7 @@ WebPluginImpl::WebPluginImpl(
 到这个函数完成， 整个plugin Instance 就完整的起来了。这里发送的IPC 全部是同步的IPC消息， 上面其实每一个IPC的接收端都有一段长长的故事；
 
 #### focus 2： PluginMsg_CreateInstance
-在接收到PluginMsg_CreateInstance消息后， 调用OnCreateInstance函数创建了一个WebPluginDelegateStub的对象，并存到一个plugin_stubs\_数组中
+在接收到PluginMsg_CreateInstance消息后， 调用OnCreateInstance函数创建了一个WebPluginDelegateStub的对象，并存到一个plugin_stubs\_数组中； 因为一个页面上可能会使用多个plugin的对象；
 content/plugin/plugin_channel.cc:266:    IPC_MESSAGE_HANDLER(PluginMsg_CreateInstance, OnCreateInstance)
 ```cpp
 void PluginChannel::OnCreateInstance(const std::string& mime_type,
