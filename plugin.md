@@ -124,7 +124,6 @@ webplugin_ = new WebPluginProxy(channel_.get(),
                                     params.load_manually);
   ... ...
 }
-
 ```
 
 content/renderer/npapi/webplugin_impl.cc
