@@ -106,20 +106,20 @@ void PluginChannel::OnCreateInstance(const std::string& mime_type,
 void WebPluginDelegateStub::OnInit(const PluginMsg_Init_Params& params,
                                    bool* transparent,
                                    bool* result) {
-...
+... ...
 webplugin_ = new WebPluginProxy(channel_.get(),
                                   instance_id_,
                                   page_url_,
                                   params.host_render_view_routing_id);
   delegate_ = WebPluginDelegateImpl::Create(webplugin_, path, mime_type_);
-  ...
+  ... ...
   webplugin_->set_delegate(delegate_);
   WebBindings::registerObjectOwner(delegate_->GetPluginNPP());
   *result = delegate_->Initialize(params.url,
                                     arg_names,
                                     arg_values,
                                     params.load_manually);
-  ...
+  ... ...
 }
 
 ```
