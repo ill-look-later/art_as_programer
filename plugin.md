@@ -84,7 +84,8 @@ WebPluginImpl::WebPluginImpl(
 - 3. 确定2完成后， 发送一个PluginMsg_Init IPC消息给Plugin初始化这个PluginInstance；
 - 4. 通过render_view\_->RegisterPluginDelegate(this); 将自己注册给RenderViewImpl
 
-到这个函数完成， 整个plugin Instance 就完整的起来了。这里发送的IPC 全部是同步的IPC消息， 上面其实每一个IPC的接收端都有一段长长的故事， 
+到这个函数完成， 整个plugin Instance 就完整的起来了。这里发送的IPC 全部是同步的IPC消息， 上面其实每一个IPC的接收端都有一段长长的故事；
+
 #### focus 2： PluginMsg_CreateInstance
 在接收到PluginMsg_CreateInstance消息后， 调用OnCreateInstance函数创建了一个WebPluginDelegateStub的对象，并存到一个plugin_stubs\_数组中
 content/plugin/plugin_channel.cc:266:    IPC_MESSAGE_HANDLER(PluginMsg_CreateInstance, OnCreateInstance)
