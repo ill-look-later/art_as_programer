@@ -104,7 +104,7 @@ void PluginChannel::OnCreateInstance(const std::string& mime_type,
 - 创建一个WebPluginProxy对象，//仅仅创建了对象
 - 创建了WebPluginDelegateImpl 对象// 通过static方法创建 PluginLib对象并初始化 + 创建PluginInstance
 - 设置delegate关系和注册NPObject的owner
-- 初始化webplugindelegate对象；// 完成一些Plugin相关的平台初始化...
+- 初始化webplugindelegate对象；// 完成一些Plugin相关的平台初始化... 
 ```CPP
 void WebPluginDelegateStub::OnInit(const PluginMsg_Init_Params& params,
                                    bool* transparent,
