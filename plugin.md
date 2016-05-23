@@ -142,7 +142,7 @@ PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
   return new PluginLib(info);
 }
 ```
-上面的CreatePluginLib函数中， 里面通过读取到pluin相关的信息， 通过这个信息构造了一个PluginLib对象并返回；并通过获取到的信息创建了PluginLib对象；
+上面的CreatePluginLib函数中， 里面通过读取到pluin相关的信息， 通过这个信息构造了一个PluginLib对象并返回；并通过获取到的信息创建了PluginLib对象； 之后通过**NP_Initialize**函数初始化了PluginLib
 
 
 
