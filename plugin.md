@@ -142,6 +142,7 @@ PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
   return new PluginLib(info);
 }
 ```
+上面的CreatePluginLib函数中， 里面通过读取到pluin相关的信息， 通过这个信息构造了一个PluginLib对象并返回；
 
 
 
