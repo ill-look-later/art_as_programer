@@ -100,54 +100,25 @@ void PluginChannel::OnCreateInstance(const std::string& mime_type,
 }
 ```
 #### focus 3： 
-在第二点中创建好WebPluginDelegateStub之后， 发送一个Init的消息给到pluginDelegateStub，响应函数如下：
+在第二点中创建好WebPluginDelegateStub之后， 发送一个Init的消息给到pluginDelegateStub，响应函数如下：这里我删除了大部分无关的代码， 只保留了主要流程的内容：大致完成了如下部分的工作
+
 ```CPP
 void WebPluginDelegateStub::OnInit(const PluginMsg_Init_Params& params,
                                    bool* transparent,
                                    bool* result) {
-  page_url_ = params.page_url;
-  GetContentClient()->SetActiveURL(page_url_);
-
-  *transparent = false;
-  *result = false;
-  if (params.arg_names.size() != params.arg_values.size()) {
-    NOTREACHED();
-    return;
-  }
-
-  const CommandLine& command_line = *CommandLine::ForCurrentProcess();
-  base::FilePath path =
-      command_line.GetSwitchValuePath(switches::kPluginPath);
-
-  webplugin_ = new WebPluginProxy(channel_.get(),
+...
+webplugin_ = new WebPluginProxy(channel_.get(),
                                   instance_id_,
                                   page_url_,
                                   params.host_render_view_routing_id);
   delegate_ = WebPluginDelegateImpl::Create(webplugin_, path, mime_type_);
-  if (delegate_) {
-    if (delegate_->GetQuirks() &
-        WebPluginDelegateImpl::PLUGIN_QUIRK_DIE_AFTER_UNLOAD) {
-      PluginThread::current()->SetForcefullyTerminatePluginProcess();
-    }
-
-    webplugin_->set_delegate(delegate_);
-    std::vector<std::string> arg_names = params.arg_names;
-    std::vector<std::string> arg_values = params.arg_values;
-
-    // Register the plugin as a valid object owner.
-    WebBindings::registerObjectOwner(delegate_->GetPluginNPP());
-
-    // Add an NPObject owner mapping for this instance, to support ownership
-    // tracking in the renderer.
-    channel_->AddMappingForNPObjectOwner(instance_id_,
-                                         delegate_->GetPluginNPP());
-
-    *result = delegate_->Initialize(params.url,
+  ...
+  webplugin_->set_delegate(delegate_);
+  WebBindings::registerObjectOwner(delegate_->GetPluginNPP());
+  *result = delegate_->Initialize(params.url,
                                     arg_names,
                                     arg_values,
                                     params.load_manually);
-    *transparent = delegate_->instance()->transparent();
-  }
 }
 
 ```
