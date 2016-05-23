@@ -119,6 +119,7 @@ webplugin_ = new WebPluginProxy(channel_.get(),
                                     arg_names,
                                     arg_values,
                                     params.load_manually);
+  ...
 }
 
 ```
