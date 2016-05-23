@@ -126,6 +126,7 @@ webplugin_ = new WebPluginProxy(channel_.get(),
 }
 ```
 
+在静态方法WebPluginDelegateImpl::Create(webplugin_, path, mime_type_);的调用中
 
 
 content/renderer/npapi/webplugin_impl.cc
