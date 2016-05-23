@@ -134,7 +134,7 @@ webplugin_ = new WebPluginProxy(channel_.get(),
 
 ```CPP
 PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
-...
+  ...
   WebPluginInfo info;
   if (!PluginList::Singleton()->ReadPluginInfo(filename, &info))
     return NULL;
