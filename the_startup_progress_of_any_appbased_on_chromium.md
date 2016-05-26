@@ -14,4 +14,8 @@ ContentMain(const ContentMainParams& params) {
   if (exit_code >= 0)
     return exit_code;
   // start message_loop， 开始开启事件循环
+  exit_code = main_runner->Run();
+  
+  // 上面的事件循环结束后， 运行main_runner 的shutdown 函数， 退出程序
+  main_runner->ShutDown();
 }
