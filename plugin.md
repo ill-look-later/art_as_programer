@@ -245,7 +245,7 @@ void PluginChannel::OnDestroyInstance(int instance_id,IPC::Message* reply_msg)
 - content/plugin/webplugin_delegate_stub.cc
 
 WebPluginDelegateStub::~WebPluginDelegateStub()
-  call: DestroyWebPluginAndDelegate
+  call: DestroyWebPluginAndDelegate(plugin_scriptable_object_, delegate_, webplugin_);
 
 
 
