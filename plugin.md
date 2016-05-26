@@ -239,3 +239,9 @@ void WebPluginDelegateImpl::PluginDestroyed()
 
 WebPluginDelegateImpl::~WebPluginDelegateImpl()
   call: DestroyInstance();
+ 
+- content/child/npapi/webplugin_delegate_impl.cc
+
+void WebPluginDelegateImpl::DestroyInstance()
+  instance_->NPP_Destroy();
+  
