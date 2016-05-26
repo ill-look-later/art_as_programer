@@ -103,5 +103,5 @@ Item {
         }
     }
 }
-
+```
 用法:viewManager.transition("xxx.qml", {"xxx": xxx})
