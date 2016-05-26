@@ -221,7 +221,7 @@ bool WebPluginImpl::initialize(WebPluginContainer* container) {
 third_party/WebKit/Source/web/WebPluginContainerImpl.cpp 中的webpluginContainer管理和维护着， 并在它的析构函数中，调用m_webPlugin->destroy(); 来析构整个plugin 一些列的过程
 
 
-content/renderer/npapi/webplugin_impl.cc
+> content/renderer/npapi/webplugin_impl.cc
 NPObject* WebPluginImpl::scriptableObject()
   call: SetContainer(NULL);
 void WebPluginImpl::SetContainer(WebPluginContainer* container)
