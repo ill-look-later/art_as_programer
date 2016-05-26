@@ -15,3 +15,6 @@ set solib-search-path /n	fs/gonghuan/mstar6486/out/Release/lib
 
 - **show solib-search-path**
 > Display the current shared library search path.
+
+
+### 根据coredump 的log来与判断coredump的原因和位置
