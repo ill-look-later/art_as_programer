@@ -248,7 +248,9 @@ WebPluginDelegateStub::~WebPluginDelegateStub()
   call: DestroyWebPluginAndDelegate(plugin_scriptable_object_, delegate_, webplugin_);
 
 static void DestroyWebPluginAndDelegate(base::WeakPtr<NPObjectStub> scriptable_object...)
-  call: 
+  call: delegate->PluginDestroyed(); // WebPlugin must outlive WebPluginDelegate.
+  call：WebBindings::unregisterObjectOwner(owner);
+  call: delete webplugin;
 
 
 
