@@ -235,6 +235,10 @@ void WebPluginImpl::TearDownPluginInstance(WebURLLoader* loader_to_ignore)
 void WebPluginDelegateProxy::PluginDestroyed()
   call: render_view_->UnregisterPluginDelegate(this);
   call: Send(new PluginMsg_DestroyInstance(instance_id_));
+ 
+- content/plugin/plugin_channel.cc
+
+IPC_MESSAGE_HANDLER_DELAY_REPLY(PluginMsg_DestroyInstance, OnDestroyInstance)
 
 
 
