@@ -271,3 +271,7 @@ void WebPluginDelegateImpl::DestroyInstance()
   instance_->NPP_Destroy();
   
 ##pos 3:
+
+- content/plugin/webplugin_proxy.cc
+
+WebPluginProxy::~WebPluginProxy()
