@@ -228,7 +228,13 @@ NPObject* WebPluginImpl::scriptableObject()
 void WebPluginImpl::SetContainer(WebPluginContainer* container)
   call: TearDownPluginInstance(NULL);
 void WebPluginImpl::TearDownPluginInstance(WebURLLoader* loader_to_ignore)
-  call: delegate_->PluginDestroyed();
+  call: delegate_->PluginDestroyed(); //这里的delegate_ 是WebPluginDelegateProxy 对象
+
+- content/renderer/npapi/webplugin_delegate_proxy.cc
+
+
+
+
 
 - content/child/npapi/webplugin_delegate_impl.cc
 
