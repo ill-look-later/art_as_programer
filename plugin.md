@@ -247,7 +247,8 @@ void PluginChannel::OnDestroyInstance(int instance_id,IPC::Message* reply_msg)
 WebPluginDelegateStub::~WebPluginDelegateStub()
   call: DestroyWebPluginAndDelegate(plugin_scriptable_object_, delegate_, webplugin_);
 
-
+static void DestroyWebPluginAndDelegate(base::WeakPtr<NPObjectStub> scriptable_object...)
+  call: 
 
 
 
