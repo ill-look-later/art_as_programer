@@ -11,7 +11,7 @@ ContentMain(const ContentMainParams& params) {
   // 构造一个ContentMainRunner的对象
   scoped_ptr<ContentMainRunner> main_runner(ContentMainRunner::Create());
   // 初始化这个main_runner
-  int exit_code = main_runner->Initialize(params);
+  int exit_code = main_runner->Initialize(params);      
   if (exit_code >= 0)
     return exit_code;
   // start message_loop， 开始开启事件循环
@@ -22,6 +22,8 @@ ContentMain(const ContentMainParams& params) {
   main_runner->ShutDown();
 }
 ```
+
+ContentMainRunner 的具体实现对象是 ConentMainRunnerImpl 类，构造函数完成了类的实例化； 将所有成员变量设置初始值；
 
 
 
