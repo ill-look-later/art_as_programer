@@ -9,7 +9,7 @@ content/app/content_main.cc
 ```Cpp
 ContentMain(const ContentMainParams& params) {
   // 构造一个ContentMainRunner的对象
-  scoped_ptr<ContentMainRunner> main_runner(ContentMainRunner::Create());    @@@@1
+  scoped_ptr<ContentMainRunner> main_runner(ContentMainRunner::Create());
   // 初始化这个main_runner
   int exit_code = main_runner->Initialize(params);
   if (exit_code >= 0)
