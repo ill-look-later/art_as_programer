@@ -222,6 +222,7 @@ third_party/WebKit/Source/web/WebPluginContainerImpl.cpp 中的webpluginContaine
 
 
 > content/renderer/npapi/webplugin_impl.cc
+
 NPObject* WebPluginImpl::scriptableObject()
   call: SetContainer(NULL);
 void WebPluginImpl::SetContainer(WebPluginContainer* container)
