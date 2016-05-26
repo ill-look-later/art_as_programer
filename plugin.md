@@ -229,3 +229,8 @@ void WebPluginImpl::SetContainer(WebPluginContainer* container)
   call: TearDownPluginInstance(NULL);
 void WebPluginImpl::TearDownPluginInstance(WebURLLoader* loader_to_ignore)
   call: delegate_->PluginDestroyed();
+
+- content/child/npapi/webplugin_delegate_impl.cc
+
+void WebPluginDelegateImpl::PluginDestroyed()
+  call: delete this;
