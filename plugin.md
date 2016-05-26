@@ -234,3 +234,8 @@ void WebPluginImpl::TearDownPluginInstance(WebURLLoader* loader_to_ignore)
 
 void WebPluginDelegateImpl::PluginDestroyed()
   call: delete this;
+
+- content/child/npapi/webplugin_delegate_impl_aura.cc
+
+WebPluginDelegateImpl::~WebPluginDelegateImpl()
+  call: DestroyInstance();
