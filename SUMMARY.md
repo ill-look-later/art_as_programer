@@ -49,6 +49,7 @@
        * [自定义控件与自绘控件](zi_ding_yi_kong_jian_yu_zi_hui_kong_jian.md)
 * [小技巧，大作用](xiao_ji_qiao_ff0c_da_zuo_yong.md)
    * [gitbook markdown居中显示图片](gitbook_markdownju_zhong_xian_shi_tu_pian.md)
+   * Gdb Debuging Coredump file
 * [C/C++ or swift/OC Basic Knowledge Note](cc++_or_swiftoc_basic_knowledge_note.md)
    * [c++ access class private variable](c++_access_class_private_variable.md)
    * [QML ViewManager](qml_viewmanager.md)
