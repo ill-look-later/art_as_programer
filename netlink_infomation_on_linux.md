@@ -22,10 +22,8 @@ if (bind(m_sock, (struct sockaddr *)&l_local, sizeof(struct sockaddr_nl)) == -1)
     m_sock = 0;
     return;
 }
-
 m_mySocket = new QTcpSocket();
-if (!m_mySocket->setSocketDescriptor(m_sock))
-{
+if (!m_mySocket->setSocketDescriptor(m_sock)){
     qDebug ("Failed to assign native socket to QTcpSocket");
     close(m_sock);
     m_sock = 0;
