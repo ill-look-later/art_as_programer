@@ -1,6 +1,6 @@
 # Netlink Infomation On Linux
 
-
+这里有篇很好的文章“解说” netlink [](http://www.cnblogs.com/qq78292959/archive/2012/06/06/2538366.html)
 
 ```CPP
 int m_sock;
