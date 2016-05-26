@@ -16,7 +16,7 @@ ContentMain(const ContentMainParams& params) {
   // start message_loop， 开始开启事件循环
   exit_code = main_runner->Run();
   
-  // message_loop->QuitNow
+  // message_loop->DeleteSoon
   // 上面的事件循环结束后， 运行main_runner 的shutdown 函数， 退出程序
   main_runner->ShutDown();
 }
