@@ -232,6 +232,10 @@ void WebPluginImpl::TearDownPluginInstance(WebURLLoader* loader_to_ignore)
 
 - content/renderer/npapi/webplugin_delegate_proxy.cc
 
+void WebPluginDelegateProxy::PluginDestroyed()
+  call: render_view_->UnregisterPluginDelegate(this);
+  call: Send(new PluginMsg_DestroyInstance(instance_id_));
+
 
 
 
