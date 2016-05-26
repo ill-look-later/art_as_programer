@@ -240,7 +240,12 @@ void WebPluginDelegateProxy::PluginDestroyed()
 
 IPC_MESSAGE_HANDLER_DELAY_REPLY(PluginMsg_DestroyInstance, OnDestroyInstance)
 void PluginChannel::OnDestroyInstance(int instance_id,IPC::Message* reply_msg)
-  call: plugin_stubs_.erase(plugin_stubs_.begin() + i); //智能指针vector
+  call: plugin_stubs_.erase(plugin_stubs_.begin() + i); //智能指针vector 调用stub析构
+
+- content/plugin/webplugin_delegate_stub.cc
+
+WebPluginDelegateStub::~WebPluginDelegateStub()
+  call: DestroyWebPluginAndDelegate
 
 
 
