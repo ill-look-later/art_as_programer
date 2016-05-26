@@ -1,0 +1,2 @@
+# Gdb Debuging Coredump file
+
