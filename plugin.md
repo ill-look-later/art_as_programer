@@ -270,3 +270,4 @@ WebPluginDelegateImpl::~WebPluginDelegateImpl()
 void WebPluginDelegateImpl::DestroyInstance()
   instance_->NPP_Destroy();
   
+##pos 3:
