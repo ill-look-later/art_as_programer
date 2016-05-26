@@ -239,6 +239,9 @@ void WebPluginDelegateProxy::PluginDestroyed()
 - content/plugin/plugin_channel.cc
 
 IPC_MESSAGE_HANDLER_DELAY_REPLY(PluginMsg_DestroyInstance, OnDestroyInstance)
+void PluginChannel::OnDestroyInstance(int instance_id,IPC::Message* reply_msg)
+  call: plugin_stubs_.erase(plugin_stubs_.begin() + i); //智能指针vector
+
 
 
 
