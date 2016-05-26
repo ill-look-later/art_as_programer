@@ -2,7 +2,6 @@
 
 
 
-
 ```CPP
 int m_sock;
 struct sockaddr_nl l_local;
