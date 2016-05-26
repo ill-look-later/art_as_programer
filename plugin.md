@@ -276,4 +276,4 @@ void WebPluginDelegateImpl::DestroyInstance()
 
 WebPluginProxy::~WebPluginProxy()
   call: 如果有pluginelement【type： NPObject】： WebBindings::releaseObject(plugin_element_);
-  call: WebBindings::releaseObject(window_npobject_);
+  call: 如果有pluginelement【type： NPObject】： WebBindings::releaseObject(window_npobject_);
