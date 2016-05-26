@@ -23,7 +23,7 @@ ContentMain(const ContentMainParams& params) {
 }
 ```
 
-ContentMainRunner 的具体实现对象是 ConentMainRunnerImpl 类，构造函数完成了类的实例化； 将所有成员变量设置初始值；
+ContentMainRunner 的具体实现对象是 ConentMainRunnerImpl 类，构造函数完成了类的实例化； 将所有成员变量设置初始值；所有其他初始化的的动作放在Initliaze中；
 
 
 
