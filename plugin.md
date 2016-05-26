@@ -275,3 +275,5 @@ void WebPluginDelegateImpl::DestroyInstance()
 - content/plugin/webplugin_proxy.cc
 
 WebPluginProxy::~WebPluginProxy()
+  call: WebBindings::releaseObject(plugin_element_);
+  call: WebBindings::releaseObject(window_npobject_);
