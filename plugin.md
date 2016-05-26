@@ -270,6 +270,9 @@ WebPluginDelegateImpl::~WebPluginDelegateImpl()
 void WebPluginDelegateImpl::DestroyInstance()
   instance_->NPP_Destroy();
   
+- content/child/npapi/plugin_instance.cc
+  call: npp_functions_->destroy(npp_, &savedData);
+  
 ##pos 3:
 
 - content/plugin/webplugin_proxy.cc
