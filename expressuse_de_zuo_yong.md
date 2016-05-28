@@ -31,15 +31,17 @@ function(req,res, next){//...}
 
 ```javascript
 app.use(function(req,res,next){
-    console.log('111');
+    console.log('pos 00000001');
     next();
-    console.log('222');
+    console.log('pos 00000002');
 });
 
 app.use(function(req,res,next){
-    console.log("333");
+    console.log("pos 0000003");
     next();
 });
 ```
+
+也就是说, 如果我们在浏览器中发送一个'HTTP://hostname:port/' 这样一个'/' 路径的请求之后, 我们一次会
 
 但是不是很理解意思。这里的function 是在什么场合调用的？
