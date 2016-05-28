@@ -88,4 +88,5 @@ http.createServer(app).listen('3000', function(){
 });
 ```
 
+看完之后是不是瞬间就感觉很easy呢? 呵呵
 
