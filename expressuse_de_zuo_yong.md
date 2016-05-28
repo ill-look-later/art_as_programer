@@ -93,9 +93,19 @@ http.createServer(app).listen('3000', function(){
 一个警告
 ---
 记得所有的use都放在static中间件上面哦, 不然,你就没机会处理请求了
+```javascript
+var logger = require('morgan');
+
+app.use(logger());
+app.use(express.static(__dirname + '/public'));
+app.use(function(req, res){
+  res.send('Hello');
+});
 
 
 
+
+```
 
 
 这里还有个在看segmentfault社区中看到的一个"温馨提示", 比如说每次接收每个请求的时候, 都需要使用数据库的操作, 那么首先可以使用, use来准备好sql的链接, 后面的中间件就可以使用req.db来进行操作了,也就是说就是引入一个所谓的中间件，其实就是用来在实际请求发生之前hack req和res对象来实现一些功能，比如果最简单的logger就是在res的end事件上添加监听写入一条日志记录;
