@@ -111,8 +111,6 @@ app.use(logger());
 app.use(function(req, res){
   res.send('Hello');
 });
-
-
 ```
 
 
