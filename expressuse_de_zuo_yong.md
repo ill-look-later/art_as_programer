@@ -29,5 +29,17 @@ function(req,res, next){//...}
 - 使用app.set 设置express内部的一些参数（options）
 - 使用app.use 来注册函数，可以简单的认为是向那个tasks的数组进行push操作
 
+```javascript
+app.use(function(req,res,next){
+    console.log('111');
+    next();
+    console.log('222');
+});
+
+app.use(function(req,res,next){
+    console.log("333");
+    next();
+});
+```
 
 但是不是很理解意思。这里的function 是在什么场合调用的？
