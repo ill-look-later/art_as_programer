@@ -19,4 +19,6 @@ function(req,res){//...}
 function(req,res, next){//...}
 ```
 
+这个next，是指下一个函数。后面我们会写一些试验来体验一下这个next，先总结一下：
+
 但是不是很理解意思。这里的function 是在什么场合调用的？
