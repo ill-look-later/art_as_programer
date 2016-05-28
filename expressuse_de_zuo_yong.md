@@ -49,7 +49,6 @@ app.use(function(req,res,next){
 
 
 至于说这里这种use的实现. 其实也不难, {ps: 其实对于我这种弱智来说还是挺难的. 不过看到了之后就不难了../wx}, 下面是网上别人写的一个demo实现, 就能很容易实现use的这种逻辑
-
 ```javascript
 var http = require('http');
 function express(){
