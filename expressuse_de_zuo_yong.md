@@ -16,7 +16,7 @@ function(req,res){//...}
 
 但是, 你会发现,实际上函数是长成下面这样子的
 ```javascript
-function(req,res){//...}
+function(req,res, next){//...}
 ```
 
 但是不是很理解意思。这里的function 是在什么场合调用的？
