@@ -24,4 +24,10 @@ function(req,res, next){//...}
 
 后面我们会写一些试验来体验一下这个next，先总结一下：
 
+- 1.导入相关模块
+- 2.执行过 var app = express() 后，
+- 使用app.set 设置express内部的一些参数（options）
+- 使用app.use 来注册函数，可以简单的认为是向那个tasks的数组进行push操作
+
+
 但是不是很理解意思。这里的function 是在什么场合调用的？
