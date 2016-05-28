@@ -96,12 +96,16 @@ http.createServer(app).listen('3000', function(){
 ```javascript
 var logger = require('morgan');
 
+
+// 这样写, 你才能正常的记录到请求记录
 app.use(logger());
 app.use(express.static(__dirname + '/public'));
 app.use(function(req, res){
   res.send('Hello');
 });
 
+
+// 下面这样写, 可能你的log可能就记录不到罗.....
 app.use(express.static(__dirname + '/public'));
 app.use(logger());
 app.use(function(req, res){
