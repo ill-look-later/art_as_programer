@@ -47,3 +47,45 @@ app.use(function(req,res,next){
 - pos 00000003
 - pos 00000002
 
+
+至于说这里这种use的实现. 其实也不难, {ps: 其实对于我这种弱智来说还是挺难的. 不过看到了之后就不难了../wx}, 下面是网上别人写的一个demo实现, 就能很容易实现use的这种逻辑
+
+```javascript
+var http = require('http');
+function express(){
+    var funcs = [];
+
+    var expr = function(req,res){
+        var i = 0;
+        function next(){            
+            var task = funcs[i++];
+            if(!task) return;
+            task(req,res,next);
+        }
+        next();
+    }
+    expr.use=function(f){
+        funcs.push(f);
+    }
+    return expr;
+}
+var app = express();
+
+app.use(function(req,res,next){
+    console.log('haha');
+    next();
+});
+app.use(function(req,res,next){
+    console.log('hehe');
+    next();
+});
+app.use(function(req,res){
+    res.end("there is nothing happened");
+});
+
+http.createServer(app).listen('3000', function(){
+  console.log('Express server listening on port 3000');
+});
+```
+
+
