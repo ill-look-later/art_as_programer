@@ -47,4 +47,3 @@ app.use(function(req,res,next){
 - pos 00000003
 - pos 00000002
 
-但是不是很理解意思。这里的function 是在什么场合调用的？
