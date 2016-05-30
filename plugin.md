@@ -148,6 +148,8 @@ PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
 
 在回到 ×focus 3× 那里， 创建完WebPluginDelegateImpl对象后，将WebPluginDelegateImpl对象设置成webplugin的delegate对象， 并调用delegate_->Initialize初始化了WebPluginDelegateImpl对象；
 
+---
+到这里为止， 整个plugin instance的创建完成了， 在FrameLoaderClientImpl对象中得到创建好的webplugin对象；
 
 content/renderer/npapi/webplugin_impl.cc
 ```CPP
