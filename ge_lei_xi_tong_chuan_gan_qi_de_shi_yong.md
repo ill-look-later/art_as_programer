@@ -25,3 +25,7 @@
 
 类似于电池侦听, 通过notifycationCenter 添加observer侦听状态变化, 两个状态, true/false
 
+
+
+
+磁场传感器 Magnetic
