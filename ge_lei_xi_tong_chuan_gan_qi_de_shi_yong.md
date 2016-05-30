@@ -31,4 +31,5 @@
 磁场传感器(方向传感器,指南针) Magnetic
 ---
 
-import CoreLocation
+- import CoreLocation
+- 获取lm = CLLocationManager
