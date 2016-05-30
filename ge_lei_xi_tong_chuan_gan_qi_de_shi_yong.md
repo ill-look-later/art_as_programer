@@ -31,6 +31,6 @@
 磁场传感器(方向传感器,指南针) Magnetic
 ---
 
-- import CoreLocation
+- import CoreLocation 导入Corelocation 基础类
 - 获取lm = CLLocationManager() 获取loction manager
 - lm.startUpdatingHeading 开始侦听方向变化
