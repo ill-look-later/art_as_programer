@@ -13,4 +13,15 @@
 各个方向的角速度..... 
 
 
+电源电池状态 PowerMonitor
+---
+
+通过notifycationCenter 添加observer 侦听状态变化即可
+
+
+
+红外距离传感器 ProximityMonitor
+---
+
+
 
