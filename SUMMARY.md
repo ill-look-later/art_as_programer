@@ -50,6 +50,7 @@
        * [Draw API的使用和页面跳转上一点点的优化](draw_apide_shi_yong_he_ye_mian_tiao_zhuan_shang_yi.md)
        * [Layout && 匹配父级容器](layout_&&_pi_pei_fu_ji_rong_qi.md)
        * [自定义控件与自绘控件](zi_ding_yi_kong_jian_yu_zi_hui_kong_jian.md)
+       * 各类系统传感器的使用
 * [小技巧，大作用](xiao_ji_qiao_ff0c_da_zuo_yong.md)
    * [gitbook markdown居中显示图片](gitbook_markdownju_zhong_xian_shi_tu_pian.md)
    * [Gdb Debuging Coredump file](gdb_debuging_coredump_file.md)
