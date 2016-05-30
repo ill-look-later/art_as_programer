@@ -32,4 +32,5 @@
 ---
 
 - import CoreLocation
-- 获取lm = CLLocationManager()
+- 获取lm = CLLocationManager() 获取loction manager
+- lm.startUpdatingHeading 开始侦听方向变化
