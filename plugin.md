@@ -143,12 +143,11 @@ PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
 }
 ```
 上面的CreatePluginLib函数中， 里面通过读取到pluin相关的信息， 通过这个信息构造了一个PluginLib对象并返回；并通过获取到的信息创建了PluginLib对象； 之后通过**NP_Initialize**函数初始化了PluginLib； 初始化的过程中， 通过PluginEntryPoints结构体保存的entry pointer会具体初始化我们自己编写的plugin的具体内容；
+
 在WebPluginDelegateImpl::create这个静态函数中紧接着调用了plugin_lib->createInstance(),函数, createInstanceh函数中， 创建并返回了PluginInstance对象； 这个instance会传递给WebPluginDelegateImpl对象， 这里用的是Scoped_refptr，他相对于scoped_ptr增加了应用计数功能， 所以最终instance的生命周期在WebPluginDelegateImpl中完成；
 
 在回到 ×focus 3× 那里， 创建完WebPluginDelegateImpl对象后，将WebPluginDelegateImpl对象设置成webplugin的delegate对象， 并调用delegate_->Initialize初始化了WebPluginDelegateImpl对象；
-```cpp
 
-```
 
 content/renderer/npapi/webplugin_impl.cc
 ```CPP
