@@ -151,6 +151,27 @@ PluginLib* PluginLib::CreatePluginLib(const base::FilePath& filename) {
 ---
 到这里为止， 整个plugin instance的创建完成了， 在FrameLoaderClientImpl对象中得到创建好的webplugin对象；
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 content/renderer/npapi/webplugin_impl.cc
 ```CPP
 bool WebPluginImpl::initialize(WebPluginContainer* container) {
