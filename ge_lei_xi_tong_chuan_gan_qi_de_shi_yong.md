@@ -32,4 +32,4 @@
 ---
 
 - import CoreLocation
-- 获取lm = CLLocationManager
+- 获取lm = CLLocationManager()
