@@ -35,3 +35,4 @@
 - 获取lm = CLLocationManager() 获取loction manager
 - 继承,实现CLLocationManagerDelegate 协议
 - lm.startUpdatingHeading 开始侦听方向变化
+- override didupdateHeading 方法来获取方向变化
