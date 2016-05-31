@@ -33,4 +33,5 @@
 
 - import CoreLocation 导入Corelocation 基础类
 - 获取lm = CLLocationManager() 获取loction manager
+- 继承,实现CLLocationManagerDelegate 协议
 - lm.startUpdatingHeading 开始侦听方向变化
