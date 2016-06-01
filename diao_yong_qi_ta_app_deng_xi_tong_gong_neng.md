@@ -83,7 +83,6 @@ iPhone中的应用程序很容易受到打扰，比如一个来电可能导致�
 另外一个非常重要的方法就是applicationDidReceiveMemoryWarning()，因为iPhone设备只有有限的内存，如果为应用程序分配了太多内存操作系统会终止应用程序的运行，但在终止之前操作系统会通过先调用委托类的applicationDidReceiveMemoryWarning()方法警告应用程序，在UIApplication接收到这个事件后它会传递给委托类的applicationDidReceiveMemoryWarning()方法，委托类在这个方法内可以进行释放内存的操作以防止操作系统强制终止应用程序的运行。
 
 下面是这个类的一些功能：
----
 1.设置icon上的数字图标
     //设置主界面icon上的数字图标，在2.0中引进， 缺省为0
     [UIApplicationsharedApplication].applicationIconBadgeNumber = 4;
