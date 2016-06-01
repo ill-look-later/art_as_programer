@@ -21,7 +21,7 @@ UIApplication的一个主要工作是处理用户事件，它会起一个队列�
 TCAppDelegate :UIResponder <UIApplicationDelegate>
 这里这个类的基类是UIResponder，和4.2以前生成的工程是不同的，以前是继承自NSObject。不论如何，本类实现了一个名叫UIApplicationDelegate的接口，这个表明这个类就是这个工程中UIApplication实例的代理类。
 在main函数中，
-```oc
+```objectivec
 @autoreleasepool {
        returnUIApplicationMain(argc, argv, nil,NSStringFromClass([TCAppDelegateclass]));
     }
