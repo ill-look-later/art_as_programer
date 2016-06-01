@@ -8,6 +8,8 @@ UIApplication.sharedApplication().openUrl(NSURL(string: String!))
 
 
 UIApplication深入研究
+---
+
 很多时候，我们不需要关心这个类，我们很少继承这个类，偶尔会调用这个类的api来实现一些功能，但是不可否认，这个类是iOS编程中很重要的一个概念，所以我这里写这个文章来总结以下这个类的信息，如果写的不对的地方，请留言，多谢。
 UIApplication的核心作用是提供了iOS程序运行期间的控制和协作工作。
 每一个程序在运行期必须有且仅有一个UIApplication（或则其子类）的一个实例。回想一下我在前面的文章“main函数研究”的文章中提到的main函数的代码，可以看出，在程序开始运行的时候，UIApplicationMain函数是程序进入点，这个函数做了很多工作，其中一个重要的工作就是创建一个UIApplication的单例实例。在你的代码中你，你可以通过调用[UIApplication sharedApplication]来得到这个单例实例的指针。
