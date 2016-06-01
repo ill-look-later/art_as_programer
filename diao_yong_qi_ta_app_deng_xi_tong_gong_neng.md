@@ -92,7 +92,9 @@ iPhone中的应用程序很容易受到打扰，比如一个来电可能导致�
     [UIApplicationsharedApplication].applicationSupportsShakeToEdit =YES;
 
 3.判断程序运行状态
-    //判断程序运行状态，在2.0以后引入
+---
+```objectivec
+//判断程序运行状态，在2.0以后引入
     /*
      UIApplicationStateActive,
      UIApplicationStateInactive,
@@ -101,12 +103,14 @@ iPhone中的应用程序很容易受到打扰，比如一个来电可能导致�
    if([UIApplicationsharedApplication].applicationState ==UIApplicationStateInactive){
         NSLog(@"程序在运行状态");
     }
-
+```
 4.阻止屏幕变暗进入休眠状态
-    //阻止屏幕变暗，慎重使用,缺省为no 2.0
+---
+//阻止屏幕变暗，慎重使用,缺省为no 2.0
     [UIApplicationsharedApplication].idleTimerDisabled =YES;
 慎重使用本功能，因为非常耗电。
 5.显示联网状态
+---
     //显示联网标记 2.0
     [UIApplicationsharedApplication].networkActivityIndicatorVisible =YES;
 
