@@ -84,9 +84,11 @@ iPhone中的应用程序很容易受到打扰，比如一个来电可能导致�
 
 下面是这个类的一些功能：
 1.设置icon上的数字图标
+---
     //设置主界面icon上的数字图标，在2.0中引进， 缺省为0
     [UIApplicationsharedApplication].applicationIconBadgeNumber = 4;
 2.设置摇动手势的时候，是否支持redo,undo操作
+---
     //摇动手势，是否支持redo undo操作。
    //3.0以后引进，缺省YES
     [UIApplicationsharedApplication].applicationSupportsShakeToEdit =YES;
@@ -106,23 +108,30 @@ iPhone中的应用程序很容易受到打扰，比如一个来电可能导致�
 ```
 4.阻止屏幕变暗进入休眠状态
 ---
+```objectivec
 //阻止屏幕变暗，慎重使用,缺省为no 2.0
     [UIApplicationsharedApplication].idleTimerDisabled =YES;
+```
 慎重使用本功能，因为非常耗电。
 5.显示联网状态
 ---
+```objectivec
     //显示联网标记 2.0
     [UIApplicationsharedApplication].networkActivityIndicatorVisible =YES;
-
+```
 6.在map上显示一个地址
+---
+```objectivec
    NSString* addressText =@"1 Infinite Loop, Cupertino, CA 95014";
    // URL encode the spaces
     addressText =  [addressTextstringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
    NSString* urlText = [NSStringstringWithFormat:@"http://maps.google.com/maps?q=%@", addressText];
     
     [[UIApplicationsharedApplication]openURL:[NSURLURLWithString:urlText]];
-
+```
 7.发送电子邮件
+---
+```objectivec
    NSString *recipients =@"mailto:first@example.com?cc=second@example.com,third@example.com&subject=Hello from California!";
    NSString *body =@"&body=It is raining in sunny California!";
     
@@ -130,15 +139,24 @@ iPhone中的应用程序很容易受到打扰，比如一个来电可能导致�
     email = [emailstringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [[UIApplicationsharedApplication]openURL:[NSURLURLWithString:email]];
-
+```
 8.打电话到一个号码
+---
+```objectivec
 
    // Call Google 411
     [[UIApplicationsharedApplication]openURL:[NSURLURLWithString:@"tel://8004664411"]];
+```
 9.发送短信
+---
+```objectivec
     // Text to Google SMS
     [[UIApplicationsharedApplication]openURL:[NSURLURLWithString:@"sms://466453"]];
+```
 10.打开一个网址
+---
+```objectivec
 
    // Lanuch any iPhone developers fav site
     [[UIApplicationsharedApplication]openURL:[NSURLURLWithString:@"http://itunesconnect.apple.com"]];
+```
