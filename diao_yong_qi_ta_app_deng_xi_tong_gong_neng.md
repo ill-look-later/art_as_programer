@@ -48,25 +48,10 @@ TCAppDelegate *myDelegate = (TCAppDelegate *)[UIApplicationsharedApplication].de
 | 11:applicationWillTerminate: | - (void)applicationWillTerminate:(UIApplication*)application |
 
 
+- 1、- (void)applicationWillResignActive:(UIApplication *)application
+> 说明：当应用程序将要入非活动状态执行，在此期间，应用程序不接收消息或事件，比如来电话了
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-1、- (void)applicationWillResignActive:(UIApplication *)application
-说明：当应用程序将要入非活动状态执行，在此期间，应用程序不接收消息或事件，比如来电话了
-2、- (void)applicationDidBecomeActive:(UIApplication *)application
+- 2、- (void)applicationDidBecomeActive:(UIApplication *)application
 说明：当应用程序入活动状态执行，这个刚好跟上面那个方法相反
 3、- (void)applicationDidEnterBackground:(UIApplication *)application
 说明：当程序被推送到后台的时候调用。所以要设置后台继续运行，则在这个函数里面设置即可
