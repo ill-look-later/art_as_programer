@@ -12,15 +12,20 @@ UIApplication深入研究
 
 很多时候，我们不需要关心这个类，我们很少继承这个类，偶尔会调用这个类的api来实现一些功能，但是不可否认，这个类是iOS编程中很重要的一个概念，所以我这里写这个文章来总结以下这个类的信息，如果写的不对的地方，请留言，多谢。
 UIApplication的核心作用是提供了iOS程序运行期间的控制和协作工作。
+
 每一个程序在运行期必须有且仅有一个UIApplication（或则其子类）的一个实例。回想一下我在前面的文章“main函数研究”的文章中提到的main函数的代码，可以看出，在程序开始运行的时候，UIApplicationMain函数是程序进入点，这个函数做了很多工作，其中一个重要的工作就是创建一个UIApplication的单例实例。在你的代码中你，你可以通过调用[UIApplication sharedApplication]来得到这个单例实例的指针。
+
 UIApplication的一个主要工作是处理用户事件，它会起一个队列，把所有用户事件都放入队列，逐个处理，在处理的时候，它会发送当前事件到一个合适的处理事件的目标控件。此外，UIApplication实例还维护一个在本应用中打开的window列表（UIWindow实例），这样它就可以接触应用中的任何一个UIView对象。UIApplication实例会被赋予一个代理对象，以处理应用程序的生命周期事件（比如程序启动和关闭）、系统事件（比如来电、记事项警告）等等。
+
 新建一个任意类型的iOS应用工程，加入我们在Class Prefix输入是TC，我们可以看到工程中生成一个类：
 TCAppDelegate :UIResponder <UIApplicationDelegate>
 这里这个类的基类是UIResponder，和4.2以前生成的工程是不同的，以前是继承自NSObject。不论如何，本类实现了一个名叫UIApplicationDelegate的接口，这个表明这个类就是这个工程中UIApplication实例的代理类。
 在main函数中，
+```oc
 @autoreleasepool {
        returnUIApplicationMain(argc, argv, nil,NSStringFromClass([TCAppDelegateclass]));
     }
+```
 这里传入了代理类到UIApplicationMain函数中，UIApplicationMain函数在生成唯一个UIApplication的时候就可以把代理类的实例指针告诉这个单例对象了。
 可以通过如下代码获UIApplication代理对象：
  
