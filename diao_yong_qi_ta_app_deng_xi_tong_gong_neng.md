@@ -39,6 +39,7 @@ duration:(NSTimeInterval)duration |
 | 8:applicationDidReceiveMemoryWarning: | - (void)applicationDidReceiveMemoryWarning:(UIApplication*)application |
 | 9:applicationSignificantTimeChange: | - (void)applicationSignificantTimeChange:(UIApplication*)application |
 | 10:applicationWillResignActive: | - (void)applicationWillResignActive:(UIApplication*)application |
+| 11:applicationWillTerminate: | - (void)applicationWillTerminate:(UIApplication*)application |
 
 
 
@@ -54,8 +55,8 @@ duration:(NSTimeInterval)duration |
 
 
 
-11:applicationWillTerminate:
-- (void)applicationWillTerminate:(UIApplication*)application
+
+
  
 1、- (void)applicationWillResignActive:(UIApplication *)application
 说明：当应用程序将要入非活动状态执行，在此期间，应用程序不接收消息或事件，比如来电话了
