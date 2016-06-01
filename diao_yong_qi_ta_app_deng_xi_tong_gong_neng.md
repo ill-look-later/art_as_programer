@@ -28,9 +28,9 @@ TCAppDelegate :UIResponder <UIApplicationDelegate>
 ```
 这里传入了代理类到UIApplicationMain函数中，UIApplicationMain函数在生成唯一个UIApplication的时候就可以把代理类的实例指针告诉这个单例对象了。
 可以通过如下代码获UIApplication代理对象：
- 
+```objectivec
 TCAppDelegate *myDelegate = (TCAppDelegate *)[UIApplicationsharedApplication].delegate;
- 
+```
 在UIApplication接收到系统事件和生命周期事件时，会把相应的事件传递给UIApplicationDelegate进行处理，下表所列的生命周期函数大都是可选的，但为了应用程序的健壮性程序员应该实现它们。
 
 | UIApplicationDelegate Event-Handling Methods | Method Signature |
