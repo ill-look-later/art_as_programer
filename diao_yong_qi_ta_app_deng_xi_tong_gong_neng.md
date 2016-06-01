@@ -81,7 +81,9 @@ duration:(NSTimeInterval)duration
 iPhone中的应用程序很容易受到打扰，比如一个来电可能导致应用程序失去焦点，如果这个时候接听了电话，那么应用程序会转到后台运行。还有很多其它类似的事件会导致iPhone应用程序失去焦点，在应用程序失去焦点前会调用委托类的applicationWillResignActive()方法，而应用程序再次获取到焦点的时候会调用applicationDidBecomeActive()方法。比如在运行应用程序的时候锁屏会调用委托类的applicationWillResignActive()方法，而当屏幕被解锁的时候，又会调用applicationDidBecomeActive()方法。
  
 另外一个非常重要的方法就是applicationDidReceiveMemoryWarning()，因为iPhone设备只有有限的内存，如果为应用程序分配了太多内存操作系统会终止应用程序的运行，但在终止之前操作系统会通过先调用委托类的applicationDidReceiveMemoryWarning()方法警告应用程序，在UIApplication接收到这个事件后它会传递给委托类的applicationDidReceiveMemoryWarning()方法，委托类在这个方法内可以进行释放内存的操作以防止操作系统强制终止应用程序的运行。
+
 下面是这个类的一些功能：
+---
 1.设置icon上的数字图标
     //设置主界面icon上的数字图标，在2.0中引进， 缺省为0
     [UIApplicationsharedApplication].applicationIconBadgeNumber = 4;
