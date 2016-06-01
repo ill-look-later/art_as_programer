@@ -1,10 +1,6 @@
 # 调用其他app等系统功能
 
-用系统默认浏览器打开url
----
-//静态方法sharedApplication 
-UIApplication.sharedApplication().openUrl(NSURL(string: String!))
-
+因为平常工作中都在看chromium的源码和写一些烂的不行的代码加到chromium里面来, 以此来降低我们公司项目整体的质量[/奸笑]
 
 
 UIApplication深入研究
