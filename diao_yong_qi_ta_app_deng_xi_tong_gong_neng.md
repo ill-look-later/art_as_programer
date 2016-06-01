@@ -25,14 +25,13 @@ TCAppDelegate :UIResponder <UIApplicationDelegate>
 TCAppDelegate *myDelegate = (TCAppDelegate *)[UIApplicationsharedApplication].delegate;
  
 在UIApplication接收到系统事件和生命周期事件时，会把相应的事件传递给UIApplicationDelegate进行处理，下表所列的生命周期函数大都是可选的，但为了应用程序的健壮性程序员应该实现它们。
+
 | UIApplicationDelegate Event-Handling Methods | Method Signature |
 | -- | -- |
 | 1:application:didChangeStatusBarFrame: | - (void)application:(UIApplication*)application didChangeSetStatusBarFrame:(CGRect)oldStatusBarFrame |
 | 2:application:didChangeStatusBarOrientation: | - (void)application:(UIApplication*)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation |
 | 3:application:handleOpenURL: | - (BOOL)application:(UIApplication*)application handleOpenURL:(NSURL*)url |
-| 4:application:willChangeStatusBarOrientation:duration: | - (void)application:(UIApplication*)application willChangeStatusBarOrientation:
-(UIInterfaceOrientation)newStatusBarOrientation
-duration:(NSTimeInterval)duration |
+| 4:application:willChangeStatusBarOrientation:duration: | - (void)application:(UIApplication*)application willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation duration:(NSTimeInterval)duration |
 | 5:application:willChangeStatusBarFrame | - (void)application:(UIApplication)application willChangeStatusBarFrame:(CGRect)newStatusBarFrame |
 | 6:applicationDidBecomeActive: | - (void)applicationDidBecomeActive:(UIApplication*)application |
 | 7:applicationDidFinishLaunching: | - (void)applicationDidFinishLaunching:(UIApplication*)application |
