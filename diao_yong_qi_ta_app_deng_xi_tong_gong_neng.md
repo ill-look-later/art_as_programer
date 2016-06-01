@@ -37,8 +37,8 @@ duration:(NSTimeInterval)duration |
 | 6:applicationDidBecomeActive: | - (void)applicationDidBecomeActive:(UIApplication*)application |
 | 7:applicationDidFinishLaunching: | - (void)applicationDidFinishLaunching:(UIApplication*)application |
 | 8:applicationDidReceiveMemoryWarning: | - (void)applicationDidReceiveMemoryWarning:(UIApplication*)application |
-| 0:10 | 1:10 |
-| 0:11 | 1:11 |
+| 9:applicationSignificantTimeChange: | - (void)applicationSignificantTimeChange:(UIApplication*)application |
+| 10:applicationWillResignActive: | - (void)applicationWillResignActive:(UIApplication*)application |
 
 
 
@@ -50,10 +50,10 @@ duration:(NSTimeInterval)duration |
 
 
 
-9:applicationSignificantTimeChange:
-- (void)applicationSignificantTimeChange:(UIApplication*)application
-10:applicationWillResignActive:
-- (void)applicationWillResignActive:(UIApplication*)application
+
+
+
+
 11:applicationWillTerminate:
 - (void)applicationWillTerminate:(UIApplication*)application
  
