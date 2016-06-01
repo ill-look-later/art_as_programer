@@ -51,7 +51,7 @@
        * [Layout && 匹配父级容器](layout_&&_pi_pei_fu_ji_rong_qi.md)
        * [自定义控件与自绘控件](zi_ding_yi_kong_jian_yu_zi_hui_kong_jian.md)
        * [各类系统传感器的使用](ge_lei_xi_tong_chuan_gan_qi_de_shi_yong.md)
-       * 调用其他app等系统功能
+       * [调用其他app等系统功能](diao_yong_qi_ta_app_deng_xi_tong_gong_neng.md)
 * [小技巧，大作用](xiao_ji_qiao_ff0c_da_zuo_yong.md)
    * [gitbook markdown居中显示图片](gitbook_markdownju_zhong_xian_shi_tu_pian.md)
    * [Gdb Debuging Coredump file](gdb_debuging_coredump_file.md)
