@@ -3,6 +3,8 @@
 
 简而言之，言而简之 就是ndk上没有提供这个非posix的函数， 用utimesat函数替代！
 
+看stackflow： http://stackoverflow.com/questions/19374749/how-to-work-around-absence-of-futimes-in-android-ndk
+
 
 futimes(3) is a non-POSIX function that takes a struct timeval (seconds, microseconds). The POSIX version is futimens(3), which takes a struct timespec (seconds, nanoseconds). The latter is available in bionic libc.
 
