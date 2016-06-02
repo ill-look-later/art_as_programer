@@ -13,7 +13,7 @@ Update: I'm afraid I got a little ahead of myself. The code is checked into AOSP
 However... if you look at the code, futimens(fd, times) is implemented as utimensat(fd, NULL, times, 0), where utimensat() is a Linux system call that does appear to be defined in the NDK. So you should be able to provide your own implementation of futimens() based on the syscall.
 
 Update: It made it into bionic but not the NDK. Here's how to roll your own:
-
+```c
 // ----- utimensat.h -----
 #include <sys/stat.h>
 #ifdef __cplusplus
@@ -36,6 +36,7 @@ int utimensat(int dirfd, const char *pathname,
 int futimens(int fd, const struct timespec times[2]) {
     return utimensat(fd, NULL, times, 0);
 }
+```
 Add those to your project, include the utimensat.h header, and you should be good to go. Tested with NDK r9b.
 
 (This should be wrapped with appropriate ifdefs (e.g. #ifndef HAVE_UTIMENSAT) so you can disable it when the NDK catches up.)
