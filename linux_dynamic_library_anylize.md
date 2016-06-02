@@ -9,11 +9,11 @@ reference:
 
 
 
-non-PIC 与 PIC 代码的区别主要在于 access global data, jump label 的不同。比如一条 access global data 的指令，
+non-PIC 与 PIC 代码的区别主要在于 access global data, jump label 的不同。比如一条 access global data 的指令;
 - non-PIC 的形势是：
-    ld r3, var1
-PIC 的形式则是：
-    ld r3, var1-offset@GOT
+      ld r3, var1  
+- PIC 的形式则是：
+      ld r3, var1-offset@GOT
 > 意思是从 GOT 表的 index 为 var1-offset 的地方处
 指示的地址处装载一个值,即var1-offset@GOT处的4个 byte 其实就是 var1 的地址。这个地址只有在运行的时候才知道，是由 dynamic-loader(ld-linux.so) 填进去的。
 
