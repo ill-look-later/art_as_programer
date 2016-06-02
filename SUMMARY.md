@@ -59,6 +59,7 @@
    * [c++ access class private variable](c++_access_class_private_variable.md)
    * [QML ViewManager](qml_viewmanager.md)
    * [Netlink Infomation On Linux](netlink_infomation_on_linux.md)
+   * Linux Dynamic Library anylize
 * [FrameWork And Library](framework_and_library.md)
    * [libuv](libuv.md)
    * [libevent](libevent.md)
