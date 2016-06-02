@@ -24,6 +24,7 @@ non-PIC 与 PIC 代码的区别主要在于 access global data, jump label 的�
       jump printf-offset@GOT,
 > 意思是跳到 GOT 表的 index 为 printf-offset 的地方处指示的地址去执行，
 这个地址处的代码摆放在 .plt section，
+
 每个外部函数对应一段这样的代码，其功能是呼叫dynamic-loader(ld-linux.so) 来查找函数的地址(本例中是 printf)，然后将其地址写到 GOT 表的 index 为 printf-offset 的地方，
 同时执行这个函数。这样，第2次呼叫 printf 的时候，就会直接跳到 printf 的地址，而不必再查找了。
 
