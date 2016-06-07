@@ -19,7 +19,7 @@
    * [EIM 异步复用模式配置核心要点](eim_yi_bu_fu_yong_mo_shi_pei_zhi_he_xin_yao_dian.md)
 * [Personal Project](personal_project.md)
    * [The X-th Project XReader](the_x-th_project_xreader.md)
-* [coder_skills_tools](mac_everthing.md)
+* [IT人基本知识积累](mac_everthing.md)
    * [Break the internet access block in ccb](break_the_internet_access_block_in_ccb.md)
    * [Get_the_wifi_password](getthe_wifi_password.md)
    * [gitbook markdown居中显示图片](gitbook_markdownju_zhong_xian_shi_tu_pian.md)
