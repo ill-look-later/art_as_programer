@@ -53,7 +53,7 @@
        * [各类系统传感器的使用](ge_lei_xi_tong_chuan_gan_qi_de_shi_yong.md)
        * [调用其他app等系统功能](diao_yong_qi_ta_app_deng_xi_tong_gong_neng.md)
 * [Coder Basic Knowledge Note](cc++_or_swiftoc_basic_knowledge_note.md)
-   * [HowTo_using_autoconf_automake_Make_std_linux_src_package](autoconf_automake_make_std_linux_src_pa.md)
+   * [HowTo_using_autoconf_automake_Make_std_linux_src_package](coder_basic_knowledge/autoconf_automake_make_std_linux_src_pa.md)
    * [c++ access class private variable](c++_access_class_private_variable.md)
    * [QML ViewManager](qml_viewmanager.md)
    * [Netlink Infomation On Linux](netlink_infomation_on_linux.md)
