@@ -1,2 +1,3 @@
-# C/C++ or swift/OC Basic Knowledge Note
+# IT 人的基本知识积累与素养
+
 
