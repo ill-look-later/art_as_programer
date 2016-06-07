@@ -52,7 +52,6 @@
        * [自定义控件与自绘控件](zi_ding_yi_kong_jian_yu_zi_hui_kong_jian.md)
        * [各类系统传感器的使用](ge_lei_xi_tong_chuan_gan_qi_de_shi_yong.md)
        * [调用其他app等系统功能](diao_yong_qi_ta_app_deng_xi_tong_gong_neng.md)
-* [小技巧，大作用](xiao_ji_qiao_ff0c_da_zuo_yong.md)
 * [C/C++ or swift/OC Basic Knowledge Note](cc++_or_swiftoc_basic_knowledge_note.md)
    * [HowTo_using_autoconf_automake_Make_std_linux_src_package](autoconf_automake_make_std_linux_src_pa.md)
    * [c++ access class private variable](c++_access_class_private_variable.md)
