@@ -11,7 +11,7 @@
    * [Chromium_input_type_change_call_stack](meet_chromium/chromiuminput_type_change_callstack.md)
    * [chromium_webElement_Paint_and_update](meet_chromium/chromiumwebelement_paint_and_update.md)
    * [Aura_Toolkit_Event](meet_chromium/auratoolkit_event.md)
-   * [The Relationship Between View && aura::window](the_relationship_between_view_and_aurawindow.md)
+   * [The Relationship Between View && aura::window](meet_chromium/the_relationship_between_view_and_aurawindow.md)
    * [Web IDL on chromium](web_idl_on_chromium.md)
    * [Plugin](plugin.md)
    * [The startup progress of  Any APP based on Chromium](the_startup_progress_of_any_appbased_on_chromium.md)
