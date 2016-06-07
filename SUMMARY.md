@@ -38,7 +38,6 @@
    * [map_reduce_filter_sort](map_reduce_filter_sort.md)
    * [ES6 New Feature Overview](es6_new_feature_overview.md)
 * [Email](email.md)
-   * [jiuzhou_7362_dfb](jiuzhou7362_dfb.md)
 * [Apple Swift系列积累](macand_ios.md)
    * [swift](swift.md)
    * [IOS app](ios_app.md)
