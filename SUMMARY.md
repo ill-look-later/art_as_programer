@@ -7,7 +7,7 @@
    * [7t45_chromium_porting](meet_chromium/7t45chromium_porting.md)
    * [popup元素的创建和销毁](meet_chromium/chromiumzhong_popup_yuan_su_de_chuang_jian_he_xiao.md)
    * [chromium(chrome) event's "from and go" based on linux X11 system](meet_chromium/chromiumchrome_events_from_and_go_based_on_linux_x.md)
-   * [Google Protocol Buffer 的使用和原理](google_protocol_buffer.md)
+   * [Google Protocol Buffer 的使用和原理](meet_chromium/google_protocol_buffer.md)
    * [nvm 在fish shell中的两种使用方式](nvm_work_on_fish_shell_on_osx.md)
    * [Chromium_input_type_change_call_stack](chromiuminput_type_change_callstack.md)
    * [chromium_webElement_Paint_and_update](chromiumwebelement_paint_and_update.md)
