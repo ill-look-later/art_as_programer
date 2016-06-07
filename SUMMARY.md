@@ -52,7 +52,7 @@
        * [自定义控件与自绘控件](zi_ding_yi_kong_jian_yu_zi_hui_kong_jian.md)
        * [各类系统传感器的使用](ge_lei_xi_tong_chuan_gan_qi_de_shi_yong.md)
        * [调用其他app等系统功能](diao_yong_qi_ta_app_deng_xi_tong_gong_neng.md)
-* [Coder Basic Knowledge Note](cserials_program_language_md.md)
+* [C系列语言积累](cserials_program_language_md.md)
    * [HowTo_using_autoconf_automake](coder_basic_knowledge/autoconf_automake_create_linux_package.md)
    * [c++ access class private variable](c++_access_class_private_variable.md)
    * [QML ViewManager](qml_viewmanager.md)
