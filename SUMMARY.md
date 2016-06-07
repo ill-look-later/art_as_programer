@@ -14,7 +14,7 @@
    * [chromium_webElement_Paint_and_update](chromiumwebelement_paint_and_update.md)
    * [用Nodejs搭建weixin公众平台入门例子](use_nodejs_setup_weixin_PublicAPI_platform_example.md)
    * [HowTo_using_autoconf_automake_Make_std_linux_src_package](autoconf_automake_make_std_linux_src_pa.md)
-   * [Aura_Toolkit_Event](auratoolkit_event.md)
+   * [Aura_Toolkit_Event](meet_chomiume/auratoolkit_event.md)
    * [The Relationship Between View && aura::window](the_relationship_between_view_and_aurawindow.md)
    * [Web IDL on chromium](web_idl_on_chromium.md)
    * [Plugin](plugin.md)
