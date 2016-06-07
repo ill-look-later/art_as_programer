@@ -19,7 +19,7 @@
    * [EIM 异步复用模式配置核心要点](eim_yi_bu_fu_yong_mo_shi_pei_zhi_he_xin_yao_dian.md)
 * [Personal Project](personal_project.md)
    * [The X-th Project XReader](the_x-th_project_xreader.md)
-* [Mac everthing](mac_everthing.md)
+* [coder_skills_tools](mac_everthing.md)
    * [HackTonish_4745G_PowerManager](hacktonish4745g_powermanager.md)
    * [mac mini 外接显示器字体发虚](mac_mini_wai_jie_xian_shi_qi_zi_ti_fa_xu.md)
 * [Node And js](nodejs.md)
