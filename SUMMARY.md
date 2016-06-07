@@ -8,7 +8,7 @@
    * [popup元素的创建和销毁](meet_chromium/chromiumzhong_popup_yuan_su_de_chuang_jian_he_xiao.md)
    * [chromium(chrome) event's "from and go" based on linux X11 system](meet_chromium/chromiumchrome_events_from_and_go_based_on_linux_x.md)
    * [Google Protocol Buffer 的使用和原理](meet_chromium/google_protocol_buffer.md)
-   * [Chromium_input_type_change_call_stack](chromiuminput_type_change_callstack.md)
+   * [Chromium_input_type_change_call_stack](meet_chromium/chromiuminput_type_change_callstack.md)
    * [chromium_webElement_Paint_and_update](chromiumwebelement_paint_and_update.md)
    * [HowTo_using_autoconf_automake_Make_std_linux_src_package](autoconf_automake_make_std_linux_src_pa.md)
    * [Aura_Toolkit_Event](meet_chomiume/auratoolkit_event.md)
