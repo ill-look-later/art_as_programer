@@ -19,7 +19,7 @@
    * [EIM 异步复用模式配置核心要点](career_memory/eim_configure_note.md)
    * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
 * [Personal Project](personal_project.md)
-   * [The X-th Project XReader](the_x-th_project_xreader.md)
+   * [The X-th Project XReader](program_project/the_x-th_project_xreader.md)
 * [IT人折腾积累](mac_everthing.md)
    * [Break the internet access block in ccb](break_the_internet_access_block_in_ccb.md)
    * [Get_the_wifi_password](getthe_wifi_password.md)
