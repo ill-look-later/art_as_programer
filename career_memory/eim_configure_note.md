@@ -54,7 +54,7 @@ Caution should be exercised for using OEA/WEA & ADH bit fields. They should be c
 
 ####22.8.3 Asynchronous Read/Write Memory Accesses Timing Diagram
 
-![](QQ20160329-2@2x.png)
+![](img/EIM_timming.png)
 
 
 ####核心寄存器代码配置16bin非复用
