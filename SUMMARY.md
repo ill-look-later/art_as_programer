@@ -28,7 +28,7 @@
    * [突破公司的文档加解密系统忆塞通](tu_po_gong_si_de_wen_dang_jia_jie_mi_xi_tong_yi_sa.md)
    * [HackTonish_4745G_PowerManager](hacktonish4745g_powermanager.md)
    * [mac mini 外接显示器字体发虚](mac_mini_wai_jie_xian_shi_qi_zi_ti_fa_xu.md)
-* [Javascript Node系列](nodejs.md)
+* [Js Node系列](nodejs.md)
    * [用Nodejs搭建weixin公众平台入门例子](use_nodejs_setup_weixin_PublicAPI_platform_example.md)
    * [Express FrameWork](express_framework.md)
        * [express.use 的作用](expressuse_de_zuo_yong.md)
