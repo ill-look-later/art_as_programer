@@ -527,4 +527,4 @@ Item {
 ![WebContentView](img/x-reader-WebContentView.png)
 
 thanks！ that all:
-![](3760833c5b2908658802ee37037a71ff.jpg)
+![](img/x-reader-funy.jpg)
