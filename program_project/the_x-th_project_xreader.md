@@ -161,7 +161,7 @@ Loader { //the main content for display
 ##### FeedmannagerView 和 ArticleListView
 
 - 图片二
-- 
+
 | ![FeedManagerView](img/x-reader-FeedManagerView.png)  | ![ArticleListView](img/x-reader-ArticleListView.png) |
 | :--: | :--: |
 
