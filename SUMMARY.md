@@ -26,7 +26,7 @@
    * [gitbook markdown居中显示图片](十年一剑IT人/gitbook_markdown_Center_Image.md)
    * [Gdb Debuging Coredump file](十年一剑IT人/gdb_debuging_coredump_file.md)
    * [nvm 在fish shell中的两种使用方式](十年一剑IT人/nvm_work_on_fish_shell_on_osx.md)
-   * [突破公司的文档加解密系统忆塞通](tu_po_gong_si_de_wen_dang_jia_jie_mi_xi_tong_yi_sa.md)
+   * [突破公司的文档加解密系统忆塞通](十年一剑IT人/break_yisaitong_Encryption_system.md)
    * [HackTonish_4745G_PowerManager](hacktonish4745g_powermanager.md)
    * [mac mini 外接显示器字体发虚](mac_mini_wai_jie_xian_shi_qi_zi_ti_fa_xu.md)
 * [Js Node系列](nodejs.md)
