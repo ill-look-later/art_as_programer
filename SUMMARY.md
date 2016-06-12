@@ -20,7 +20,7 @@
    * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
 * [Personal Project](personal_project.md)
    * [The X-th Project XReader](program_project/the_x-th_project_xreader.md)
-* [IT人折腾积累](十年一剑IT人/IT_man_skills.md)
+* [十年一剑IT人](十年一剑IT人/IT_man_skills.md)
    * [Break the internet access block in ccb](十年一剑IT人/break_the_internet_access_block_in_ccb.md)
    * [Get_the_wifi_password](十年一剑IT人/get_wifi_password_from_android.md)
    * [gitbook markdown居中显示图片](十年一剑IT人/gitbook_markdown_Center_Image.md)
