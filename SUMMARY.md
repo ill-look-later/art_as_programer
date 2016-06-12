@@ -25,7 +25,7 @@
    * [Get_the_wifi_password](IT_Man_Skills/get_wifi_password_from_android.md)
    * [gitbook markdown居中显示图片](IT_Man_Skills/gitbook_markdown_Center_Image.md)
    * [Gdb Debuging Coredump file](IT_Man_Skills/gdb_debuging_coredump_file.md)
-   * [nvm 在fish shell中的两种使用方式](十年一剑IT人/nvm_work_on_fish_shell_on_osx.md)
+   * [nvm 在fish shell中的两种使用方式](IT_Man_Skills/nvm_work_on_fish_shell_on_osx.md)
    * [突破公司的文档加解密系统忆塞通](十年一剑IT人/break_yisaitong_Encryption_system.md)
    * [HackTonish_4745G_PowerManager](十年一剑IT人/hacktonish_4745g_powermanager.md)
    * [mac mini 外接显示器字体发虚](十年一剑IT人/mac_mini_hdmi_displayer_resolution.md)
