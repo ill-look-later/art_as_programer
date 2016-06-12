@@ -161,9 +161,8 @@ Loader { //the main content for display
 ##### FeedmannagerView 和 ArticleListView
 
 - 图片二
-
-![FeedManagerView](img/x-reader-FeedManagerView.png)  
-![ArticleListView](img/x-reader-ArticleListView.png)
+| ![FeedManagerView](img/x-reader-FeedManagerView.png)  | ![ArticleListView](img/x-reader-ArticleListView.png) |
+| :--: | :--: |
 
 这两个view就是你在main.qml文件中看到的那个stackview对应的两个view；只要我们依次把它们通过下面这个接口
     
