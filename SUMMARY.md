@@ -22,7 +22,7 @@
    * [The X-th Project XReader](program_project/the_x-th_project_xreader.md)
 * [十年一剑IT人](IT_Man_Skills/IT_man_skills.md)
    * [Break the internet access block in ccb](IT_Man_Skills/break_the_internet_access_block_in_ccb.md)
-   * [Get_the_wifi_password](十年一剑IT人/get_wifi_password_from_android.md)
+   * [Get_the_wifi_password](IT_Man_Skills/get_wifi_password_from_android.md)
    * [gitbook markdown居中显示图片](十年一剑IT人/gitbook_markdown_Center_Image.md)
    * [Gdb Debuging Coredump file](十年一剑IT人/gdb_debuging_coredump_file.md)
    * [nvm 在fish shell中的两种使用方式](十年一剑IT人/nvm_work_on_fish_shell_on_osx.md)
