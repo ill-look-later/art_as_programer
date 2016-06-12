@@ -24,7 +24,7 @@
    * [Break the internet access block in ccb](十年一剑IT人/break_the_internet_access_block_in_ccb.md)
    * [Get_the_wifi_password](十年一剑IT人/get_wifi_password_from_android.md)
    * [gitbook markdown居中显示图片](十年一剑IT人/gitbook_markdown_Center_Image.md)
-   * [Gdb Debuging Coredump file](gdb_debuging_coredump_file.md)
+   * [Gdb Debuging Coredump file](十年一剑IT人/gdb_debuging_coredump_file.md)
    * [nvm 在fish shell中的两种使用方式](nvm_work_on_fish_shell_on_osx.md)
    * [突破公司的文档加解密系统忆塞通](tu_po_gong_si_de_wen_dang_jia_jie_mi_xi_tong_yi_sa.md)
    * [HackTonish_4745G_PowerManager](hacktonish4745g_powermanager.md)
