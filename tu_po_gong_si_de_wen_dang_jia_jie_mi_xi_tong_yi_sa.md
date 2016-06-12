@@ -1,2 +1,4 @@
 # 突破公司的文档加解密系统忆塞通
 
+
+so easy, a bad sytem!
