@@ -524,7 +524,11 @@ Item {
 这个没什么好说的，qt从webkit切换到Chromium作为webengine之后，使用起来没有什么大额问题，这里也是简简单单的使用它去load一个article的url而已；这里是将**WebEngineView**简单地封装了一下，加了一个控制zoomfactor的缩放条而已；so easy!
 就长这个样
 -图片4
-![WebContentView](img/x-reader-WebContentView.png)
+| ![WebContentView](img/x-reader-WebContentView.png) | 
+| :--: |
+
+
 
 thanks！ that all:
+
 ![](img/x-reader-funy.jpg)
