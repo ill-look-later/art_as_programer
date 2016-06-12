@@ -21,7 +21,7 @@
 * [Personal Project](personal_project.md)
    * [The X-th Project XReader](program_project/the_x-th_project_xreader.md)
 * [十年一剑IT人](IT_Man_Skills/IT_man_skills.md)
-   * [Break the internet access block in ccb](十年一剑IT人/break_the_internet_access_block_in_ccb.md)
+   * [Break the internet access block in ccb](IT_Man_Skills/break_the_internet_access_block_in_ccb.md)
    * [Get_the_wifi_password](十年一剑IT人/get_wifi_password_from_android.md)
    * [gitbook markdown居中显示图片](十年一剑IT人/gitbook_markdown_Center_Image.md)
    * [Gdb Debuging Coredump file](十年一剑IT人/gdb_debuging_coredump_file.md)
