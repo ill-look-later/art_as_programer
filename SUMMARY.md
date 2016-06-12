@@ -28,7 +28,7 @@
    * [nvm 在fish shell中的两种使用方式](IT_Man_Skills/nvm_work_on_fish_shell_on_osx.md)
    * [突破公司的文档加解密系统忆塞通](IT_Man_Skills/break_yisaitong_Encryption_system.md)
    * [HackTonish_4745G_PowerManager](IT_Man_Skills/hacktonish_4745g_powermanager.md)
-   * [mac mini 外接显示器字体发虚](十年一剑IT人/mac_mini_hdmi_displayer_resolution.md)
+   * [mac mini 外接显示器字体发虚](IT_Man_Skills/mac_mini_hdmi_displayer_resolution.md)
 * [Js Node系列](nodejs.md)
    * [用Nodejs搭建weixin公众平台入门例子](use_nodejs_setup_weixin_PublicAPI_platform_example.md)
    * [Express FrameWork](express_framework.md)
