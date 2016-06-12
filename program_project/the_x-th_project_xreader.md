@@ -531,4 +531,5 @@ Item {
 
 thanks！ that all:
 
-![](img/x-reader-funy.jpg)
+|![](img/x-reader-funy.jpg) |
+| :--: |
