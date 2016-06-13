@@ -1,2 +1,0 @@
-# Coder Basic Knowledge Note
-
