@@ -29,7 +29,7 @@
    * [突破公司的文档加解密系统忆塞通](IT_Man_Skills/break_yisaitong_Encryption_system.md)
    * [HackTonish_4745G_PowerManager](IT_Man_Skills/hacktonish_4745g_powermanager.md)
    * [mac mini 外接显示器字体发虚](IT_Man_Skills/mac_mini_hdmi_displayer_resolution.md)
-* [Js Node系列](javascript_nodejs/javascript_nodejs.md)
+* [Js Node系列](javascript_nodejs/README.md)
    * [Express FrameWork](express_framework.md)
        * [express.use 的作用](expressuse_de_zuo_yong.md)
        * [概念: 模板引擎](gai_5ff53a_mo_ban_yin_qing.md)
