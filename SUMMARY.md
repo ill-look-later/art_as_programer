@@ -31,7 +31,7 @@
    * [mac mini 外接显示器字体发虚](IT_Man_Skills/mac_mini_hdmi_displayer_resolution.md)
 * [Js Node系列](javascript_nodejs/README.md)
    * [Express FrameWork](javascript_nodejs/express_framework.md)
-       * [express.use 的作用](expressuse_de_zuo_yong.md)
+       * [express.use 的作用](javascript_nodejs/expressuse_de_zuo_yong.md)
        * [概念: 模板引擎](gai_5ff53a_mo_ban_yin_qing.md)
    * [用Nodejs搭建weixin公众平台入门例子](javascript_nodejs/setup_weixin_PublicAPI_platform_example.md)
    * [javascript 日记](javascript_ri_ji.md)
