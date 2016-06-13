@@ -1,0 +1,2 @@
+# macmini display not clear
+
