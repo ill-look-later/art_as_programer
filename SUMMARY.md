@@ -35,7 +35,7 @@
        * [概念: 模板引擎](javascript_nodejs/Templates_engine.md)
    * [用Nodejs搭建weixin公众平台入门例子](javascript_nodejs/setup_weixin_PublicAPI_platform_example.md)
    * [javascript 构造函数](javascript_nodejs/javascript_constructor.md)
-   * [ES6 New Keyword class](es6_new_keyword_class.md)
+   * [ES6 New Keyword class](javascript_nodejs/es6_new_keyword_class.md)
    * [map_reduce_filter_sort](map_reduce_filter_sort.md)
    * [ES6 New Feature Overview](es6_new_feature_overview.md)
 * [Apple Swift系列积累](macand_ios.md)
