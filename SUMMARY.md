@@ -45,7 +45,7 @@
        * [UI与代码binding 的两种方法](uiyu_dai_ma_binding_de_liang_zhong_fang_fa.md)
        * [swift Class Binding to Storyboard](swift_class_binding_to_storyboard.md)
        * [Event Binding to UI action](event_binding_to_ui_action.md)
-       * [UI的跳转和页面之间的数据传递](uide_tiao_zhuan_he_ye_mian_zhi_jian_de_shu_ju_chua.md)
+       * [UI的跳转和页面之间的数据传递](MacIOS_development/uiyu_dai_ma_binding_de_liang_zhong_fang_fa.md)
        * [Draw API的使用和页面跳转上一点点的优化](draw_apide_shi_yong_he_ye_mian_tiao_zhuan_shang_yi.md)
        * [Layout && 匹配父级容器](layout_&&_pi_pei_fu_ji_rong_qi.md)
        * [自定义控件与自绘控件](zi_ding_yi_kong_jian_yu_zi_hui_kong_jian.md)
