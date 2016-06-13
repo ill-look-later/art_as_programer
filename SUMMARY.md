@@ -40,7 +40,7 @@
    * [ES6 New Feature Overview](javascript_nodejs/es6_new_feature_overview.md)
 * [Apple Swift系列积累](MacIOS_development/README.md)
    * [swift](MacIOS_development/swift.md)
-   * [IOS app](ios_app.md)
+   * [IOS app](MacIOS_development/ios_app.md)
        * [启动过程描述](qi_dong_guo_cheng_miao_shu.md)
        * [UI与代码binding 的两种方法](uiyu_dai_ma_binding_de_liang_zhong_fang_fa.md)
        * [swift Class Binding to Storyboard](swift_class_binding_to_storyboard.md)
