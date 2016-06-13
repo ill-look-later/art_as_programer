@@ -30,7 +30,7 @@
    * [HackTonish_4745G_PowerManager](IT_Man_Skills/hacktonish_4745g_powermanager.md)
    * [mac mini 外接显示器字体发虚](IT_Man_Skills/mac_mini_hdmi_displayer_resolution.md)
 * [Js Node系列](javascript_nodejs/javascript_nodejs.md)
-   * [用Nodejs搭建weixin公众平台入门例子](use_nodejs_setup_weixin_PublicAPI_platform_example.md)
+   * [用Nodejs搭建weixin公众平台入门例子](javascript_nodejs/setup_weixin_PublicAPI_platform_example.md)
    * [Express FrameWork](express_framework.md)
        * [express.use 的作用](expressuse_de_zuo_yong.md)
        * [概念: 模板引擎](gai_5ff53a_mo_ban_yin_qing.md)
