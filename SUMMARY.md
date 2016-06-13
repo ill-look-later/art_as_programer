@@ -43,7 +43,7 @@
    * [IOS app](MacIOS_development/ios_app.md)
        * [启动过程描述](MacIOS_development/qi_dong_guo_cheng_miao_shu.md)
        * [UI与代码binding 的两种方法](uiyu_dai_ma_binding_de_liang_zhong_fang_fa.md)
-       * [swift Class Binding to Storyboard](swift_class_binding_to_storyboard.md)
+       * [swift Class Binding to Storyboard](MacIOS_development/swift_class_binding_to_storyboard.md)
        * [Event Binding to UI action](event_binding_to_ui_action.md)
        * [UI的跳转和页面之间的数据传递](MacIOS_development/uiyu_dai_ma_binding_de_liang_zhong_fang_fa.md)
        * [Draw API的使用和页面跳转上一点点的优化](draw_apide_shi_yong_he_ye_mian_tiao_zhuan_shang_yi.md)
