@@ -44,8 +44,7 @@ static struct i2c_board_info __initdata mxc_i2c1_board_info[] = {
     > 注：0x70是从设备的写地址，而设备地址是0x70的高7位，所以要向右移一位得到从设备地址得到0x38。 
 
 
- 3. 增加触摸屏引脚初化;
- - 在设备驱动程序中修改初始化的控制 主要时由三星的GPIO操作函数换成我们飞思卡尔平台的
+ 3. 增加触摸屏引脚初化,在设备驱动程序中修改初始化的控制 主要时由三星的GPIO操作函数换成我们飞思卡尔平台的
 ```c
 // capaticy touch srceen  gpio init 
 static int __init ft5x0x_ts_init(void)
