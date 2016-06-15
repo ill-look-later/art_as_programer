@@ -71,5 +71,9 @@ if(ret)
   else 
   //return false
 ```
-有的人会问，可以把函数改写成返回指针的形式呀，yes，是的可以这样做，比如改写成这样：uchar * catch_Oneframe(int *return_value,__u32 *fameSize)；这样改写函数本身是没有错误的，并且能够正常的工作，但是在C语言编程时保持链式表达的支持，这样写会有好处的比如说：uchar *p_fram = NULL;unsigned int size = 0,ret = 0;if(catch_Onefram(&p_fram,&size))   transform(p_fram,size);   //do other img processing else   //return false      have a nice day！ Huan.GOng
+有的人会问，可以把函数改写成返回指针的形式呀，yes，是的可以这样做，比如改写成这样：
+
+    uchar * catch_Oneframe(int *return_value,__u32 *fameSize)；
+
+这样改写函数本身是没有错误的，并且能够正常的工作，但是在C语言编程时保持链式表达的支持，这样写会有好处的比如说：uchar *p_fram = NULL;unsigned int size = 0,ret = 0;if(catch_Onefram(&p_fram,&size))   transform(p_fram,size);   //do other img processing else   //return false      have a nice day！ Huan.GOng
 
