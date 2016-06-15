@@ -85,5 +85,5 @@ if(catch_Onefram(&p_fram,&size))
 else
   //return false
 ```
-have a nice day！ Huan.GOng
+have a nice day！ Huan.Gong
 
