@@ -16,7 +16,7 @@
    * [chromium_npapi_Plugin](meet_chromium/chromium_npapi_pluginmd.md)
    * [The startup progress of  Any APP based on Chromium](meet_chromium/the_startup_progress_of_any_appbased_on_chromium.md)
 * [Embeded Development](Embeded_development/embeded_development.md)
-   * 电容触摸屏FT5406移植说明
+   * [电容触摸屏FT5406移植说明](Embeded_development/Porting Ft5406 to Freescale Imx6Q.md)
 * [career_memory](career_memory/README.md)
    * [EIM 异步复用模式配置核心要点](career_memory/eim_configure_note.md)
    * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
