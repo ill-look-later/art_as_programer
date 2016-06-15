@@ -91,7 +91,7 @@ config TOUCHSCREEN_FT5X06
      To compile this driver as a module, choose M here; the module will be called ft5x06_ts 
 ```
 - 在当前目录下，编辑Makefile，在文件最后一行添加： 
-obj-$(CONFIG_TOUCHSCREEN_FT5X06) += ft5x06_ts.o 
+    obj-$(CONFIG_TOUCHSCREEN_FT5X06) += ft5x06_ts.o 
 5、重新编译内核 
 
 //上面的基本上时移植整个驱动的步骤，但是实际移植中还是会碰到一些小问题，而这些小问题，如果不够细心，也不是那么容易被发现。
