@@ -18,7 +18,7 @@
 * [career_memory](career_memory/README.md)
    * [EIM 异步复用模式配置核心要点](career_memory/eim_configure_note.md)
    * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
-   * [why need pointer pointing to another pointer](C_series_language/why need pointer pointing to another pointer)
+   * [why need pointer pointing to another pointer](C_series_language/pointer_pointing_to_another_pointer.md)
 * [Personal Project](personal_project.md)
    * [The X-th Project XReader](program_project/the_x-th_project_xreader.md)
 * [十年一剑IT人](IT_Man_Skills/IT_man_skills.md)
