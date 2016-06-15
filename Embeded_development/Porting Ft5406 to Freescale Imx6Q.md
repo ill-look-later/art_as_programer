@@ -126,6 +126,7 @@ config TOUCHSCREEN_FT5X06
 	ts->gpio_wakeup = pdata->gpio_wakeup;
 	ts->gpio_reset = pdata->gpio_reset;
 ............
+```
         从这段代码中我们大致的可以看明白。就是我们在probe函数中申明了一个平台设备数据结构pdata，用来接收dev.platform_data数据结构，dev则是我们具体的I2C这个平台设备，当时我们在
 mach-imx6q_sabresd.c中初始化这个设备的时候提供了平台数据结构，现在在设备驱动程序中从新获取到这个数据结构，通过这个数据结构中的数据【事实上这些数据就是硬件的配置】来申请
 中断，配置中断，申请内核的一些其他必要的数据。这样就完成了设备的配置，而且做到了设备驱动和硬件的一种封装和隔离。
