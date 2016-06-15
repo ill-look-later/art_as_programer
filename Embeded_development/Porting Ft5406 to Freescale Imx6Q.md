@@ -46,6 +46,7 @@ static struct i2c_board_info __initdata mxc_i2c1_board_info[] = {
 
  3. 增加触摸屏引脚初化 
 在设备驱动程序中修改初始化的控制 主要时由三星的GPIO操作函数换成我们飞思卡尔平台的
+```c
 // capaticy touch srceen  gpio init 
 static int __init ft5x0x_ts_init(void)
 {
@@ -74,6 +75,7 @@ static int __init ft5x0x_ts_init(void)
 #endif
 /*
 .........
+```
 3、  将驱动文件ft5x06_ts.c和ft5x06_ts.h以及ft5x0x_touch.h文件放在driver/input/touchscreen目录下 
 4、  在当前目录下，编辑Kconfig, 增加ft5x06驱动的配置选项 
 config TOUCHSCREEN_FT5X06 
