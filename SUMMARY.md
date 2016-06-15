@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Embeded Development
 * [遇见Chromium](meet_chromium/chapter1.md)
    * [What's the difference between RenderWidget and RenderView](meet_chromium/whats_the_difference_between_renderwidget_and_renderview.md)
    * [Get Ip/gateway/dns throgh sh script On Platform Linux(Unix)](meet_chromium/get_ipgatewaydns_throgh_sh_script_on_platform_linuxunix.md)
@@ -16,6 +15,7 @@
    * [Web IDL on chromium](meet_chromium/web_idl_on_chromium.md)
    * [chromium_npapi_Plugin](meet_chromium/chromium_npapi_pluginmd.md)
    * [The startup progress of  Any APP based on Chromium](meet_chromium/the_startup_progress_of_any_appbased_on_chromium.md)
+* Embeded Development
 * [career_memory](career_memory/README.md)
    * [EIM 异步复用模式配置核心要点](career_memory/eim_configure_note.md)
    * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
