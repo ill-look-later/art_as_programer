@@ -103,8 +103,8 @@ config TOUCHSCREEN_FT5X06
 的出书画init 或者更多的是在probe中申请中断，在remove中释放中断的，而驱动设计的原则之中，就是将软硬件有一个很好的办法隔离，那么最好的办法就是在具体的plat_device
 和plat_driver中完成这些设备的引用和引脚的分配，之后通过数据结构指针将这些必要的信息提供给具体的设备驱动程序，那么驱动程序对应的处理就可以抛开硬件，只要关心传递过来
 的数据结构中的数据，就行。于是我们在我们触屏的驱动的probe函数中看到了如下的代码：
+```c
 .............
-```
 	pdata = client->dev.platform_data;
 	if (!pdata) {
 		dev_err(&client->dev, "failed to get platform data\n");
