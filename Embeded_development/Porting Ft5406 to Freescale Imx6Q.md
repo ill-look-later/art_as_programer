@@ -72,10 +72,10 @@ static int __init ft5x0x_ts_init(void)
         gpio_free(GTP_RST_PORT);
         msleep(10);
 #endif
-/*
 .........
 ```
-3、  将驱动文件ft5x06_ts.c和ft5x06_ts.h以及ft5x0x_touch.h文件放在driver/input/touchscreen目录下 
+
+4. 将驱动文件ft5x06_ts.c和ft5x06_ts.h以及ft5x0x_touch.h文件放在driver/input/touchscreen目录下 
 4、  在当前目录下，编辑Kconfig, 增加ft5x06驱动的配置选项 
 config TOUCHSCREEN_FT5X06 
    tristate 
