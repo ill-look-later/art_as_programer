@@ -61,7 +61,7 @@ int catch_Oneframe(uchar **p_fram,__u32 *fameSize) {
 }
 ```
 这段代码中我们希望通过在函数外申明一个uchar \*fram的指针来指向我们要获取的一帧图像，之后申明了一个表示这个图像的大小的int 型变量。而返回值表示我们到底时成功了还是失败了。所以实际看到的应用是这样的：
-```
+```c
 uchar *p_fram = NULL;
 unsigned int size = 0,ret = 0;
 ret = catch_Onefram(&p_fram,&size);
