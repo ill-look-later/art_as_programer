@@ -133,6 +133,7 @@ config TOUCHSCREEN_FT5X06
 有一个驱动已经占用了这个设备或者占用了这个中断，当初始化我们的驱动的时候再次去申请使用这个中断当然就会失败了，想到这里，结合我们im6Q平台上的设备，很快就想到了可能是原来LCD
 的触屏IC tsc2007的驱动已经申请了这个中断并占用了，于是到mach-imx6q_sabresd.c中查看给I2C1上挂载的设备上果然有tsc2007，并且她的中断也是GPIO9这个脚的中断，于是屏蔽掉这段代码就
 成功的解决了这个问题。如下：
+```
 static struct i2c_board_info mxc_i2c1_board_info[] __initdata = {
 	{
 		I2C_BOARD_INFO("mxc_hdmi_i2c", 0x50),
