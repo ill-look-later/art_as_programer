@@ -13,8 +13,7 @@
 移植步骤：
 ---
 
-1.  在arch/arm/mach-mx6/board-mx6q_sabresd.c文件中添加I2C设备 
-为了完成平台设备的初始化我们移植了itop4412上Ft5x06的平台数据结构
+1.  在arch/arm/mach-mx6/board-mx6q_sabresd.c文件中添加I2C设备.为了完成平台设备的初始化我们移植了itop4412上Ft5x06的平台数据结构
 ```c
 /* add by Huan.Gong @2014/10/22 */
 #ifdef CONFIG_TOUCHSCREEN_FT5X0X
