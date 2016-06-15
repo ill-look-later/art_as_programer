@@ -60,5 +60,9 @@ int catch_Oneframe(uchar **p_fram,__u32 *fameSize) {
     return SUCCESS;
 }
 ```
-这段代码中我们希望通过在函数外申明一个uchar \*fram的指针来指向我们要获取的一帧图像，之后申明了一个表示这个图像的大小的int 型变量。而返回值表示我们到底时成功了还是失败了。所以实际看到的应用是这样的：uchar *p_fram = NULL;unsigned int size = 0,ret = 0;ret = catch_Onefram(&p_fram,&size);if(ret)   transform(p_fram,size);   //do other img processing else   //return false有的人会问，可以把函数改写成返回指针的形式呀，yes，是的可以这样做，比如改写成这样：uchar * catch_Oneframe(int *return_value,__u32 *fameSize)；这样改写函数本身是没有错误的，并且能够正常的工作，但是在C语言编程时保持链式表达的支持，这样写会有好处的比如说：uchar *p_fram = NULL;unsigned int size = 0,ret = 0;if(catch_Onefram(&p_fram,&size))   transform(p_fram,size);   //do other img processing else   //return false      have a nice day！ Huan.GOng
+这段代码中我们希望通过在函数外申明一个uchar \*fram的指针来指向我们要获取的一帧图像，之后申明了一个表示这个图像的大小的int 型变量。而返回值表示我们到底时成功了还是失败了。所以实际看到的应用是这样的：
+```
+uchar *p_fram = NULL;unsigned int size = 0,ret = 0;ret = catch_Onefram(&p_fram,&size);if(ret)   transform(p_fram,size);   //do other img processing else   //return false
+```
+有的人会问，可以把函数改写成返回指针的形式呀，yes，是的可以这样做，比如改写成这样：uchar * catch_Oneframe(int *return_value,__u32 *fameSize)；这样改写函数本身是没有错误的，并且能够正常的工作，但是在C语言编程时保持链式表达的支持，这样写会有好处的比如说：uchar *p_fram = NULL;unsigned int size = 0,ret = 0;if(catch_Onefram(&p_fram,&size))   transform(p_fram,size);   //do other img processing else   //return false      have a nice day！ Huan.GOng
 
