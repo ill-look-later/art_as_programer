@@ -30,6 +30,7 @@ static struct ft5x0x_i2c_platform_data ft5x0x_pdata = {
 /* end add */
 ```
 2. 将我们的触屏设备添加到I2C初始化数据结构中，并完成附上初始化数据参数
+```c
 static struct i2c_board_info __initdata mxc_i2c1_board_info[] = { 
    { 
         {       // add by Huan.Gong @ 2014/10/20
@@ -38,7 +39,9 @@ static struct i2c_board_info __initdata mxc_i2c1_board_info[] = {
         	.irq = gpio_to_irq(SABRESD_TS_INT),
         	.platform_data = &ft5x0x_pdata
         	},
-}; 
+};
+```
+
       注：0x70是从设备的写地址，而设备地址是0x70的高7位，所以要向右移一位得到从设备地址得到0x38。 
 
 
