@@ -21,7 +21,7 @@
 
 如下是以上程序的输出结果（平台：_osx10.10，LLVM 6.0 + clang-600.0.56_）：
 
-```language-bash
+```bash
 Modifying on s_array...
 Ahis is literal string.
 Modifying on s_literal...
