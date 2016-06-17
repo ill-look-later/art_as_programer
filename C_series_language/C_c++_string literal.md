@@ -83,7 +83,7 @@ $                                local_variable = 0x7fff5f9dbb28
 
 程序的源代码如下：
 
-```language-c--
+```c--
 #include <stdio.h>
 #include <stdlib.h>
 
