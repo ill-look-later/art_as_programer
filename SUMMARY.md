@@ -63,6 +63,7 @@
    * [Linux Dynamic Library anylize](C_series_language/linux_dynamic_library_anylize.md)
    * [timegm implement](C_series_language/timegm_implement.md)
    * [futimes not find on NDK](C_series_language/futimes_not_find_on_ndk.md)
+   * C/C++ 中字符串字面量
 * [FrameWork And Library](framework_library/README.md)
    * [libuv](framework_library/libuv.md)
    * [libevent](framework_library/libevent.md)
