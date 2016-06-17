@@ -63,7 +63,7 @@ Bus error: 10
 
 下面的程序输出展示了这四个区在程序中的实际地址：
 
-```language-bash
+```bash
 --------Code Area--------
 $                                string_literal = 0x100224e16
 $                        another_string_literal = 0x100224e5f
