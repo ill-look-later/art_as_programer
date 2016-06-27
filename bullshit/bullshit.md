@@ -2,8 +2,9 @@
 
 
 
-[1581/1581] ConditionVariableTest.LargeFastTaskTest (133 ms)
 36 tests failed:
+---
+
     ConditionVariableTest.LargeFastTaskTest
     ConditionVariableTest.MultiThreadConsumerTest
     ConditionVariableTest.TimeoutTest
@@ -41,11 +42,15 @@
     SequencedWorkerPoolTest.DelayedTaskDuringShutdown
     UnixDomainSocketTest.SendRecvMsgAbortOnReplyFDClose
 4 tests timed out:
+---
+
     PosixDynamicThreadPoolTest.Basic
     PosixDynamicThreadPoolTest.Complex
     PosixDynamicThreadPoolTest.ReuseIdle
     PosixDynamicThreadPoolTest.TwoActiveTasks
 7 tests crashed:
+---
+
     HistogramDeathTest.BadRangesTest
     ScopedFD.ScopedFDCrashesOnCloseFailure
     SecurityTest.CallocOverflow
