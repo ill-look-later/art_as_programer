@@ -64,6 +64,7 @@
    * [timegm implement](C_series_language/timegm_implement.md)
    * [futimes not find on NDK](C_series_language/futimes_not_find_on_ndk.md)
    * [C/C++ 中字符串字面量](C_series_language/C_c++_string literal.md)
+   * C++ SIGNAL to QML SLOT in Qt
 * [bullshit](bullshit/bullshit.md)
    * [with_the_bullshit_courage_to_face_the_fucking_life.md](bullshit/with_the_bullshit_courage_to_face_the_fucking_life.md)
 * [FrameWork And Library](framework_library/README.md)
