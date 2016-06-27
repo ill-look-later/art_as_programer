@@ -9,6 +9,7 @@
 看下面的代码
 ```javascript
 Item {
+  objectName: ""
   Connections {
       target: MetaObject // namely QOBJECT 
       onAxxxsignal: {
