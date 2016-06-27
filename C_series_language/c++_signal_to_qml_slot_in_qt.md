@@ -10,7 +10,7 @@
 ```javascript
 Connections {
     target: MetaObject // namely QOBJECT 
-    onXxxxsignal: {
+    onAxxxsignal: {
         qmlString = signalString
     }
 }
