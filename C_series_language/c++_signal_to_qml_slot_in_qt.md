@@ -13,7 +13,7 @@ Item {
   Connections {
       target: MetaObject // namely QOBJECT 
       onAxxxsignal: {
-
+        objectName = sinal_arguments
       }
   }
 }
