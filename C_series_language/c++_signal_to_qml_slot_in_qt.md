@@ -9,7 +9,7 @@
 看下面的代码
 ```javascript
 Connections {
-    target: MetaObject 
+    target: MetaObject // namely QOBJECT 
     onFinishedGatheringDataForItem: {
         qmlString = signalString
     }
