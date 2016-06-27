@@ -33,3 +33,5 @@ Connections {
     }
 }
 
+同样的, 如果你需要将qml对象的信号, 连接到C++ Object的slot上, 可以在这个模块OnLoadCompleted:中利用 signale.conect(C++object, slotfunction)
+
