@@ -4,3 +4,14 @@
 
 [QT Documents](http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)
 
+
+这里讲到的是我们如何将我们C++类中得信号,导出到QML中, 按照Qt官方的说法,在MetaObject的支持向, 理论上不管是C++　还是QML中得信号, 都是可以connect的, 可这是理论上呀{哭晕...};
+看下面的代码
+```javascript
+Connections {
+    target: YourObject 
+    onFinishedGatheringDataForItem: {
+        qmlString = signalString
+    }
+}
+```
