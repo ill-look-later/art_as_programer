@@ -24,4 +24,12 @@ QQmlEngine,QJSEngine; 通过它可以取到qml对象的QQmlContext,RootObject等
 
 要想在QML中访问C++对象:
 http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt
+
 rootContext()->setContextProperty("YourObject", myOb);
+Connections {
+    target: YourObject 
+    onFinishedGatheringDataForItem: {
+        qmlString = signalString
+    }
+}
+
