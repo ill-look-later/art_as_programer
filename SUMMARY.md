@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * With the bullshit courage to face the fucking life
 * [遇见Chromium](meet_chromium/chapter1.md)
    * [What's the difference between RenderWidget and RenderView](meet_chromium/whats_the_difference_between_renderwidget_and_renderview.md)
    * [Get Ip/gateway/dns throgh sh script On Platform Linux(Unix)](meet_chromium/get_ipgatewaydns_throgh_sh_script_on_platform_linuxunix.md)
@@ -65,6 +64,7 @@
    * [timegm implement](C_series_language/timegm_implement.md)
    * [futimes not find on NDK](C_series_language/futimes_not_find_on_ndk.md)
    * [C/C++ 中字符串字面量](C_series_language/C_c++_string literal.md)
+* With the bullshit courage to face the fucking life
 * [FrameWork And Library](framework_library/README.md)
    * [libuv](framework_library/libuv.md)
    * [libevent](framework_library/libevent.md)
