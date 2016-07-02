@@ -33,9 +33,10 @@ Item {
 所以上面说的这些就可以用下面的代码来实现:
 ```c++
 QString objproperty = "XReaderContext";
-    QQmlContext* qml_context = m_engine->rootContext();
-    qml_context->setContextProperty(objproperty,this);```
+QQmlContext* qml_context = m_engine->rootContext();
+qml_context->setContextProperty(objproperty,this);```
 ```javascript
+//qml中
 Connections {
     target: YourObject 
     onFinishedGatheringDataForItem: {
