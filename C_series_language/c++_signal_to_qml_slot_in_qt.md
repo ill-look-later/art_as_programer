@@ -18,8 +18,7 @@ Item {
   }
 }
 ```
-一个直接的问题, 如果这个metaobject是一个c++对象, 在qml中如何拿到这个对象呢? 在最新的Qt5.1+的版本中, 用子对象QQmlApplicationEngine代替了QQmlEngine, 这个QQmlApplicationEngine变成了整个qml执行环境的完整上下文, 它继承了QObject, 
-QQmlEngine,QJSEngine; 通过它可以取到qml对象的QQmlContext,RootObject等等对象;
+一个直接的问题, 如果这个metaobject是一个c++对象, 在qml中如何拿到这个对象呢? 在最新的Qt5.1+的版本中, 用子类QQmlApplicationEngine代替了QQmlEngine, 这个QQmlApplicationEngine变成了整个qml执行环境的完整上下文, 它继承了QObject, QQmlEngine, QJSEngine; 通过它可以取到qml对象的QQmlContext,RootObject等等对象;
 具体参考:[](http://doc.qt.io/qt-5/qqmlapplicationengine.html)
 
 要想在QML中访问C++对象:
