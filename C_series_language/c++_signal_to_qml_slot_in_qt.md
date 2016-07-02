@@ -29,13 +29,20 @@ Item {
 - 4. 在qml中直接使用YourObject对象即可;
 
   > 信号和槽本身是整个qt中qml 和 qt/C++ 共同的机制, 所以一旦将你设计的类暴露出去之后, 你的类所拥有的信号和槽本身就已经暴露出去了; QML中直接使用 YourObject.yoursignal(); YourObject.youSlot(); 都是可以的;当然也可以使用信号来连接到其他对象[不管是c++的还是qml的]槽上, 或者将其他信号连接到yourobject的slot上
-rootContext()->setContextProperty("YourObject", myOb);
+
+所以上面说的这些就可以用下面的代码来实现:
+```c++
+QString objproperty = "XReaderContext";
+    QQmlContext* qml_context = m_engine->rootContext();
+    qml_context->setContextProperty(objproperty,this);```
+```javascript
 Connections {
     target: YourObject 
     onFinishedGatheringDataForItem: {
         qmlString = signalString
     }
 }
+```
 
 同样的, 如果你需要将qml对象的信号, 连接到C++ Object的slot上, 可以在这个模块OnLoadCompleted:中利用 signale.conect(C++object, slotfunction)来完成绑定
 
