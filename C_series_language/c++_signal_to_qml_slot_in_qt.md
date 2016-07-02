@@ -38,7 +38,7 @@ qml_context->setContextProperty(objproperty,this);```
 ```javascript
 //qml中
 Connections {
-    target: YourObject 
+    target: XReaderContext 
     onFinishedGatheringDataForItem: {
         qmlString = signalString
     }
