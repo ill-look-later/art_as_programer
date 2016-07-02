@@ -39,7 +39,7 @@ qml_context->setContextProperty(objproperty,this);```
 //qml中
 Connections {
     target: XReaderContext 
-    onFinishedGatheringDataForItem: {
+    onC++Signal: {
         qmlString = signalString
     }
 }
