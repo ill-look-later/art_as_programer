@@ -22,7 +22,7 @@ Item {
 具体参考:[](http://doc.qt.io/qt-5/qqmlapplicationengine.html)
 
 要想在QML中访问C++对象:
-http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt
+
 
 rootContext()->setContextProperty("YourObject", myOb);
 Connections {
@@ -34,3 +34,5 @@ Connections {
 
 同样的, 如果你需要将qml对象的信号, 连接到C++ Object的slot上, 可以在这个模块OnLoadCompleted:中利用 signale.conect(C++object, slotfunction)来完成绑定
 
+参考: 
+http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt
