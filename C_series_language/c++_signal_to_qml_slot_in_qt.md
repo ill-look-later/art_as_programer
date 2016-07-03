@@ -70,7 +70,7 @@ QML 中调用 C++ 中得public方法
         
         Q_PROPERTY(QString author READ author WRITE setAuthor NOTIFY authorChanged)
 
-具体去看看qt的文档即可
+具体去看看qt的文档即可!
 参考: 
 - [signal-to-qml-slot-in-qt](http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt)
 - [qtqml-cppintegration-interactqmlfromcpp](http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)
