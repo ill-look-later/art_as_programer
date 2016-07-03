@@ -55,6 +55,7 @@
        * [自定义控件与自绘控件](MacIOS_development/zi_ding_yi_kong_jian_yu_zi_hui_kong_jian.md)
        * [各类系统传感器的使用](MacIOS_development/ge_lei_xi_tong_chuan_gan_qi_de_shi_yong.md)
        * [调用其他app等系统功能](MacIOS_development/diao_yong_qi_ta_app_deng_xi_tong_gong_neng.md)
+       * Application User Preference
 * [C系列语言积累](C_series_language/README.md)
    * [HowTo_using_autoconf_automake](C_series_language/autoconf_automake_create_linux_package.md)
    * [c++ access class private variable](C_series_language/c++_access_class_private_variable.md)
