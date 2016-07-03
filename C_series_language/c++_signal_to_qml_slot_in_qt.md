@@ -4,6 +4,8 @@
 
 [QT Documents](http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)
 
+导出C++类到QML上下文中
+---
 
 这里讲到的是我们如何将我们C++类中得信号,导出到QML中, 按照Qt官方的说法,在MetaObject的支持向, 理论上不管是C++　还是QML中得信号, 都是可以connect的, 可这是理论上呀{哭晕...};
 看下面的代码:
@@ -58,8 +60,9 @@ QML 中调用 C++ 中得public方法
 当然这其中有折中的方法, 就是通过C++的槽, qml中信号连接到C++对象的槽上, 之后通过信号触发槽函数的执行, 在槽中再调用我们的C++对象的函数; 想我这种效率恐惧症是接受不了这样绕弯的方法的, 当然, 除非出于设计结构或者其他更重要的原因;
 
 其实很简单, 要暴露我们的类成员方法到qml执行环境中, 只需要通过宏**Q_INVOKABLE**标识即可;比如:
+        
         Q_INVOKABLE int gu(int size)
-
+这样就可以在上面
 
 参考: 
 http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt
