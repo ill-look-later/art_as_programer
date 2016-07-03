@@ -42,4 +42,4 @@ IOS应用程序中, 在系统设置页面里面包含了每一个安装了的应
     public func setURL(url: NSURL?, forKey defaultName: String)
 ```
 
-基本上可以看出, **NSUserDefaults** 类提供了一系列的setxxx forkey的方法和 xxxforkey的方法来设置和获取应用程序首选项的值; 同时还提供了静态的方法standardUserDefaults()来获取一个内置的default的NSUserDefaults对象, 
+基本上可以看出, **NSUserDefaults** 类提供了一系列的setxxx forkey的方法和 xxxforkey的方法来设置和获取应用程序首选项的值; 同时还提供了静态的方法standardUserDefaults()来获取一个default的NSUserDefaults对象, 
