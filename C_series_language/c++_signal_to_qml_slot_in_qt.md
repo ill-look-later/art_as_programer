@@ -62,7 +62,10 @@ QML 中调用 C++ 中得public方法
 其实很简单, 要暴露我们的类成员方法到qml执行环境中, 只需要通过宏**Q_INVOKABLE**标识即可;比如:
         
         Q_INVOKABLE int gu(int size)
-这样就可以在上面
+这样就可以在上面导出C++对象到qml上下文中的基础上, 直接在qml中调用我们导出的普通C++成员函数或者成员变量了;
+        
+        //qml中
+        YourC++Object.gu(10);
 
 参考: 
 http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt
