@@ -54,7 +54,7 @@ override func viewDidLoad() {
     
   let userdefaults = NSUserDefaults.standardUserDefaults()
   
-   = userdefaults.boolForKey("keepLiveOnBackground")
+  keepalive = userdefaults.boolForKey("keepLiveOnBackground")
   //userdefaults.setBool(true, forKey: "keepLiveOnBackground")
 }
 ```
