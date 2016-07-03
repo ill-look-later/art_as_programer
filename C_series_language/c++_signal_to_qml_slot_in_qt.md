@@ -70,3 +70,5 @@ QML 中调用 C++ 中得public方法
 参考: 
 http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt
 [QT Documents](http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)
+
+[connecting-c-with-qml-using-q-invokable](http://stackoverflow.com/questions/9341005/connecting-c-with-qml-using-q-invokable)
