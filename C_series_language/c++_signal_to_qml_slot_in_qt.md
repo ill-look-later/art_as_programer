@@ -51,5 +51,12 @@ Connections {
 
 同样的, 如果你需要将qml对象的信号, 连接到C++ Object的slot上, 可以在这个模块OnLoadCompleted:中利用 signal.conect(C++object, slotfunction)来完成绑定
 
+QML 中调用 C++ 中得public方法
+---
+
+在整合C++/QML的过程中, 通过导出C++对象, 好像基本可以完成大部分工作了, 但是还有一个问题: 如何调用C++对象的方法;
+当然这其中有折中的方法, 就是通过C++的槽, qml中信号连接到C++对象的槽上, 之后通过信号触发槽函数的执行, 在槽中再调用我们的C++对象的函数;
+
+
 参考: 
 http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt
