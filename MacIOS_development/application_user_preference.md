@@ -25,4 +25,11 @@ IOS应用程序中, 在系统设置页面里面包含了每一个安装了的应
     
     /// -removeObjectForKey: is equivalent to -[... setObject:nil forKey:defaultName]
     public func removeObjectForKey(defaultName: String)
+    
+    public func integerForKey(defaultName: String) -> Int
+    /// -floatForKey: is similar to -integerForKey:, except that it returns a float, and boolean values will not be converted.
+    public func floatForKey(defaultName: String) -> Float
+    /// -doubleForKey: is similar to -doubleForKey:, except that it returns a double, and boolean values will not be converted.
+    public func doubleForKey(defaultName: String) -> Double
+
 ```
