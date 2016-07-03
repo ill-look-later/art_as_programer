@@ -69,7 +69,8 @@ QML 中调用 C++ 中得public方法
 同样地实现机制,我们可以通过宏**Q_PROPERTY**来将c++的成员变量暴露到qml上下文环境中;
         
         Q_PROPERTY(QString author READ author WRITE setAuthor NOTIFY authorChanged)
-        
+
+具体去看看qt的文档即可
 参考: 
 - [signal-to-qml-slot-in-qt](http://stackoverflow.com/questions/8834147/c-signal-to-qml-slot-in-qt)
 - [qtqml-cppintegration-interactqmlfromcpp](http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)
