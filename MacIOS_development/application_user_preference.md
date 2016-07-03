@@ -32,4 +32,14 @@ IOS应用程序中, 在系统设置页面里面包含了每一个安装了的应
     /// -doubleForKey: is similar to -doubleForKey:, except that it returns a double, and boolean values will not be converted.
     public func doubleForKey(defaultName: String) -> Double
 
+
+
+    public func setFloat(value: Float, forKey defaultName: String)
+    /// -setDouble:forKey: is equivalent to -setObject:forKey: except that the value is converted from a double to an NSNumber.
+    public func setDouble(value: Double, forKey defaultName: String)
+    /// -setBool:forKey: is equivalent to -setObject:forKey: except that the value is converted from a BOOL to an NSNumber.
+    public func setBool(value: Bool, forKey defaultName: String)
+    /// -setURL:forKey is equivalent to -setObject:forKey: except that the value is archived to an NSData. Use -URLForKey: to retrieve values set this way.
+    @available(iOS 4.0, *)
+    public func setURL(url: NSURL?, forKey defaultName: String)
 ```
