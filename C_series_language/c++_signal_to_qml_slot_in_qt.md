@@ -37,6 +37,7 @@ sinal c++Signal(QString singalString);
 QString objproperty = "XReaderContext";
 QQmlContext* qml_context = m_engine->rootContext();
 qml_context->setContextProperty(objproperty,this);```
+
 ```javascript
 //qml中
 Connections {
