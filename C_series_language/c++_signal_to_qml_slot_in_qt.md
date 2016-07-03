@@ -32,6 +32,8 @@ Item {
 
 所以上面说的这些就可以用下面的代码来实现:
 ```c++
+sinal c++Signal(QString singalString);
+...
 QString objproperty = "XReaderContext";
 QQmlContext* qml_context = m_engine->rootContext();
 qml_context->setContextProperty(objproperty,this);```
