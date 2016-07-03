@@ -72,5 +72,5 @@ QML 中调用 C++ 中得public方法
 
 - http://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html
 - [QT Documents](http://doc.qt.io/qt-5/qtqml-cppintegration-interactqmlfromcpp.html)
-- [](http://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html)
+- [qtqml-cppintegration-exposecppattributes](http://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html)
 - [connecting-c-with-qml-using-q-invokable](http://stackoverflow.com/questions/9341005/connecting-c-with-qml-using-q-invokable)
