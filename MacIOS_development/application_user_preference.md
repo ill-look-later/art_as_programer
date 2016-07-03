@@ -48,10 +48,12 @@ IOS应用程序中, 在系统设置页面里面包含了每一个安装了的应
 ---
 
 ```swift
-      override func viewDidLoad() {
-        super.viewDidLoad()
+override func viewDidLoad() {
+  super.viewDidLoad()
     
-        let userdefaults = NSUserDefaults.standardUserDefaults()
-        userdefaults.setBool(true, forKey: "keepLiveOnBackground")
-    }
+  let userdefaults = NSUserDefaults.standardUserDefaults()
+  
+  userdefaults.boolForKey("keepLiveOnBackground")
+  //userdefaults.setBool(true, forKey: "keepLiveOnBackground")
+}
 ```
