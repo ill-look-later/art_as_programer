@@ -43,7 +43,7 @@
 
 3，打开starUML。help>enter license
 
-Name:0xcb
-licenseKey:later equals never!
+    Name:0xcb
+    licenseKey:later equals never!
 
 然后提示你注册成功！
