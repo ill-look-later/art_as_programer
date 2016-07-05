@@ -2,7 +2,7 @@
 
 
 
-[各平台版本均适用，本文更改的为Mac版本。​  ](http://bbs.chinapyg.com/thread-79022-1-1.html)
+[各平台版本均适用，本文更改的为Mac版本](http://bbs.chinapyg.com/thread-79022-1-1.html)
 
 1，打开对应 mac版本的安装包位置，在对应目录/Applications/StarUML.app/Contents/www/license/node/LicenseManagerDomain.js文件。
 
