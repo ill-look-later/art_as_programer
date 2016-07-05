@@ -33,7 +33,7 @@
    * [突破公司的文档加解密系统忆塞通](IT_Man_Skills/break_yisaitong_Encryption_system.md)
    * [HackTonish_4745G_PowerManager](IT_Man_Skills/hacktonish_4745g_powermanager.md)
    * [macmini display not clear](IT_Man_Skills/macmini_display_not_clear.md)
-   * Crack StarUML 2.7
+   * [Crack StarUML 2.7](IT_Man_Skills/crack_staruml_27.md)
 * [Js Node系列](javascript_nodejs/README.md)
    * [Express FrameWork](javascript_nodejs/express_framework.md)
        * [express.use 的作用](javascript_nodejs/expressuse_de_zuo_yong.md)
