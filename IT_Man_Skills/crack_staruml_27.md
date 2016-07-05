@@ -18,7 +18,7 @@
 8.  `           quantity: "mergades.com",`
 9.  `           licenseKey: "later equals never!"`
 10.  `       };`
-11.  ``
+11.  `
 12.  `       try {`
 13.  `           pk = new NodeRSA(PK);`
 14.  `           decrypted = pk.decrypt(licenseKey, 'utf8');`
