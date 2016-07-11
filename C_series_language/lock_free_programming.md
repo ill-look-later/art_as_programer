@@ -29,21 +29,6 @@
     * [参考资料 ](https://www.ibm.com/developerworks/cn/linux/l-cn-lockfree/#resources)
     * [评论](https://www.ibm.com/developerworks/cn/linux/l-cn-lockfree/#icomments)
 
-<!-- SUMMARY_END -->
-
-<!-- BEGIN_IBM-CONTENT -->
-
-<!-- BEGIN_IBM-CONTENT-BODY -->
-
-<!-- BEGIN_IBM-CONTENT-MAIN -->
-
-<!-- 1_1_COLUMN_BEGIN -->
-
-![](https://dw1.s81c.com/developerworks/i/bluemix-graphic.png)
-
-在 IBM Bluemix 云平台上开发并部署您的下一个应用。
-
-[开始您的试用](https://developer.ibm.com/sso/bmregistration?lang=zh_CN&ca=dwchina-_-bluemix-_-l-cn-lockfree-_-sidebar)
 
 ## 非阻塞型同步 (Non-blocking Synchronization) 简介
 
