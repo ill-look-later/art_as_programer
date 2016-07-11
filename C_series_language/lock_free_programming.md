@@ -6,12 +6,8 @@
 
 [杨 小华](https://www.ibm.com/developerworks/cn/linux/l-cn-lockfree/#authorN1001B), Linux 内核开发工程师, 自由撰稿人
 
-<!--this is where the h2 usually goes-->
 
-<!--.-->
 杨小华，目前从事 Linux 内核方面的研究，喜欢捣鼓 Linux 系统，对 Linux 中断系统比较了解。可以通过 normalnotebook@126.com 与他取得联系。  
-
-<!---->
 
 2010 年 1 月 21 日
 
