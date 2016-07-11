@@ -8,11 +8,8 @@
 
 多核多线程已经成为当下一个时髦的话题，而无锁编程更是这个时髦话题中的热点话题。Linux 内核可能是当今最大最复杂的并行程序之一，为我们分析多核多线程提供了绝佳的范例。内核设计者已经将最新的无锁编程技术带进了 2.6 系统内核中，本文以 2.6.10 版本为蓝本，带领您领略多核多线程编程的真谛，窥探无锁编程的奥秘 ，体味大师们的高雅设计！
 
-4![](https://dw1.s81c.com/developerworks/i/v17/dw-cmts-arrow.png) [评论](https://www.ibm.com/developerworks/cn/linux/l-cn-lockfree/#icomments)
 
 [杨 小华](https://www.ibm.com/developerworks/cn/linux/l-cn-lockfree/#authorN1001B), Linux 内核开发工程师, 自由撰稿人
-
-[关闭 [x]](https://www.ibm.com/developerworks/cn/linux/l-cn-lockfree/#close)
 
 <!--this is where the h2 usually goes-->
 
