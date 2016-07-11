@@ -78,7 +78,7 @@ CAS 原语负责将某处内存地址的值（1 个字节）与一个期望值�
 
 ##### 清单 1. CAS 伪码
 
-<pre class="displaycode">
+```CPP
  Bool CAS(T* addr, T expected, T newValue) 
  { 
       if( *addr == expected ) 
