@@ -296,7 +296,7 @@ Seqlock 实现原理是依赖一个序列计数器，当写者写入数据时，
 
 ##### 清单 8. 2.6.10 RCU 实现代码
 
-<pre class="displaycode">
+```CPP
  #define rcu_read_lock()    preempt_disable() 
  #define rcu_read_unlock()  preempt_enable() 
  #define rcu_assign_pointer(p, v)  ({ \ 
@@ -346,7 +346,7 @@ Seqlock 实现原理是依赖一个序列计数器，当写者写入数据时，
   ipc_rcu_putref(old); 
   return newsize; 
  }
-</pre>
+```
 
 纵观整个流程，写者除内核屏障外，几乎没有一把锁。当写者需要更新数据结构时，首先复制该数据结构，申请 new 内存，然后对副本进行修改，调用 memcpy 将原数组的内容拷贝到 new 中，同时对扩大的那部分赋新值，修改完毕后，写者调用 rcu_assign_pointer 修改相关数据结构的指针，使之指向被修改后的新副本，整个写操作一气呵成，其中修改指针值的操作属于原子操作。在数据结构被写者修改后，需要调用内存屏障 smp_wmb，让其他 CPU 知晓已更新的指针值，否则会导致 SMP 环境下的 bug。当所有潜在的读者都执行完成后，调用 call_rcu 释放旧副本。同 Spin lock 一样，RCU 同步技术主要适用于 SMP 环境。
 
