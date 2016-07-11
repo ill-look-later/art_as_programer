@@ -169,7 +169,7 @@ Spin Lock 是一种轻量级的同步方法，一种非阻塞锁。当 lock 操�
 
 ##### 清单 4. spin lock 实现代码
 
-<pre class="displaycode">
+```cpp
  static inline void __preempt_spin_lock(spinlock_t *lock) 
  { 
            ……
@@ -190,7 +190,7 @@ Spin Lock 是一种轻量级的同步方法，一种非阻塞锁。当 lock 操�
     :"0" (0) : "memory"); 
   return oldval > 0; 
  }
-</pre>
+```
 
 汇编语言指令 xchgb 原子性的交换 8 位 oldval( 存 0) 和 lock->lock 的值，如果 oldval 为 1(lock 初始值为 1)，则获取锁成功，反之，则继续循环，接着 relax 休息一会儿，然后继续周而复始，直到成功。
 
