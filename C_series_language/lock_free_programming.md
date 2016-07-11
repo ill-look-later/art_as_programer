@@ -232,7 +232,7 @@ Linux 2.6 内核中引入一种新型锁——顺序锁 (seqlock)，它与 spin 
 
 ##### 清单 6. 2.6.10 seqlock 实现代码
 
-<pre class="displaycode">
+```CPP
  static inline unsigned read_seqbegin(const seqlock_t *sl) 
  { 
   unsigned ret = sl->sequence; 
@@ -280,7 +280,7 @@ Linux 2.6 内核中引入一种新型锁——顺序锁 (seqlock)，它与 spin 
   clock_was_set(); 
   return 0; 
  }
-</pre>
+```
 
 Seqlock 实现原理是依赖一个序列计数器，当写者写入数据时，会得到一把锁，并且将序列值加 1。当读者读取数据之前和之后，该序列号都会被读取，如果读取的序列号值都相同，则表明写没有发生。反之，表明发生过写事件，则放弃已进行的操作，重新循环一次，直至成功。不难看出，do_gettimeofday 函数里面的 while 循环和接下来的两行赋值操作就是 CAS 操作。
 
