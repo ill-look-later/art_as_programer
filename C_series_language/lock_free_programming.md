@@ -362,8 +362,7 @@ Seqlock 实现原理是依赖一个序列计数器，当写者写入数据时，
 
 ##### 清单 9. 2.6.10 环形缓冲区实现代码
 
-```C
-
+```CPP
  /* 
  * __kfifo_put - puts some data into the FIFO, no locking version 
  * Note that with only one concurrent reader and one concurrent 
