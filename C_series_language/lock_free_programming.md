@@ -206,7 +206,7 @@ pthread 库已经提供了对 spin lock 的支持，所以用户态程序也能�
 
 ##### 清单 5. 2.4.34 seqlock 实现代码
 
-<pre class="displaycode">
+```cpp
  443 void do_gettimeofday(struct timeval *tv) 
  444 { 
                ……
