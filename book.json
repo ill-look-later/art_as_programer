@@ -1,19 +1,25 @@
 {
-    "plugins": [
-        "theme-official"
-    ],
     "pluginsConfig": {
         "fontSettings": {
             "size": 1
         },
         "theme-default": {
-            "styles": "\"zoom\": 1.5",
+            "styles": "",
             "showLevel": true
         },
         "fontsettings": {
-            "theme": "white",
+            "theme": "night",
             "family": "sans",
-            "size": 4
+            "size": 2
+        },
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": true,
+            "weibo": true,
+            "instapaper": false,
+            "vk": false,
+            "all": "facebook,google,weibo"
         }
     },
     "fontSize": 10,
