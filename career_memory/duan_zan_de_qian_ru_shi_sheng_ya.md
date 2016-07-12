@@ -1,6 +1,5 @@
 # 短暂的嵌入式生涯
 
-# 短暂的嵌入式生涯 
 
 ![三人team](img/freescale_smart_car_team.png)
 
