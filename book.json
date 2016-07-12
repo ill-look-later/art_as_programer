@@ -1,12 +1,24 @@
 {
-    "fontSettings": {
-        "size": 1
-    },
-    "zoom": 1.5,
-    "fontSize" : 10,
+    "plugins": [
+        "theme-official"
+    ],
     "pluginsConfig": {
         "fontSettings": {
             "size": 1
+        },
+        "theme-default": {
+            "styles": "\"zoom\": 1.5",
+            "showLevel": true
+        },
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans",
+            "size": 4
         }
-    }
- }
+    },
+    "fontSize": 10,
+    "fontSettings": {
+        "size": 1
+    },
+    "zoom": 1.5
+}
