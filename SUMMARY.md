@@ -13,7 +13,7 @@
     * [Aura\_Toolkit\_Event](meet_chromium/auratoolkit_event.md)
     * [The Relationship Between View && aura::window](meet_chromium/the_relationship_between_view_and_aurawindow.md)
     * [Web IDL on chromium](meet_chromium/web_idl_on_chromium.md)
-    * [chromium\_npapi\_Plugin](meet_chromium/chromium_npapi_pluginmd.md)
+    * [chromium\_npapi\_Plugin](meet_chromium/chromium_npapi_plugin.md)
     * [The startup progress of  Any APP based on Chromium](meet_chromium/the_startup_progress_of_any_appbased_on_chromium.md)
 * [Embeded Development](Embeded_development/embeded_development.md)
     * [电容触摸屏FT5406移植说明](Embeded_development/Porting Ft5406 to Freescale Imx6Q.md)
