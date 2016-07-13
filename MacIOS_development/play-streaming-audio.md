@@ -6,14 +6,10 @@
 
 仅仅播放一个流媒体:
 
-```swift
+```cpp
 var audioplayer: AVPlayer! = nil
 audioplayer = AVPlayer();
- audioplayer.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: url)!)) 
- audioplayer.play();
+audioplayer.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: url)!))
+audioplayer.play(); 
 ```
-
-
-
-
 
