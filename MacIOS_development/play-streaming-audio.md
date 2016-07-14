@@ -6,7 +6,7 @@
 
 仅仅播放一个流媒体:
 
-```cpp
+```js
 var audioplayer: AVPlayer! = nil
 audioplayer = AVPlayer();
 audioplayer.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: "http://x.com/xxxx/xxx.mp3")!))
@@ -24,7 +24,7 @@ audioplayer.play();
 
 改变进度的几个函数:
 
-```
+```js
 public func seekToTime(time: CMTime)
 public func seekToTime\(time: CMTime, completionHandler: (Bool) -&gt; Void)
 public func seekToTime\(time: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime)
