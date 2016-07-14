@@ -20,23 +20,17 @@ audioplayer.play();
 * public init\(playerItem item: AVPlayerItem\)
 
 
-他们分别从一个URL 和 一个AVPlayerItem 来构造一个对象, 而对于AVPlayer来说, 没一个播放的对象都是一个AVPlayerItem, 正如我上面的代码中得函数 **replaceCurrentItemWithPlayerItem** , 我们可以在播放的任何时刻, 通过这个函数来切换播放; AVPlayerItem 还通过一系列的扩展,帮助完成了一些列的功能, 我们最关注的几个: 播放,暂停, 前进,后退, 播放速率, 这些在AVPlayer类中都有完整函数定义来满足我们的需求; 
-
-
+他们分别从一个URL 和 一个AVPlayerItem 来构造一个对象, 而对于AVPlayer来说, 没一个播放的对象都是一个AVPlayerItem, 正如我上面的代码中得函数 **replaceCurrentItemWithPlayerItem** , 我们可以在播放的任何时刻, 通过这个函数来切换播放; AVPlayerItem 还通过一系列的扩展,帮助完成了一些列的功能, 我们最关注的几个: 播放,暂停, 前进,后退, 播放速率, 这些在AVPlayer类中都有完整函数定义来满足我们的需求;
 
 改变进度的几个函数:
 
 ```
 public func seekToTime(time: CMTime)
 public func seekToTime\(time: CMTime, completionHandler: (Bool) -&gt; Void)
-public func seekToTime\(time: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTim)
+public func seekToTime\(time: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime)
 public func seekToTime\(time: CMTime, toleranceBefore: CMTime, toleranceAfter: CMTime, completionHandler: (Bool) &gt; Void)
 //还有 seekToDate 系列的函数同样可以达到同样地目的
 public func seekToDate(date: NSDate)
 ....
 ```
-
-
-
-
 
