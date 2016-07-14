@@ -34,3 +34,14 @@ public func seekToDate(date: NSDate)
 ....
 ```
 
+
+
+```
+ public func pause()
+ public func play()
+```
+
+
+
+
+
