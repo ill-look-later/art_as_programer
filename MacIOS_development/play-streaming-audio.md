@@ -13,3 +13,10 @@ audioplayer.replaceCurrentItemWithPlayerItem(AVPlayerItem(URL: NSURL(string: url
 audioplayer.play(); 
 ```
 
+这里我使用了空参数的构造函数, 事实上, AVPlayer还提供了另外的两个构造函数, 
+
+* public init\(URL: NSURL\)
+
+* public init\(playerItem item: AVPlayerItem\) 
+
+
