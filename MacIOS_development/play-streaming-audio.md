@@ -42,6 +42,8 @@ public func seekToDate(date: NSDate)
 另外, 我们可以通过添加侦听, 来获取到时间的变化和歌曲长度的变化
 
 ```
-public func addPeriodicTimeObserverForInterval(interval: CMTime, queue: dispatch_queue_t?, usingBlock block: (CMTime) -> Void) -> AnyObject 
- public func addBoundaryTimeObserverForTimes(times: [NSValue], queue: dispatch_queue_t?, usingBlock block: () -> Void) -> AnyObject   
+ public func addPeriodicTimeObserverForInterval(interval: CMTime, queue: dispatch_queue_t?, usingBlock block: (CMTime) -> Void) -> AnyObject 
+ public func addBoundaryTimeObserverForTimes(times: [NSValue], queue: dispatch_queue_t?, usingBlock block: () -> Void) -> AnyObject
+ public func removeTimeObserver(observer: AnyObject) 
 ```
+
