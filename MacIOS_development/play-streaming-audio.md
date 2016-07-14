@@ -47,3 +47,16 @@ public func seekToDate(date: NSDate)
  public func removeTimeObserver(observer: AnyObject) 
 ```
 
+### 如果我们需要播放一个歌曲列表怎么办?
+
+---
+
+一个AVplayer的派生类 **AVQueuePlayer** 已经为我们准备好了这样的功能, 这样就省去了自己上一首下一首等等的事情了, 既然是派生类, 所以AVPlayer有的他都有, 另外它实现了几个对于这种列表播放需要的功能
+
+它可以用一个**AVPlayerItem**的数组来初始化这个**AVQueuePlayer**
+
+public init(items: [AVPlayerItem]) // 使用一个数组来初始化播放列表
+public func items() -&gt; [AVPlayerItem] // 取得这个列表
+ public func advanceToNextItem() //下一首 
+ public func insertItem(item: AVPlayerItem, afterItem: AVPlayerItem?) // 在列表中插入一个播放对象, 不过插入前最好判断一下能否插入播放对象, 具体看类的函数 canInsertItem->Bool
+
