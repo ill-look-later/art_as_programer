@@ -20,4 +20,5 @@ audioplayer.play();
 * public init\(playerItem item: AVPlayerItem\)
 
 
-他们分别从一个URL
+他们分别从一个URL 和 一个AVPlayerItem 来构造一个对象, 而对于AVPlayer来说, 没一个播放的对象都是一个AVPlayerItem, 正如我上面的代码中得函数 replaceCurrentItemWithPlayerItem , 我们可以在播放的任何时刻, 通过这个函数来切换播放;
+
