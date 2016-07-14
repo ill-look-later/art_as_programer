@@ -55,8 +55,16 @@ public func seekToDate(date: NSDate)
 
 它可以用一个**AVPlayerItem**的数组来初始化这个**AVQueuePlayer**
 
+```cpp
 public init(items: [AVPlayerItem]) // 使用一个数组来初始化播放列表
 public func items() -&gt; [AVPlayerItem] // 取得这个列表
- public func advanceToNextItem() //下一首 
- public func insertItem(item: AVPlayerItem, afterItem: AVPlayerItem?) // 在列表中插入一个播放对象, 不过插入前最好判断一下能否插入播放对象, 具体看类的函数 canInsertItem->Bool
+public func advanceToNextItem() //下一首 
+public func insertItem(item: AVPlayerItem, afterItem: AVPlayerItem?) // 在列表中插入一个播放对象, 不过插入前最好判断一下能否插入播放对象, 具体看类的函数 canInsertItem->Bool
+//还有下面的这个: 是否自动播放下一首....
+ public enum AVPlayerActionAtItemEnd : Int { 
+ case Advance
+ case Pause
+ case None
+}
+```
 
