@@ -4,7 +4,7 @@
 
 在ios 7 以前, 发起http 气球还是通过**NSURLRequest **来发起同步或一部的请求, 传入一个闭包来出来返回的数据或者错误, 比如下面这段代码这样;
 
-```swift
+```javascrit
  func onSearch(url:String) { 
  let nsUrl: NSURL = NSURL(string: url)!
  let request: NSURLRequest = NSURLRequest(URL: nsUrl)
