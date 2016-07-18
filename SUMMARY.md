@@ -35,6 +35,7 @@
     * [macmini display not clear](IT_Man_Skills/macmini_display_not_clear.md)
     * [Crack StarUML 2.7](IT_Man_Skills/crack_staruml_27.md)
     * [How start Front End](IT_Man_Skills/how_start_front_end.md)
+    * [设计模式导航](IT_Man_Skills/设计模式导航.md)
 * [Js Node系列](javascript_nodejs/README.md)
     * [Express FrameWork](javascript_nodejs/express_framework.md)
         * [express.use 的作用](javascript_nodejs/expressuse_de_zuo_yong.md)

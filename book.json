@@ -1,2 +1,30 @@
 {
+    "pluginsConfig": {
+        "fontSettings": {
+            "size": 1
+        },
+        "theme-default": {
+            "styles": "",
+            "showLevel": true
+        },
+        "fontsettings": {
+            "theme": "night",
+            "family": "sans",
+            "size": 2
+        },
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": true,
+            "weibo": true,
+            "instapaper": false,
+            "vk": false,
+            "all": "facebook,google,weibo"
+        }
+    },
+    "fontSize": 10,
+    "fontSettings": {
+        "size": 1
+    },
+    "zoom": 1.5
 }
