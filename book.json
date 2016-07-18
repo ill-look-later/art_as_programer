@@ -11,14 +11,6 @@
             "theme": "night",
             "family": "sans",
             "size": 2
-        },
-        "sharing": {
-            "facebook": false,
-            "twitter": false,
-            "google": true,
-            "weibo": true,
-            "instapaper": false,
-            "vk": false
         }
     }
 }
