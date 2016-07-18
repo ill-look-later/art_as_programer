@@ -59,6 +59,7 @@
         * [调用其他app等系统功能](MacIOS_development/diao_yong_qi_ta_app_deng_xi_tong_gong_neng.md)
         * [Application User Preference](MacIOS_development/application_user_preference.md)
         * [Play Streaming Audio](MacIOS_development/play-streaming-audio.md)
+        * [http xml resquest](MacIOS_development/http-xml-resquest.md)
 * [C系列语言积累](C_series_language/README.md)
     * [HowTo\_using\_autoconf\_automake](C_series_language/autoconf_automake_create_linux_package.md)
     * [c++ access class private variable](C_series_language/c++_access_class_private_variable.md)
