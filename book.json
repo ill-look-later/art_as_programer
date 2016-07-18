@@ -18,8 +18,7 @@
             "google": true,
             "weibo": true,
             "instapaper": false,
-            "vk": false,
-            "all": "facebook,google,weibo"
+            "vk": false
         }
     }
 }
