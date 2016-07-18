@@ -20,7 +20,7 @@
 
 而新的系统中, apple 官方明确地推荐使用Session 回话 和 task 的形式来创建人物和完成请求了,通过 **NSURLSession** 来创建一个URL会话, 使用一系列内置的函数可以将任务包装成 Task 的形式, 之后通过Task的Resume函数来启动一个URL会话任务, 看下面的代码
 
-```
+```javascript
  let nsUrl: NSURL = NSURL(string: url)! 
  let request: NSURLRequest = NSURLRequest(URL: nsUrl)
 
