@@ -39,9 +39,9 @@ public func seekToDate(date: NSDate)
  public func play()
 ```
 
-另外, 我们可以通过添加侦听, 来获取到时间的变化和歌曲长度的变化
+另外, 我们可以通过添加侦听, 来获取到时间的变化和歌曲长度的变化, 比如说你要在播放时间变化时update 你用来显示播放进度的 **progressbar** ; 当然在一个**viewcontroller **disappear的时候通过
 
-```
+```js
  public func addPeriodicTimeObserverForInterval(interval: CMTime, queue: dispatch_queue_t?, usingBlock block: (CMTime) -> Void) -> AnyObject 
  public func addBoundaryTimeObserverForTimes(times: [NSValue], queue: dispatch_queue_t?, usingBlock block: () -> Void) -> AnyObject
  public func removeTimeObserver(observer: AnyObject) 
