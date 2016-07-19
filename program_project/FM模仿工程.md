@@ -22,4 +22,13 @@
 
 - 首先完成UI的布局和页面跳转等整体的视觉上的东西
 - 完成页面跳转逻辑和使用**IBOutlet,IBAction**绑定相关的Item
+- 实现http请求,解析请求到得数据
+- 将网络上获取到得歌曲信息通过下面函数来填充我们的tabview,将我们的数据binding到UI上
+      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+- 实现交互逻辑, 选择相应的cell后播放相应的歌曲,完成UI元素的update
+       func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) 
+- 完成频道选择逻辑
+- 为
+
+
 
