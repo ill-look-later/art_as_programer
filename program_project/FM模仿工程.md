@@ -21,5 +21,5 @@
 ---
 
 - 首先完成UI的布局和页面跳转等整体的视觉上的东西
-- 完成页面跳转逻辑和使用IBOutlet,IBAction 绑定相关的Item
+- 完成页面跳转逻辑和使用**IBOutlet,IBAction**绑定相关的Item
 
