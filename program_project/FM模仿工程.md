@@ -8,7 +8,6 @@
 应用到的基础知识
 ---
 
-
 - storyboard 手动布局image, progressbar, tableview等元素
 - 利用**NSURLSession**发起网络请求task,响应网络请求应答
 - 利用**AVKit**播放流媒体, 完成流媒体播放的控制
@@ -20,3 +19,5 @@
 
 基本开发流程
 ---
+
+
