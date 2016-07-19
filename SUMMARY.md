@@ -12,6 +12,7 @@
     * [macmini display not clear](IT_Man_Skills/macmini_display_not_clear.md)
     * [Crack StarUML 2.7](IT_Man_Skills/crack_staruml_27.md)
     * [How start Front End](IT_Man_Skills/how_start_front_end.md)
+    * [设计模式导航](IT_Man_Skills/设计模式导航.md)
 * [遇见Chromium](meet_chromium/chapter1.md)
     * [What's the difference between RenderWidget and RenderView](meet_chromium/whats_the_difference_between_renderwidget_and_renderview.md)
     * [Get Ip\/gateway\/dns throgh sh script On Platform Linux\(Unix\)](meet_chromium/get_ipgatewaydns_throgh_sh_script_on_platform_linuxunix.md)
