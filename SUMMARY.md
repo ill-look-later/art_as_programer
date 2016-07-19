@@ -35,6 +35,7 @@
     * [LVDS Connector On IMx6Q](Embeded_development/lvds_connector_on_imx6q.md)
 * [Personal Project](program_project/img/README.md)
     * [The X-th Project XReader](program_project/the_x-th_project_xreader.md)
+    * [FM模仿](program_project/FM模仿工程.md)
 * [Js Node系列](javascript_nodejs/README.md)
     * [Express FrameWork](javascript_nodejs/express_framework.md)
         * [express.use 的作用](javascript_nodejs/expressuse_de_zuo_yong.md)
