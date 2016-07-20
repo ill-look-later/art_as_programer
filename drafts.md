@@ -168,15 +168,16 @@
 
  [**romaonthego/RETableViewManager**
  _RETableViewManager - Powerful data driven content manager for UITableView._github.com](https://github.com/romaonthego/RETableViewManager "https://github.com/romaonthego/RETableViewManager")[](https://github.com/romaonthego/RETableViewManager)
- ## 13. PermissionScope
+ 
+## 13. PermissionScope
  Useful library to deliver better user experience by informing user about needed system permissions **before** asking user for them. Higher acceptance rate -> more users actively using the app -> better retention -> better stats -> more downloads. Highly recommended pod.
- <figure name="6818" id="6818" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*lCNOzpkOzDj-WUFbUITtQA.png)
- </figure>
+ 
  #### CocoaPods:
- <pre name="9ceb" id="9ceb" class="graf--pre graf-after--h4">
- pod 'PermissionScope'
- </pre>
+ 
+         pod 'PermissionScope'
+
  [**nickoneill/PermissionScope**
  _PermissionScope - A Periscope-inspired way to ask for iOS permissions_github.com](https://github.com/nickoneill/PermissionScope "https://github.com/nickoneill/PermissionScope")[](https://github.com/nickoneill/PermissionScope)
  ## 14. SVProgressHUD
