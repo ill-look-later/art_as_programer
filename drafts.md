@@ -103,12 +103,13 @@
 
  [**BradLarson/GPUImage**
  _GPUImage - An open source iOS framework for GPU-based image and video processing_github.com](http://github.com/BradLarson/GPUImage "http://github.com/BradLarson/GPUImage")[](http://github.com/BradLarson/GPUImage)
+
  ## 8. iRate
  What’s the best way to get more reviews in the App Store? I don’t have hard data to answer that question, but if I had to guess, I would say that **simple asking the user.** Maybe it’s a little oldschool way to do this— most developers now create custom in-app alerts — but if you don’t have time or you don’t want to implement everything from scratch, it’s better to use iRate than not to. And this is iRate exactly —** a small library that you include in your project and forget about asking users for review — iRate will do it for you, at proper time.**
  #### CocoaPods:
- <pre name="4a72" id="4a72" class="graf--pre graf-after--h4">
- pod 'iRate'
- </pre>
+ 
+         pod 'iRate'
+
  [**nicklockwood/iRate**
  _iRate - A handy class that prompts users of your iPhone or Mac App Store app to rate your application after using it…_github.com](https://github.com/nicklockwood/iRate "https://github.com/nicklockwood/iRate")[](https://github.com/nicklockwood/iRate)
  ## 9. GameCenterManager
