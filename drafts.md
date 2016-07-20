@@ -250,19 +250,21 @@
 
  [**Quick/Quick**
  _Quick - The Swift (and Objective-C) testing framework._github.com](https://github.com/Quick/Quick "https://github.com/Quick/Quick")[](https://github.com/Quick/Quick)
- ## 19. IAPHelper
+ 
+## 19. IAPHelper
  In-app purchases brings us a lot of boilerplate code, which this library get rid of and give us a simple wrapper for most common tasks related to money transfer from iOS user to your (or your company) wallet.
  #### CocoaPods:
- <pre name="2115" id="2115" class="graf--pre graf-after--h4">
- pod 'IAPHelper'
- </pre>
+
+         pod 'IAPHelper'
+
  [**saturngod/IAPHelper**
  _IAPHelper - in app purchases helper for iOS_github.com](https://github.com/saturngod/IAPHelper "https://github.com/saturngod/IAPHelper")[](https://github.com/saturngod/IAPHelper)
- ## 20. ReactiveCocoa
+ 
+## 20. ReactiveCocoa
  OK, here we have a little monster.
- <figure name="c5f9" id="c5f9" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*ZGn-IDtnbbN7ryiXwpNQTg.png)
- </figure>
+
  ReactiveCocoa isn’t a rather small, drop-in project like the others on this list. **ReactiveCocoa brings us a totally different programming style/architecture based on signals and streams of values.** It’s totally mind blowing and first you need unlearn what you’ve learned to understand how this work. It’s not an easy task, but rewarding.
  This isn’t a proper place to teach you ReactiveCocoa, but I’ll give you good resources if you are interested:
  [**Getting Started with ReactiveCocoa**
@@ -272,17 +274,17 @@
  [**ReactiveCocoa Tutorial - The Definitive Introduction: Part 1/2**
  _As an iOS developer, nearly every line of code you write is in reaction to some event; a button tap, a received network…_www.raywenderlich.com](http://www.raywenderlich.com/62699/reactivecocoa-tutorial-pt1 "http://www.raywenderlich.com/62699/reactivecocoa-tutorial-pt1")[](http://www.raywenderlich.com/62699/reactivecocoa-tutorial-pt1)
  #### CocoaPods:
- <pre name="2559" id="2559" class="graf--pre graf-after--h4">
- pod 'ReactiveCocoa'
- </pre>
+
+     pod 'ReactiveCocoa'
+
  [**ReactiveCocoa/ReactiveCocoa**
  _ReactiveCocoa - A framework for composing and transforming streams of values_github.com](https://github.com/ReactiveCocoa/ReactiveCocoa "https://github.com/ReactiveCocoa/ReactiveCocoa")[](https://github.com/ReactiveCocoa/ReactiveCocoa)
  ## 21. SwiftyJSON
  JSON parsing in Swift made easy.
  #### CocoaPods:
- <pre name="4c86" id="4c86" class="graf--pre graf-after--h4">
- pod 'SwiftyJSON'
- </pre>
+
+         pod 'SwiftyJSON'
+
  [**SwiftyJSON/SwiftyJSON**
  _SwiftyJSON - The better way to deal with JSON data in Swift_github.com](https://github.com/SwiftyJSON/SwiftyJSON "https://github.com/SwiftyJSON/SwiftyJSON")[](https://github.com/SwiftyJSON/SwiftyJSON)
  ## 22. Spring
