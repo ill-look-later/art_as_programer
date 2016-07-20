@@ -179,29 +179,31 @@
 
  [**nickoneill/PermissionScope**
  _PermissionScope - A Periscope-inspired way to ask for iOS permissions_github.com](https://github.com/nickoneill/PermissionScope "https://github.com/nickoneill/PermissionScope")[](https://github.com/nickoneill/PermissionScope)
- ## 14. SVProgressHUD
+ 
+## 14. SVProgressHUD
  This image **is** loaded properly, don’t wait longer and don’t refresh the page. **This is exactly how SVProgressHUD looks like in your app.** If you need custom waiting indicator, here you have (the best probably) one.
- <figure name="8d03" id="8d03" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*nUWClDbqfsNzRqFx6jhA3g.gif)
- </figure>
+
  #### CocoaPods:
- <pre name="b5fb" id="b5fb" class="graf--pre graf-after--h4">
- pod 'SVProgressHUD'
- </pre>
+         pod 'SVProgressHUD'
+
  [**TransitApp/SVProgressHUD**
  _SVProgressHUD - A clean and lightweight progress HUD for your iOS app._github.com](https://github.com/TransitApp/SVProgressHUD "https://github.com/TransitApp/SVProgressHUD")[](https://github.com/TransitApp/SVProgressHUD)
- ## 15. FontAwesomeKit
+ 
+## 15. FontAwesomeKit
  **Font Awesome is awesome** and with this library you can easily add the font to your project and use it in many ways.
- <figure name="a2e3" id="a2e3" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*QYbVsOA96NsUxSCrQ_CIUw.jpeg)
- </figure>
+
  #### CocoaPods:
- <pre name="81d1" id="81d1" class="graf--pre graf-after--h4">
- pod 'FontAwesomeKit'
- </pre>
+
+         pod 'FontAwesomeKit'
+
  [**PrideChung/FontAwesomeKit**
  _FontAwesomeKit - Icon font library for iOS. Currently supports Font-Awesome, Foundation icons, Zocial, and ionicons._github.com](https://github.com/PrideChung/FontAwesomeKit "https://github.com/PrideChung/FontAwesomeKit")[](https://github.com/PrideChung/FontAwesomeKit)
- ## 16. SnapKit
+ 
+## 16. SnapKit
  Love auto layout? You should!
  _At least when creating it in storyboards._
  Creating constraints in code is painful without some help, but luckily SnapKit is here and with it on board you can code your constraints in easy, declarative way. Check it out.
@@ -210,8 +212,7 @@
 
  #### CocoaPods:
 
-
- pod 'SnapKit'
+        pod 'SnapKit'
 
  [**SnapKit/SnapKit**
  _SnapKit - A Swift Autolayout DSL for iOS & OS X_github.com](https://github.com/SnapKit/SnapKit "https://github.com/SnapKit/SnapKit")[](https://github.com/SnapKit/SnapKit)
