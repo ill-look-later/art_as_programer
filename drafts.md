@@ -349,57 +349,49 @@
 
  [**kishikawakatsumi/KeychainAccess**
  _KeychainAccess - Simple Swift wrapper for Keychain that works on iOS and OS X_github.com](https://github.com/kishikawakatsumi/KeychainAccess "https://github.com/kishikawakatsumi/KeychainAccess")[](https://github.com/kishikawakatsumi/KeychainAccess)
- ## 27. iOS-charts
+ 
+## 27. iOS-charts
  And last but not least — the iOS charts library! It’s so useful and beautiful, that I won’t write here too much —** just scroll below and see what you can do in your app with this project.**
- <figure name="bf39" id="bf39" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*VbtAD_1hxOldYxjJx6vASA.png)
- </figure>
- <figure name="f0c0" id="f0c0" class="graf--figure graf--layoutOutsetRow is-partialWidth graf-after--figure" style="width: 29.772%;">
+
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*WaQkU2dRwNzqMEZunyqNAQ.png)
- </figure>
- <figure name="f56a" id="f56a" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 28.55%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*OeGTvNnJUqBIehn1wjIbpg.png)
- </figure>
- <figure name="f835" id="f835" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 41.678%;">
+
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/600/1*sDI562oJKyDVGq49BjMeYA.png)
- </figure>
- <figure name="684a" id="684a" class="graf--figure graf--layoutOutsetRow is-partialWidth graf-after--figure" style="width: 32.472%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*3Nn3WU5YSg26_8vPQZ2rDQ.png)
- </figure>
- <figure name="5015" id="5015" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 32.553%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*pOqvE_3UQPfkepplZA2zqA.png)
- </figure>
- <figure name="43b7" id="43b7" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 34.975%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*RSiBbr-v5YXod6MQNDXz2g.png)
- </figure>
- <figure name="38aa" id="38aa" class="graf--figure graf--layoutOutsetRow is-partialWidth graf-after--figure" style="width: 36.478%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*BCtAfcEAjrU1KW-IfG7jmA.png)
- </figure>
- <figure name="e7ac" id="e7ac" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 52.044%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/600/1*IPF0dEGyvDLsw4pzASPxaA.png)
- </figure>
- <figure name="e9ec" id="e9ec" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 11.478%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/200/1*vHUAaOByjBHfLfo2x1Z6yw.png)
- </figure>
- <figure name="4b24" id="4b24" class="graf--figure graf--layoutOutsetRow is-partialWidth graf-after--figure" style="width: 50.166%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/600/1*JMvTfSBPIFj-ganbyCPTzg.png)
- </figure>
- <figure name="61d4" id="61d4" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 49.834%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/600/1*bC4jLpWVEqhxGRXbdv_2xw.png)
- </figure>
- <figure name="cf56" id="cf56" class="graf--figure graf--layoutOutsetRow is-partialWidth graf-after--figure" style="width: 80.074%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/1000/1*AAcJvh9nb4BETcE4f6g9lw.png)
- </figure>
- <figure name="b5dd" id="b5dd" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 19.926%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*YfdosQop9CLvd1cMV7JsXw.png)
- </figure>
+
  Yes, everything is available as a drop-in (ok, maybe “code-in”) component.
  Unfortunately there is no CocoaPods support yet, so you need to manually drag the project to your Xcode workspace.
-</section>
-<section name="29cd" class=" section--body">
+
  ---
- ### **TL;DR list of all these libraries for quick access:**
- 1. [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet) [UI, empty table view solver]
+
+ 
+### **TL;DR list of all these libraries for quick access:**
+ 
+1. [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet) [UI, empty table view solver]
  2. [PDTSimpleCalendar](https://github.com/jivesoftware/PDTSimpleCalendar) [UI, drop-in calendar component]
  3. [MagicalRecord](https://github.com/magicalpanda/MagicalRecord) [Core Data helper implementing active record pattern]
  4. [Chameleon](https://github.com/ViccAlexander/Chameleon) [UI, color framework]
@@ -426,9 +418,8 @@
  25. [Concorde](https://github.com/contentful-labs/Concorde) [download and decode progressive JPEGs]
  26. [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess) [manage keychain easily]
  27. [iOS-charts](https://github.com/danielgindi/ios-charts) [beautiful charts library]
-</section>
-<section name="deb4" class=" section--body section--last">
+
  ---
  Thanks for reading, it was a long list! If you think it was worth creating, **please share it by clicking the _Share_ button below the article **— more people will benefit from it**.** Also if you’re a Medium user, **please click the _Recommend_ button** — it will inspire me to create more iOS development articles!
-</section>
+
 
