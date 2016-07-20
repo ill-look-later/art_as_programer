@@ -86,20 +86,21 @@
  _TextFieldEffects - Custom UITextFields effects inspired by Codrops, built using Swift_github.com](https://github.com/raulriera/TextFieldEffects "https://github.com/raulriera/TextFieldEffects")[](https://github.com/raulriera/TextFieldEffects)
  ## 7. GPUImage
  Have you ever created a camera app? **If not, you surely will after meeting this library.**
- <figure name="b74c" id="b74c" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*s7tpFPCnKV8YZ7qdCVZyqg.png)
- <figcaption class="imageCaption">GPUImage possibilities.</figcaption>
- </figure>
+
+
  GPUImage provides us a GPU-accelerated camera effects (both images and video) with blazing speed. There are hundreds of apps in the App Store that use this library — and one mine’s too:
- <figure name="448c" id="448c" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*o5JTFxgggZUYCvGZm6kh1g.png)
- <figcaption class="imageCaption">GPUImage in use in one of my apps.</figcaption>
- </figure>
+ 
+
  8869 stars on GitHub and still counting.
+
  #### CocoaPods:
- <pre name="574e" id="574e" class="graf--pre graf-after--h4">
- pod 'GPUImage'
- </pre>
+ 
+         pod 'GPUImage'
+
  [**BradLarson/GPUImage**
  _GPUImage - An open source iOS framework for GPU-based image and video processing_github.com](http://github.com/BradLarson/GPUImage "http://github.com/BradLarson/GPUImage")[](http://github.com/BradLarson/GPUImage)
  ## 8. iRate
