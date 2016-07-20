@@ -217,7 +217,7 @@
  [**SnapKit/SnapKit**
  _SnapKit - A Swift Autolayout DSL for iOS & OS X_github.com](https://github.com/SnapKit/SnapKit "https://github.com/SnapKit/SnapKit")[](https://github.com/SnapKit/SnapKit)
 
- ## 17. MGSwipeTableCell
+## 17. MGSwipeTableCell
  Another UI component, that is so often seen in many apps that Apple should probably think about including something similar in standard iOS SDK. **Swipeable table cell**, this is the best description of this pod. The best one.
 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*g9U2AX7pYXm5QY0_rBKOUQ.gif)
@@ -236,7 +236,7 @@
  [**MortimerGoro/MGSwipeTableCell**
  _MGSwipeTableCell - An easy to use UITableViewCell subclass that allows to display swippable buttons with a variety of…_github.com](https://github.com/MortimerGoro/MGSwipeTableCell "https://github.com/MortimerGoro/MGSwipeTableCell")[](https://github.com/MortimerGoro/MGSwipeTableCell)
 
- ## 18. Quick
+## 18. Quick
  Unit testing in Swift, for Swift (ok, for Objective-C too), integrated with Xcode. If you are Objective-C fan, I would recommend [Specta](https://github.com/specta/specta) instead of this, but for Swift Quick will be probably the best shot.
 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*slKaci9ZuZRTUjDzgi3-SA.png)
@@ -246,7 +246,7 @@
 
  #### CocoaPods:
 
- pod 'Quick'
+         pod 'Quick'
 
  [**Quick/Quick**
  _Quick - The Swift (and Objective-C) testing framework._github.com](https://github.com/Quick/Quick "https://github.com/Quick/Quick")[](https://github.com/Quick/Quick)
