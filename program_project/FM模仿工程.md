@@ -2,8 +2,9 @@
 
 首先看看它长什么样, 估计有的人一看就知道我是照个某个博客抄袭的某个应用\/奸笑; 看图:
 
-|![界面](/program_project/img/fakeFM_Post.png)|
-| :--: |
+| ![界面](/program_project/img/fakeFM_Post.png) |
+| :--- |
+|
 
 下面总结一下这个工程的流程和使用到得一些基本知识
 
@@ -23,15 +24,18 @@
 * 完成页面跳转逻辑和使用**IBOutlet,IBAction**绑定相关的Item
 * 实现http请求,解析请求到得数据
 * 将网络上获取到得歌曲信息通过下面函数来填充我们的tabview,将我们的数据binding到UI上
+
   ```
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
   ```
 
 * 实现交互逻辑, 选择相应的cell后播放相应的歌曲,完成UI元素的update
+
   ```
    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) 
   ```
 
 * 完成频道选择逻辑
+
 * 为Cell添加简单地3D scale animation
 
