@@ -321,32 +321,32 @@
 
  [**JanC/TAPromotee**
  _TAPromotee - Objective-C library to cross promote iOS apps_github.com](https://github.com/JanC/TAPromotee "https://github.com/JanC/TAPromotee")[](https://github.com/JanC/TAPromotee)
- ## 25. Concorde
+ 
+## 25. Concorde
  Do you load a lot of JPEGs in your app? With Concorde you can do it in a bit better looking way. A progressive way.
- <figure name="9488" id="9488" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*2UdNaQS15wesjGjjiHAvaQ.gif)
- </figure>
+
  #### CocoaPods:
- <pre name="ccdf" id="ccdf" class="graf--pre graf-after--h4">
- pod 'Concorde'
- </pre>
+     pod 'Concorde'
+
  [**contentful-labs/Concorde**
  _Concorde - Download and decode progressive JPEGs on iOS._github.com](https://github.com/contentful-labs/Concorde "https://github.com/contentful-labs/Concorde")[](https://github.com/contentful-labs/Concorde)
- ## 26. KeychainAccess
+ 
+## 26. KeychainAccess
  Little helper library to manage Keychain access.
- <figure name="18e7" id="18e7" class="graf--figure graf--layoutOutsetRow is-partialWidth graf-after--p" style="width: 33.333%;">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*uLid5pu3_m0YQIptfim5jg.png)
- </figure>
- <figure name="ffcf" id="ffcf" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 33.333%;">
+
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*lfVh0XU6GaSr-irD8xeb8A.png)
- </figure>
- <figure name="8bcb" id="8bcb" class="graf--figure graf--layoutOutsetRowContinue is-partialWidth graf-after--figure" style="width: 33.333%;">
+
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*tEIFKi-dRQW7FkohYgELAw.png)
- </figure>
+
  #### CocoaPods:
- <pre name="bcff" id="bcff" class="graf--pre graf-after--h4">
- pod 'KeychainAccess'
- </pre>
+         pod 'KeychainAccess'
+
  [**kishikawakatsumi/KeychainAccess**
  _KeychainAccess - Simple Swift wrapper for Keychain that works on iOS and OS X_github.com](https://github.com/kishikawakatsumi/KeychainAccess "https://github.com/kishikawakatsumi/KeychainAccess")[](https://github.com/kishikawakatsumi/KeychainAccess)
  ## 27. iOS-charts
