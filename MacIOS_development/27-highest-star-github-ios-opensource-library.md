@@ -108,7 +108,7 @@
 
  #### CocoaPods:
 
- pod 'iRate'
+         pod 'iRate'
 
  [**nicklockwood/iRate**
  _iRate - A handy class that prompts users of your iPhone or Mac App Store app to rate your application after using it…_github.com](https://github.com/nicklockwood/iRate "https://github.com/nicklockwood/iRate")[](https://github.com/nicklockwood/iRate)
