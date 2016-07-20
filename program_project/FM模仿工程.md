@@ -28,7 +28,7 @@
 - 实现交互逻辑, 选择相应的cell后播放相应的歌曲,完成UI元素的update
        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) 
 - 完成频道选择逻辑
-- 为
+- 为Cell添加简单地3D scale animation
 
 
 
