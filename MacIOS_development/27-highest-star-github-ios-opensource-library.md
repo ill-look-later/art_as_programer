@@ -125,7 +125,7 @@
  I’m using this in one of my games and it’s a pleasure experience.
  #### CocoaPods:
 
- pod 'GameCenterManager'
+         pod 'GameCenterManager'
 
  [**nihalahmed/GameCenterManager**
  _GameCenterManager - iOS Game Center helper singleton_github.com](https://github.com/nihalahmed/GameCenterManager "https://github.com/nihalahmed/GameCenterManager")[](https://github.com/nihalahmed/GameCenterManager)
