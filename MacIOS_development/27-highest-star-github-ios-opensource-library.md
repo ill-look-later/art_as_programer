@@ -12,7 +12,7 @@
 
  #### CocoaPods:
 
- pod 'DZNEmptyDataSet'
+  > pod 'DZNEmptyDataSet'
 
  [**DZNEmptyDataSet**
  _DZNEmptyDataSet - A drop-in UITableView/UICollectionView superclass category for showing empty datasets whenever the…_github.](https://github.com/dzenbot/DZNEmptyDataSet "https://github.com/dzenbot/DZNEmptyDataSet")[](https://github.com/dzenbot/DZNEmptyDataSet)
@@ -23,7 +23,7 @@
 
  #### CocoaPods:
 
- pod 'PDTSimpleCalendar'
+  > pod 'PDTSimpleCalendar'
 
  [**jivesoftware/PDTSimpleCalendar**
  _PDTSimpleCalendar - A simple Calendar / Date Picker for iOS using UICollectionView_github.com](https://github.com/jivesoftware/PDTSimpleCalendar "https://github.com/jivesoftware/PDTSimpleCalendar")[](https://github.com/jivesoftware/PDTSimpleCalendar)
@@ -32,7 +32,7 @@
  MagicalRecord works like a wrapper for Core Data and hides from developer all non-relevant stuff. If you’ve ever worked with active record pattern (e.g. Ruby on Rails), you’re in home. Really, really recommended library if you are using Core Data in your app.
  #### CocoaPods:
 
- pod 'MagicalRecord'
+  > pod 'MagicalRecord'
 
  [**magicalpanda/MagicalRecord**
  _MagicalRecord - Super Awesome Easy Fetching for Core Data 1!!!11!!!!1!_github.com](https://github.com/magicalpanda/MagicalRecord "https://github.com/magicalpanda/MagicalRecord")[](https://github.com/magicalpanda/MagicalRecord)
@@ -48,7 +48,7 @@
 
  #### CocoaPods:
 
- pod 'ChameleonFramework'
+  > pod 'ChameleonFramework'
 
  [**ViccAlexander/Chameleon**
  _Chameleon - Flat Color Framework for iOS (Obj-C & Swift)_github.com](https://github.com/ViccAlexander/Chameleon "https://github.com/ViccAlexander/Chameleon")[](https://github.com/ViccAlexander/Chameleon)
@@ -60,7 +60,7 @@
  Need to do networking stuff like downloading, uploading, getting JSONs etc.? Alamofire is for you. 8000 people on GitHub cannot be wrong.
  #### CocoaPods:
 
- pod 'Alamofire'
+  > pod 'Alamofire'
 
  [**Alamofire/Alamofire**
  _Alamofire - Elegant HTTP Networking in Swift_github.com](https://github.com/Alamofire/Alamofire "https://github.com/Alamofire/Alamofire")[](https://github.com/Alamofire/Alamofire)
@@ -75,7 +75,7 @@
  Yep, **these are simple drop-in controllers.** You can even make use from IBDesignables in storyboard!
  #### CocoaPods:
 
- pod 'TextFieldEffects'
+  > pod 'TextFieldEffects'
 
  #### Carthage:
 
@@ -98,7 +98,7 @@
 
  #### CocoaPods:
 
- pod 'GPUImage'
+ > pod 'GPUImage'
 
  [**BradLarson/GPUImage**
  _GPUImage - An open source iOS framework for GPU-based image and video processing_github.com](http://github.com/BradLarson/GPUImage "http://github.com/BradLarson/GPUImage")[](http://github.com/BradLarson/GPUImage)
@@ -108,7 +108,7 @@
 
  #### CocoaPods:
 
-         pod 'iRate'
+ > pod 'iRate'
 
  [**nicklockwood/iRate**
  _iRate - A handy class that prompts users of your iPhone or Mac App Store app to rate your application after using it…_github.com](https://github.com/nicklockwood/iRate "https://github.com/nicklockwood/iRate")[](https://github.com/nicklockwood/iRate)
@@ -125,7 +125,7 @@
  I’m using this in one of my games and it’s a pleasure experience.
  #### CocoaPods:
 
-         pod 'GameCenterManager'
+  > pod 'GameCenterManager'
 
  [**nihalahmed/GameCenterManager**
  _GameCenterManager - iOS Game Center helper singleton_github.com](https://github.com/nihalahmed/GameCenterManager "https://github.com/nihalahmed/GameCenterManager")[](https://github.com/nihalahmed/GameCenterManager)
@@ -137,7 +137,7 @@
  I’ve tried a few other libraries providing this kind of control and PKRevealController is just the best. Very easy to setup, highly customizable and recognizes gestures very, very well. It could be included in iOS SDK as a standard control, really.
  #### CocoaPods:
 
-         pod 'PKRevealController'
+ > pod 'PKRevealController'
 
  [**pkluz/PKRevealController**
  _Introducing PKRevealController 2 - The second version of one of the most popular view controller containers for iOS…_github.com](https://github.com/pkluz/PKRevealController "https://github.com/pkluz/PKRevealController")[](https://github.com/pkluz/PKRevealController)
@@ -148,7 +148,7 @@
  **Self growing text area? Check.Gestures recognizing, autocompletion, multimedia pasting? Check. Easy drop-in solution? Check.** What else can you possibly need?
  #### CocoaPods:
 
- pod 'SlackTextViewController'
+  > pod 'SlackTextViewController'
 
  [**slackhq/SlackTextViewController**
  _SlackTextViewController - A drop-in UIViewController subclass with a growing text input view and other useful messaging…_github.com](https://github.com/slackhq/SlackTextViewController "https://github.com/slackhq/SlackTextViewController")[](https://github.com/slackhq/SlackTextViewController)
@@ -163,7 +163,7 @@
 
  #### CocoaPods:
 
- pod 'RETableViewManager'
+  > pod 'RETableViewManager'
 
  [**romaonthego/RETableViewManager**
  _RETableViewManager - Powerful data driven content manager for UITableView._github.com](https://github.com/romaonthego/RETableViewManager "https://github.com/romaonthego/RETableViewManager")[](https://github.com/romaonthego/RETableViewManager)
@@ -175,7 +175,7 @@
 
  #### CocoaPods:
 
- pod 'PermissionScope'
+  > pod 'PermissionScope'
 
  [**nickoneill/PermissionScope**
  _PermissionScope - A Periscope-inspired way to ask for iOS permissions_github.com](https://github.com/nickoneill/PermissionScope "https://github.com/nickoneill/PermissionScope")[](https://github.com/nickoneill/PermissionScope)
@@ -186,7 +186,8 @@
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*nUWClDbqfsNzRqFx6jhA3g.gif)
 
  #### CocoaPods:
-         pod 'SVProgressHUD'
+  
+ > pod 'SVProgressHUD'
 
  [**TransitApp/SVProgressHUD**
  _SVProgressHUD - A clean and lightweight progress HUD for your iOS app._github.com](https://github.com/TransitApp/SVProgressHUD "https://github.com/TransitApp/SVProgressHUD")[](https://github.com/TransitApp/SVProgressHUD)
@@ -198,7 +199,7 @@
 
  #### CocoaPods:
 
-         pod 'FontAwesomeKit'
+ > pod 'FontAwesomeKit'
 
  [**PrideChung/FontAwesomeKit**
  _FontAwesomeKit - Icon font library for iOS. Currently supports Font-Awesome, Foundation icons, Zocial, and ionicons._github.com](https://github.com/PrideChung/FontAwesomeKit "https://github.com/PrideChung/FontAwesomeKit")[](https://github.com/PrideChung/FontAwesomeKit)
@@ -212,7 +213,7 @@
 
  #### CocoaPods:
 
-        pod 'SnapKit'
+ > pod 'SnapKit'
 
  [**SnapKit/SnapKit**
  _SnapKit - A Swift Autolayout DSL for iOS & OS X_github.com](https://github.com/SnapKit/SnapKit "https://github.com/SnapKit/SnapKit")[](https://github.com/SnapKit/SnapKit)
@@ -231,7 +232,7 @@
  These are just 3 animation types, there are more of them. Explore readme.
  #### CocoaPods:
 
- pod 'MGSwipeTableCell'
+  > pod 'MGSwipeTableCell'
 
  [**MortimerGoro/MGSwipeTableCell**
  _MGSwipeTableCell - An easy to use UITableViewCell subclass that allows to display swippable buttons with a variety of…_github.com](https://github.com/MortimerGoro/MGSwipeTableCell "https://github.com/MortimerGoro/MGSwipeTableCell")[](https://github.com/MortimerGoro/MGSwipeTableCell)
@@ -246,7 +247,7 @@
 
  #### CocoaPods:
 
-         pod 'Quick'
+ > pod 'Quick'
 
  [**Quick/Quick**
  _Quick - The Swift (and Objective-C) testing framework._github.com](https://github.com/Quick/Quick "https://github.com/Quick/Quick")[](https://github.com/Quick/Quick)
@@ -255,7 +256,7 @@
  In-app purchases brings us a lot of boilerplate code, which this library get rid of and give us a simple wrapper for most common tasks related to money transfer from iOS user to your (or your company) wallet.
  #### CocoaPods:
 
-         pod 'IAPHelper'
+ >  pod 'IAPHelper'
 
  [**saturngod/IAPHelper**
  _IAPHelper - in app purchases helper for iOS_github.com](https://github.com/saturngod/IAPHelper "https://github.com/saturngod/IAPHelper")[](https://github.com/saturngod/IAPHelper)
@@ -275,7 +276,7 @@
  _As an iOS developer, nearly every line of code you write is in reaction to some event; a button tap, a received network…_www.raywenderlich.com](http://www.raywenderlich.com/62699/reactivecocoa-tutorial-pt1 "http://www.raywenderlich.com/62699/reactivecocoa-tutorial-pt1")[](http://www.raywenderlich.com/62699/reactivecocoa-tutorial-pt1)
  #### CocoaPods:
 
- pod 'ReactiveCocoa'
+  > pod 'ReactiveCocoa'
 
  [**ReactiveCocoa/ReactiveCocoa**
  _ReactiveCocoa - A framework for composing and transforming streams of values_github.com](https://github.com/ReactiveCocoa/ReactiveCocoa "https://github.com/ReactiveCocoa/ReactiveCocoa")[](https://github.com/ReactiveCocoa/ReactiveCocoa)
@@ -284,7 +285,7 @@
  JSON parsing in Swift made easy.
  #### CocoaPods:
 
- pod 'SwiftyJSON'
+  > pod 'SwiftyJSON'
 
  [**SwiftyJSON/SwiftyJSON**
  _SwiftyJSON - The better way to deal with JSON data in Swift_github.com](https://github.com/SwiftyJSON/SwiftyJSON "https://github.com/SwiftyJSON/SwiftyJSON")[](https://github.com/SwiftyJSON/SwiftyJSON)
@@ -296,7 +297,7 @@
 
  #### CocoaPods:
 
- pod 'Spring'
+  > pod 'Spring'
 
  [**MengTo/Spring**
  _Spring - A library to simplify iOS animations in Swift._github.com](https://github.com/MengTo/Spring "https://github.com/MengTo/Spring")[](https://github.com/MengTo/Spring)
@@ -305,7 +306,7 @@
  Load custom fonts to your app easily.
  #### CocoaPods:
 
- pod 'FontBlaster'
+  > pod 'FontBlaster'
 
  [**ArtSabintsev/FontBlaster**
  _FontBlaster - Programmatically load custom fonts into your iOS app._github.com](https://github.com/ArtSabintsev/FontBlaster "https://github.com/ArtSabintsev/FontBlaster")[](https://github.com/ArtSabintsev/FontBlaster)
@@ -317,7 +318,7 @@
 
  #### CocoaPods:
 
- pod 'TAPromotee'
+  > pod 'TAPromotee'
 
  [**JanC/TAPromotee**
  _TAPromotee - Objective-C library to cross promote iOS apps_github.com](https://github.com/JanC/TAPromotee "https://github.com/JanC/TAPromotee")[](https://github.com/JanC/TAPromotee)
@@ -328,7 +329,7 @@
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*2UdNaQS15wesjGjjiHAvaQ.gif)
 
  #### CocoaPods:
- pod 'Concorde'
+  > pod 'Concorde'
 
  [**contentful-labs/Concorde**
  _Concorde - Download and decode progressive JPEGs on iOS._github.com](https://github.com/contentful-labs/Concorde "https://github.com/contentful-labs/Concorde")[](https://github.com/contentful-labs/Concorde)
@@ -345,7 +346,8 @@
  ![](https://d262ilb51hltx0.cloudfront.net/max/400/1*tEIFKi-dRQW7FkohYgELAw.png)
 
  #### CocoaPods:
- pod 'KeychainAccess'
+  
+> pod 'KeychainAccess'
 
  [**kishikawakatsumi/KeychainAccess**
  _KeychainAccess - Simple Swift wrapper for Keychain that works on iOS and OS X_github.com](https://github.com/kishikawakatsumi/KeychainAccess "https://github.com/kishikawakatsumi/KeychainAccess")[](https://github.com/kishikawakatsumi/KeychainAccess)
