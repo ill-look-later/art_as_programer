@@ -300,23 +300,25 @@
 
  [**MengTo/Spring**
  _Spring - A library to simplify iOS animations in Swift._github.com](https://github.com/MengTo/Spring "https://github.com/MengTo/Spring")[](https://github.com/MengTo/Spring)
- ## 23. FontBlaster
+ 
+## 23. FontBlaster
  Load custom fonts to your app easily.
  #### CocoaPods:
- <pre name="053a" id="053a" class="graf--pre graf-after--h4">
- pod 'FontBlaster'
- </pre>
+
+         pod 'FontBlaster'
+
  [**ArtSabintsev/FontBlaster**
  _FontBlaster - Programmatically load custom fonts into your iOS app._github.com](https://github.com/ArtSabintsev/FontBlaster "https://github.com/ArtSabintsev/FontBlaster")[](https://github.com/ArtSabintsev/FontBlaster)
- ## 24. TAPromotee
+ 
+## 24. TAPromotee
  Cross promoting your apps is one of the best marketing strategies you can implement in them for free. And with this library it’s so easy that you can’t longer justify not doing it — add TAPromotee to your podfile, configure and enjoy more downloads for free.
- <figure name="4c54" id="4c54" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*FF4dr7V617RSqlrUhuvr7Q.png)
- </figure>
+
  #### CocoaPods:
- <pre name="3fd8" id="3fd8" class="graf--pre graf-after--h4">
- pod 'TAPromotee'
- </pre>
+
+         pod 'TAPromotee'
+
  [**JanC/TAPromotee**
  _TAPromotee - Objective-C library to cross promote iOS apps_github.com](https://github.com/JanC/TAPromotee "https://github.com/JanC/TAPromotee")[](https://github.com/JanC/TAPromotee)
  ## 25. Concorde
