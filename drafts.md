@@ -153,17 +153,19 @@
  
  [**slackhq/SlackTextViewController**
  _SlackTextViewController - A drop-in UIViewController subclass with a growing text input view and other useful messaging…_github.com](https://github.com/slackhq/SlackTextViewController "https://github.com/slackhq/SlackTextViewController")[](https://github.com/slackhq/SlackTextViewController)
- ## 12. RETableViewManager
+ 
+## 12. RETableViewManager
  RETableViewManager will help you with dynamically creating and managing your table views, everything in code. It deliver us predefined cells (for bools, texts, dates etc. — check screenshots below), but you can also create your custom views and use them along with the default ones.
- <figure name="7d86" id="7d86" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*Tq-kGojYO7NjWWa2R7pKcQ.png)
- <figcaption class="imageCaption">Left screenshot is so oldschool!</figcaption>
- </figure>
+ 
+
  All of this stuff you can do in storyboard without help of this library, but sometimes code is simply better than visual editor.
+
  #### CocoaPods:
- <pre name="4f09" id="4f09" class="graf--pre graf-after--h4">
- pod 'RETableViewManager'
- </pre>
+ 
+         pod 'RETableViewManager'
+
  [**romaonthego/RETableViewManager**
  _RETableViewManager - Powerful data driven content manager for UITableView._github.com](https://github.com/romaonthego/RETableViewManager "https://github.com/romaonthego/RETableViewManager")[](https://github.com/romaonthego/RETableViewManager)
  ## 13. PermissionScope
