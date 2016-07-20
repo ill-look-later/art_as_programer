@@ -255,7 +255,7 @@
  In-app purchases brings us a lot of boilerplate code, which this library get rid of and give us a simple wrapper for most common tasks related to money transfer from iOS user to your (or your company) wallet.
  #### CocoaPods:
 
- pod 'IAPHelper'
+         pod 'IAPHelper'
 
  [**saturngod/IAPHelper**
  _IAPHelper - in app purchases helper for iOS_github.com](https://github.com/saturngod/IAPHelper "https://github.com/saturngod/IAPHelper")[](https://github.com/saturngod/IAPHelper)
