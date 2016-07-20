@@ -279,7 +279,8 @@
 
  [**ReactiveCocoa/ReactiveCocoa**
  _ReactiveCocoa - A framework for composing and transforming streams of values_github.com](https://github.com/ReactiveCocoa/ReactiveCocoa "https://github.com/ReactiveCocoa/ReactiveCocoa")[](https://github.com/ReactiveCocoa/ReactiveCocoa)
- ## 21. SwiftyJSON
+ 
+## 21. SwiftyJSON
  JSON parsing in Swift made easy.
  #### CocoaPods:
 
@@ -287,15 +288,16 @@
 
  [**SwiftyJSON/SwiftyJSON**
  _SwiftyJSON - The better way to deal with JSON data in Swift_github.com](https://github.com/SwiftyJSON/SwiftyJSON "https://github.com/SwiftyJSON/SwiftyJSON")[](https://github.com/SwiftyJSON/SwiftyJSON)
- ## 22. Spring
+ 
+## 22. Spring
  Animations made easy, chainable and declarative.
- <figure name="953e" id="953e" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*J0QzPXBCDAs6d5MS9DPMpg.jpeg)
- </figure>
+
  #### CocoaPods:
- <pre name="0bb2" id="0bb2" class="graf--pre graf-after--h4">
- pod 'Spring'
- </pre>
+
+         pod 'Spring'
+
  [**MengTo/Spring**
  _Spring - A library to simplify iOS animations in Swift._github.com](https://github.com/MengTo/Spring "https://github.com/MengTo/Spring")[](https://github.com/MengTo/Spring)
  ## 23. FontBlaster
