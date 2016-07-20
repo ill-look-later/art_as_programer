@@ -206,31 +206,33 @@
  Love auto layout? You should!
  _At least when creating it in storyboards._
  Creating constraints in code is painful without some help, but luckily SnapKit is here and with it on board you can code your constraints in easy, declarative way. Check it out.
- <figure name="c9c5" id="c9c5" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*PVelVchmwY6kHZ9FMGuJiQ.png)
- </figure>
+
  #### CocoaPods:
- <pre name="ca72" id="ca72" class="graf--pre graf-after--h4">
- pod 'SnapKit'
- </pre>
+
+
+         pod 'SnapKit'
+
  [**SnapKit/SnapKit**
  _SnapKit - A Swift Autolayout DSL for iOS & OS X_github.com](https://github.com/SnapKit/SnapKit "https://github.com/SnapKit/SnapKit")[](https://github.com/SnapKit/SnapKit)
+
  ## 17. MGSwipeTableCell
  Another UI component, that is so often seen in many apps that Apple should probably think about including something similar in standard iOS SDK. **Swipeable table cell**, this is the best description of this pod. The best one.
- <figure name="1f65" id="1f65" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*g9U2AX7pYXm5QY0_rBKOUQ.gif)
- </figure>
- <figure name="f565" id="f565" class="graf--figure graf-after--figure">
+
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*5ZLSg0LU_vA-qiV8CIakFA.gif)
- </figure>
- <figure name="59bf" id="59bf" class="graf--figure graf-after--figure">
+
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*j4GvOd6JFS93U2kx2vkCLQ.gif)
- </figure>
+
  These are just 3 animation types, there are more of them. Explore readme.
  #### CocoaPods:
- <pre name="17e5" id="17e5" class="graf--pre graf-after--h4">
- pod 'MGSwipeTableCell'
- </pre>
+
+         pod 'MGSwipeTableCell'
+
  [**MortimerGoro/MGSwipeTableCell**
  _MGSwipeTableCell - An easy to use UITableViewCell subclass that allows to display swippable buttons with a variety of…_github.com](https://github.com/MortimerGoro/MGSwipeTableCell "https://github.com/MortimerGoro/MGSwipeTableCell")[](https://github.com/MortimerGoro/MGSwipeTableCell)
  ## 18. Quick
