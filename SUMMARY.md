@@ -47,6 +47,7 @@
     * [ES6 New Feature Overview](javascript_nodejs/es6_new_feature_overview.md)
 * [Apple Swift系列积累](MacIOS_development/README.md)
     * [swift](MacIOS_development/swift.md)
+    * [27 Highest Star Github IOS OpenSource Library](MacIOS_development/27-highest-star-github-ios-opensource-library.md)
     * [IOS app](MacIOS_development/ios_app.md)
         * [启动过程描述](MacIOS_development/qi_dong_guo_cheng_miao_shu.md)
         * [UI与代码binding 的两种方法](MacIOS_development/uiyu_dai_ma_binding_de_liang_zhong_fang_fa.md)
