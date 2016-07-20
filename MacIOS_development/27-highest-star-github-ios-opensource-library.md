@@ -137,12 +137,12 @@
  I’ve tried a few other libraries providing this kind of control and PKRevealController is just the best. Very easy to setup, highly customizable and recognizes gestures very, very well. It could be included in iOS SDK as a standard control, really.
  #### CocoaPods:
 
- pod 'PKRevealController'
+         pod 'PKRevealController'
 
  [**pkluz/PKRevealController**
  _Introducing PKRevealController 2 - The second version of one of the most popular view controller containers for iOS…_github.com](https://github.com/pkluz/PKRevealController "https://github.com/pkluz/PKRevealController")[](https://github.com/pkluz/PKRevealController)
 
- ## 11. SlackTextViewController
+## 11. SlackTextViewController
 
  Have you ever used Slack iOS app? If you are working in a bigger software company, probably yes. For these people who haven’t — Slack rocks. And Slack’s iOS app too, especially for the great, custom text input control… which here you have — a code ready for use in your app!
  **Self growing text area? Check.Gestures recognizing, autocompletion, multimedia pasting? Check. Easy drop-in solution? Check.** What else can you possibly need?
