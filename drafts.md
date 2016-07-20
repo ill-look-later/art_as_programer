@@ -55,27 +55,24 @@
  _Chameleon - Flat Color Framework for iOS (Obj-C & Swift)_github.com](https://github.com/ViccAlexander/Chameleon "https://github.com/ViccAlexander/Chameleon")[](https://github.com/ViccAlexander/Chameleon)
  ## 5. Alamofire
  Alamofire is an elegant networking library written in Swift. Have you ever been using AFNetworking? Alamofire is it’s younger brother. Younger and more stylish, of course (AFNetworking is written in Objective-C).
- <figure name="7f4d" id="7f4d" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*qkOCEhp5g9ixArBdLDwPyw.png)
- </figure>
+
  Need to do networking stuff like downloading, uploading, getting JSONs etc.? Alamofire is for you. 8000 people on GitHub cannot be wrong.
  #### CocoaPods:
- <pre name="9250" id="9250" class="graf--pre graf-after--h4">
- pod 'Alamofire'
- </pre>
+
+     pod 'Alamofire'
+
  [**Alamofire/Alamofire**
  _Alamofire - Elegant HTTP Networking in Swift_github.com](https://github.com/Alamofire/Alamofire "https://github.com/Alamofire/Alamofire")[](https://github.com/Alamofire/Alamofire)
  ## 6. TextFieldEffects
  Don’t you think that standard UITextField is a little boring? Me too — so **say hello to TextFieldEffects!** I won’t write too much, I’ll just show you a few examples what this library can do:
- <figure name="b173" id="b173" class="graf--figure graf-after--p">
- ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*U1VSW9jDKKWF2yYlbhQ-Ug.gif)
- </figure>
- <figure name="3e66" id="3e66" class="graf--figure graf-after--figure">
+![](https://d262ilb51hltx0.cloudfront.net/max/800/1*U1VSW9jDKKWF2yYlbhQ-Ug.gif)
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*Nws8VPi9br54Ae-tCwLXGA.gif)
- </figure>
- <figure name="9e38" id="9e38" class="graf--figure graf-after--figure">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*lZ7TWmt36U9eBNdoxmyjhA.gif)
- </figure>
+
  Yep, **these are simple drop-in controllers.** You can even make use from IBDesignables in storyboard!
  #### CocoaPods:
  <pre name="91b6" id="91b6" class="graf--pre graf-after--h4">
