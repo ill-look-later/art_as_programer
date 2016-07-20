@@ -235,18 +235,19 @@
 
  [**MortimerGoro/MGSwipeTableCell**
  _MGSwipeTableCell - An easy to use UITableViewCell subclass that allows to display swippable buttons with a variety of…_github.com](https://github.com/MortimerGoro/MGSwipeTableCell "https://github.com/MortimerGoro/MGSwipeTableCell")[](https://github.com/MortimerGoro/MGSwipeTableCell)
+
  ## 18. Quick
  Unit testing in Swift, for Swift (ok, for Objective-C too), integrated with Xcode. If you are Objective-C fan, I would recommend [Specta](https://github.com/specta/specta) instead of this, but for Swift Quick will be probably the best shot.
- <figure name="07e1" id="07e1" class="graf--figure graf-after--p">
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*slKaci9ZuZRTUjDzgi3-SA.png)
- </figure>
- <figure name="2406" id="2406" class="graf--figure graf-after--figure">
+
+
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*ZMm8Jgzv9VTPi3v7cxc4KA.png)
- </figure>
+
  #### CocoaPods:
- <pre name="52c1" id="52c1" class="graf--pre graf-after--h4">
- pod 'Quick'
- </pre>
+
+         pod 'Quick'
+
  [**Quick/Quick**
  _Quick - The Swift (and Objective-C) testing framework._github.com](https://github.com/Quick/Quick "https://github.com/Quick/Quick")[](https://github.com/Quick/Quick)
  ## 19. IAPHelper
