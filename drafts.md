@@ -75,13 +75,13 @@
 
  Yep, **these are simple drop-in controllers.** You can even make use from IBDesignables in storyboard!
  #### CocoaPods:
- <pre name="91b6" id="91b6" class="graf--pre graf-after--h4">
- pod 'TextFieldEffects'
- </pre>
+
+         pod 'TextFieldEffects'
+
  #### Carthage:
- <pre name="12a4" id="12a4" class="graf--pre graf-after--h4">
- github "raulriera/TextFieldEffects"
- </pre>
+ 
+         github "raulriera/TextFieldEffects"
+
  [**raulriera/TextFieldEffects**
  _TextFieldEffects - Custom UITextFields effects inspired by Codrops, built using Swift_github.com](https://github.com/raulriera/TextFieldEffects "https://github.com/raulriera/TextFieldEffects")[](https://github.com/raulriera/TextFieldEffects)
  ## 7. GPUImage
