@@ -106,47 +106,51 @@
 
  ## 8. iRate
  What’s the best way to get more reviews in the App Store? I don’t have hard data to answer that question, but if I had to guess, I would say that **simple asking the user.** Maybe it’s a little oldschool way to do this— most developers now create custom in-app alerts — but if you don’t have time or you don’t want to implement everything from scratch, it’s better to use iRate than not to. And this is iRate exactly —** a small library that you include in your project and forget about asking users for review — iRate will do it for you, at proper time.**
+
  #### CocoaPods:
  
          pod 'iRate'
 
  [**nicklockwood/iRate**
  _iRate - A handy class that prompts users of your iPhone or Mac App Store app to rate your application after using it…_github.com](https://github.com/nicklockwood/iRate "https://github.com/nicklockwood/iRate")[](https://github.com/nicklockwood/iRate)
- ## 9. GameCenterManager
+ 
+## 9. GameCenterManager
  Love or hate singletons, but in this case managing Game Center is **just easier** with a little help of our best known anti-pattern (you _have only one Game Center_ in your game, right?).
- <figure name="ee84" id="ee84" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*t1Sy5Jt2fAaeU1VaAeEjbQ.png)
- </figure>
+
  To be honest, _vanilla-managing_ Game Center in iOS isn’t that hard, **but with this library is just simple and fast.** And better is the enemy of the good.
- <figure name="74db" id="74db" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*P3bj6yW7GnnT0yTt0RdboQ.png)
- </figure>
+
  I’m using this in one of my games and it’s a pleasure experience.
  #### CocoaPods:
- <pre name="4393" id="4393" class="graf--pre graf-after--h4">
- pod 'GameCenterManager'
- </pre>
+ 
+         pod 'GameCenterManager'
+
  [**nihalahmed/GameCenterManager**
  _GameCenterManager - iOS Game Center helper singleton_github.com](https://github.com/nihalahmed/GameCenterManager "https://github.com/nihalahmed/GameCenterManager")[](https://github.com/nihalahmed/GameCenterManager)
  ## 10. **PKRevealController 2**
  This is a real gem here, **one of my most favorited iOS control.** PKRevealController is a slideable side menu (left, right or both), which slides with a help of your finger (or just by pressing the button, but it’s not as much cool as sliding).
- <figure name="6a7f" id="6a7f" class="graf--figure graf-after--p">
+ 
  ![](https://d262ilb51hltx0.cloudfront.net/max/800/1*uM5nPOq0tbieJBYMC0f1jg.png)
- </figure>
+ 
  I’ve tried a few other libraries providing this kind of control and PKRevealController is just the best. Very easy to setup, highly customizable and recognizes gestures very, very well. It could be included in iOS SDK as a standard control, really.
  #### CocoaPods:
- <pre name="e5b8" id="e5b8" class="graf--pre graf-after--h4">
- pod 'PKRevealController'
- </pre>
+ 
+         pod 'PKRevealController'
+ 
  [**pkluz/PKRevealController**
  _Introducing PKRevealController 2 - The second version of one of the most popular view controller containers for iOS…_github.com](https://github.com/pkluz/PKRevealController "https://github.com/pkluz/PKRevealController")[](https://github.com/pkluz/PKRevealController)
+
  ## 11. SlackTextViewController
+
  Have you ever used Slack iOS app? If you are working in a bigger software company, probably yes. For these people who haven’t — Slack rocks. And Slack’s iOS app too, especially for the great, custom text input control… which here you have — a code ready for use in your app!
  **Self growing text area? Check.Gestures recognizing, autocompletion, multimedia pasting? Check. Easy drop-in solution? Check.** What else can you possibly need?
  #### CocoaPods:
- <pre name="a80f" id="a80f" class="graf--pre graf-after--h4">
- pod 'SlackTextViewController'
- </pre>
+ 
+         pod 'SlackTextViewController'
+ 
  [**slackhq/SlackTextViewController**
  _SlackTextViewController - A drop-in UIViewController subclass with a growing text input view and other useful messaging…_github.com](https://github.com/slackhq/SlackTextViewController "https://github.com/slackhq/SlackTextViewController")[](https://github.com/slackhq/SlackTextViewController)
  ## 12. RETableViewManager
