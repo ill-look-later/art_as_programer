@@ -15,6 +15,7 @@
     * [Web IDL on chromium](meet_chromium/web_idl_on_chromium.md)
     * [chromium\_npapi\_Plugin](meet_chromium/chromium_npapi_plugin.md)
     * [The startup progress of  Any APP based on Chromium](meet_chromium/the_startup_progress_of_any_appbased_on_chromium.md)
+    * [Chromium Plugin Begin Again](meet_chromium/chromium-plugin-begin-again.md)
 * [career\_memory](career_memory/README.md)
     * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
     * [why need pointer pointing to another pointer](C_series_language/pointer_pointing_to_another_pointer.md)
