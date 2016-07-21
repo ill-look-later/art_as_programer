@@ -79,7 +79,7 @@ WebPluginImpl::WebPluginImpl(
       call: **if (!webPlugin->initialize(container.get()))**    (#第二条线，创建后plugin的初始化)
 
 下面的内容就是webplugin的初始化过程， 里面首先做了个判断， 确保这个plugin的render_view\_ 是存在的，之后这里构造了一个WebPluginDelegateProxy对象并通过Initialize函数初始化；初始化中完成了下面几件事情
-- 1. 发送一个FrameHostMsg_OpenChannelToPlugin IPC来初始化Plugin的IPCchannel，这个ipcchannel是Browser进程到Plugin的
+- 1. 发送一个FrameHostMsg_OpenChannelToPlugin IPC来初始化Plugin的IPC channel，这个ipcchannel是Browser进程到Plugin的
 - 2. 发送一个PluginMsg_CreateInstance IPC给Plugin进程创建PluginInstance
 - 3. 确定2完成后， 发送一个PluginMsg_Init IPC消息给Plugin初始化这个PluginInstance；
 - 4. 通过render_view\_->RegisterPluginDelegate(this); 将自己注册给RenderViewImpl
