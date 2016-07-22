@@ -12,7 +12,8 @@ function sleep(ms) {
     }
 }
 console.log("position 1");
+setTimeout("alert('3 seconds!')",3000);
 sleep(10000);//10s stop here
 console.log("position 2");
 ```
-
+这段代码就是设定了一个定时器“3秒后弹出一个alert框”；之后就在***当前任务**中
