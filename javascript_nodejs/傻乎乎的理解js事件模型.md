@@ -11,5 +11,8 @@ function sleep(ms) {
         ;
     }
 }
+console.log("position 1");
+sleep(10000);//10s stop here
+console.log("position 2");
 ```
 
