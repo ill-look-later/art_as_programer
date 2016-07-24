@@ -4,8 +4,6 @@
 
 ![界面](/program_project/img/fakeFM_Post.png)
 
-
-
 下面总结一下这个工程的流程和使用到得一些基本知识
 
 ## 应用到的基础知识
@@ -40,3 +38,11 @@
 * 为Cell添加简单地3D scale animation
 
 
+下面是一些代码块
+
+更新播放时间
+---
+
+```swift
+audioplayer.addPeriodicTimeObserverForInterval(CMTimeMakeWithSeconds(1.0, 60), queue: nil, usingBlock: { (t:CMTime)->Void in var time:String = ""; let current_sec = CMTimeGetSeconds(t) let curTimeInt:Int = Int(current_sec) let sec:Int = curTimeInt % 60; let minute:Int = Int(curTimeInt/60) time = minute < 10 ? "0\(minute):" : "\(minute):"; time += sec < 10 ? "0\(sec)" : "\(sec)"; self.playtime.text = time; // update the progress view if let item = (self.audioplayer.currentItem) { let duaration_sec = CMTimeGetSeconds(item.duration); if (duaration_sec.isNaN) { return } print(duaration_sec); print(current_sec); self.progressview.setProgress(Float(current_sec/duaration_sec), animated: true) print("update progress to \(self.progressview.progress)") } })
+```
