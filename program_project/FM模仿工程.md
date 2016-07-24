@@ -69,6 +69,7 @@ audioplayer.addPeriodicTimeObserverForInterval(CMTimeMakeWithSeconds(1.0, 60),
 ## 网络请求
 ---
 
+```swift
   let imgurl:NSURL = NSURL(string: url)!
   let request: NSURLRequest = NSURLRequest(URL: imgurl) 
   let urlSession = NSURLSession.sharedSession() 
@@ -83,4 +84,4 @@ audioplayer.addPeriodicTimeObserverForInterval(CMTimeMakeWithSeconds(1.0, 60),
       } 
   })
   datatask.resume()
-
+```
