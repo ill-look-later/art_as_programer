@@ -10,4 +10,4 @@
 - usb camera capture && decode && encode && realtime display
 - Get a deeper understanding about how linux kernel work
 - have a good time learn QML/QT On Embed linux
-
+- a little pity for platform TI DM8168
