@@ -7,4 +7,6 @@
 - porting QT framework to Imx6Q
 - BootLoad basic configure && compile && little Motify
 - linux driver, EIM, LVDS, Brightness, Ft5406
+- usb camera capture && decode && encode && realtime display
+- Get a deeper understanding about how linux kernel work
 
