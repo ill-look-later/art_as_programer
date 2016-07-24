@@ -66,3 +66,21 @@ audioplayer.addPeriodicTimeObserverForInterval(CMTimeMakeWithSeconds(1.0, 60),
 })
 ```
 
+## 网络请求
+---
+
+  let imgurl:NSURL = NSURL(string: url)!
+  let request: NSURLRequest = NSURLRequest(URL: imgurl) 
+  let urlSession = NSURLSession.sharedSession() 
+  let datatask = urlSession.dataTaskWithRequest(request,
+                                                completionHandler: {
+      (data: NSData?, response: NSURLResponse?, error:NSError?)->Void in
+      if (error != nil) { 
+        print("url request load data error", error?.description) 
+      } else if data != nil { 
+        let img = UIImage(data: (data)!)
+        self.imageCache[url] = img self.iv.image = img 
+      } 
+  })
+  datatask.resume()
+
