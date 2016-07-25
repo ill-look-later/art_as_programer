@@ -76,6 +76,7 @@
     * [C\/C++ 中字符串字面量](C_series_language/C_c++_string literal.md)
     * [C++ SIGNAL to QML SLOT in Qt](C_series_language/c++_signal_to_qml_slot_in_qt.md)
     * [透过 Linux 内核看无锁编程](C_series_language/lock_free_programming.md)
+    * [进程共享内存之间的同步](C_series_language/进程共享内存之间的同步.md)
 * [bullshit 中文称之为 扯蛋](bullshit/bullshit.md)
     * [with\_the\_bullshit\_courage\_to\_face\_the\_fucking\_life.md](bullshit/with_the_bullshit_courage_to_face_the_fucking_life.md)
 * [FrameWork And Library](framework_library/README.md)
