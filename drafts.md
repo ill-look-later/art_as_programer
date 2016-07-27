@@ -1,5 +1,9 @@
 void RenderWidget::OnRepaint(gfx::Size size_to_paint)
-void SetNeedsRedrawRect(gfx::Rect damage_rect);
+void RenderWidgetCompositor::SetNeedsRedrawRect(gfx::Rect damage_rect);
+void LayerTreeHost::SetNeedsRedrawRect(const gfx::Rect& damage_rect)
+
+
+
 
 RenderWidget::SetNeedsRedrawRect
 
