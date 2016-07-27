@@ -2,8 +2,13 @@ void RenderWidget::OnRepaint(gfx::Size size_to_paint)
 void RenderWidgetCompositor::SetNeedsRedrawRect(gfx::Rect damage_rect);
 void LayerTreeHost::SetNeedsRedrawRect(const gfx::Rect& damage_rect)
 void ProxyMain::SetNeedsRedraw(const gfx::Rect& damage_rect);
+void ThreadProxy::SetNeedsRedraw(const gfx::Rect& damage_rect)
+    PostTask(FROM_HERE, base::Bind(&ThreadProxy::SetNeedsRedrawRectOnImplThread,...);
 
-
+// LayerTreeHost<-->ProxyMain<-->ChannelMain
+//                                    |
+//                                    | 
+//                                ChannelImpl<-->ProxyImpl<-->LayerTreeHostImpl
 
 RenderWidget::SetNeedsRedrawRect
 
