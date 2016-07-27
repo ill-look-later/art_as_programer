@@ -15,7 +15,7 @@ void Scheduler::SetNeedsAnimate();
    > state_machine_.SetNeedsAnimate();ProcessScheduledActions();
 void Scheduler::ProcessScheduledActions();
    > call SchedulerClient* serial function according to action type
-
+ProxyImpl:  LayerTreeHostImplClient, SchedulerClient 
 
 
 
