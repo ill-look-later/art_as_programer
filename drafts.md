@@ -38,7 +38,56 @@ enum DrawMode {
  DRAW_MODE_RESOURCELESS_SOFTWARE
 };
 ```
-如果是  DRAW_MODE_RESOURCELESS_SOFTWARE 模式的话， 就会新创建一个临时的 **SoftwareRenderer** 对象调用 DrawFrame 函数进行绘制；其他情况的话则使用layer_tree_host_impl 内部维护的 SoftwareRenderer 对象会绘制；在DrawFrame 函数中完成绘制，并将其copy到bitmap中；
+如果是  DRAW
+```cpp
+void DirectRenderer::DrawFrame(RenderPassList* render_passes_in_draw_order,
+ float device_scale_factor,
+ const gfx::Rect& device_viewport_rect,
+ const gfx::Rect& device_clip_rect,
+ bool disable_picture_quad_image_filtering) {
+ TRACE_EVENT0("cc", "DirectRenderer::DrawFrame");
+ UMA_HISTOGRAM_COUNTS("Renderer4.renderPassCount",
+ render_passes_in_draw_order->size());
+ const RenderPass* root_render_pass = render_passes_in_draw_order->back();
+ DCHECK(root_render_pass);
+ DrawingFrame frame;
+ frame.render_passes_in_draw_order = render_passes_in_draw_order;
+ frame.root_render_pass = root_render_pass;
+ frame.root_damage_rect = Capabilities().using_partial_swap
+ ? root_render_pass->damage_rect
+ : root_render_pass->output_rect;
+ frame.root_damage_rect.Intersect(gfx::Rect(device_viewport_rect.size()));
+ frame.device_viewport_rect = device_viewport_rect;
+ frame.device_clip_rect = device_clip_rect;
+ frame.disable_picture_quad_image_filtering =
+ disable_picture_quad_image_filtering;
+ overlay_processor_->ProcessForOverlays(render_passes_in_draw_order,
+ &frame.overlay_list);
+ EnsureBackbuffer();
+ // Only reshape when we know we are going to draw. Otherwise, the reshape
+ // can leave the window at the wrong size if we never draw and the proper
+ // viewport size is never set.
+ output_surface_->Reshape(device_viewport_rect.size(), device_scale_factor);
+ BeginDrawingFrame(&frame);
+ for (size_t i = 0; i < render_passes_in_draw_order->size(); ++i) {
+ RenderPass* pass = render_passes_in_draw_order->at(i);
+ DrawRenderPass(&frame, pass);
+ for (ScopedPtrVector<CopyOutputRequest>::iterator it =
+ pass->copy_requests.begin();
+ it != pass->copy_requests.end();
+ ++it) {
+ if (i > 0) {
+ // Doing a readback is destructive of our state on Mac, so make sure
+ // we restore the state between readbacks. http://crbug.com/99393.
+ UseRenderPass(&frame, pass);
+ }
+ CopyCurrentRenderPassToBitmap(&frame, pass->copy_requests.take(it));
+ }
+ }
+ FinishDrawingFrame(&frame);
+ render_passes_in_draw_order->clear();
+}
+```
 
 LayerTreeHostImpl::DidDrawAllLayers(const FrameData& frame);
 
