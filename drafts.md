@@ -92,7 +92,7 @@ void DirectRenderer::DrawFrame(RenderPassList* render_passes_in_draw_order,
 ```
 当绘制完成后调用**FinishDrawingFrame(&frame);**来完成绘制；绘制完成后调用FinishDrawingFrame函数来通知SoftwareOutputDevice::EndPaint() 来将绘制完成的数据copy到显示后端去完成显示；比如说在我们嵌入式linux平台是， 我们对接到dfb的surface上；之后通过dfbwindow的相关接口跟新显示；
 
-很遗憾的是这部分在新的chromium中变动还是很大的， 我这部分的分析是基于v39上；在新的版本v50版本上这部分很多函数都有所更新， 不过整体的流程还是大致一样额，具体可以到最新的代码上看一下
+很遗憾的是这部分在新的chromium中变动还是很大的， 我这部分的分析是基于v39上；在新的版本v50版本上这部分很多函数都有所更新， 不过整体的流程还是大致一样额，具体可以到最新的代码上看一下；
 
 
 
