@@ -129,5 +129,3 @@ app.use(function(req, res, next) {
 
 在以后的中间件里你就可以使用 req.db对象来查询数据库了。
 
-
-

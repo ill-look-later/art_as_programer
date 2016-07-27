@@ -2,9 +2,7 @@
 
 首先看看它长什么样, 估计有的人一看就知道我是照个某个博客抄袭的某个应用\/奸笑; 看图:
 
-| ![界面](/program_project/img/fakeFM_Post.png) |
-| :--- |
-|
+![界面](/program_project/img/fakeFM_Post.png)
 
 下面总结一下这个工程的流程和使用到得一些基本知识
 
@@ -39,3 +37,51 @@
 
 * 为Cell添加简单地3D scale animation
 
+
+下面是一些代码块
+
+## 更新播放时间
+
+```swift
+audioplayer.addPeriodicTimeObserverForInterval(CMTimeMakeWithSeconds(1.0, 60),
+                                               queue: nil,
+                                               usingBlock: { 
+             (t:CMTime)->Void in
+             var time:String = "";
+             let current_sec = CMTimeGetSeconds(t)
+             let curTimeInt:Int = Int(current_sec)
+             let sec:Int = curTimeInt % 60;
+             let minute:Int = Int(curTimeInt/60)
+             time = minute < 10 ? "0\(minute):" : "\(minute):";
+             time += sec < 10 ? "0\(sec)" : "\(sec)";
+             self.playtime.text = time;
+ // update the progress view 
+             if let item = (self.audioplayer.currentItem) {
+                 let duaration_sec = CMTimeGetSeconds(item.duration);
+                 if (duaration_sec.isNaN) { 
+                     return
+                 }
+                 self.progressview.setProgress(Float(current_sec/duaration_sec), animated: true)
+              }
+})
+```
+
+## 网络请求
+---
+
+```swift
+  let imgurl:NSURL = NSURL(string: url)!
+  let request: NSURLRequest = NSURLRequest(URL: imgurl) 
+  let urlSession = NSURLSession.sharedSession() 
+  let datatask = urlSession.dataTaskWithRequest(request,
+                                                completionHandler: {
+      (data: NSData?, response: NSURLResponse?, error:NSError?)->Void in
+      if (error != nil) { 
+        print("url request load data error", error?.description) 
+      } else if data != nil { 
+        let img = UIImage(data: (data)!)
+        self.imageCache[url] = img self.iv.image = img 
+      } 
+  })
+  datatask.resume()
+```
