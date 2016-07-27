@@ -24,8 +24,10 @@ DrawResult ThreadProxy::ScheduledActionDrawAndSwapIfPossible()
   - DrawSwapInternal(forced_draw);
 
 DrawResult ThreadProxy::DrawSwapInternal(bool forced_draw);
-  - layer_tree_host_impl->DrawLayers( the_layer_need_draw)
+  - layer_tree_host_impl->DrawLayers( const FrameData& frame )
   -  LayerTreeHostImpl::DidDrawAllLayers(const FrameData& frame) 
+
+其中，DrawLayers 中会判断这个
 
 LayerTreeHostImpl::DidDrawAllLayers(const FrameData& frame);
 
