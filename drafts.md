@@ -3,7 +3,17 @@ void RenderWidgetCompositor::SetNeedsRedrawRect(gfx::Rect damage_rect);
 void LayerTreeHost::SetNeedsRedrawRect(const gfx::Rect& damage_rect)
 void ProxyMain::SetNeedsRedraw(const gfx::Rect& damage_rect);
 void ThreadProxy::SetNeedsRedraw(const gfx::Rect& damage_rect)
-    PostTask(FROM_HERE, base::Bind(&ThreadProxy::SetNeedsRedrawRectOnImplThread,...);
+   > PostTask(FROM_HERE, base::Bind(&ThreadProxy::SetNeedsRedrawRectOnImplThread,...);
+
+void ThreadProxy::SetNeedsRedrawRectOnImplThread(const gfx::Rect& damage_rect)
+   > impl().layer_tree_host_impl->SetViewportDamage(damage_rect);
+
+void ThreadProxy::SetNeedsRedrawOnImplThread();
+   > impl().scheduler->SetNeedsRedraw();
+
+void Scheduler::SetNeedsAnimate();
+   > state_machine_.SetNeedsAnimate();
+   > ProcessScheduledActions();
 
 // LayerTreeHost<-->ProxyMain<-->ChannelMain
 //                                    |
