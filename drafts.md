@@ -90,7 +90,9 @@ void DirectRenderer::DrawFrame(RenderPassList* render_passes_in_draw_order,
  render_passes_in_draw_order->clear();
 }
 ```
-当绘制完成后调用**FinishDrawingFrame(&frame);**来完成绘制；
+当绘制完成后调用**FinishDrawingFrame(&frame);**来完成绘制；绘制完成后调用FinishDrawingFrame函数来通知SoftwareOutputDevice::EndPaint() 来将绘制完成的数据copy到显示后端去完成显示；比如说在我们嵌入式linux平台是， 我们对接到dfb的surface上；之后通过dfbwindow的相关接口跟新显示；
+
+
 
 
 LayerTreeHostImpl::DidDrawAllLayers(const FrameData& frame);
