@@ -31,7 +31,12 @@ LayerTreeHostImpl::DidDrawAllLayers(const FrameData& frame);
 其中，DrawLayers 中会判断这个 framedata中是否有需要更新的区域， 如果没有就直接返回了；
 否则就拿当前系统是使用哪种绘制方式 **const DrawMode draw_mode = GetDrawMode();**
 ```CPP
-enum DrawMode { DRAW_MODE_NONE, DRAW_MODE_HARDWARE, DRAW_MODE_SOFTWARE, DRAW_MODE_RESOURCELESS_SOFTWARE };
+enum DrawMode {
+ DRAW_MODE_NONE,
+ DRAW_MODE_HARDWARE,
+ DRAW_MODE_SOFTWARE,
+ DRAW_MODE_RESOURCELESS_SOFTWARE
+};
 ```
 
 LayerTreeHostImpl::DidDrawAllLayers(const FrameData& frame);
