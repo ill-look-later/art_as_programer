@@ -38,7 +38,9 @@ enum DrawMode {
  DRAW_MODE_RESOURCELESS_SOFTWARE
 };
 ```
+
 如果是  DRAW
+
 ```cpp
 void DirectRenderer::DrawFrame(RenderPassList* render_passes_in_draw_order,
  float device_scale_factor,
