@@ -12,8 +12,7 @@ void ThreadProxy::SetNeedsRedrawOnImplThread();
    > impl().scheduler->SetNeedsRedraw();
 
 void Scheduler::SetNeedsAnimate();
-   > state_machine_.SetNeedsAnimate();
-   > ProcessScheduledActions();
+   > state_machine_.SetNeedsAnimate();ProcessScheduledActions();
 
 // LayerTreeHost<-->ProxyMain<-->ChannelMain
 //                                    |
