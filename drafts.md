@@ -15,8 +15,7 @@ void Scheduler::SetNeedsAnimate();
    > state_machine_.SetNeedsAnimate();ProcessScheduledActions();
 void Scheduler::ProcessScheduledActions();
    > call SchedulerClient* serial function according to action type
-void Scheduler::DrawAndSwapIfPossible()
-   > 判断是否可以绘制， 如果可以绘制的话，调用client的绘制接口
+void Scheduler::DrawAndSwapIfPossible()//判断是否可以绘制， 如果可以绘制的话，调用client的绘制接口
   - client_->ScheduledActionDrawAndSwapIfPossible();
   - state_machine_.DidDrawIfPossibleCompleted(result); //绘制完成后更新状态机的状态
 
