@@ -13,6 +13,15 @@ void ThreadProxy::SetNeedsRedrawOnImplThread();
 
 void Scheduler::SetNeedsAnimate();
    > state_machine_.SetNeedsAnimate();ProcessScheduledActions();
+void Scheduler::ProcessScheduledActions();
+
+
+
+
+
+
+
+
 
 // LayerTreeHost<-->ProxyMain<-->ChannelMain
 //                                    |
