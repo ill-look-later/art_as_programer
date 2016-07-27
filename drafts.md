@@ -39,7 +39,7 @@ enum DrawMode {
 };
 ```
 
-如果是  DRAW_MODE_RESOURCELESS_SOFTWARE 模式，这里会新创建一个临时的SoftRender来绘制
+如果是  DRAW_MODE_RESOURCELESS_SOFTWARE 模式，这里会新创建一个临时的SoftRender来绘制；否则调用layer_tree_host_impl 内部的 SoftRender对象来完成绘制，在DrawFrame中
 
 ```cpp
 void DirectRenderer::DrawFrame(RenderPassList* render_passes_in_draw_order,
