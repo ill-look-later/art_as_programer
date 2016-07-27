@@ -38,7 +38,7 @@ enum DrawMode {
  DRAW_MODE_RESOURCELESS_SOFTWARE
 };
 ```
-如果是  DRAW_MODE_RESOURCELESS_SOFTWARE 模式的话， 就会新创建一个临时的 **SoftwareRenderer** 对象调用 DrawFrame 函数进行绘制；其他情况的话则使用layer_tree_host_impl 内部维护的 SoftwareRenderer 对象会绘制
+如果是  DRAW_MODE_RESOURCELESS_SOFTWARE 模式的话， 就会新创建一个临时的 **SoftwareRenderer** 对象调用 DrawFrame 函数进行绘制；其他情况的话则使用layer_tree_host_impl 内部维护的 SoftwareRenderer 对象会绘制；
 
 LayerTreeHostImpl::DidDrawAllLayers(const FrameData& frame);
 
