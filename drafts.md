@@ -39,7 +39,7 @@ enum DrawMode {
 };
 ```
 
-如果是  DRAW
+如果是 DRAW
 
 ```cpp
 void DirectRenderer::DrawFrame(RenderPassList* render_passes_in_draw_order,
