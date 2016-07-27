@@ -23,6 +23,7 @@ DrawResult ThreadProxy::ScheduledActionDrawAndSwapIfPossible()
   - DCHECK(impl().layer_tree_host_impl->CanDraw());
   - DrawSwapInternal(forced_draw);
 
+DrawResult ThreadProxy::DrawSwapInternal(bool forced_draw);
 
 
 ProxyImpl:  LayerTreeHostImplClient, SchedulerClient 
