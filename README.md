@@ -2,7 +2,6 @@
 
 All of those just for note some information i recv
 
-~~官方文档follow练习~~
 
 ## Plan
 
