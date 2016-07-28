@@ -2,3 +2,10 @@
 
 All of those just for note some information i recv
 
+
+Plan
+－－－
+
+
+
+
