@@ -18,6 +18,7 @@ swift的中optional 变量的判断和解析虽然带来了便利， 但是同�
 
 当解析的时可能由于技巧不足，就可能写成下面这个样子
 
+```swift
 if let jsonDic = json as? NSDictionary {
   if let product = jsonDic["product"] as? String {
     if let subclass = product["subclass"] as? ... {
