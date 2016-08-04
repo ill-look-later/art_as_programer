@@ -16,4 +16,5 @@ All of those just for note some information i recv
 * 阅读srs的一部分代码，看看大致的实现，计划？
 * 阅读《黑客与画家》
 * 利用 nodejs electron 框架开发一个小的音乐播放器？ 仿照网易云音乐？
+  > 这个原来对我来说可能是个问题， 现在妹纸学前端了， 正好让她做页面那块....
 
