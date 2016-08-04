@@ -1,4 +1,4 @@
-
+qml 中获取到的资源路径url 转化成系统路径PATH
 
 
 ```javascript
