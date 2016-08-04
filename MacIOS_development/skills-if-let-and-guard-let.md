@@ -35,3 +35,12 @@ if let jsonDic = json as? NSDictionary {
 
 其实和很多其它语言一样， 解析规则是满足前后顺序的，就像｀c语言中if｀ if(a && a->isbool && a->f()) 一样当a == NULL 时，后面的条件就不会去访问；所以在swift中我们可以写成下面这两种情况来使代码看起来更优雅一点；👀下面；
 
+```swift
+if let jsonDic = json as? NSDictionary,
+       product = jsonDic["product"] as? ...,
+       subclass= product["subclass"] as? ...,
+       subclass1= subclass["subclass1"] as? ...,
+       subclass2= subclass1["suclass2"] as? ...,
+       key = subclass2["key"] as? Int {
+  print("value:/(key)")
+}
