@@ -50,6 +50,7 @@
     * [傻乎乎的理解js事件模型](javascript_nodejs/傻乎乎的理解js事件模型.md)
     * [URL组成分析](javascript_nodejs/url组成分析.md)
     * [Electron: jQuery is not defined](javascript_nodejs/electron-jquery-is-not-defined.md)
+    * [a share componnent from my girl](javascript_nodejs/a-share-componnent-from-my-girl.md)
 * [Apple Swift系列积累](MacIOS_development/README.md)
     * [swift basic](MacIOS_development/swift.md)
     * [27 Highest Star Github IOS OpenSource Library](MacIOS_development/27-highest-star-github-ios-opensource-library.md)
