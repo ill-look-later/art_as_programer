@@ -49,3 +49,9 @@ if let jsonDic = json as? NSDictionary,
 if let value = JSON(json)["product"]["subclass"]["subclass1"]["subclass2"]["subclass3"]["key"] {
   print("value:/(value)");
 }
+```
+
+
+
+
+
