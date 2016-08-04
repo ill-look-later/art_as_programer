@@ -15,6 +15,7 @@ A better an more generic solution IMO:
 <!-- normal script imports etc --> 
 <script src="scripts/jquery.min.js"></script> 
 <script src="scripts/vendor.js"></script> 
+
 <!-- Insert this line after script imports --> 
 <script>
   if (window.module) 
@@ -24,5 +25,8 @@ A better an more generic solution IMO:
 
 **Benefits**
 
-* Works for both browser and electron with the same code* Fixes issues for ALL 3rd-party libraries (not just jQuery) without having to specify each one* Script Build / Pack Friendly (i.e. Grunt / Gulp all scripts into vendor.js)* Does NOT require `node-integration` to be false
+* Works for both browser and electron with the same code
+* Fixes issues for ALL 3rd-party libraries (not just jQuery) without having to specify each one
+* Script Build / Pack Friendly (i.e. Grunt / Gulp all scripts into vendor.js)
+* Does NOT require `node-integration` to be false
 
