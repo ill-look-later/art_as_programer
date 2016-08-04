@@ -42,5 +42,10 @@ if let jsonDic = json as? NSDictionary,
        subclass1= subclass["subclass1"] as? ...,
        subclass2= subclass1["suclass2"] as? ...,
        key = subclass2["key"] as? Int {
-  print("value:/(key)")
+  print("value:/(key)");
+}
+
+// 或者下面这样更优雅的处理
+if let value = JSON(json)["product"]["subclass"]["subclass1"]["subclass2"]["subclass3"]["key"] {
+  print("value:/(value)");
 }
