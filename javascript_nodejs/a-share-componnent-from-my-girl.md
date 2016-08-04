@@ -1,2 +1,2 @@
-# girl friend practice on js animation
+# Girl friend practice on js animation
 
