@@ -12,14 +12,11 @@
 * 锁死开始按钮， 结束后恢复开始按钮
 * `setTimeout` 和 使用随即生成的次数控制结束
 
-
-几点没有做到的
----
+## 几点没有做到的
 
 实际应用中，这样可能是不行的／奸笑，还得控制概率的大小，而且最终的结果应该在服务器上做， 在浏览器中做这样的逻辑很容易被恶意js代码篡改掉
 
-
-```html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +60,7 @@
             <li class="selected">iphone 4s</li>
             <li>iphone 5</li>
             <li>iphone 5s</li>
-            
+
         </ul>
         <ul id="box2">
             <li>iphone 6</li> 
@@ -74,7 +71,7 @@
             <li>iphone 6p</li>
             <li>iphone 6s</li>
             <li>iphone 8s</li>
-            
+
         </ul>
     </divi>
     <script>
@@ -91,7 +88,7 @@
             var items = document.getElementsByTagName("li");
             items[4].onclick = undefined;
             items[4].innerHTML = "wait"
-            
+
             var query = [0, 1, 2, 5, 8, 7, 6, 3];
             var query_index = 0;
 
@@ -122,7 +119,7 @@
                     query_index = 0;
                 }
                 items[query[query_index]].className = "selected";
-                
+
                 var looped_times = times();
                 if (looped_times > loop_times*2/3) {
                     loop_speed += 9;
@@ -157,3 +154,4 @@
 </body>
 </html>
 ```
+
