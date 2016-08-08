@@ -84,6 +84,7 @@
     * [透过 Linux 内核看无锁编程](C_series_language/lock_free_programming.md)
     * [进程共享内存之间的同步](C_series_language/进程共享内存之间的同步.md)
     * [qml url path to logic path](C_series_language/qml-url-path-to-logic-path.md)
+    * [Posix Vs SystemV shared memory](C_series_language/posix-vs-systemv-shared-memory.md)
 * [bullshit 中文称之为 扯蛋](bullshit/bullshit.md)
     * [with\_the\_bullshit\_courage\_to\_face\_the\_fucking\_life.md](bullshit/with_the_bullshit_courage_to_face_the_fucking_life.md)
 * [FrameWork And Library](framework_library/README.md)
