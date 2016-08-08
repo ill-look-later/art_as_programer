@@ -15,6 +15,4 @@
        MAP_SHARED,
        backend_store_handle,
        SEEK_SET);
-
-  
 ```
