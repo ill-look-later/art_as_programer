@@ -9,7 +9,12 @@
     printf("\n ftruncate failed\n");
     return;
   }
-  mmap(NULL, sizeof(RTSettings),PROT_READ|PROT_WRITE, MAP_SHARED,backend_store_handle, SEEK_SET);
+  mmap(NULL,
+       sizeof(RTSettings),
+       PROT_READ|PROT_WRITE,
+       MAP_SHARED,
+       backend_store_handle,
+       SEEK_SET);
 
   
 ```
