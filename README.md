@@ -8,7 +8,7 @@ All of those just for note some information i recv
 * ~~利用豆瓣FM的api实现一个stream流的播放~~
 * ~~7DaysNodejs nodejs的基础库过一遍~~
 * ~~nodejs官方教程基础库~~
-* ~~使用jeklly搭建一个静态[博客](博客)~~
+* ~~使用jeklly搭建静态[博客](http://huangong.github.io/GreatBlog/)~~
 * ECMAscript6跟进练习［es6.ruanyifeng.com](http://es6.ruanyifeng.com/#docs/intro)
 * ~~nodejs express socket.io broadcast live video~~
 * 模仿实现一个swift版本的微博客户端
