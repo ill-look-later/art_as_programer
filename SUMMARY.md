@@ -71,6 +71,7 @@
         * [Play Streaming Audio](MacIOS_development/play-streaming-audio.md)
         * [http xml resquest](MacIOS_development/http-xml-resquest.md)
     * [skills: if let and guard let](MacIOS_development/skills-if-let-and-guard-let.md)
+    * [skills: capture list in clourse](MacIOS_development/skills-capture-list-in-clourse.md)
 * [C系列语言积累](C_series_language/README.md)
     * [HowTo\_using\_autoconf\_automake](C_series_language/autoconf_automake_create_linux_package.md)
     * [c++ access class private variable](C_series_language/c++_access_class_private_variable.md)
