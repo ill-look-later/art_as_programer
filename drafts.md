@@ -135,7 +135,7 @@ RenderWidgetCompositor里面有cc::LayerTreeHost<layer_tree_host_> 对象；
 
 
 
-```Cpp
+```C++
 std::unique_ptr<RenderWidgetHostIterator> widgets(
       RenderWidgetHostImpl::GetAllRenderWidgetHosts());
   while (RenderWidgetHost* widget = widgets->GetNextHost()) {
