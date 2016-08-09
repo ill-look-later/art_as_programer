@@ -14,3 +14,12 @@
     // closure body goes here
 }
 ```
+如果是存在闭包参数，那么就变成了下面这个样子了：
+```swift
+doSomeThingAsync(request: req, handle: {
+  [unowner self, weak ohterInstance] (arg1, arg2...) in 
+
+  //closure block, your code here
+  ...
+});
+```
