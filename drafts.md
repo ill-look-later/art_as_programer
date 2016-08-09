@@ -131,3 +131,21 @@ RenderWidgetCompositor::SetNeedsRedrawRect(const gfx::Recctt&damagerect)
 render_widget 维护一个 RenderWidgetCompositor 【compositor_】对象
 
 RenderWidgetCompositor里面有cc::LayerTreeHost<layer_tree_host_> 对象；
+
+
+
+
+```Cpp
+std::unique_ptr<RenderWidgetHostIterator> widgets(
+      RenderWidgetHostImpl::GetAllRenderWidgetHosts());
+  while (RenderWidgetHost* widget = widgets->GetNextHost()) {
+    RenderViewHost* rvh = RenderViewHost::From(widget);
+    if (!rvh)
+      continue;
+
+    // Skip widgets in other processes.
+    if (rvh->GetProcess()->GetID() != GetID())
+      continue;
+
+    rvh->OnWebkitPreferencesChanged();
+```
