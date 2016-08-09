@@ -1,4 +1,4 @@
 # 三星ChromiumGStreamerBackend中的MediaHost 与 MediaProcess
 
 
-通过MediaProcessHost::Get接口可以得到MediaProcessHost对象， 这样便可以在UI线程当中访问mediaprocess
+通过`MediaProcessHost::Get`接口可以得到`MediaProcessHost`对象， 这样便可以在UI线程当中访问mediaprocess
