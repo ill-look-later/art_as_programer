@@ -8,10 +8,11 @@ All of those just for note some information i recv
 * ~~利用豆瓣FM的api实现一个stream流的播放~~
 * ~~7DaysNodejs nodejs的基础库过一遍~~
 * ~~nodejs官方教程基础库~~
-* Jascript ECMAscript6 跟进练习 阮一峰的文档 [http:\/\/es6.ruanyifeng.com\/\#docs\/intro](http://es6.ruanyifeng.com/#docs/intro)
+* ~~使用jeklly搭建静态[博客](http://huangong.github.io/GreatBlog/)~~
+* ECMAscript6跟进练习［es6.ruanyifeng.com](http://es6.ruanyifeng.com/#docs/intro)
 * ~~nodejs express socket.io broadcast live video~~
 * 模仿实现一个swift版本的微博客户端
-* Xreader 的一个readme.md 完成介绍
+* ~~Xreader 的一个readme.md 完成介绍~~
 * 实现XReader的一个youtubedl的扩展：c/c++部分搞定，现在要export到qml上下文中...
 * 阅读srs的一部分代码，看看大致的实现，计划？
 * 阅读《黑客与画家》
