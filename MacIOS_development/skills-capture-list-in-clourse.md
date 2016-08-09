@@ -35,3 +35,21 @@ doSomeThingAsync(request: req, handle: {
 
 ![引用关系](./img/closureReference2x.png)
 
+
+swift中这种写法和思想其实和其它语言很想， 就像c++11 标准中的lambda表达式；它定义的闭包和swift中长得惊人的相似：
+
+```c++
+#include <algorithm>
+#include <cmath>
+
+void abssort(float* x, unsigned n) {
+    std::sort(x, x + n,
+        // Lambda expression begins
+        [](float a, float b) {
+            return (std::abs(a) < std::abs(b));
+        } // end of lambda expression
+    );
+}
+
+```
+
