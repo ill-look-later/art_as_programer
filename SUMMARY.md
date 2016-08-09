@@ -39,6 +39,7 @@
     * [How start Front End](IT_Man_Skills/how_start_front_end.md)
     * [设计模式导航](IT_Man_Skills/设计模式导航.md)
     * [一些列工具类网站导航](IT_Man_Skills/一些列工具类网站导航.md)
+    * [gitbook editor 同时推送到github与gitbook](IT_Man_Skills/gitbook-editor-同时推送到github与gitbook.md)
 * [Js Node系列](javascript_nodejs/README.md)
     * [Express FrameWork](javascript_nodejs/express_framework.md)
         * [express.use 的作用](javascript_nodejs/expressuse_de_zuo_yong.md)
