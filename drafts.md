@@ -155,6 +155,14 @@ std::unique_ptr<RenderWidgetHostIterator> widgets(
 
 
 helloMessage 
-
-这个调用是从browserChildProcessHostDelegate处继承来的， 当BrowserChiledProssHost接收到hellomsg之后就转发到了Plugin， V47中新增的mediaHost同样的流程
 PluginProcessHost::OnChannelConnected(int32 peer_pid)
+
+这个调用是从browserChildProcessHostDelegate处继承来的， 当BrowserChiledProssHost接收到hellomsg之后就转发到了PluginProcessHost， V47中新增的mediaHost同样的流程；
+
+在每个进程Connect来的时候，同步所有的config到对应的子进程中....
+
+向render进程发送设置可以通过render_process_host_impl.cc 发送 ChildProcessMsg_xxx 个对应的render进程；
+
+
+
+
