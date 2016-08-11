@@ -156,4 +156,5 @@ std::unique_ptr<RenderWidgetHostIterator> widgets(
 
 helloMessage 
 
+这个调用是从browserChildProcessHostDelegate处继承来的， 当BrowserChiledProssHost接收到hellomsg之后就转发到了Plugin， V47中新增的mediaHost同样的流程
 PluginProcessHost::OnChannelConnected(int32 peer_pid)
