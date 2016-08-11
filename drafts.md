@@ -163,7 +163,7 @@ PluginProcessHost::OnChannelConnected(int32 peer_pid)
 
 向render进程发送设置可以通过render_process_host_impl.cc 发送 ChildProcessMsg_xxx 个对应的render进程；
 
-
+有静态函数RenderProcessHost::AllHostIterator();可以拿到所有的render_process_host 来发消息
 
 
 
