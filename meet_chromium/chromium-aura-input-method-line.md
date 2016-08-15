@@ -5,8 +5,8 @@ chromium 的input作为整个新的Aura UI这部分的基础实现， 他为我�
 LinuxInputMethodContext
 
 ```c++
-	class UI_BASE_IME_EXPORT LinuxInputMethodContext {
-	 public:
+class UI_BASE_IME_EXPORT LinuxInputMethodContext {
+public:
 	  virtual ~LinuxInputMethodContext() {}
 	
 	  // Dispatches the key event to an underlying IME.  Returns true if the key
@@ -27,7 +27,7 @@ LinuxInputMethodContext
 	
 	  // Blurs the context.
 	  virtual void Blur() = 0;
-	};
+};
 ```
 
 通过这里， 的focus，blur，reset，setcursorLocation DispatchKeyEvent 等几个简单的函数来实现输入法的显示/隐藏、侦听ui事件等等功能； 比如说对应到具体linux平台上，在Focus函数中，可调用gtk的 `gtk_im_context_focus_in(gtk_context_);`函数来call其系统平台的键盘；
