@@ -3,6 +3,7 @@
 chromium 的input作为整个新的Aura UI这部分的基础实现， 他为我们完成了input_mthod_base.h类， 在linux平台上， 有`InputMethodAuraLinux` 实现部分负责和输入法对接部分，在Aura的window tree host的实现部分，通过GetInputMethod函数来触发 `input_method_factory.cc` 工厂实现文件来创建不同对应不同平台的实现， 而在`InputMethodAuraLinux`中通过管理LinuxInputMethodContext 来对接不同平台的具体输入法框架，不如说ibus， fcitx...;
 
 LinuxInputMethodContext
+
 ```c++
 	class UI_BASE_IME_EXPORT LinuxInputMethodContext {
 	 public:
