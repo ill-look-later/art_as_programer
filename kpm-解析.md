@@ -2,7 +2,10 @@
 
 来自阮一峰：
 
-原始的借鉴之处：[](http://jakeboxer.com/blog/2009/12/13/the-knuth-morris-pratt-algorithm-in-my-own-words/)
+> [原始的借鉴之处](http://jakeboxer.com/blog/2009/12/13/the-knuth-morris-pratt-algorithm-in-my-own-words/)
+
+文章在用来自快课网
+
 很久以前，我一直以来的印象是KMP字符串匹配算法很麻烦，很难懂。直到这篇文章的出现。
 
 [字符串匹配](http://en.wikipedia.org/wiki/String_searching_algorithm)是计算机的基本任务之一。
