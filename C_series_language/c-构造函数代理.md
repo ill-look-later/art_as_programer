@@ -42,6 +42,9 @@ int main(int argc, char const *argv[])
 - 是通过无参数的构造函数创建的`CDelegate`对象
 - 为了排除干扰，main函数中没有去调用`delete delegate`对象
 
+Case 1 输出
+---
+
 下面是运行结果：
 ```shell
 CDelegate() be called
