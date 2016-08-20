@@ -101,5 +101,4 @@ huan@Macmini:~/Desktop$ ./a.out
 CDelegate(int value) be called
 CDelegate() be called
 value_: 0
-
 ```
