@@ -51,7 +51,6 @@ CDelegate() be called
 CDelegate(int value) be called
 CDelegate destroyed
 value_: 0
-
 ```
 
 Case 2
