@@ -153,4 +153,4 @@ using obj:0x13cfc20 get value_: 0
 
 分析与结论:
 ---
-从case 1的输出可以看到， 如果我们在一个构造函数的函数体中去调用另一个构造函数， 实际上会发生另外一次构造函数和析构函数， 也就是说我们在构造函数CDelegate() 中通过`CDelegate(int value)`构造了一个新的CDelegate对象，而这个对象作为一个临时变量
+从case 1的输出可以看到， 如果我们在一个构造函数的函数体中去调用另一个构造函数， 实际上会发生另外一次构造函数和析构函数， 也就是说我们在构造函数CDelegate() 中通过`CDelegate(int value)`构造了一个新的CDelegate对象，而这个对象作为一个临时变量，在构造函数`CDelegate()`运行完之后， 临时的对象就析构了；所以才会出现`CDelegate destroyed` 的打印输出； 在case 3中会印证这个想法；
