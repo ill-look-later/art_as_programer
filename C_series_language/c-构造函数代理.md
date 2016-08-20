@@ -125,7 +125,6 @@ public:
 	int get_vaule() {
 		return value_;
 	}
-
 private:
 	int value_;
 };
@@ -148,7 +147,6 @@ CDelegate() be called; this object is:0x13cfc20
 CDelegate(int value) be called, this object is:0x7ffc4b06b4e0
 obj:0x7ffc4b06b4e0 going to die, CDelegate destroyed
 using obj:0x13cfc20 get value_: 0
-
 ```
 
 分析与结论:
@@ -160,3 +158,5 @@ case 2中是C++11文档中所写到的，c++11开始支持`委托构造函数` �
 case 3中， 我将每一个类对象的指针都打印出来了， 从case 3的输出可以看出； case 1的情形下， 首先通过CDelegate() 创建了具体的一个对象`0x13cfc20` ， 在这个函数体中， 我们又通过`CDelegate(int value)`创建了一个对象`0x7ffc4b06b4e0` 而这个对象在构造函数`CDelegate()`离开的时候作为临时变量被析构了；
 
 而我在编程中就是犯了这个错误；最近在学apple 的swift中， 构造函数的委托都是放在具体的函数体中， 而我想当然的认为C++11以上的标准也会使用同样的策略（ps: 当然没有仔细想， 就想当然的用了）; 如此👀来， c++11等新的标准引入了大量的新的必要的特性， 包括我之前写的一个swift lambda表达式 和 c++中的一个对比， 包括值捕获，捕获列表；都非常的相似，但是同样的，swift作为后起之秀， 没有历史兼容等等包袱， 可以大刀阔斧的改进和使用优良的设计；包括switch case中默认的break，都能让程序跑起来更加的“意料之中”； 而不是意料之外；当然也不是没有缺点， 新的C++也足够足够的好，当程序语言，永远都没有最好；
+
+所以，
