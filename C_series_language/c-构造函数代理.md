@@ -95,8 +95,6 @@ huan@Macmini:~/Desktop$ g++ main.cc
 main.cc:5:26: warning: delegating constructors only available with -std=c++11 or -std=gnu++11
   CDelegate(): CDelegate(0) {
                           ^
-
-
 huan@Macmini:~/Desktop$ ./a.out 
 CDelegate(int value) be called
 CDelegate() be called
