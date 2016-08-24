@@ -2,5 +2,10 @@
 
 static assert用于在`编译时`的断言检测，也就是说，在编译器编译代码的时候，就检测这个条件是否成立， 如果检测失败`false` 则终止编译， 表示这里有某项必须满足的条件是不满足的
 
+语法
+---
 
-
+>   **static_assert** **(** bool_constexpr **,** message **)** | (since C++11)
+>   **static_assert** **(** bool_constexpr  **)**              | (since C++17)
+                                                                  
+其中 bool_constexpr 布尔表达式， 如果为`true` 则这个语句没有任何作用， 否则， 则在编译输出中输出 `message` 信息，并且终止编译；从c++17 开始`message`参数可以被忽略；
