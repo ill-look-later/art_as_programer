@@ -9,3 +9,8 @@ static assert用于在`编译时`的断言检测，也就是说，在编译器�
 >   **static_assert** **(** bool_constexpr  **)**              | (since C++17)
                                                                   
 其中 bool_constexpr 布尔表达式， 如果为`true` 则这个语句没有任何作用， 否则， 则在编译输出中输出 `message` 信息，并且终止编译；从c++17 开始`message`参数可以被忽略；
+
+Note
+---
+
+因为`message` 必须是一个字符串字面量（`literal`）, 所以它不能包含动态的信息，也不能包含常量表达式等任何不是字面量的信息;
