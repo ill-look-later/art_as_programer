@@ -98,6 +98,6 @@
     * [libevent](framework_library/libevent.md)
     * [Protocol Buffer From Google](framework_library/protocol_buffer_from_google.md)
 * [drafts](drafts.md)
-* [他人的经典](他人的经典.md)
-    * [KMP 解析](kpm-解析.md)
+* [他人的经典](来自他人的经典分析/README.md)
+    * [KMP 解析](来自他人的经典分析/kpm-解析.md)
 
