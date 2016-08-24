@@ -96,9 +96,9 @@
     * [libuv](framework_library/libuv.md)
     * [libevent](framework_library/libevent.md)
     * [Protocol Buffer From Google](framework_library/protocol_buffer_from_google.md)
-* [语言无关](语言无关.md)
-    * [静态链表](静态链表.md)
+* [他人的经典](来自他人的经典分析/README.md)
+    * [KMP 解析](来自他人的经典分析/kpm-解析.md)
+* [语言无关数据结构算法技巧等等](Computer Science/README.md)
+    * [静态链表的理解与分析](Computer Science/静态链表.md)
 * [drafts](drafts.md)
-* [他人的经典](他人的经典.md)
-    * [KMP 解析](kpm-解析.md)
 
