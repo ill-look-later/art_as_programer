@@ -99,5 +99,7 @@
     * [Protocol Buffer From Google](framework_library/protocol_buffer_from_google.md)
 * [来自他人的经典分析](来自他人的经典分析/README.md)
     * [KMP 解析](来自他人的经典分析/kpm-解析.md)
+* [Computer Science](Computer Science/README.md)
+    * [排序算法终结](Computer Science/排序算法终结.md)
 * [drafts](drafts.md)
 
