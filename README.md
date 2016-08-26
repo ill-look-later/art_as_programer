@@ -5,7 +5,7 @@ All of those just for note some information i recv
 ## Plan & Road
 
 * ~~NodeJs 官方文档follow练习~~
-* ~~[利用豆瓣FM的api实现一个stream流的播放](/program_project/做xreader过程中的感悟.md)~~
+* ~~[利用豆瓣FM的api实现一个stream流的播放](/program_project/FM模仿工程.md)~~
 * ~~7DaysNodejs nodejs的基础库过一遍~~
 * ~~nodejs官方教程基础库~~
 * ~~使用jeklly搭建静态~~[~~博客~~](http://huangong.github.io/GreatBlog/)
