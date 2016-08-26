@@ -22,7 +22,7 @@
 所以我开始google “正文提取” 相关的东西；看了一些理论上的论文／博客，也流浪了不少实现的库／模块，但是对于我来说整合它们和维护它们或者说自己也去造个轮子时间和精力都太大了， 而我目前还没有那样的时间和精力去完成；我不想因为这个将我开发[XReader](https://github.com/HuanGong/XReader)这个“玩具”的热情消耗完；所以我在尝试了[js extractor](https://github.com/SKing7/extractor) && [Html2Article](https://github.com/stanzhai/Html2Article) && [哈工大的《基于行块分布函数的通用网页正文抽取》](http://code.google.com/p/cx-extractor/) && readbility; 
 最终， 因为时间和维护代码的关系， 我使用了readbility， 因为这样只要注册提供一个token，就可以使用了， 最后我也这么做的， 在上面画面中右上角的第二个图标就是所定义的阅读模式；
 
-![readability 阅读模式效果](./assets/readability_api.gif)
+![readability 阅读模式效果](assets/readability_api.gif)
 从上面应该看出了什么来了；对！慢. 这样直接的结果就是体验不适很好；但是从国外的反馈👀的话；好想并没有国内这么糟糕；只能无力的吐槽一下国内的网络环境了；
 
 但是优化它么？ 并没有；因为按照之前的想法，因为我还想将inoreader整合进来；想着只靠着自己那几行简单的url请求和xml的简单parse就能长期使用可能非常难， 而通过inoreader的api，可以通过oauth认证和inoreader的api我可以坐享便利；技术上讲它没有难点；也行之有效，然而事实上，最后我却没有继续做下去了；
