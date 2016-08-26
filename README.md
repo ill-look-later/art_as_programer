@@ -21,9 +21,7 @@ All of those just for note some information i recv
   > 这个原来对我来说可能是个问题， 现在妹纸学前端了， 正好让她做页面那块....
 
 * ~~和妹纸比赛，谁能先实现抽奖动画和逻辑~~ 完胜✌️
-
 * nodejs + mongodb + express博客搭建 ing...
-
 * ~~纯手工实现 webrtc＋socket.io+express+canvans直播聊天室~~ done
 * ~~使用srs在本地搭建一个流媒体直播平台、根据难度考虑写个简单的客户端~~
 * [阅读《C++ 并发编程》](https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/content/chapter1/chapter1-chinese.html)
