@@ -12,7 +12,7 @@ All of those just for note some information i recv
 * ECMAscript6跟进练习［es6.ruanyifeng.com](http://es6.ruanyifeng.com/#docs/intro)
 * ~~nodejs express socket.io broadcast live video~~
 * 模仿实现一个swift版本的微博客户端
-* ~~[Xreader 的一个readme.md 完成介绍]()~~
+* ~~[Xreader 的一个readme.md 完成介绍](/program_project/做xreader过程中的感悟.md)~~
 * 实现XReader的一个youtubedl的扩展：c++部分搞定，现在要export到qml上下文中...
 * 阅读srs的一部分代码，看看大致的实现，计划？
 * 阅读《黑客与画家》
