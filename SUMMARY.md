@@ -28,6 +28,7 @@
 * [Personal Project](program_project/img/README.md)
     * [The X-th Project XReader](program_project/the_x-th_project_xreader.md)
     * [Imitate FM Studio](program_project/FM模仿工程.md)
+    * [做Xreader过程中的感悟](program_project/img/做xreader过程中的感悟.md)
 * [十年一剑IT人](IT_Man_Skills/IT_man_skills.md)
     * [Break the internet access block in ccb](IT_Man_Skills/break_the_internet_access_block_in_ccb.md)
     * [Get the wifi password](IT_Man_Skills/get_wifi_password_from_android.md)
