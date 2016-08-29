@@ -1,3 +1,5 @@
+# fath i known for sure
+
 1. We Are Responsible for Our Life. And nobody else. Although all success requires the assistance and cooperation of others, our success can never be left to anyone else. Luck is not a strategy.
 
 > 我们要对我们的人生负责。这不是别人的责任。尽管所有的成功都需要别人的帮助与合作，但我们的成功不能依赖别人来替我们取得。等待好运降临并非上策。
