@@ -25,4 +25,4 @@ PPAPI在 Google Native Client \(NaCl\) 技术基础上开发出的一套规范�
 5. Initial attempt to provide 3D graphics access.
 6. Plugin registry.
 
-google chrome 在我现在工作中的版本V39NPAPI和PPAPI都是支持的，但是从V42起，查阅的源码中NPAPI相关的代码逐渐的被一点点去除了， 到了现在的52， 整个Chrome中的
+google chrome 在我现在工作中的版本V39NPAPI和PPAPI都是支持的，但是从V42起，查阅的源码中NPAPI相关的代码逐渐的被一点点去除了， 到了现在的52， 整个Chrome中的源代码中， 几乎已经找不到相关的code了；
