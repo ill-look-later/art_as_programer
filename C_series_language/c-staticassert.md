@@ -22,4 +22,4 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 
 ```
 
-如果上面的例子在64bit的机器上编译， 在编译的过程中就会报错；
+如果上面的例子在64bit的机器上编译， 在编译的过程中就会报错；这也是`static assert`中static的意思；
