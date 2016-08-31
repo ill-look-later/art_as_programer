@@ -1,5 +1,10 @@
 # Posix Vs SystemV shared Memory
 
+
+
+posix:
+---
+
 ```c
   int shmfd = shm_open("shmblockname", O_RDWR|O_CREAT, 00777);
   if (-1 == shmfd) {//failed
@@ -16,3 +21,6 @@
        backend_store_handle,
        SEEK_SET);
 ```
+
+system V:
+---
