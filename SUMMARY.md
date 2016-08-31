@@ -101,6 +101,7 @@
     * [Protocol Buffer From Google](framework_library/protocol_buffer_from_google.md)
 * [来自他人的经典分析](来自他人的经典分析/README.md)
     * [KMP 解析](来自他人的经典分析/kpm-解析.md)
+    * [tips how get linux memory status in c and cpp](来自他人的经典分析/tips-how-get-linux-memory-status-in-c-and-cpp.md)
 * [Computer Science](Computer Science/README.md)
     * [排序算法终结](Computer Science/排序算法终结.md)
 * [英文朗读](英语阅读/README.md)
