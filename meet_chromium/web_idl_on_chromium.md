@@ -9,9 +9,9 @@
 正常情况下binding成功之后， 会在`/out/Release/gen/blink/bindings/core/v8/V8[IDL名称].cpp[h]` 生成相应binding的C\/C++的实现。
 
 LocalFram
-通过client\(\)可以访问FrameClient
-FrameClient\(\)里通过page\(\)拿到chromeClient
-  page\(\)-&gt;chromeClient\(\)
+通过`client()`可以访问`FrameClient`
+FrameClient()里通过`page()`拿到`chromeClient`
+  `page()->chromeClient()`
 
 ```
 WebLocalFrameImpl* webframe = WebLocalFrameImpl::fromFrame(frame);
