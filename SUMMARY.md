@@ -92,6 +92,7 @@
     * [Posix Vs SystemV shared memory](C_series_language/posix-vs-systemv-shared-memory.md)
     * [C++ 构造函数代理](C_series_language/c-构造函数代理.md)
     * [C++ static\_assert](C_series_language/c-staticassert.md)
+    * [lambda 表达式的秘密与陷阱](C_series_language/lambda-表达式的秘密与陷阱.md)
 * [bullshit 中文称之为 扯蛋](bullshit/bullshit.md)
     * [with\_the\_bullshit\_courage\_to\_face\_the\_fucking\_life.md](bullshit/with_the_bullshit_courage_to_face_the_fucking_life.md)
 * [FrameWork And Library](framework_library/README.md)
