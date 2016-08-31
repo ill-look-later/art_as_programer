@@ -1,5 +1,8 @@
 # lambda 表达式的秘密与陷阱
 
+简单的实例
+---
+
 ```c++
 #include <algorithm>
 #include <cmath>
@@ -13,6 +16,8 @@ void abssort(float* x, unsigned n) {
 
 }
 ```
+定义:
+---
 
 ![lambda图示](/MacIOS_development/img/IC251606.jpeg)
 
