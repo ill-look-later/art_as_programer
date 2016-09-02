@@ -4,7 +4,7 @@
 
 命令：`gdb [excutable_file] [coredumpfile]`
 
-在gdb中， 有`solib-absolute-prefix` 和 `solib-search-path`两个参数可以用来指定. 若有多个路径用冒号`:`分隔
+在gdb中， 我们可以通过gdb命令`solib-absolute-prefix` 和 `solib-search-path`两个参数可以用来指定我们程序依赖的库的路径，以便gdb将这些库导入与coredump中的堆栈地址整合进行分析. 若有多个路径用冒号`:`分隔；
 
 [gdb reference guide book](http://visualgdb.com/gdbreference/commands/set_solib-search-path)
 
@@ -12,7 +12,7 @@ example:
 ---
 > set solib-search-path /nfs/gonghuan/mstar6486/out/Release/lib:/opt/mslib
 
-
+
 - **set solib-search-path path**
 
 > If this variable is set, path is a colon-separated list of directories to search for shared libraries. ‘solib-search-path’ is used after ‘sysroot’ fails to locate the library, or if the path to the library is relative instead of absolute. If you want to use ‘solib-search-path’ instead of ‘sysroot’, be sure to set ‘sysroot’ to a nonexistent directory to prevent gdb from finding your host's libraries. ‘sysroot’ is preferred; setting it to a nonexistent directory may interfere with automatic loading of shared library symbols.
