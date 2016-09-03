@@ -90,7 +90,7 @@
     * [进程共享内存之间的同步](C_series_language/进程共享内存之间的同步.md)
     * [qml url path to logic path](C_series_language/qml-url-path-to-logic-path.md)
     * [Posix Vs SystemV shared memory](C_series_language/posix-vs-systemv-shared-memory.md)
-    * [C++ 构造函数代理](C_series_language/c-构造函数代理.md)
+    * [C++ 构造函数委托](C_series_language/c-构造函数代理.md)
     * [C++ static\_assert](C_series_language/c-staticassert.md)
     * [lambda 表达式的秘密与陷阱](C_series_language/lambda-表达式的秘密与陷阱.md)
 * [bullshit 中文称之为 扯蛋](bullshit/bullshit.md)
