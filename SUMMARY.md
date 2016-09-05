@@ -95,6 +95,7 @@
     * [C++ static\_assert](C_series_language/c-staticassert.md)
     * [lambda 表达式的秘密与陷阱](C_series_language/lambda-表达式的秘密与陷阱.md)
     * [coredump file analyze by gdb](C_series_language/coredump-file-analyze-by-gdb.md)
+    * [free or delete NULL pointer](C_series_language/free-or-delete-null-pointer.md)
 * [bullshit 中文称之为 扯蛋](bullshit/bullshit.md)
     * [with\_the\_bullshit\_courage\_to\_face\_the\_fucking\_life.md](bullshit/with_the_bullshit_courage_to_face_the_fucking_life.md)
 * [FrameWork And Library](framework_library/README.md)
