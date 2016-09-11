@@ -8,10 +8,8 @@
 
 ​Thank you for all the things I'm not
 
-​Forgive me for the words unsaid For the times
+​Forgive me for the words unsaid For the times I forgot
 
-I forgot 
-​
 Mama remember all my life 
 
 You showed me love, you sacrificed 
@@ -24,7 +22,6 @@ And I know you believed And I know you had dreams
 ​
 And I'm sorry it took all this time to see 
 ​
-
 That I am where I am because of your truth 
 
 And I miss you, And I miss you
