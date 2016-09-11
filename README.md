@@ -27,5 +27,5 @@ All of those just for note some information i recv
 * [阅读《C++ 并发编程》](https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/content/chapter1/chapter1-chinese.html)
 * 回顾[排序算法](/Computer Science/排序算法终结.md)和相关的[数据结构]
 
-* 英文朗读，每朗读一篇这里都会［+2］
+* 英文朗读，每朗读一篇这里都会［+3］
 
