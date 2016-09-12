@@ -26,6 +26,10 @@ All of those just for note some information i recv
 * ~~使用srs在本地搭建一个流媒体直播平台、根据难度考虑写个简单的客户端~~
 * [阅读《C++ 并发编程》](https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/content/chapter1/chapter1-chinese.html)
 * 回顾[排序算法](/Computer Science/排序算法终结.md)和相关的[数据结构]
+* 阅读《TCP/IP详解 卷一》
+* ~~概略阅读 libevent 源码，multiplex/demultiplex实现~~
+
+
 
 * 英文朗读，每朗读一篇这里都会［+3］
 
