@@ -30,6 +30,5 @@ All of those just for note some information i recv
 * ~~概略阅读 libevent 源码，multiplex/demultiplex实现~~
 
 
-
 * 英文朗读，每朗读一篇这里都会［+3］
-
+* 阅读《灿烂千阳》
