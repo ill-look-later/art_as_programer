@@ -10,6 +10,6 @@
 
 篇幅有限，此文仅仅介绍输入法的对接，也就是说事件怎么给输入法，以及输入法怎么和整个事件分发过程结合起来；开始之前，我们看一下整个框架的介绍，以便我们之后结合代码进行分析；
 
-![](/meet_chromium/img/chromium-ime_context.001.png)
+![](img/chromium-ime_context.001.png)
 
 
