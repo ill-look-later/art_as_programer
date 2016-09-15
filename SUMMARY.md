@@ -19,6 +19,7 @@
     * [MediaHost On ChromiumGStreamerBackend](meet_chromium/mediahost-on-chromiumgstreamerbackend.md)
     * [chromium aura input method line](meet_chromium/chromium-aura-input-method-line.md)
     * [Add New feature to Chromium content-shell](meet_chromium/add-new-feature-to-chromium-content-shell.md)
+    * [为chromium对接自己的输入法](meet_chromium/为chromium对接自己的输入法.md)
 * [career\_memory](career_memory/README.md)
     * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
     * [why need pointer pointing to another pointer](C_series_language/pointer_pointing_to_another_pointer.md)
