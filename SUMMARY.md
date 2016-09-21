@@ -23,6 +23,7 @@
 * [career\_memory](career_memory/README.md)
     * [短暂的嵌入式生涯](career_memory/duan_zan_de_qian_ru_shi_sheng_ya.md)
     * [why need pointer pointing to another pointer](C_series_language/pointer_pointing_to_another_pointer.md)
+    * [我有过很多梦想](career_memory/我有过很多梦想.md)
 * [Embeded Development](Embeded_development/embeded_development.md)
     * [电容触摸屏FT5406移植说明](Embeded_development/Porting Ft5406 to Freescale Imx6Q.md)
     * [EIM 异步复用模式配置核心要点](Embeded_development/eim_configure_note.md)
