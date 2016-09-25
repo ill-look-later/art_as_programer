@@ -116,5 +116,6 @@
     * [MaMa song for mama](英语阅读/mama-song-for-mama.md)
 * [Let Code](LetCode/README.md)
     * [code01: Two Sum](LetCode/code01-two-sum.md)
+    * [code02：threeSum](LetCode/code02-threesum.md)
 * [drafts](drafts.md)
 

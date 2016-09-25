@@ -1,4 +1,4 @@
-### 1. Two Sum
+# 1. Two Sum
 
 
 Given an array of integers, return **indices** of the two numbers such that they add up to a specific target.
@@ -38,7 +38,7 @@ public:
     }
 };
 ```
-这个答案肯定是accept， 但是这样肯定不是最优的一个；后来考虑到了hashmap；c++11中有提供;于是又了下面这样的版本：
+这个答案肯定是accept， 但是这样肯定不是最优的一个；{最烂的一个：800ms+ 哭晕呀....}后来考虑到了hashmap；c++11中有提供;于是又了下面这样的版本：13ms 靠！ 算法的威力呀.... 
 ```c
 vector<int> twoSum(vector<int> &numbers, int target)
 {
