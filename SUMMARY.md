@@ -114,5 +114,7 @@
 * [英文朗读](英语阅读/README.md)
     * [what you sow, you reap](英语阅读/what-you-saw-you-reap.md)
     * [MaMa song for mama](英语阅读/mama-song-for-mama.md)
+* [Let Code](LetCode/README.md)
+    * [code01: Two Sum](LetCode/code01-two-sum.md)
 * [drafts](drafts.md)
 
