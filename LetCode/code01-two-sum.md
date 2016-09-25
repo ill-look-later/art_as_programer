@@ -15,3 +15,58 @@ return [**0**, **1**].
 </pre>
 
 就是给定一个整型数组，给定一个target整型数；要求找出数组中两个数相加等于给定的target；返回这两个数在数组中的索引；即`nums[i] + nums[j] == target`; 返回 `[i， j]`;
+
+```c
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> v;
+        for (int i = 0; i < nums.size() ; i++) {
+            //if (nums[i] > target) { @01
+                //continue;
+            //}
+            for (int j = i+1; j < nums.size(); j++) {
+                //if (nums[j] > target) { @02
+                    //continue;
+                //}
+                if (target == nums[i]+nums[j]) {
+                    v.push_back(i), v.push_back(j);
+                }
+            }
+        }
+        return v;
+    }
+};
+```
+这个答案肯定是accept， 但是这样肯定不是最优的一个；后来考虑到了hashmap；c++11中有提供;于是又了下面这样的版本：
+```c
+vector<int> twoSum(vector<int> &numbers, int target)
+{
+    //Key is the number and value is its index in the vector.
+	unordered_map<int, int> hash;
+	vector<int> result;
+	for (int i = 0; i < numbers.size(); i++) {
+		int numberToFind = target - numbers[i];
+
+            //if numberToFind is found in map, return them
+		if (hash.find(numberToFind) != hash.end()) {
+                    //+1 because indices are NOT zero based
+			result.push_back(hash[numberToFind]);
+			result.push_back(i);			
+			return result;
+		}
+
+            //number was not found. Put it in the map.
+		hash[numbers[i]] = i;
+	}
+	return result;
+}
+```
+
+
+第一次做时， 在@01 @02位置加了条件， 缺乏考虑， 没考虑到负数的情况； 比如 `-3 + 4 = 1`; 我们不能因为 `4>1`就认为 4 与其它整数相加都大于1； so.....
+
+第二个hashmap的是看到了别人的提示做的；原理就是，遍历数组；在hashmap中找目标值'target-nums[i]'，将遍历过且不是正确结果的值存入hashmap；
+
+别人家的代码：
+---
