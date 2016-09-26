@@ -1,4 +1,4 @@
-# qt wenegine的实现结构
+# Qt wenegine的实现结构
 
 ### void QQuickItem::update()
 
