@@ -11,6 +11,7 @@ The call to [QQuickItem::updatePaintNode](http://doc.qt.io/qt-5/qquickitem.html#
 Only items which specify [QQuickItem::ItemHasContents](http://doc.qt.io/qt-5/qquickitem.html#Flag-enum) are allowed to call QQuickItem::update\(\).
 
 在重绘函数`updatePaintNode`中将冲render中交换回来的数据对象ChromiumCompositorData通过`DelegatedFrameNode::commit`完成数据的交换，经过commit函数，所有chromium绘制的数据都交换到了QSGNode对象中；QSGNode在`updatePaintNode`中返回给qt的绘制系统，与qtwidget/qtquickitem对象继续合成并显示；
-这里的
+
+上面的ChromiumCompositorData对象是对QSharedData的封装；里面并维护着chromium中真正的数据对象`scoped_ptr<cc::DelegatedFrameData> frameData;`
 
 
