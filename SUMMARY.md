@@ -117,5 +117,6 @@
 * [Let Code](LetCode/README.md)
     * [code01: Two Sum](LetCode/code01-two-sum.md)
     * [code02：threeSum](LetCode/code02-threesum.md)
+    * [code03：endianJudge](LetCode/code03：endianjudge.md)
 * [drafts](drafts.md)
 
