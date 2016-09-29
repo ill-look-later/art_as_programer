@@ -120,5 +120,6 @@
     * [code02：threeSum](LetCode/code02-threesum.md)
     * [code03：endianJudge](LetCode/code03：endianjudge.md)
     * [code04: atoi and itoa](LetCode/code04-atoi-and-itoa.md)
+    * [code05: list reverse](LetCode/code05-list-reverse.md)
 * [drafts](drafts.md)
 
