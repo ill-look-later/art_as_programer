@@ -10,11 +10,12 @@ struct Node {
 Node* listReverse(Node* head) {
   Node* pre = NULL;
   Node* cur = head;
-while(cur != NULL) {
+  while(cur != NULL) {
     Node* tmp = cur->next;
     cur->next = pre;
     pre = cur;
     cur = tmp;
   }
-list_head = pre;
+  return list_head = pre;
+}
 ```
