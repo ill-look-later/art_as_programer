@@ -7,11 +7,14 @@ struct Node {
 	Node* next;
 };
 
-Node* reverse(Node* head) {
-	Node* next_node = head->next;
-	if (next_node == NULL) {
-		head->next		
-	}
-
-}
+Node* listReverse(Node* head) {
+  Node* pre = NULL;
+  Node* cur = head;
+while(cur != NULL) {
+    Node* tmp = cur->next;
+    cur->next = pre;
+    pre = cur;
+    cur = tmp;
+  }
+list_head = pre;
 ```
