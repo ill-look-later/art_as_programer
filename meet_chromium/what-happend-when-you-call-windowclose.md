@@ -36,7 +36,6 @@ void Chrome::closeWindowSoon()
     m_client->closeWindowSoon();
 }
 
-
 void ChromeClientImpl::closeWindowSoon()
 {
     // Make sure this Page can no longer be found by JS.
