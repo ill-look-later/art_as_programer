@@ -31,8 +31,7 @@ void LocalDOMWindow::close(ExecutionContext* context) {
 ```
 
 ```c
-void Chrome::closeWindowSoon()
-{
+void Chrome::closeWindowSoon() {
     m_client->closeWindowSoon();
 }
 
