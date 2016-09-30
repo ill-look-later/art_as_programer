@@ -1,8 +1,7 @@
 # What Happend When js Call window.close
 
 ```c
-void LocalDOMWindow::close(ExecutionContext* context)
-{
+void LocalDOMWindow::close(ExecutionContext* context) {
     if (!m_frame || !m_frame->isMainFrame())
         return;
 
