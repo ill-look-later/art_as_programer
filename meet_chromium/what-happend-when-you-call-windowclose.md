@@ -45,3 +45,28 @@ void ChromeClientImpl::closeWindowSoon() {
 }
 ```
 
+```c
+void RenderWidget::closeWidgetSoon() {
+  DCHECK(content::RenderThread::Get());
+  if (is_swapped_out_) {
+    // This widget is currently swapped out, and the active widget is in a
+    // different process.  Have the browser route the close request to the
+    // active widget instead, so that the correct unload handlers are run.
+    Send(new ViewHostMsg_RouteCloseEvent(routing_id_));
+    return;
+  }
+
+  // If a page calls window.close() twice, we'll end up here twice, but that's
+  // OK.  It is safe to send multiple Close messages.
+
+  // Ask the RenderWidgetHost to initiate close.  We could be called from deep
+  // in Javascript.  If we ask the RendwerWidgetHost to close now, the window
+  // could be closed before the JS finishes executing.  So instead, post a
+  // message back to the message loop, which won't run until the JS is
+  // complete, and then the Close message can be sent.
+  base::ThreadTaskRunnerHandle::Get()->PostTask(
+      FROM_HERE, base::Bind(&RenderWidget::DoDeferredClose, this));
+}
+```
+
+
