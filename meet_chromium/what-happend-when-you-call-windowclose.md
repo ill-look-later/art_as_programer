@@ -40,7 +40,6 @@ void ChromeClientImpl::closeWindowSoon() {
     Page::ordinaryPages().remove(m_webView->page());
     // Make sure that all loading is stopped.  Ensures that JS stops executing!
     m_webView->mainFrame()->stopLoading();
-
     if (m_webView->client())
         m_webView->client()->closeWidgetSoon();
 }
