@@ -29,3 +29,17 @@ void LocalDOMWindow::close(ExecutionContext* context) {
     page->chrome().closeWindowSoon();
 }
 ```
+
+```c
+void Chrome::closeWindowSoon()
+{
+    m_client->closeWindowSoon();
+}
+
+
+void ChromeClientImpl::closeWindowSoon()
+{
+    // Make sure this Page can no longer be found by JS.
+    Page::ordinaryPages().remove(m_webView->page());
+```
+
