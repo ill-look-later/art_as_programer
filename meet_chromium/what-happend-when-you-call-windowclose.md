@@ -35,8 +35,7 @@ void Chrome::closeWindowSoon() {
     m_client->closeWindowSoon();
 }
 
-void ChromeClientImpl::closeWindowSoon()
-{
+void ChromeClientImpl::closeWindowSoon() {
     // Make sure this Page can no longer be found by JS.
     Page::ordinaryPages().remove(m_webView->page());
     // Make sure that all loading is stopped.  Ensures that JS stops executing!
