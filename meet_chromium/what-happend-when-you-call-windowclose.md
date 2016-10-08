@@ -40,8 +40,6 @@ v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完
 
 最后至于如何一步步在加载一个新页面在什么时机调用这些静态函数将这些注册到v8中；C/C++功力暂时有点吃力，加上对V8不甚了解，暂时还没完全弄懂，以后有机会更多的了解V8之后，可能有机会再来弄懂这些；
 
-
-
 ```c
 //src/out/Release/gen/blink/bindings/core/v8/V8Window.cpp
 static void closeMethod(const v8::FunctionCallbackInfo<v8::Value>& info)
