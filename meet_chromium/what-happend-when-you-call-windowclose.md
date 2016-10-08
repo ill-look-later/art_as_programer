@@ -1,6 +1,7 @@
 # What Happend When js Call window.close
 
 在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
+![idl-bindings](/meet_chromium/img/webkit_v8_webidl_bindings.png)
 
 ```c
 //src/out/Release/gen/blink/bindings/core/v8/V8Window.cpp
