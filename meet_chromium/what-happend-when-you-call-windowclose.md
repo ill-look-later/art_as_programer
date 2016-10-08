@@ -8,8 +8,10 @@
 
 v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完成我们想要实现的功能，想像一下，如果这些所有的功能都是v8来完成，v8得有多臃肿庞大，那将是多么的恐怖。而idl和bindings就是来辅助完成这样的一种由js代码到我们真正的执行环境的一种方法；web IDL是针对web定义的一些列接口规范；而bindings则是通过一定的规则解析idl描述出来的接口，通过特定语言的codegenerator代码生成器生成面向特定语言的代码；而每个js解析器的接口和注册方法、机制不一样，所以就要针对不同的解析器生成不同的代码；v8中，使用V8 Bindings Generator来生成代码；一个python写的idl解析程序；[引用一个博客](http://blog.csdn.net/cutesource/article/details/8862287)上面的一张图；
 
-在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
+
 ![idl-bindings](/meet_chromium/img/webkit_v8_webidl_bindings.png)
+
+在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
 
 ```c
 //src/out/Release/gen/blink/bindings/core/v8/V8Window.cpp
