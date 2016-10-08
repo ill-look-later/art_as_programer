@@ -10,6 +10,12 @@ static void closeMethod(const v8::FunctionCallbackInfo<v8::Value>& info)
     ExecutionContext* executionContext = currentExecutionContext(info.GetIsolate());
     impl->close(executionContext);
 }
+static void closeMethodCallback(const v8::FunctionCallbackInfo<v8::Value>& info)
+{
+    TRACE_EVENT_SET_SAMPLING_STATE("blink", "DOMMethod");
+    LocalDOMWindowV8Internal::closeMethod(info);
+    TRACE_EVENT_SET_SAMPLING_STATE("v8", "V8Execution");
+}
 ```
 
 ```c
