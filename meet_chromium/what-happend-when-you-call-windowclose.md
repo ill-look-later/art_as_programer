@@ -15,7 +15,7 @@ v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完
 
 根据chormium[这篇文档中的描述](https://www.chromium.org/developers/web-idl-interfaces)在解析idl的时候，bindings相关的代码会假定我们在idl中描述的接口，类，变量等等每一个属性都是实现好的；而在v47版本当中，它的实现是`third_party/WebKit/Source/core/frame/LocalDOMWindow.cpp`文件中实现的；
 
--
+- 通过
 - 在V8Window.cpp[h]中
 
 
