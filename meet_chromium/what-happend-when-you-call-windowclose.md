@@ -1,6 +1,10 @@
 # What Happend When js Call window.close
 
-分析这个close或者说window.open并不是因为他们有多重要；而是这只是一个普遍的过程，抛砖引玉而已，整个设计的结构就是这样的，只要弄清一个，就可以理会其他的实现；
+分析这个close或者说window.open并不是因为他们有多重要；而是这只是一个普遍的过程，抛砖引玉而已，整个设计的结构就是这样的，只要弄清一个，就可以理会其他的实现；我们在js中调用`window.close()`；首先我们应该明确，js本身而言，它没有window这个全局对象，也不具备文件访问能力；所以也没有所谓的`window.close()`方法，那么我们之所以能调用，肯定是有一个什么东西告诉js的执行引擎“嘿，伙计，待会有人如果在.js文件中写了个`window.close()`你就到某个地方找到某个对象，执行某段代码就好了”；不管是webcore还是v8，都是这样子的；在blink中所以肯定是有一个地方，有某段代码或向v8运行的context中注入了一些对象；
+
+首先我们来看一些概念：
+1.  IDL：接口定义语言，详细解释可见http://trac.webkit.org/wiki/WebKitIDL
+2.  Bindings：WebKit动态生成与其他框架（如JavascriptCore, V8）整合的代码
 在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
 ![idl-bindings](/meet_chromium/img/webkit_v8_webidl_bindings.png)
 
