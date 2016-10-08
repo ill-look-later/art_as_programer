@@ -1,5 +1,6 @@
 # What Happend When js Call window.close
 
+分析这个close或者说window.open并不是因为他们有多重要；而是这只是一个普遍的过程，抛砖引玉而已，整个设计的结构就是这样的，只要弄清一个，就可以理会其他的实现；
 在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
 ![idl-bindings](/meet_chromium/img/webkit_v8_webidl_bindings.png)
 
