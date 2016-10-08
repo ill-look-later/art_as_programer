@@ -3,7 +3,7 @@
 在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
 
 ```c
-
+//src/out/Release/gen/blink/bindings/core/v8/V8Window.cpp
 static void closeMethod(const v8::FunctionCallbackInfo<v8::Value>& info)
 {
     LocalDOMWindow* impl = V8Window::toImpl(info.Holder());
