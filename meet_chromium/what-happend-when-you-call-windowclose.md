@@ -50,6 +50,7 @@ static void closeMethodCallback(const v8::FunctionCallbackInfo<v8::Value>& info)
     TRACE_EVENT_SET_SAMPLING_STATE("v8", "V8Execution");
 }
 ```
+到这里我们身下的就是对整个函数调用的callstack的一个跟踪了；在V8Window.cpp中通过`LocalDOMWindow* impl = V8Window::toImpl(info.Holder());`拿到了我们最终的在webkit中的实现部分；在下面的close中我们可以看到做了一些类的条件检测，只有当我们的页面是通过window.open打开且backForwardList <=1 且在我们的webpreference中允许js
 
 ```c
 void LocalDOMWindow::close(ExecutionContext* context) {
