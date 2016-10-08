@@ -18,10 +18,19 @@ v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完
 - 通过idl的编译解析工具idl_compiler.py解析之后生成`out/Release/gen/blink/bindings/core/v8/V8Window.cpp[h]`文件
 - 在V8Window.cpp[h]中一方面是实现了对LocalDOMWindow各个方法属性的代理和jsapi到各个包装API的映射表，到时候通过调用installV8WindowFunction等静态函数将所有的属性与方法注册进去;
 - 当新解析一个页面的时候向已初始化v8解析环境中进入这些属性和方法；blink将V8Window.cpp中静态函数将映射表中所有的属性和方法都注册到v8的context中；
-- 当V8解析到js代码`window.close()`时通过映射表找到对应方法在包装对象V8Window.cpp中的实现`closeMethodCallback`
-    static void closeMethodCallback(const v8::FunctionCallbackInfo<v8::Value>& info)
+- 当V8解析到js代码`window.close()`时通过映射表找到对应方法在包装对象V8Window.cpp中的实现`closeMethodCallback`; 下面的代码可以看出，通过调用开始注册进去的callback函数`closeMethodCallback`内部再次调用`LocalDOMWindowV8Internal::closeMethod`；在closeMethod中得到blink中的LocalDomWindowImpl对象；通过这个对象调用在LocalDOMWindowImpl.cpp中的close方法；
+    static void closeMethodCallback(const v8::FunctionCallbackInfo<v8::Value>& info) {
+        TRACE_EVENT_SET_SAMPLING_STATE("blink", "DOMMethod");
+        LocalDOMWindowV8Internal::closeMethod(info);
+        TRACE_EVENT_SET_SAMPLING_STATE("v8", "V8Execution");
+    }
+    static void closeMethod(const v8::FunctionCallbackInfo<v8::Value>& info)
     {
-    TRACE_EVENT_SET_SAMPLING_STATE("blink", "DOMMethod");
+        LocalDOMWindow* impl = V8Window::toImpl(info.Holder());
+        ExecutionContext* executionContext = currentExecutionContext(info.GetIsolate());
+        impl->close(executionContext);
+    }
+-
 
 
 
