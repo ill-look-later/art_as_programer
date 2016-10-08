@@ -5,6 +5,7 @@
 首先我们来看一些概念：
 1.  IDL：接口定义语言，详细解释可见http://trac.webkit.org/wiki/WebKitIDL
 2.  Bindings：WebKit动态生成与其他框架（如JavascriptCore, V8）整合的代码
+
 在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
 ![idl-bindings](/meet_chromium/img/webkit_v8_webidl_bindings.png)
 
