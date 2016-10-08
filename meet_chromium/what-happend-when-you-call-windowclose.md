@@ -32,7 +32,7 @@ v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完
     }
 
 在查看V8Window.cpp 中，通过关键字`close` 与函数对象的包装函数形成一个结构体，任何一个继承了`ScriptWrappable`的变量都要通过宏`DEFINE_WRAPPERTYPEINFO`来对扩充这个对象的功能，其实就是给当前类添加了一个public的方法`const WrapperTypeInfo* wrapperTypeInfo() const override`和一个静态对象`static const WrapperTypeInfo& s_wrapperTypeInfo`,看下面的代码：
-    
+    //out/Debug/gen/blink/bindings/core/v8/V8Window.cpp
     const WrapperTypeInfo& DOMWindow::s_wrapperTypeInfo = V8Window::wrapperTypeInfo;
 看看下面这个两个最后至于如何一步步在加载一个新页面在什么时机调用这些静态函数将这些注册到v8中；C/C++功力暂时有点吃力，加上对V8不甚了解，暂时还没完全弄懂，以后有机会更多的了解V8之后，可能有机会再来弄懂这些；
 
