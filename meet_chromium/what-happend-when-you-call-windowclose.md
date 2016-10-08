@@ -1,5 +1,17 @@
 # What Happend When js Call window.close
 
+在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
+
+```c
+
+static void closeMethod(const v8::FunctionCallbackInfo<v8::Value>& info)
+{
+    LocalDOMWindow* impl = V8Window::toImpl(info.Holder());
+    ExecutionContext* executionContext = currentExecutionContext(info.GetIsolate());
+    impl->close(executionContext);
+}
+```
+
 ```c
 void LocalDOMWindow::close(ExecutionContext* context) {
     if (!m_frame || !m_frame->isMainFrame())
