@@ -36,7 +36,7 @@ v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完
     //out/Debug/gen/blink/bindings/core/v8/V8Window.cpp
     const WrapperTypeInfo& DOMWindow::s_wrapperTypeInfo = V8Window::wrapperTypeInfo;
 
-也就是说，我们注册的那些函数，方法，属性，都通过一层层的包装，包装成v8里面的一些对象和结构体，存储在了s_wrapperTypeInfo 这个静态变量里面了，webkit、blink中每一个`ScriptWrappable`的对象，即每一个可以在js中访问交互的对象，变量，属性，方法都需要通过这样的方法保存到WrapperTypeInfo中，也就是说fram，wiindow，document，navigator，css所有的动画变量什么的都需要通过这样的宏生成一个包装对象，等到合适的时机通过Wrap来将这些注册到V8context中；
+也就是说，我们注册的那些函数，方法，属性，都通过一层层的包装，包装成v8里面的一些对象和结构体，存储在了s_wrapperTypeInfo 这个静态变量里面了，webkit、blink中每一个`ScriptWrappable`的对象，即每一个可以在js中访问交互的对象，变量，属性，方法都需要通过这样的方法保存到WrapperTypeInfo中，也就是说fram，wiindow，document，navigator，css所有的动画变量什么的都需要通过这样的宏生成一个包装对象，等到合适的时机通过wrap来将这些注册到V8context中；
 
 最后至于如何一步步在加载一个新页面在什么时机调用这些静态函数将这些注册到v8中；C/C++功力暂时有点吃力，加上对V8不甚了解，暂时还没完全弄懂，以后有机会更多的了解V8之后，可能有机会再来弄懂这些；
 
