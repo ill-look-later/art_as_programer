@@ -17,7 +17,7 @@ v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完
 
 - 通过idl的编译解析工具idl_compiler.py解析之后生成`out/Release/gen/blink/bindings/core/v8/V8Window.cpp[h]`文件
 - 在V8Window.cpp[h]中一方面是实现了对LocalDOMWindow各个方法属性的代理和jsapi到各个包装API的映射表，通过installV8WindowTemplate将所有的属性与方法注册进去;
-
+- 当页面解析的时候初始化v8解析环境；blink将V8Window.cpp中
 
 
 ```c
