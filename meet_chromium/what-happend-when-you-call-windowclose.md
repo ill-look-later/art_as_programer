@@ -11,6 +11,9 @@ v8 只是负责解析js的写出来的一句句语句，它并不能帮我们完
 
 在`third_party/WebKit/Source/core/frame/Window.idl`中， 我们为通过webIDL（web Interface description language）为窗口绑定了open close方法；
 
+    [DoNotCheckSecurity, CallWith=ExecutionContext] void close();
+
+根据chormium[这篇文档中的描述](https://www.chromium.org/developers/web-idl-interfaces)在解析idl的时候，bindings相关的代码会假定我们在idl中描述的接口，类，变量等等每一个属性都是实现好的；而在v47版本当中，它的实现是`third_party/WebKit/Source/core/frame/LocalDOMWindow.cpp`文件中实现的；
 ```c
 //src/out/Release/gen/blink/bindings/core/v8/V8Window.cpp
 static void closeMethod(const v8::FunctionCallbackInfo<v8::Value>& info)
