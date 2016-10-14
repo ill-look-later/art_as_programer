@@ -1,4 +1,6 @@
 # Chromium_input_type_change_call_stack
+
+前几天遇到个问题， 导致在我们的浏览器上，焦点无缘无故的丢失了，所以就稍微将这部分代码看了一下，webkit里面焦点变化主要是由下面几种情况引起的；
 ###主要三种情况
 - html element focus
 - pepper plugin set focus
