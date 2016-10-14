@@ -1,5 +1,5 @@
-# chromium event's "from and go" based on linux X11 system 
-> chrome 在linux X11上事件的生和死
+# chromium platform event's "from and go" based on linux X11 system 
+> chrome 在linux X11上平台事件的生和死
 
 
 events/platform/x11/x11_event_source_glib.cc
