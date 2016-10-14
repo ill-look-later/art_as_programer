@@ -3,6 +3,7 @@
 这是一份v39上的chromium在x11平台上的事件的backtrace，这时候的事件分发其实还是比较乱的，从V32开始引入新的AURA以来， 改动比较大，新一点的v47 v52上面整理的改进之后，这一部分变得简单多了；
 
 到AURA TOOLKIT UI的:
+```
 (gdb) bt
 #0  views::Textfield::OnKeyPressed (this=0x3f3e3a82c520, event=...)
     at ../../ui/views/controls/textfield/textfield.cc:669
@@ -123,6 +124,5 @@
 #59 0x00000000005133d8 in content::ContentMainRunnerImpl::Run (this=0x3f3e3a59b380)
     at ../../content/app/content_main_runner.cc:769
 #60 0x0000000000510975 in content::ContentMain (params=...) at ../../content/app/content_main.cc:19
----Type <return> to continue, or q <return> to quit---
 #61 0x0000000000430e3c in main (argc=5, argv=0x7fffffffe538) at ../../content/shell/app/shell_main.cc:49
 
