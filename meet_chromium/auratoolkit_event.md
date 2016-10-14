@@ -1,5 +1,6 @@
 # Aura_Toolkit_Event
 
+这是一份v39上的chromium在x11平台上的事件的backtrace，这时候的事件分发其实还是比较乱的，从V32开始引入新的AURA以来， 改动比较大，新一点的v47 v52上面整理的改进之后，这一部分变得简单多了；
 
 0x0000000004de5c25 in ui::(anonymous namespace)::XSourceDispatch (source=0x16b02cd9f860, unused_func=0x0, data=0x16b02ce37a40) at ../../ui/events/platform/x11/x11_event_source_glib.cc:39
  0x0000000004de534b in ui::X11EventSource::DispatchXEvents (this=0x16b02ce37a40) at ../../ui/events/platform/x11/x11_event_source.cc:118
