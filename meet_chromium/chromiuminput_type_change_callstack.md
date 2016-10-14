@@ -2,7 +2,7 @@
 
 前几天遇到个问题， 导致在我们的浏览器上，焦点无缘无故的丢失了，导致到content层时导致输入状态不对，从而使得软键盘输入无效的问题；所以就稍微将这部分代码看了一下，webkit里面焦点变化主要是由下面几种情况引起的；
 ###主要三种情况
-- html element focus change by keyevent
+- html element focus change by keyevent or js's Set active elements
 - pepper plugin set focus
 - mouse select event for editor
 ---
