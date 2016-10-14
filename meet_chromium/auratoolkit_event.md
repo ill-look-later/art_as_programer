@@ -66,7 +66,7 @@ views::DesktopNativeWidgetAura::OnKeyEvent(ui::KeyEvent*)
 
 views::DesktopNativeWidgetAura::OnKeyEvent
 
- views::Widget::OnKeyEvent
+views::Widget::OnKeyEvent
 
 ui/views/widget/desktop_aura/desktop_native_widget_aura.cc
   void DesktopNativeWidgetAura::RepostNativeEvent(gfx::NativeEvent native_event)
