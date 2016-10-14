@@ -5,7 +5,7 @@
 首先，请看如下代码片段：
 
 ```c
-1 int main() {
+ 1 int main() {
  2     char *s_literal = "This is literal string.";
  3     char s_array[] = "This is literal string.";
  4     cout << "Modifying on s_array..."
