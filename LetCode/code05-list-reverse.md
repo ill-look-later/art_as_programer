@@ -52,7 +52,6 @@ Node* reverse(Node* node) {
   // 返回自己
   return node;
 }
-
 int main() {
   int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
   int index = 0;
@@ -67,7 +66,6 @@ int main() {
     printf("%d-", p->val);
   printf("\n");
 
-
   Node* node = reverse(nullNode->next);
   node->next = NULL;
 
@@ -75,6 +73,6 @@ int main() {
   while(p = p->next)
     printf("%d-", p->val);
   printf("\n");
-}
+}
 
 ```
