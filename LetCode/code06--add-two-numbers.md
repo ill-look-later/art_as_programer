@@ -31,7 +31,7 @@ public:
             int sum = l1_node->val+l2_node->val + (step_forward ? 1 : 0);
             step_forward = sum > 9;
             l1_node->val = sum%10;
-            std::cout << l1_node->val << "-";
+            //std::cout << l1_node->val << "-";
             if (l1_node->next == NULL && l2_node->next != NULL) {
                 l1_node->next = new ListNode(0);
             } else if (l1_node->next != NULL && l2_node->next == NULL) {
