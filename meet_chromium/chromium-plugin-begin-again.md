@@ -29,4 +29,4 @@ google chrome 在我现在工作中的版本V39NPAPI和PPAPI都是支持的，�
 
 当一个页面主文档下载完毕，也就是当收到browser端塞过来的一段数据； 从didRecieveData到Parse这段数据；最后到PluginDocument中的CreateDocumentStructure开始，在创建整个Plugin Tag的过程中创建了整个Plugin实例；
 
-
+![NPAPI PLUGIN 流程图](/meet_chromium/img/Chromium_Plugin.png)
