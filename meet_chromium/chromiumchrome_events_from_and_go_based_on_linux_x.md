@@ -172,4 +172,4 @@ base::ObserverList<PlatformEventObserver> observers_
 一些额外的信息
 ---
 
-chromium中，PlatformEventDispatcher在分发过程中， 会将事件分发给Chromium内部与平台无关的EventSource对象，在`EventSource::SendEventToProcessor` 在事件分发的源头；通过
+chromium中，PlatformEventDispatcher在分发过程中， 会将事件分发给Chromium内部与平台无关的EventSource对象，在`EventSource::SendEventToProcessor`过程中还提供了一个`EventRewriter` 对象的链表来给我们修改这个平台事件的机会；通过继承EventRewriter相关的接口， 我们可以对我们感兴趣的PlatformEvent进行控制修改；
