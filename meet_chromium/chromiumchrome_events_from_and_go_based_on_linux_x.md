@@ -171,4 +171,5 @@ base::ObserverList<PlatformEventObserver> observers_
 
 一些额外的信息
 ---
-通常我们从平台取到的事件会经过一些转换，或者按键组合之类的， 
+
+chromium中，PlatformEventDispatcher在分发过程中， 会将事件分发给Chromium内部与平台无关的EventSource对象，在`EventSource::SendEventToProcessor` 在事件分发的源头；通过
