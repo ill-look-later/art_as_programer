@@ -154,10 +154,6 @@ FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
 还有类NativeViewGLSurfaceEGLX11， X11Window， DesktopWindowTreeHostX11，
 当然这部分索引出来的都是linux上x11上的一些code， 其实假设我们最后是把他porting到嵌入式平台不带x11的， 可能系统native 窗口是dfbwindow 或者其他的；或者android平台上的Glsurface. 总之我们可以很容一看出来，是chromium的windowtreehost 或要实现类似功能的模块；也就是说：如果我们要全盘托管整个事件的分发， 那么可以通过注册overridden\_dispatcher来获取最高优先级的分发权限；而我们的windowtreehost则是在平台相关的windowtreehost初始化的时候通过`ui::PlatformEventSource::GetInstance()->AddPlatformEventDispatcher(this);`来将自己注册为平台事件的分发者，这样便可以顺利的完成事件的分发；
 
-从上面overridden_dispatcher_->DispatchEvent(platform_event);之后代码中我们可以看到， 后面还有如果事件还有其他的oberserver的话， 还会遍历这些PlatformEventObserver 和 其他的PlatformEventDispatcher， 而这些都是通过调用函数 
-
-    PlatformEventSource::AddPlatformEventDispatcher()
-来添加额外的平台事件分发者，除此之外还有通过添加平台事件的观察者oberser来获取事件
 ```
 .cc
 void PlatformEventSource::AddPlatformEventObserver(
