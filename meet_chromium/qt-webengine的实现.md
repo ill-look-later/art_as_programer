@@ -15,3 +15,4 @@ Only items which specify [QQuickItem::ItemHasContents](http://doc.qt.io/qt-5/qqu
 上面的ChromiumCompositorData对象是对QSharedData的封装；里面并维护着chromium中真正的数据对象`scoped_ptr<cc::DelegatedFrameData> frameData;`
 
 
+加班累到爆，整理中......
