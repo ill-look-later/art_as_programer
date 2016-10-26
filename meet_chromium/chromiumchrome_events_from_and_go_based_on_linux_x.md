@@ -152,12 +152,8 @@ FOR_EACH_OBSERVER(PlatformEventObserver, observers_,
     class AURA_EXPORT WindowTreeHostX11 : public WindowTreeHost,
                                           public ui::PlatformEventDispatcher
 还有类NativeViewGLSurfaceEGLX11， X11Window， DesktopWindowTreeHostX11，
-当然这部分索引出来的都是linux上x11上的一些code， 其实假设我们最后是把他porting到嵌入式平台不带x11的， 可能系统native 窗口是dfbwindow 或者其他的；或者android平台上的Glsurface. 总之我们可以很容一看出来，是chromium的windowtreehost 或要实现类似功能的模块；也就是说：调用overridden_dispatcher_->DispatchEvent(platform_event);是将事件分发给chromium内部的窗口树的host节点上。
+当然这部分索引出来的都是linux上x11上的一些code， 其实假设我们最后是把他porting到嵌入式平台不带x11的， 可能系统native 窗口是dfbwindow 或者其他的；或者android平台上的Glsurface. 总之我们可以很容一看出来，是chromium的windowtreehost 或要实现类似功能的模块；也就是说：如果我们要全盘托管整个事件的分发， 那么可以通过注册overridden\_dispatcher来获取最高优先级的分发权限；而我们的windowtreehost则是在平台相关的windowtreehost初始化的时候通过`ui::PlatformEventSource::GetInstance()->AddPlatformEventDispatcher(this);`来将自己注册为平台事件的分发者，这样便可以顺利的完成事件的分发；
 
-从上面overridden_dispatcher_->DispatchEvent(platform_event);之后代码中我们可以看到， 后面还有如果事件还有其他的oberserver的话， 还会遍历这些PlatformEventObserver 和 其他的PlatformEventDispatcher， 而这些都是通过调用函数 
-
-    PlatformEventSource::AddPlatformEventDispatcher()
-来添加额外的平台事件分发者，除此之外还有通过添加平台事件的观察者oberser来获取事件
 ```
 .cc
 void PlatformEventSource::AddPlatformEventObserver(
@@ -172,3 +168,8 @@ base::ObserverList<PlatformEventObserver> observers_
 　　整体看来， 整个plat事件分发的时候三个点，一个是平台事件的监听者（platformeventObserver） 一个是用于window_tree 或者 其他平台上的layer tree分发事件的一个重写的platformEventDispatcher（这是正统哦）， 还有通过调用AddPlatformEventDispatcher来分发事件（这个就是那些分封的亲王，襄阳王，平阳王啥的）分别通过他们来将事件传递给想要拿到这些事件的对象。
   
 　　至此， chromium平台事件到此结束。而后面的事件处理就是chromium本身给自己的UI系统也就是基于全新的Aura的子系统分发这些事件， 当让在这个之前，得将这些事件从从PlatEvent 转化成uiEvent， 具体请参见各个继承者对DispatchEvent的具体实现。不同平台拿上来的平台事件也不同有Xevent， 也有windows的 Msg事件 嵌入式平台上也有DFBEvent
+
+一些额外的信息
+---
+
+chromium中，PlatformEventDispatcher在分发过程中， 会将事件分发给Chromium内部与平台无关的EventSource对象，在`EventSource::SendEventToProcessor`过程中还提供了一个`EventRewriter` 对象的链表来给我们修改这个平台事件的机会；通过继承EventRewriter相关的接口， 我们可以对我们感兴趣的PlatformEvent进行控制修改；
