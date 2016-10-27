@@ -10,7 +10,7 @@
 3. Money is not everything. There's Mastercard and Visa.
 > 钞票不是万能的，毕竟有时还需要信用卡。
 
-4. One should love animals. They are so tasty.
+4. EveryOne should love animals. They are so tasty.
 > 每个人都应该热爱动物，因为它们很好吃。
 
 
