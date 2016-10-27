@@ -33,3 +33,6 @@ All of those just for note some information i recv
 * ~~使用nodejs<socket.IO> + hmtl5 ＋ websoket 实现简单的文字/视频聊天~~
 * 英文朗读，每朗读一篇这里都会［+4］
 * 阅读《灿烂千阳》
+
+
+* 看看我的照片
