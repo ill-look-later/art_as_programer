@@ -27,6 +27,8 @@ All of those just for note some information i recv
 * [阅读《C++ 并发编程》](https://chenxiaowei.gitbooks.io/cpp_concurrency_in_action/content/content/chapter1/chapter1-chinese.html)
 * 回顾[排序算法](/Computer Science/排序算法终结.md)和相关的[数据结构]
 * 阅读《TCP/IP详解 卷一》
+* ~~了解qtwebchannel的实现源码~~
+* 查看chromium如何整合入Qt，了解其架构ing...
 * ~~概略阅读 libevent 源码，multiplex/demultiplex实现~~
 * ~~使用nodejs<socket.IO> + hmtl5 ＋ websoket 实现简单的文字/视频聊天~~
 * 英文朗读，每朗读一篇这里都会［+4］
