@@ -25,7 +25,9 @@
 
 8. Success is a relative term. It brings so many relatives.
 > 成功是一个相关名词，它会给你带来很多不相关的亲戚。
-　　9. Never put off the work till tomorrow what you can put off today.
-　　不要等明天交不上差再找借口，今天就要找好。
-　　10. Love is photogenic. It needs darkness to develop.
-　　爱情就像照片，需要大量的暗房时间来培养。
+
+9. Never put off the work till tomorrow what you can put off today.
+> 不要等明天交不上差再找借口，今天就要找好。
+　　
+10. Love is photogenic. It needs darkness to develop.
+> 爱情就像照片，需要大量的暗房时间来培养。
