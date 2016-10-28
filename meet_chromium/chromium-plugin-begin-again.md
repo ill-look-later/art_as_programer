@@ -1,4 +1,4 @@
-# Plugin Begin Again
+# Chromium Plugin Begin Again
 
 在begin again之前，先搞清楚两个概念** chrome extensions** & **web Plugin**
 
@@ -27,6 +27,6 @@ PPAPI在 Google Native Client \(NaCl\) 技术基础上开发出的一套规范�
 
 google chrome 在我现在工作中的版本V39NPAPI和PPAPI都是支持的，但是从V42起，查阅的源码中NPAPI相关的代码逐渐的被一点点去除了， 到了现在的52， 整个Chrome中的源代码中， 几乎已经找不到相关的code了；
 
-当一个页面主文档下载完毕，也就是当收到browser端塞过来的一段数据； 从didRecieveData到Parse这段数据；最后到PluginDocument中的CreateDocumentStructure开始，在创建整个Plugin Tag的过程中创建了整个Plugin实例；
+当一个页面主文档下载完毕，也就是当收到browser端塞过来的一段数据； 从didRecieveData到Parse这段数据；最后到PluginDocument中的CreateDocumentStructure开始，在创建整个Plugin Tag的过程中创建了整个Plugin Instance实例；
 
 ![NPAPI PLUGIN 流程图](/meet_chromium/img/Chromium_Plugin.png)

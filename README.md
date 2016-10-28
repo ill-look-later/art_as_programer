@@ -13,7 +13,7 @@ All of those just for note some information i recv
 * ~~nodejs express socket.io broadcast live video~~
 * 模仿实现IOS端swift版本的微博客户端
 * ~~[Xreader 的一个readme.md 完成介绍](/program_project/做xreader过程中的感悟.md)~~
-* 实现XReader的一个youtubedl的扩展：c++部分搞定，现在要export到qml上下文中...
+* ~~实现XReader的一个youtubedl的扩展：c++部分搞定，现在要export到qml上下文中...~~突然想到这没有什么用， 在大陆有什么用呢....
 * 阅读srs的一部分代码，看看大致的实现，计划？
 * ~~阅读《黑客与画家》~~
 * 利用 nodejs electron 框架开发一个小的音乐播放器？ 仿照网易云音乐？
@@ -35,4 +35,4 @@ All of those just for note some information i recv
 * 阅读《灿烂千阳》
 
 
-* 看看我的照片
+* [买来一盒铅笔画画缓解压力增加生活的乐趣](/bullshit/可爱萌.md)
