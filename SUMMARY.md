@@ -107,6 +107,7 @@
 * [bullshit  扯蛋](bullshit/bullshit.md)
     * [with\_the\_bullshit\_courage\_to\_face\_the\_fucking\_life.md](bullshit/with_the_bullshit_courage_to_face_the_fucking_life.md)
     * [可爱萌](bullshit/可爱萌.md)
+    * [卡通政治](bullshit/卡通政治.md)
 * [FrameWork And Library](framework_library/README.md)
     * [libuv](framework_library/libuv.md)
     * [libevent](framework_library/libevent.md)
