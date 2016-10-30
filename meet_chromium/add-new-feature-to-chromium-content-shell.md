@@ -25,11 +25,8 @@ If you want to filter and send IPC messages, implement the
 
 If your feature has part of the code in WebKit, avoid having callbacks go through  **WebViewClient** interface so that we don't bloat it. Consider creating a new WebKit interface that the WebKit code calls, and have the renderer side class implement it. As an example, see  **WebAutoFillClient**(`WebKit/chromium/public/WebAutoFillClient.h`).
 
-
 Browser UI thread:
 ---
-
-
 
 The  **WebContentsObserver** (`content/public/browser/web_contents_observer.h`) interface allows objects on the UI thread to filter IPC messages and also gives notifications about frame navigation. As an example, see **TabHelper**(chrome/browser/extensions/tab_helper.h).
 
