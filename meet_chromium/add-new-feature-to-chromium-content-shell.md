@@ -1,5 +1,7 @@
 ### How to Add New Features (without bloating RenderView/RenderViewHost/WebContents)
 
+> 下面是官网的说明文档， 简单，很简单， 但的确就是这样的， 但是如果开始对conent层中的代码没有了解的话， 那么下面这些东西可以说是废话啦；如果英文好，可以看看下面的文档， 如果英文不好，看文档后面我整理的内容； 如果你看不懂， 请先👀 chromium相关的架构和相关类的关系；如果你还是看不懂or看不下去， please shutdown you computer， go out and then have drink；life always has a choice， isn't it?；
+
 **<font size="4">Problem</font>**
 
 
