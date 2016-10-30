@@ -119,6 +119,7 @@
 * [Computer Science](Computer Science/README.md)
     * [基本排序算法总结](Computer Science/排序算法终结.md)
     * [最大子序列问题分析](Computer Science/最大子序列问题分析.md)
+    * [成员变量的初始化](Computer Science/成员变量的初始化.md)
 * [英文朗读](英语阅读/README.md)
     * [what you sow, you reap](英语阅读/what-you-saw-you-reap.md)
     * [MaMa song for mama](英语阅读/mama-song-for-mama.md)
