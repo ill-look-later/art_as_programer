@@ -55,7 +55,7 @@ static void closeMethodCallback(const v8::FunctionCallbackInfo<v8::Value>& info)
     TRACE_EVENT_SET_SAMPLING_STATE("v8", "V8Execution");
 }
 ```
-到这里我们身下的就是对整个函数调用的callstack的一个跟踪了；在V8Window.cpp中通过`LocalDOMWindow* impl = V8Window::toImpl(info.Holder());`拿到了我们最终的在webkit中的实现部分；在下面的close中我们可以看到做了一些类的条件检测，只有当我们的页面是通过window.open打开且backForwardList <=1 且在我们的webpreference中允许js关闭窗口时，我们才会关闭当前的页面；当上面所有的条件都满足的时候调用了chrome对象的`closeWindowSoon()`方法来关闭页面；其实chrome对象也是将这个动作转发给了我chromeclient对象去执行；在chromeclient中， 通过`m_webView->mainFrame()->stopLoading();`来停止加载整个页面，最后通过`m_webView->client()->closeWidgetSoon();`调用到chromium的conent层的closewidgetSoon来关闭这个页面；
+到这里我们身下的就是对整个函数调用的callstack的一个跟踪了；在V8Window.cpp中通过`LocalDOMWindow* impl = V8Window::toImpl(info.Holder());`拿到了我们最终的在webkit中的实现部分；在下面的close中我们可以看到做了一些类的条件检测，只有当我们的页面是通过window.open打开且backForwardList <=1 且在我们的webpreference中允许js关闭窗口时，我们才会关闭当前的页面；当上面所有的条件都满足的时候调用了chrome对象的`closeWindowSoon()`方法来关闭页面；其实chrome对象也是将这个动作转发给了我chromeclient对象去执行；在chromeclient中， 通过`m_webView->mainFrame()->stopLoading();`来停止加载整个页面，最后通过`m_webView->client()->closeWidgetSoon();`调用到chromium的conent层的closewidgetSoon来关闭这个页面；RenderWidget对象从WebWidgetClient继承了这个接口；
 
 ```c
 void LocalDOMWindow::close(ExecutionContext* context) {
@@ -125,5 +125,9 @@ void RenderWidget::closeWidgetSoon() {
       FROM_HERE, base::Bind(&RenderWidget::DoDeferredClose, this));
 }
 ```
+
+上面我们可以看到在closewidgetsoon函数中， 如果当前的的这个widget是一个subframe中的也就是chromium当中的remote frame， 则发送了一个CloseEvent给renderviewhost， 如果是一个正常的关闭过程， 则通过一个task `DoDeferredClose`来具体执行关闭的动作，这样做的原因， 上面也有解释，因为这时候关闭的话可能js的函数调用还在进行，所以通过task队列将关闭的时间推迟到js代码执行完成之后再做；
+
+
 
 
