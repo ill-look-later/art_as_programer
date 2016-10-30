@@ -191,6 +191,8 @@ void Shell::Close() {
 
 在ShellWindowDelegateView::WindowClosing函数中，删除shell_, 而shell中通过base::scop_ptr来析构WebContentsImpl对象， 而WebContentsImpl对象作为renderwidgethost， renderframehost， navigator，NavigatorController，renderviewhost等对象的委托对象，也就是说管理和维护着这些对象的关系，通过webcontentsImpl的析构，完成整个页面的关闭和render对应的render进程的关闭；
 
+最后来一段
+---
 
-
+其实从整个过程来看， 并不难分析，甚至相对于绘制，合成，net模块或者很多基础模块来讲，相对简单， 但是整个过程却告诉了我们整个V8<->blink［webkit］到 glue层，到content端的Render端，再通过IPC消息到Browser端，已经相关的各个模块如何组织汇总在WebContentsImpl有条不紊的工作，最后WebContentsImpl作为一个页面的具体事例，给基于Chormium开发的开发者通过继承WebContentsObserver 和 WebContentsDelegate来管理多个页面； 最后，如果依赖于Chromium的Aura现的UI层Toolkit的话， 如何继承WidgetDelegateView来完成UI部分的整合， 如果不依赖AUra的绘制，像我所接触到的qt，它就在RenderWidgetHostViewbase的基础上， 继承并实现`virtual void OnSwapCompositorFrame(virtual void OnSwapCompositorFrame)`接口， 用Qt自己的图形绘制API实现了绘制；同样的在源码中我们可以看到在android平台上也有自己的实现；
 
