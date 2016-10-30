@@ -127,6 +127,69 @@ void RenderWidget::closeWidgetSoon() {
 ```
 
 上面我们可以看到在closewidgetsoon函数中， 如果当前的的这个widget是一个subframe中的也就是chromium当中的remote frame， 则发送了一个CloseEvent给renderviewhost， 如果是一个正常的关闭过程， 则通过一个task `DoDeferredClose`来具体执行关闭的动作，这样做的原因， 上面也有解释，因为这时候关闭的话可能js的函数调用还在进行，所以通过task队列将关闭的时间推迟到js代码执行完成之后再做；
+```c
+
+void RenderWidget::DoDeferredClose() {
+	WillCloseLayerTreeView(); 
+	Send(new ViewHostMsg_Close(routing_id_));
+}
+```
+这里通过调用willCLoseLayerTreeView来讲host_closing_标志位置位， 以便防止多次关闭，另外在WillCloseLayerTreeView中通知blink中的WEbFrameWidgetImpl将其成员m_layerTreeView设置成null；但完成这些之后， 发送一个IPC消息`ViewHostMsg_Close`到Browser进程当中，在browser进程中，RenderWidgetHostImpl和RenderViewHostImpl中都响应了这个IPC消息， 
+```c
+void RenderWidgetHostImpl::OnClose() {
+  ShutdownAndDestroyWidget(true);
+}
+
+void RenderWidgetHostImpl::ShutdownAndDestroyWidget(bool also_delete) {
+  RejectMouseLockOrUnlockIfNecessary();
+
+  if (process_->HasConnection()) {
+    // Tell the renderer object to close.
+    bool rv = Send(new ViewMsg_Close(routing_id_));
+    DCHECK(rv);
+  }
+
+  Destroy(also_delete);
+}
+```
+在renderwidgetimpl中我们可以看到在Onclose这个IPC响应函数中调用了其成员函数shutdownAndDestroyWidget(true); 随后ShutdownAndDestroyWidget函数中判断， 如果render进程初始化且is_alive `return is_initialized_ && !is_dead_;` 那么久发送一个ViewMsg_Close的消息到Renderer进程当中，执行render端的关闭操作，包括重置compositor， 关闭webwidget;
+
+而在RenderViewHostImpl::OnClose 这个响应函数中， 调用了自身的成员函数`ClosePageIgnoringUnloadEvents();`
+```c
+void RenderViewHostImpl::ClosePageIgnoringUnloadEvents() {
+  GetWidget()->StopHangMonitorTimeout();
+  is_waiting_for_close_ack_ = false;
+
+  sudden_termination_allowed_ = true;
+  delegate_->Close(this);
+}
+```
+在ClosePageIgnoreingUnloadEvents中，调用`deletate_->Close(this)`利用它的委托WebContentsImpl对象来关闭整个页面，而WebContentsImpl是一个具体的对象，代表着整个页面和相关的结构， 但是它不管理自己， 所以WebContentsImpl对象依旧将这个事件上传给WebContentsImpl的委托对象；也就是chromium文档中提到的embedder，对于chore浏览器，那就是src/chrome下的实现， 如果是ChromeOs，那就就是其相关的实现，而作为一个简单的实现即Shell， 在src/shell/browser/shell.cc中；
+```c
+void Shell::CloseContents(WebContents* source) {
+  Close();
+}
+
+void Shell::Close() {
+  if (headless_)
+    delete this;
+  else
+    window_widget_->CloseNow();
+
+}
+```
+在Shell的实现中， 因为一个shell对应着一个webcontent; 而在shell的实现中，一个shell最后绑定到了一个ShellWindowDelegateView上也就是一个Widget上组件上，一个Widget在UI层面来看就是一个Native的窗口，所以在我们跑磨人的content_shell这个可执行文件时， 当我们打开新的页面时创建的是一个新的Native的window，原因也在这里， 从上面的代码可以看到调用了`window_widget_->CloseNow()`,最后widget会逐级的关闭NativeWidget， DestktopWinDowTreeHost，等平台相关的对象， 最后WindowTreeHost关闭时通知给NativeWidget，NativeWidget通知给Widget，Widget通知给它的委托，也就是我们的ShellWIndowDelegateView，在Widget的OnNativeWidgetDestroying函数中调用`widget_delegate_->WindowClosing()`
+
+```c
+  void WindowClosing() override {
+    if (shell_) {
+      delete shell_;
+      shell_ = NULL;
+    }
+  }
+```
+
+在ShellWindowDelegateView::WindowClosing函数中，删除shell_, 而shell中通过base::scop_ptr来析构WebContentsImpl对象， 而WebContentsImpl对象作为renderwidgethost， renderframehost， navigator，NavigatorController，renderviewhost等对象的委托对象，也就是说管理和维护着这些对象的关系，通过webcontentsImpl的析构，完成整个页面的关闭和render对应的render进程的关闭；
 
 
 
