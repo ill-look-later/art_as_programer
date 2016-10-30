@@ -103,11 +103,6 @@ ProxyImpl:  LayerTreeHostImplClient, SchedulerClient
 
 
 
-
-
-
-
-
 // LayerTreeHost<-->ProxyMain<-->ChannelMain
 //                                    |
 //                                    | 
