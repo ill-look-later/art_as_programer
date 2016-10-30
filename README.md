@@ -35,4 +35,4 @@ All of those just for note some information i recv
 * 阅读《灿烂千阳》
 
 
-* [买来一盒铅笔画画缓解压力增加生活的乐趣](//bullshit/可爱萌.md)
+* [买来一盒铅笔画画缓解压力增加生活的乐趣](/bullshit/可爱萌.md)
