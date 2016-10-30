@@ -49,6 +49,7 @@
     * [一些列工具类网站导航](IT_Man_Skills/一些列工具类网站导航.md)
     * [gitbook editor 同时推送到github与gitbook](IT_Man_Skills/gitbook-editor-同时推送到github与gitbook.md)
     * [再次相信了微软的黑科技](IT_Man_Skills/再次相信了微软的黑科技.md)
+    * [git cli chinese character not normal](IT_Man_Skills/git-cli-chinese-character-not-normal.md)
 * [Js Node系列](javascript_nodejs/README.md)
     * [Express FrameWork](javascript_nodejs/express_framework.md)
         * [express.use 的作用](javascript_nodejs/expressuse_de_zuo_yong.md)
