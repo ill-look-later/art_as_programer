@@ -27,6 +27,7 @@
     * [What Happend When You Call window.close\(\)](meet_chromium/what-happend-when-you-call-windowclose.md)
     * [QtWebchannel 实现机制](meet_chromium/qtwebchannel-实现机制.md)
     * [万里长征第一步](meet_chromium/万里长征第一步.md)
+    * [DOM Tree的创建过程学习](meet_chromium/dom-tree的创建过程学习.md)
 * [Embeded Development](Embeded_development/embeded_development.md)
     * [电容触摸屏FT5406移植说明](Embeded_development/Porting Ft5406 to Freescale Imx6Q.md)
     * [EIM 异步复用模式配置核心要点](Embeded_development/eim_configure_note.md)
