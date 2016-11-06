@@ -1,9 +1,10 @@
 # 反序整型数
 
 ```cpp
+
 #include <limits>
 
-class Solution {
+class Solution { //6ms
 public:
     int reverse(int x) {
         //bool is_negative = false;
