@@ -143,13 +143,13 @@ ninja -C out/Default hello_world
 out/Default/hello_world
 ```
 
-GN encourages target names for static libraries that aren't globally unique. To build one of these, you can pass the label with no leading “//” to ninja:
+GN的静态编译的target名字不是全局唯一的. 如果你要指定编译具体哪一个目标的时候，你可以在通过ninja编译的时候传递一个target参数给它，同样是“//”＋路径＋目标名字:
 
-<pre class="code">
+```shell
 ninja -C out/Default tools/gn/tutorial:hello_world
-</pre>
+```
 
-### [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Declaring-dependencies)Declaring dependencies
+### [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Declaring-dependencies) 声明依赖关系
 
 Let's make a static library that has a function to say hello to random people. There is a source file `hello.cc` in that directory which has a function to do this. Open the `tools/gn/tutorial/BUILD.gn` file and add the static library to the bottom of the existing file:
 
