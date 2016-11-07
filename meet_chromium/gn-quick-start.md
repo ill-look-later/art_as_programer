@@ -85,38 +85,39 @@ target_cpu = "x64"
 
 具体更详细的信息情查看这片文档 [GNCrossCompiles](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/cross_compiles.md)
 
-## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Configuring-goma)Configuring goma
+## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Configuring-goma)配置 goma
 
-Run `gn args out/Default` (substituting your build directory as needed). Add:
+运行 `gn args out/Default` (substituting your build directory as needed). 添加下面参数：
 
-<pre class="code">
+```shell
 use_goma = true
 goma_dir = "~/foo/bar/goma"
-</pre>
+```
 
-If your goma is in the default location (`~/goma`) then you can omit the `goma_dir` line.
+如果你的goma配置在你的默认路径(`~/goma`)，那么你就可以省略`goma_dir`这行配置；
 
-## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Configuring-component-mode)Configuring component mode
+## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Configuring-component-mode)配置编译的组件（component）模式
 
-This is a build arg like the goma flags. run `gn args out/Default` and add:
+这个和上面goma的配置差不多，运行`gn args out/Default`之后，添加：
 
-<pre class="code">
+```shell
 is_component_build = true
-</pre>
+```
+> 这个命令配置的就是静态编译还是动态编译；如果为true的话，就全部是动态库，否则就是静态库
 
-## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Step_by_step)Step-by-step
+## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Step_by_step) 手把手教程😃
 
-### [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Adding-a-build-file)Adding a build file
+### [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Adding-a-build-file) 添加编译文件
 
-Create a `tools/gn/tutorial/BUILD.gn` file and enter the following:
+创建一个编译文件 `tools/gn/tutorial/BUILD.gn` 并输入如下内容：
 
-<pre class="code">
+```shell
 executable("hello_world") {
   sources = [
     "hello_world.cc",
   ]
 }
-</pre>
+```
 
 There should already be a `hello_world.cc` file in that directory, containing what you expect. That's it! Now we just need to tell the build about this file. Open the `BUILD.gn` file in the root directory and add the label of this target to the dependencies of one of the root groups (a “group” target is a meta-target that is just a collection of other targets):
 
