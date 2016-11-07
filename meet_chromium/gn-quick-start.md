@@ -68,24 +68,22 @@ is_debug = false
 gn args --list out/my_build
 ```
 
-在上面命令的输出中，请注意查看每个编译参数下面的说明，（⚠️需要说明的是你必须指定编译目录，因为不同的编译目录下可以根据的你的指定产生不同的参数）
+在上面命令的输出中，请注意查看每个编译参数下面的说明，（⚠️需要说明的是你必须指定编译目录，因为不同的编译目录下可以根据的你的指定产生不同的参数）Chrome的开发者请看一个Chrome特殊的配置说明[Chrome-specific build configuration](http://www.chromium.org/developers/gn-build-configuration)。
 
-Chrome developers can also read the [Chrome-specific build configuration](http://www.chromium.org/developers/gn-build-configuration) instructions for more information.
+## 为一个指定的目标OS和特定的平台（架构）交叉编译
 
-## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Cross_compiling-to-a-target-OS-or-architecture)Cross-compiling to a target OS or architecture
+运行 `gn args out/Default` (substituting your build directory as needed)并且指定下面用于交叉编译的一个或多个配置选项；
 
-Run `gn args out/Default` (substituting your build directory as needed) and add one or more of the following lines for common cross-compiling options.
-
-<pre class="code">
+```shell
 target_os = "chromeos"
 target_os = "android"
 
 target_cpu = "arm"
 target_cpu = "x86"
 target_cpu = "x64"
-</pre>
+```
 
-See [GNCrossCompiles](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/cross_compiles.md) for more info.
+具体更详细的信息情查看这片文档 [GNCrossCompiles](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/cross_compiles.md)
 
 ## [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Configuring-goma)Configuring goma
 
