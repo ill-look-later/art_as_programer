@@ -119,9 +119,9 @@ executable("hello_world") {
 }
 ```
 
-There should already be a `hello_world.cc` file in that directory, containing what you expect. That's it! Now we just need to tell the build about this file. Open the `BUILD.gn` file in the root directory and add the label of this target to the dependencies of one of the root groups (a “group” target is a meta-target that is just a collection of other targets):
+这个目录下本身就有一个`hello_world.cc` 文件, 是不是很贴心（containing what you expect）.就是这样的！现在我们需要告诉gn哪个文件需要编译，打开你当前所在的目录src目录中的`BUILD.gn`这个文件并添加这个target到依赖root组的目录下；(一个 “group” 对象是一个元目标，代表着一系列的其他target的集合):
 
-<pre class="code">
+```shell
 group("root") {
   deps = [
     ...
@@ -129,19 +129,19 @@ group("root") {
     "//tools/gn/tutorial:hello_world",
   ]
 }
-</pre>
+```
 
-You can see the label of your target is “//” (indicating the source root), followed by the directory name, a colon, and the target name.
+你可以看到你的target是以 “//” (表明这是src目录，src根目录),后面接着是你目录地址后面用冒号':'接着是你的target名字；
 
-### [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Testing-your-addition)Testing your addition
+### [](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/quick_start.md#Testing-your-addition)测试你添加的target
 
-From the command line in the source root directory:
+在src根目录输入下面命令:
 
-<pre class="code">
+```shell
 gn gen out/Default
 ninja -C out/Default hello_world
 out/Default/hello_world
-</pre>
+```
 
 GN encourages target names for static libraries that aren't globally unique. To build one of these, you can pass the label with no leading “//” to ninja:
 
