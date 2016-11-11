@@ -3,4 +3,4 @@
 example:
 ---
 
-`
+- input: `char* s = "IOU"; output: `UOI`
