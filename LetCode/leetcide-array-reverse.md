@@ -6,7 +6,8 @@ example:
 - input: `char* s = "IOU"; output: `UOI`
 
 
-```c
+```c 
+//O(N/2)
 #include <stdio.h>
 
 void reverse(char a[], int size) {
