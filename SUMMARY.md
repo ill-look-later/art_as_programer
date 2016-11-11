@@ -137,5 +137,6 @@
     * [code07:找出最大没有重复元素的子串长度](LetCode/找出最大没有重复元素的子串长度.md)
     * [leetcode: zigzag string conversion](LetCode/leetcode-zigzag-string-conversion.md)
     * [leetcode: reverse Int value](LetCode/leetcode-reverse-int-value.md)
+    * [leetcide: array reverse](LetCode/leetcide-array-reverse.md)
 * [drafts](drafts.md)
 
